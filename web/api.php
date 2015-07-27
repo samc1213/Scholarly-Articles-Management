@@ -30,7 +30,17 @@
 		$songs = $db->songs;
 		// To insert a dict, use the insert method.
 		$songs->batchInsert($seedData);
-
+		
+		$query = array('weeksAtOne' => array('$gte' => 10));
+		$cursor = $songs->find($query)->sort(array('decade' => 1));
+		foreach($cursor as $doc) {
+		    echo 'In the ' .$doc['decade'];
+		    echo ', ' .$doc['song']; 
+		    echo ' by ' .$doc['artist'];
+		    echo ' topped the charts for ' .$doc['weeksAtOne']; 
+		    echo ' straight weeks.', "\n";
+		}	
+		
 		// Since this is an example, we'll clean up after ourselves.
 		$songs->drop();
 		// Only close the connection when your app is terminating
