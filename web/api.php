@@ -8,8 +8,22 @@
 		
 		$seedData = array(
 		    array(
-		        'username' => $username, 
-		        'pass' => $password,
+		        'decade' => '1970s', 
+		        'artist' => 'Debby Boone',
+		        'song' => 'You Light Up My Life', 
+		        'weeksAtOne' => 10
+		    ),
+		    array(
+		        'decade' => '1980s', 
+		        'artist' => 'Olivia Newton-John',
+		        'song' => 'Physical', 
+		        'weeksAtOne' => 10
+		    ),
+		    array(
+		        'decade' => '1990s', 
+		        'artist' => 'Mariah Carey',
+		        'song' => 'One Sweet Day', 
+		        'weeksAtOne' => 16
 		    ),
 		);
 		
