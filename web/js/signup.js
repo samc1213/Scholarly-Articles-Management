@@ -28,18 +28,14 @@ $(document).ready (function () {
 				},
 			success: function(data)
 			{
-				console.log("Data" + data);
-				console.log(typeof(data));
-				// if (data == "ERROR USERNAME TAKEN") 
-				// {
-					// console.log("yaytak");
-					// $('#errorspace').text("ERROR! THAT USERNAME EXISTS");
-				// }
-				// else
-				// {
-					// console.log("nottak");
-					// window.location.replace("/");
-				// }
+				if (data == "0") 
+				{
+					$('#errorspace').text("ERROR! THAT USERNAME EXISTS");
+				}
+				else
+				{
+					window.location.replace("/");
+				}
 			}
 		}); //end ajax
 	}); //end signup form
