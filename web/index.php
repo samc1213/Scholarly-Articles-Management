@@ -45,6 +45,10 @@
 	        </header>
 	        
 	        	<section id="names">
+	        		<?php
+	        			include 'api.php';
+						createuser("hello", "goodbye");
+	        		?>
 	        	</section>
 	        	
 	        	<h2 id="grantheader"><?php session_start();
