@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         
-        <link rel="stylesheet" href="font-awesome-4.3.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/font-awesome-4.3.0/css/font-awesome.min.css">
         
         <link rel="stylesheet" href="css/jquery.modal.css" type="text/css" media="screen" />
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
