@@ -47,7 +47,11 @@
 	        	<section id="names">
 	        		<?php
 	        			include 'api.php';
-						createuser("hello", "goodbye");
+						try {
+							createuser("hello1", "goodbye1");
+						} catch (Exception $e) {
+							echo $e;
+						}
 						echo "hi";
 	        		?>
 	        	</section>
