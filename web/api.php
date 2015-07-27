@@ -6,7 +6,7 @@
 		try {
 			createuser($_POST['username'], $_POST['password']);
 		} catch (Exception $e) {
-			echo $e;
+			echo $e -> getCode();
 		}
 	}
 ?>
