@@ -43,8 +43,6 @@
 		    echo ' straight weeks.', "\n";
 		}	
 		
-		// Since this is an example, we'll clean up after ourselves.
-		$songs->drop();
 		// Only close the connection when your app is terminating
 		$client->close();
 	}	//end create user
