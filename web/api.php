@@ -1,6 +1,6 @@
 <?php
 	function createuser($username, $password) {
-		$uri = "mongodb://heroku_v7w2qftd:a5h7slci8p0b2p9nt7qe96hmvv@ds027483.mongolab.com:27483/heroku_v7w2qftd";
+		$uri = "mongodb://heroku_v7w2qftd:Newpass1@ds027483.mongolab.com:27483/heroku_v7w2qftd";
 		$options = array("connectTimeoutMS" => 30000);
 		
 		$client = new MongoClient($uri, $options);
