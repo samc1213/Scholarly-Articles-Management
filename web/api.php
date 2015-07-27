@@ -4,7 +4,7 @@
 		$options = array("connectTimeoutMS" => 30000);
 		
 		$client = new MongoClient($uri, $options);
-		$db = $client->selectDB("mydb");
+		$db = $client->selectDB("heroku_v7w2qftd");
 		
 		$seedData = array(
 		    array(
