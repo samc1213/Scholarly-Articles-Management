@@ -4,19 +4,30 @@
 		
 		$uri = "mongodb://heroku_v7w2qftd:a5h7slci8p0b2p9nt7qe96hmvv@ds027483.mongolab.com:27483/heroku_v7w2qftd";
 				
-		$client = new Mongo($uri);
+		$seedData = array(
+	    array(
+	        'decade' => '1970s', 
+	        'artist' => 'Debby Boone',
+	        'song' => 'You Light Up My Life', 
+	        'weeksAtOne' => 10
+	    ),
+	    array(
+	        'decade' => '1980s', 
+	        'artist' => 'Olivia Newton-John',
+	        'song' => 'Physical', 
+	        'weeksAtOne' => 10
+	    ),
+	    array(
+	        'decade' => '1990s', 
+	        'artist' => 'Mariah Carey',
+	        'song' => 'One Sweet Day', 
+	        'weeksAtOne' => 16
+	    ),
+	);
+	
+		$client = new MongoClient($uri);
 		
-		$dbname = "heroku_v7w2qftd";
-		
-		$db = $client->$dbname;
-		
-		$c_users = $db->users;
-		
-		$user = array(
-			'first_name' => 'MongoDB',
-			'last_name' => 'Fan',
-			'tags' => array('developer','user')
-		);
+		$db = $client->selectDB("heroku_v7w2qftd");
 				
 		$songs = $db->songs;
 		// To insert a dict, use the insert method.
