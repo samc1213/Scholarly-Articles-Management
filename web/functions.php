@@ -1,5 +1,5 @@
 <?php
-	function createuser($username, $password) {
+	function createuser($username, $password, $email, $firstname, $lastname) {
 		require('../vendor/autoload.php');
 				
 		try{
@@ -9,6 +9,9 @@
 			    array(
 			        'username' => $username, 
 			        'password' => $password,
+			        'email' => $email,
+			        'firstname' => $firstname,
+			        'lastname' => $lastname
 			    ),
 			);
 		

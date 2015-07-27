@@ -28,14 +28,17 @@ $(document).ready (function () {
 				},
 			success: function(data)
 			{
-				console.log("dAta: " + data);
 				if (data == "0") 
 				{
 					$('#errorspace').text("ERROR! THAT USERNAME EXISTS");
 				}
-				else
+				else if (data == "")
 				{
 					window.location.replace("/");
+				}
+				else
+				{
+					$('#errorspace').text("THERE WAS AN ERROR ADDING THAT USERNAME");
 				}
 			}
 		}); //end ajax
