@@ -1,0 +1,10 @@
+{
+    "name": "samc1213/heroku-grants",
+    "authors": [
+        {
+            "name": "Sam Cohen",
+            "email": "samc1213@gmail.com"
+        }
+    ],
+    "require": {}
+}
