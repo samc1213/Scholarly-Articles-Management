@@ -48,6 +48,7 @@
 	        		<?php
 	        			include 'api.php';
 						createuser("hello", "goodbye");
+						echo "hi";
 	        		?>
 	        	</section>
 	        	
