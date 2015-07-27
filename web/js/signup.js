@@ -17,8 +17,9 @@ $(document).ready (function () {
 	lastname = $('#lastname').val();
 		$.ajax ({
 			type: "POST",
-			url: "php/signup.php",
+			url: "api.php",
 			data: {
+				type: "create",
 				username: username,
 				password: password,
 				email: email,
@@ -29,16 +30,16 @@ $(document).ready (function () {
 			{
 				console.log("Data" + data);
 				console.log(typeof(data));
-				if (data == "ERROR USERNAME TAKEN") 
-				{
-					console.log("yaytak");
-					$('#errorspace').text("ERROR! THAT USERNAME EXISTS");
-				}
-				else
-				{
-					console.log("nottak");
-					window.location.replace("/");
-				}
+				// if (data == "ERROR USERNAME TAKEN") 
+				// {
+					// console.log("yaytak");
+					// $('#errorspace').text("ERROR! THAT USERNAME EXISTS");
+				// }
+				// else
+				// {
+					// console.log("nottak");
+					// window.location.replace("/");
+				// }
 			}
 		}); //end ajax
 	}); //end signup form

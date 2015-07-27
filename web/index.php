@@ -45,15 +45,6 @@
 	        </header>
 	        
 	        	<section id="names">
-	        		<?php
-	        			include 'api.php';
-						try {
-							createuser("hello1", "goodbye1");
-						} catch (Exception $e) {
-							echo $e;
-						}
-						echo "hi";
-	        		?>
 	        	</section>
 	        	
 	        	<h2 id="grantheader"><?php session_start();
