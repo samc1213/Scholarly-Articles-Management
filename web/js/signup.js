@@ -28,6 +28,7 @@ $(document).ready (function () {
 				},
 			success: function(data)
 			{
+				console.log("dAta: " + data);
 				if (data == "0") 
 				{
 					$('#errorspace').text("ERROR! THAT USERNAME EXISTS");
