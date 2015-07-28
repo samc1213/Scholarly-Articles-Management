@@ -133,7 +133,12 @@
 			
 			$results = $grants->find($query);
 			
-			echo var_dump(iterator_to_array($results));
+			foreach ($results as $result)
+			{
+				echo var_dump($result);
+			}
+			
+			// echo var_dump(iterator_to_array($results));
 		} catch (Exception $e) {
 			echo $e -> getMessage();
 		}
