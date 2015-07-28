@@ -53,19 +53,23 @@
 					
 			$users = $db->users;	
 			
-			$user = $users->findOne(array("username" => $username));	
+			$user = $users->findOne(array("username" => $username));
+			
+			$passhash = $user["password"];
+			
+			if (password_verify($password, $passhash)) {
+				echo "SUCCESS";
+			}
+			else
+			{
+				throw new Exception ("Password doesn't match");
+			}
+				
 		} catch (Exception $e) {
 			throw new Exception ($e);
 		}
-		$passhash = $user["password"];
 		
-		if (password_verify($password, $passhash)) {
-			echo "SUCCESS";
-		}
-		else
-		{
-			throw new Exception ("Password doesn't match");
-		}
+
 	}
 	
 ?>
