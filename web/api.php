@@ -10,4 +10,12 @@
 			echo $e -> getCode();
 		}
 	}
+	
+	if ($_POST["type"] == "login") {
+		try {
+			loginuser($_POST['username'], $_POST['password']);
+		} catch (Exception $e) {
+			echo $e -> getMessage();
+		}
+	}
 ?>
