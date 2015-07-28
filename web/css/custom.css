@@ -93,6 +93,14 @@ header {
 	margin-top: 10%;
 }
 
+#signinform {
+	padding: 5%;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10%;
+}
+
 .grant {
 	width: 60%;
 	margin-left: auto;
