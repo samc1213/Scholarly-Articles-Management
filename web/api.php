@@ -34,7 +34,7 @@
 	else if ($_POST["type"] == "newgrant") {
 		session_start();
 		$username = $_SESSION['username'];
-		$phpdata = json_decode($_POST['data']);
+		$phpdata = (array)json_decode($_POST['data']);
 		echo var_dump($phpdata);
 		newgrant($phpdata['name'], $phpdata['source'], $phpdata['awardperiod1'], $phpdata['awardperiod2'], $phpdata['status'], $phpdata['personmonths'], $phpdata['specify'], $phpdata['amount'], $phpdata['piamount'], $phpdata['description'], $username);
 	}
