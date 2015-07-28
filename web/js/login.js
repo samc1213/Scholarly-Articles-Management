@@ -26,7 +26,7 @@ $(document).ready(function () {
 			{
 				console.log("Data: " + data);
 				console.log(typeof(data));
-				if (data == "") 
+				if (data == "SUCCESS") 
 				{
 					window.location.replace("/");
 				}

@@ -43,18 +43,6 @@
 	        	
 	        	
 	        </header>
-	        
-	        	<section id="testing">
-	        		<?php
-	        			include 'functions.php';
-						try {
-							echo loginuser("asdfpaosidfaspdofasdf", "asdf");
-						} catch (Exception $e)
-						{
-							echo $e;
-						}
-	        		?>
-	        	</section>
 	        	
 	        	<h2 id="grantheader"><?php session_start();
 	        	if (isset($_SESSION['user'])) {
