@@ -55,20 +55,21 @@
 			
 			$user = $users->findOne(array("username" => $username));
 			
-			$passhash = $user["password"];
+			echo var_dump($user);
 			
-			// if (password_verify($password, $passhash)) {
-				// echo "SUCCESS";
-			// }
-			// else
-			// {
-				// throw new Exception ("Password doesn't match");
-			// }
+			$passhash = $user["password"];
 				
 		} catch (Exception $e) {
-			throw new Exception ($e);
+			throw new Exception ("Trouble connecting to database");
 		}
 		
+		if (password_verify($password, $passhash)) {
+				echo "SUCCESS";
+			}
+			else
+			{
+				throw new Exception ("Password doesn't match");
+			}
 
 	}
 	
