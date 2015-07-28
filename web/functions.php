@@ -144,7 +144,7 @@
 		{
 			$uri = "mongodb://heroku_v7w2qftd:a5h7slci8p0b2p9nt7qe96hmvv@ds027483.mongolab.com:27483/heroku_v7w2qftd";
 			
-			$newdata = array ('$set' => array(
+			$newdata = array(
 				        'name' => $name, 
 				        'source' => $source,
 				        'awardperiod1' => $awardperiod1,
@@ -156,7 +156,7 @@
 				        'piamount' => $piamount,
 				        'description' => $description,
 				        'user' => $user,
-				    ));		
+				    );		
 			
 			try {
 				$client = new MongoClient($uri);
