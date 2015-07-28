@@ -63,7 +63,7 @@
 				$email = $user["email"];
 					
 			} catch (Exception $e) {
-				throw new Exception ("Trouble connecting to database");
+				$result['message'] = "Trouble connecting to database";
 			}
 			
 			if ($user == null) {
