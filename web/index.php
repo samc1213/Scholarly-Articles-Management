@@ -89,7 +89,7 @@
 									echo '. </span>';
 									
 									echo '<span class="granttitle">';
-									echo $grant['title'];
+									echo $grant['name'];
 									echo '</span>';
 									echo '<span> </span><span class="buttoncover"><button class="btn btn-default editbtn" style="padding: 0;" id="editbtn';
 									echo $count;
@@ -104,7 +104,7 @@
 									$piamount = $grant['piamount'];
 									$pmonths = $grant['personmonths'];
 									$units = $grant['specify'];
-									$summary = $grant['summary'];
+									$summary = $grant['description'];
 									$fromdate = $grant['awardperiod1'];
 									$todate = $grant['awardperiod2'];
 									

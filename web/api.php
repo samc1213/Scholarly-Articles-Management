@@ -39,4 +39,9 @@
 		newgrant($phpdata['name'], $phpdata['source'], $phpdata['awardperiod1'], $phpdata['awardperiod2'], $phpdata['status'], $phpdata['personmonths'], $phpdata['specify'], $phpdata['amount'], $phpdata['piamount'], $phpdata['description'], $username);
 	}
 	
+	else if ($_POST["type"] == "editgrant") {
+		$phpdata = (array)json_decode($_POST['data']);
+		echo $phpdata;
+	}
+	
 ?>

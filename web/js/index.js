@@ -67,6 +67,7 @@ $(document).ready( function () {
 		
 		data['originalname'] = originalname;
 		data['originalperiod1'] = originalperiod1;
+		
 		data['name'] = $('#egrantname').val();
 		
 		if ($('#esource').val() == 'Other')
@@ -90,8 +91,11 @@ $(document).ready( function () {
 		
 		$.ajax ({
 			type: "POST",
-			url: "php/editgrant.php",
-			data: {data: jsondata},
+			url: "api.php",
+			data: {
+				type: "editgrant",
+				data: jsondata
+			},
 			success: function(data)
 			{
 				console.log(data);
