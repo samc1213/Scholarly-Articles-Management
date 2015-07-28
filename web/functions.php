@@ -62,7 +62,7 @@
 		}
 		
 		if ($user == null) {
-			echo "ERROR";
+			throw new Exception ("User doesn't exist");
 		}
 		
 		else if (password_verify($password, $passhash)) {
@@ -70,7 +70,7 @@
 		}
 		else
 		{
-			echo "ERROR";
+			throw new Exception ("Password doesn't match");
 		}
 
 	}
