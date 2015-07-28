@@ -167,10 +167,10 @@
 						
 				$grants = $db->grants;
 				
-				$grant = $grants->find(array("name" => "Grant1"));
+				$grant = $grants->find(array("name" => $originalname));
 				echo var_dump(iterator_to_array($grant));
 				
-				$grants->update(array("name" => $originalname, "awardperiod1" => $originalperiod1, "user" => $user), $newdata, array("upsert" => true));
+				$grants->update(array("name" => "Grant1"), $newdata, array("upsert" => true));
 			} catch (Exception $e) {
 				echo $e -> getMessage();
 			}
