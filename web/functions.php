@@ -144,7 +144,8 @@
 		{
 			$uri = "mongodb://heroku_v7w2qftd:a5h7slci8p0b2p9nt7qe96hmvv@ds027483.mongolab.com:27483/heroku_v7w2qftd";
 			
-			echo $name;
+			echo "WOAH";
+			echo $originalname, $originalperiod1, $name, $source, $awardperiod1, $awardperiod2, $status, $personmonths, $specify, $amount, $piamount, $description, $user;
 			
 			$newdata = array(
 				        'name' => $name, 
