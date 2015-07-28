@@ -4,7 +4,7 @@
 				
 		try{
 			$uri = "mongodb://heroku_v7w2qftd:a5h7slci8p0b2p9nt7qe96hmvv@ds027483.mongolab.com:27483/heroku_v7w2qftd";
-					
+			// $uri = "mongodb://localhost/";		
 			$data = array(
 			    array(
 			        'username' => $username, 
@@ -46,6 +46,8 @@
 				
 		try{
 			$uri = "mongodb://heroku_v7w2qftd:a5h7slci8p0b2p9nt7qe96hmvv@ds027483.mongolab.com:27483/heroku_v7w2qftd";
+			
+			// $uri = "mongodb://localhost/";		
 					
 			$client = new MongoClient($uri);
 			
