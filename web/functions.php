@@ -131,9 +131,9 @@
 					
 			$grants = $db->grants;
 			
-			$grants->find($query);
+			$results = $grants->find($query);
 			
-			echo var_dump(iterator_to_array($grants));
+			echo var_dump(iterator_to_array($results));
 		} catch (Exception $e) {
 			echo $e -> getMessage();
 		}
