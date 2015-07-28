@@ -57,8 +57,15 @@
 		} catch (Exception $e) {
 			throw new Exception ($e);
 		}
-		echo var_dump($user["password"]);
+		$passhash = $user["password"];
 		
+		if (password_verify($password, $passhash)) {
+			echo "SUCCESS";
+		}
+		else
+		{
+			throw new Exception ("Password doesn't match");
+		}
 	}
 	
 ?>

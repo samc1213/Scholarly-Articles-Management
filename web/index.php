@@ -48,7 +48,7 @@
 	        		<?php
 	        			include 'functions.php';
 						try {
-							echo loginuser("asdf", "asdf");
+							echo loginuser("asdfpaosidfaspdofasdf", "asdf");
 						} catch (Exception $e)
 						{
 							echo $e;
