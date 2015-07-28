@@ -137,7 +137,7 @@
 		} catch (Exception $e) {
 			echo $e -> getMessage();
 		}
-		return $result; //result is an iterator
+		return $results; //result is an iterator
 		
 	}
 	

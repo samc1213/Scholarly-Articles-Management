@@ -60,6 +60,7 @@
 	        				session_start();
 							if (isset($_SESSION['username'])) {
 								$user = $_SESSION['username'];
+								echo var_dump($user);
 								$grants = getgrants($user);
 								
 								echo var_dump($grants);
