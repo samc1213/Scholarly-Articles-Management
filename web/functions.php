@@ -135,7 +135,7 @@
 			
 			foreach ($results as $result)
 			{
-				echo var_dump($result);
+				echo var_dump($result["name"]);
 			}
 			
 			// echo var_dump(iterator_to_array($results));
