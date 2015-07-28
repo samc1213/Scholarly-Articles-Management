@@ -33,7 +33,7 @@
 	        	<a href="/"> <img id="mainlogo" src="img/sofilogo.png"/> </a>
 	        	<?php
 	        		session_start();
-					if (isset($_SESSION['user'])) {
+					if (isset($_SESSION['username'])) {
 						echo '<button id="logoutheaderbutton" class="logbutton">Logout</button>';		
 					}
 					else {
@@ -45,7 +45,7 @@
 	        </header>
 	        	
 	        	<h2 id="grantheader"><?php session_start();
-	        	if (isset($_SESSION['user'])) {
+	        	if (isset($_SESSION['username'])) {
 	        		echo $_SESSION['firstname'];
 					echo "'s Grants</h2>";
 				}
@@ -57,8 +57,8 @@
 	        	<section id="grants">
 	        			<?php
 	        				session_start();
-							if (isset($_SESSION['user'])) {
-								$user = $_SESSION['user'];
+							if (isset($_SESSION['username'])) {
+								$user = $_SESSION['username'];
 								chdir('/Users/sam/Documents/Aptana Studio 3 Workspace/CP Grants/dist/ruby');
 								$jsongrants = shell_exec('ruby get_grants.rb '.$user);
 								$dirtyphpgrants = (array)json_decode($jsongrants);
@@ -139,7 +139,7 @@
 
 	        	<?php
 	        	session_start();
-	        	if (isset($_SESSION['user'])) {
+	        	if (isset($_SESSION['username'])) {
 	        		echo '<button id="newgrantbutton"><i class="fa fa-plus-square" id="newgrantplus"></i> Add another grant</button>';
 				}?>
 	    	

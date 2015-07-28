@@ -61,24 +61,28 @@
 			$user = $users->findOne(array("username" => $username));
 			
 			$passhash = $user["password"];
+			$firstname = $user["firstname"];
+			$lastname = $user["lastname"];
+			$email = $user["email"];
 				
 		} catch (Exception $e) {
 			throw new Exception ("Trouble connecting to database");
 		}
 		
 		if ($user == null) {
-			$message = array("message" => "User doesn't exist");
-			array_push($result, $message);
+			$result["message"] = "User doesn't exist";
 		}
 		
 		else if (password_verify($password, $passhash)) {
-			$message = array("message" => "SUCCESS");
-			array_push($result, $message);
+			$result["message"] = "SUCCESS";
+			$result["username"] = $username;
+			$result["firstname"] = $firstname;
+			$result["lastname"] = $lastname;
+			$result["email"] = $email;
 		}
 		else
 		{
-			$message = array("message" => "Password doesn't match");
-			array_push($result, $message);
+			$result["message"] = "Password doesn't match";
 		}
 	return $result;
 	}
