@@ -95,7 +95,7 @@
 		
 		$grant = array(
 			        'name' => $name, 
-			        'source' => $password,
+			        'source' => $source,
 			        'awardperiod1' => $awardperiod1,
 			        'awardperiod2' => $awardperiod2,
 			        'status' => $status,
@@ -117,6 +117,26 @@
 		} catch (Exception $e) {
 			throw new Exception($e);
 		}		
+	}
+	
+	function getgrants($user) {
+		$uri = "mongodb://heroku_v7w2qftd:a5h7slci8p0b2p9nt7qe96hmvv@ds027483.mongolab.com:27483/heroku_v7w2qftd";
+		
+		$query = array ("user" => $user);
+		
+		try {
+			$client = new MongoClient($uri);
+			
+			$db = $client->selectDB("heroku_v7w2qftd");
+					
+			$grants = $db->grants;
+			
+			$grants->find($query);
+			
+			echo var_dump(iterator_to_array($grants));
+		} catch (Exception $e) {
+			echo $e -> getMessage();
+		}
 	}
 	
 ?>

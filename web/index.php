@@ -56,9 +56,11 @@
 				?>
 	        	<section id="grants">
 	        			<?php
+	        				include 'functions.php';
 	        				session_start();
 							if (isset($_SESSION['username'])) {
 								$user = $_SESSION['username'];
+								echo getgrants($user);
 								chdir('/Users/sam/Documents/Aptana Studio 3 Workspace/CP Grants/dist/ruby');
 								$jsongrants = shell_exec('ruby get_grants.rb '.$user);
 								$dirtyphpgrants = (array)json_decode($jsongrants);
