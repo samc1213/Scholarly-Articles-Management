@@ -44,6 +44,8 @@
 	
 	function loginuser($username, $password) {
 		require('../vendor/autoload.php');
+		
+		$result = array();
 				
 		try{
 			$uri = "mongodb://heroku_v7w2qftd:a5h7slci8p0b2p9nt7qe96hmvv@ds027483.mongolab.com:27483/heroku_v7w2qftd";
@@ -65,17 +67,20 @@
 		}
 		
 		if ($user == null) {
-			throw new Exception ("User doesn't exist");
+			$message = array("message" => "User doesn't exist");
+			array_push($result, $message);
 		}
 		
 		else if (password_verify($password, $passhash)) {
-				echo "SUCCESS";
+			$message = array("message" => "SUCCESS");
+			array_push($result, $message);
 		}
 		else
 		{
-			throw new Exception ("Password doesn't match");
+			$message = array("message" => "Password doesn't match");
+			array_push($result, $message);
 		}
-
+	return $result;
 	}
 	
 ?>

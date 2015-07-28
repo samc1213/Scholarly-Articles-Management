@@ -13,7 +13,15 @@
 	
 	if ($_POST["type"] == "login") {
 		try {
-			loginuser($_POST['username'], $_POST['password']);
+			$result = loginuser($_POST['username'], $_POST['password']);
+			echo $result['message'];
+			// if ($result =="SUCCESS") {
+				// session_start();
+				// $_SESSION['user'] = $_POST['username'];
+				// $_SESSION['firstname'] = $phpresult['firstname'];
+				// $_SESSION['lastname'] = $phpresult['lastname'];
+				// $_SESSION['email'] = $phpresult['email'];
+			// }
 		} catch (Exception $e) {
 			echo $e -> getMessage();
 		}
