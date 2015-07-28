@@ -167,7 +167,7 @@
 						
 				$grants = $db->grants;
 				
-				$grant = $grants->find(array("name" => $originalname));
+				$grant = $grants->find(array("name" => "Grant1"));
 				echo var_dump(iterator_to_array($grant));
 				
 				$grants->update(array("name" => $originalname, "awardperiod1" => $originalperiod1, "user" => $user), $newdata, array("upsert" => true));
