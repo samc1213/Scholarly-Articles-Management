@@ -23,7 +23,7 @@
 				$_SESSION['email'] = $result['email'];
 			}
 		} catch (Exception $e) {
-			echo $e -> getMessage();
+			// echo $e -> getMessage();
 		}
 	}
 	
