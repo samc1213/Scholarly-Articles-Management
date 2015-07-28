@@ -61,7 +61,13 @@
 							if (isset($_SESSION['username'])) {
 								$user = $_SESSION['username'];
 								$grants = getgrants($user);
-																
+								
+								echo var_dump($grants);
+								
+								foreach ($grants as $grant) {
+									echo var_dump($grant);
+								}
+													
 								$count = 0;
 								
 								if (empty($grants))
