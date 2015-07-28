@@ -41,7 +41,8 @@
 	
 	else if ($_POST["type"] == "editgrant") {
 		$phpdata = (array)json_decode($_POST['data']);
-		echo $phpdata;
+		echo var_dump($phpdata);
+		editgrant
 	}
 	
 ?>
