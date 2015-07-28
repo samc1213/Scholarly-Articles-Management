@@ -70,7 +70,7 @@
 									
 								}
 																
-								foreach ($phpgrants as $grant) {
+								foreach ($grants as $grant) {
 									echo '<div id="grant';
 									echo $count;
 									echo '" class="grant">';
