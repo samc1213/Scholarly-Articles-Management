@@ -60,27 +60,17 @@
 	        				session_start();
 							if (isset($_SESSION['username'])) {
 								$user = $_SESSION['username'];
-								echo $user;
-								echo getgrants($user);
-								chdir('/Users/sam/Documents/Aptana Studio 3 Workspace/CP Grants/dist/ruby');
-								$jsongrants = shell_exec('ruby get_grants.rb '.$user);
-								$dirtyphpgrants = (array)json_decode($jsongrants);
+								$grants = getgrants($user);
 																
-								$cleanphpgrants = array();
-								foreach ($dirtyphpgrants as $grant) {
-									$grant = (array)$grant;
-									array_push($cleanphpgrants, $grant);								
-								}		//this cleans up the generic objects and makes the whole grant structure an array of arrays
-								
 								$count = 0;
 								
-								if (empty($cleanphpgrants))
+								if (empty($grants))
 								{
 									echo "<h3 style='text-align: center; color: red;'>You don't have any grants at the moment. Add one below!</h3>";
 									
 								}
 																
-								foreach ($cleanphpgrants as $cleangrant) {
+								foreach ($phpgrants as $grant) {
 									echo '<div id="grant';
 									echo $count;
 									echo '" class="grant">';
@@ -92,7 +82,7 @@
 									echo '. </span>';
 									
 									echo '<span class="granttitle">';
-									echo $cleangrant['title'];
+									echo $grant['title'];
 									echo '</span>';
 									echo '<span> </span><span class="buttoncover"><button class="btn btn-default editbtn" style="padding: 0;" id="editbtn';
 									echo $count;
@@ -101,15 +91,15 @@
 									
 									echo '"></i></button></span>';
 																									
-									$status = $cleangrant['status'];
-									$agency = $cleangrant['source'];
-									$amount = $cleangrant['amount'];
-									$piamount = $cleangrant['piamount'];
-									$pmonths = $cleangrant['pmonths'];
-									$units = $cleangrant['pmonthunit'];
-									$summary = $cleangrant['summary'];
-									$fromdate = $cleangrant['fromdate'];
-									$todate = $cleangrant['todate'];
+									$status = $grant['status'];
+									$agency = $grant['source'];
+									$amount = $grant['amount'];
+									$piamount = $grant['piamount'];
+									$pmonths = $grant['personmonths'];
+									$units = $grant['specify'];
+									$summary = $grant['summary'];
+									$fromdate = $grant['awardperiod1'];
+									$todate = $grant['awardperiod2'];
 									
 									echo '<span class="status">'.$status.'</span></p>';
 									
