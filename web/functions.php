@@ -167,6 +167,9 @@
 						
 				$grants = $db->grants;
 				
+				$grant = $grants->find(array("name" => $originalname));
+				echo var_dump($grant);
+				
 				$grants->update(array("name" => $originalname, "awardperiod1" => $originalperiod1, "user" => $user), $newdata, array("upsert" => true));
 			} catch (Exception $e) {
 				echo $e -> getMessage();
