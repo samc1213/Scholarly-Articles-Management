@@ -5,7 +5,8 @@ $(document).ready( function () {
 		$.ajax ({
 			type: "POST",
 			url: "api.php",
-			data: {
+			data:
+			{
 				type: "logout",
 			},
 			success: function(data)
@@ -40,17 +41,19 @@ $(document).ready( function () {
 		data['piamount'] = $('#piamount').val();
 		data['description'] = $("#description").val();
 		
-		
 		var jsondata = JSON.stringify(data);
 		
 		$.ajax ({
 			type: "POST",
-			url: "php/newgrant.php",
-			data: {data: jsondata},
+			url: "api.php",
+			data:
+			{
+				type: "newgrant",
+				data: jsondata
+			},
 			success: function(data)
 			{
 				console.log(data);
-				// console.log("logoutattempt");
 				location.reload();
 			}
 		}); //end ajax
