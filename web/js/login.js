@@ -28,6 +28,7 @@ $(document).ready(function () {
 				console.log(typeof(data));
 				if (data == "SUCCESS") 
 				{
+					console.log("YAYLOGIN!");
 					window.location.replace("/");
 				}
 				else
