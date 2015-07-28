@@ -42,6 +42,7 @@
 	else if ($_POST["type"] == "editgrant") {
 		$phpdata = (array)json_decode($_POST['data']);
 		echo var_dump($phpdata);
+		session_start();
 		$ogname = $phpdata['originalname'];
 		$user = $_SESSION['username'];
 		echo "user: ".$user;
