@@ -57,13 +57,13 @@
 			
 			$passhash = $user["password"];
 			
-			if (password_verify($password, $passhash)) {
-				echo "SUCCESS";
-			}
-			else
-			{
-				throw new Exception ("Password doesn't match");
-			}
+			// if (password_verify($password, $passhash)) {
+				// echo "SUCCESS";
+			// }
+			// else
+			// {
+				// throw new Exception ("Password doesn't match");
+			// }
 				
 		} catch (Exception $e) {
 			throw new Exception ($e);
