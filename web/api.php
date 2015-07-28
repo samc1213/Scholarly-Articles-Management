@@ -14,7 +14,7 @@
 	else if ($_POST["type"] == "login") {
 		try {
 			$result = loginuser($_POST['username'], $_POST['password']);
-			echo $result["message"];
+			echo "message:".$result["message"];
 			if ($result["message"]=="SUCCESS") {
 				session_start();
 				$_SESSION['username'] = $result['username'];
