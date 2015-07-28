@@ -1,5 +1,5 @@
 $(document).ready(function () {
-	$("#signupform").submit(function (e) {
+	$("#signinform").submit(function (e) {
 	$('#errorspace').text(" ");
 
 	e.preventDefault();
@@ -16,8 +16,9 @@ $(document).ready(function () {
 	password = $('#password').val();
 		$.ajax ({
 			type: "POST",
-			url: "php/signin.php",
+			url: "api.php",
 			data: {
+				type: "login",
 				username: username,
 				password: password,
 				},
@@ -25,18 +26,16 @@ $(document).ready(function () {
 			{
 				console.log("Data: " + data);
 				console.log(typeof(data));
-				if (data == "ERROR") 
+				if (data == "") 
 				{
-					console.log("boo");
-					$('#errorspace').text("ERROR! THAT USERNAME/PASSWORD COMBO DOESN'T EXIST");
+					window.location.replace("/");
 				}
 				else
 				{
-					console.log("yay");
-					window.location.replace("/");
+					$('#errorspace').text(data);
 				}
 			}
-		}); //end ajax
+		}); //end
 	}); //end login form
 	
 }); //end document ready
