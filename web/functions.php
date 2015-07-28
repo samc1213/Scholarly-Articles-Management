@@ -85,6 +85,11 @@
 			$result["message"] = "Password doesn't match";
 		}
 	return $result;
-	}
+	}//end login user
+
+	function logout() {
+		session_start();
+		session_destroy();
+	} //end logout
 	
 ?>

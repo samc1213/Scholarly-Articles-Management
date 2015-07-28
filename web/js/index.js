@@ -3,8 +3,11 @@ $(document).ready( function () {
 	var originalperiod1;
 	$("#logoutheaderbutton").click( function () {
 		$.ajax ({
-			type: "GET",
-			url: "php/logout.php",
+			type: "POST",
+			url: "api.php",
+			data: {
+				type: "logout",
+			},
 			success: function(data)
 			{
 				console.log(data);
