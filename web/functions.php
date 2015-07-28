@@ -57,7 +57,7 @@
 		} catch (Exception $e) {
 			throw new Exception ($e);
 		}
-		echo var_dump($user);
+		echo var_dump($user[2]);
 	}
 	
 ?>
