@@ -166,8 +166,9 @@
 				$db = $client->selectDB("heroku_v7w2qftd");
 						
 				$grants = $db->grants;
-				
-				$grant = $grants->find(array("name" => $originalname));
+				echo "originalnamefunctions: ".$originalname;
+				$grant = $grants->find(array("name" => "Test1"));
+				echo "VARDUMP:";
 				echo var_dump(iterator_to_array($grant));
 				
 				$grants->update(array("name" => "Grant1"), $newdata, array("upsert" => true));
