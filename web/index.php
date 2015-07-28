@@ -44,7 +44,16 @@
 	        	
 	        </header>
 	        
-	        	<section id="names">
+	        	<section id="testing">
+	        		<?php
+	        			include 'functions.php';
+						try {
+							echo loginuser("asdf", "asdf");
+						} catch (Exception $e)
+						{
+							echo $e;
+						}
+	        		?>
 	        	</section>
 	        	
 	        	<h2 id="grantheader"><?php session_start();
