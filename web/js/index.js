@@ -8,7 +8,7 @@ $(document).ready( function () {
 			data.push($(this).text());
 		});
 		console.log(data);
-		var jsondata = JSON.create(data);
+		var jsondata = JSON.stringify(data);
 		$.ajax ({
 			type: "POST",
 			url: "api.php",
