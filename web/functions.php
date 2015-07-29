@@ -187,7 +187,6 @@
 
 				$messages->insert($message);
 				$mongoid = $message['_id']->{'$id'};
-				echo var_dump($mongoid);
 				
 				$fields = array("id" => $mongoid);
 				
@@ -205,7 +204,7 @@
 				echo $response;
 				
 			} catch (Exception $e) {
-				echo $e -> getMessage();
+				// echo $e -> getMessage();
 			}
 		} //end download
 	?>
