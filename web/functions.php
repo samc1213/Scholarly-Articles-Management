@@ -201,6 +201,10 @@
 				
 				$response = curl_exec($ch);
 				
+				$client = S3Client::factory(array(
+				    'secret' => getenv('AWS_SECRET_ACCESS_KEY'),
+				    'key' => getenv('AWS_ACCESS_KEY_ID')
+				));
 				echo $response;
 				
 			} catch (Exception $e) {
