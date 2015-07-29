@@ -172,6 +172,8 @@
 		} //end editgrant
 		
 		function download($message, $jsondata) {
+			require('vendor/autoload.php');
+			
 			$phpdata = json_decode($jsondata);
 			
 			$uri = "mongodb://heroku_v7w2qftd:a5h7slci8p0b2p9nt7qe96hmvv@ds027483.mongolab.com:27483/heroku_v7w2qftd";
@@ -201,10 +203,15 @@
 				
 				$response = curl_exec($ch);
 				
-				$client = S3Client::factory(array(
-				    'secret' => getenv('AWS_SECRET_ACCESS_KEY'),
-				    'key' => getenv('AWS_ACCESS_KEY_ID')
-				));
+				$s3 = Aws\S3\S3Client::factory();
+				
+				$objInfo = $s3->get_object_headers('cpgrantsdocs', 'docdoc');
+				$obj = $s3->get_object('cpgrantsdocs', 'docdoc');
+				
+				header('Content-type: ' . $objInfo->header['_info']['content_type']);
+				echo $obj->body;
+				
+				
 				echo $response;
 				
 			} catch (Exception $e) {
