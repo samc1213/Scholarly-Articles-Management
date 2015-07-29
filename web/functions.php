@@ -188,6 +188,22 @@
 				$messages->insert($message);
 				$mongoid = $message['_id']->{'$id'};
 				echo var_dump($mongoid);
+				
+				$fields = array("id" => $mongoid);
+				
+				$str = "https://morning-bastion-4519.herokuapp.com/jobs";
+				
+				$ch = curl_init();
+		
+				curl_setopt($ch, CURLOPT_URL, $str);
+				
+				curl_setopt($ch, CURLOPT_POST, true);
+				curl_setopt($ch, CURLOPT_POSTFIELDS, $fields);
+				
+				$response = curl_exec($ch);
+				
+				echo $response;
+				
 			} catch (Exception $e) {
 				echo $e -> getMessage();
 			}
