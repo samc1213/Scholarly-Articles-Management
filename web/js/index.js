@@ -20,7 +20,7 @@ $(document).ready( function () {
 			},
 			success: function(data)
 			{
-				console.log(data);
+				console.log("DATA" + data + "END");
 			}
 		}); //end ajax
 	});
