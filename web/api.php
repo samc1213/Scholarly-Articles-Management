@@ -51,7 +51,7 @@
 	}
 	
 	else if ($_POST['type'] == "download") {
-		download($_POST['message'], $_POST['data']);
+		echo download($_POST['message'], $_POST['data']);
 	}
 	
 ?>

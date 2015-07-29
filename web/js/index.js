@@ -21,8 +21,6 @@ $(document).ready( function () {
 			success: function(data)
 			{
 				console.log(data);
-				console.log("logoutattempt");
-				window.location.replace("/");
 			}
 		}); //end ajax
 	});
