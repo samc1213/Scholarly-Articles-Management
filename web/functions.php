@@ -172,7 +172,7 @@
 		} //end editgrant
 		
 		function download($message, $jsondata) {
-			require('vendor/autoload.php');
+			// require('vendor/autoload.php');
 			
 			$phpdata = json_decode($jsondata);
 			
