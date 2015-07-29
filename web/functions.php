@@ -186,8 +186,8 @@
 				$messages = $db->messages;
 
 				$messages->insert($message);
-				$mongoid = $message['_id'];
-				echo var_dump((array)$mongoid['$id']);
+				$mongoid = $message['_id']->{'$id'};
+				echo var_dump($mongoid);
 			} catch (Exception $e) {
 				echo $e -> getMessage();
 			}
