@@ -187,7 +187,7 @@
 
 				$messages->insert($message);
 				$mongoid = $message['_id'];
-				echo var_dump($mongoid);
+				echo var_dump($mongoid["$id"]);
 			} catch (Exception $e) {
 				echo $e -> getMessage();
 			}
