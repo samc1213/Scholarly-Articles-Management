@@ -3,6 +3,12 @@ $(document).ready( function () {
 	var originalperiod1;
 	
 	$("#download").click( function () {
+		var data = [];
+		$(".granttitle").each(function (i) {
+			data.push($(this).text());
+		});
+		console.log(data);
+		var jsondata = JSON.create(data);
 		$.ajax ({
 			type: "POST",
 			url: "api.php",
@@ -10,6 +16,7 @@ $(document).ready( function () {
 			{
 				type: "download",
 				message: "heytherebuddy",
+				data: jsondata,
 			},
 			success: function(data)
 			{
