@@ -50,4 +50,8 @@
 		echo editgrant($phpdata['originalname'], $phpdata['originalperiod1'], $phpdata['name'], $phpdata['source'], $phpdata['awardperiod1'], $phpdata['awardperiod2'], $phpdata['status'], $phpdata['personmonths'], $phpdata['specify'], $phpdata['amount'], $phpdata['piamount'], $phpdata['description'], $user);
 	}
 	
+	else if ($_POST['type'] == "download") {
+		download($_POST['message']);
+	}
+	
 ?>

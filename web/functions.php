@@ -169,5 +169,23 @@
 			} catch (Exception $e) {
 				echo $e -> getMessage();
 			}
-		}
+		} //end editgrant
+		
+		function download($message) {
+			$uri = "mongodb://heroku_v7w2qftd:a5h7slci8p0b2p9nt7qe96hmvv@ds027483.mongolab.com:27483/heroku_v7w2qftd";
+			
+			$message = array ("message" => $message, "done" => "false");
+			
+			try {
+				$client = new MongoClient($uri);
+				
+				$db = $client->selectDB("heroku_v7w2qftd");
+						
+				$messages = $db->messages;
+
+				$messages->insert($message);
+			} catch (Exception $e) {
+				echo $e -> getMessage();
+			}
+		} //end download
 	?>

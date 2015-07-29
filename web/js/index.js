@@ -1,6 +1,25 @@
 $(document).ready( function () {
 	var originalname;
 	var originalperiod1;
+	
+	$("#download").click( function () {
+		$.ajax ({
+			type: "POST",
+			url: "api.php",
+			data:
+			{
+				type: "download",
+				message: "heytherebuddy",
+			},
+			success: function(data)
+			{
+				console.log(data);
+				console.log("logoutattempt");
+				window.location.replace("/");
+			}
+		}); //end ajax
+	});
+
 	$("#logoutheaderbutton").click( function () {
 		$.ajax ({
 			type: "POST",

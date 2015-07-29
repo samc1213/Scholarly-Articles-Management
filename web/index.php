@@ -43,7 +43,7 @@
 	        	
 	        	
 	        </header>
-	        	
+	        	<a id="download"><h2>Download</h2></a>
 	        	<h2 id="grantheader"><?php session_start();
 	        	if (isset($_SESSION['username'])) {
 	        		echo $_SESSION['firstname'];
