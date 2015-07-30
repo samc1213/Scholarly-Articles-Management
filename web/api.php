@@ -55,7 +55,8 @@
 		if (file_exists('localfile.docx')) {
 			$filestr = file_get_contents('localfile.docx');
 			$trim = ltrim($filestr);
-			file_put_contents('localfile.txt', $trim);
+			$retrim = ltrim($trim);
+			file_put_contents('localfile.txt', $retrim);
 			    // header("Cache-Control: public");
 			    // header("Content-Description: File Transfer");
 			    header("Content-Disposition: attachment; filename=file.txt");
