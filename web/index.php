@@ -127,7 +127,25 @@
 									
 									echo '<span class="status">'.$status.'</span></p>';
 									if ($agency == "DOE"){
-										echo '<button class="DLbutton">DL</button>';
+										echo '<form action=""<button action=class="DLbutton">DL</button>';
+										
+										require ('/app/vendor/autoload.php');
+					
+										$s3 = Aws\S3\S3Client::factory();
+								
+										$params=array(
+										    'Bucket' => 'cpgrantsdocs',
+										    'Key'    => 'docdoc',
+										    'SaveAs' => 'localdoc.docx',
+										);
+								
+										$result = $s3->getObject($params);
+										
+										$file_url = 'localdoc.docx';
+										header('Content-Type: application/octet-stream');
+										header("Content-Transfer-Encoding: Binary"); 
+										header("Content-disposition: attachment; filename=downloadedfile.docx"); 
+										readfile($file_url); // do the double-download-dance (dirty but worky)
 									}
 									
 									echo '<p class="grantagency">'.$agency.'</p>';

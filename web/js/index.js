@@ -2,9 +2,6 @@ $(document).ready( function () {
 	var originalname;
 	var originalperiod1;
 
-	$(".DLbutton").click(function() {
-		$("#downloadpopup").show();
-	});
 
 	$("#download").submit(function () {
 		var data = [];
