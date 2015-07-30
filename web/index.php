@@ -43,7 +43,7 @@
 	        	
 	        	
 	        </header>
-	        	<form id="download" method="post" action="api.php">
+	        	<form id="download" method="post" action="download.php">
 	        		<input name="type" value="download" type="hidden">
 	        		<input name="message" value="hihi" type="hidden">
 	        		<h2><button>Download</button></h2></form>

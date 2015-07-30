@@ -171,10 +171,12 @@
 			}
 		} //end editgrant
 		
-		function download($message, $jsondata) {
+
+		// function download($message, $jsondata) {
+		function download() {
 			// require('vendor/autoload.php');
 			
-			$phpdata = json_decode($jsondata);
+			// $phpdata = json_decode($jsondata);
 			
 			$uri = "mongodb://heroku_v7w2qftd:a5h7slci8p0b2p9nt7qe96hmvv@ds027483.mongolab.com:27483/heroku_v7w2qftd";
 			
@@ -187,10 +189,12 @@
 						
 				$messages = $db->messages;
 
-				$messages->insert($message);
-				$mongoid = $message['_id']->{'$id'};
+				// $messages->insert($message);
+				// $mongoid = $message['_id']->{'$id'};
 				
-				$fields = array("id" => $mongoid);
+				// $fields = array("id" => $mongoid);
+				
+				$files = array ("id" => "testing");
 				
 				$str = "https://morning-bastion-4519.herokuapp.com/jobs";
 				
