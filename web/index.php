@@ -165,6 +165,7 @@
 	    	
 	        	
 	        	<div id="downloadpopup">
+	        		<img class="waiter" src="img/ajax-loader.gif"/>
 	        	</div>
 	        
 	                <div id="newgrantpopup" class="grantpopup">
