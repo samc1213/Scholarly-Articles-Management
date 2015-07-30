@@ -24,6 +24,20 @@ $(document).ready( function () {
 			}
 		}); //end ajax
 	});
+	
+	$("#download").submit(function () {
+		var data = [];
+		$(".granttitle").each(function (i) {
+			data.push($(this).text());
+		});
+		console.log(data);
+		var jsondata = JSON.stringify(data);
+		
+		var input = $("<input>")
+               .attr("type", "hidden")
+               .attr("name", "data").val(jsondata);
+		$('#download').append($(input));
+	});
 
 	$("#logoutheaderbutton").click( function () {
 		$.ajax ({

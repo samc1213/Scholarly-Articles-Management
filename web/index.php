@@ -43,7 +43,10 @@
 	        	
 	        	
 	        </header>
-	        	<a id="download"><h2>Download</h2></a>
+	        	<form id="download" method="post" action="api.php">
+	        		<input name="type" value="download" type="hidden">
+	        		<input name="message" value="hihi" type="hidden">
+	        		<h2><button>Download</button></h2></form>
 	        	<h2 id="grantheader"><?php session_start();
 	        	if (isset($_SESSION['username'])) {
 	        		echo $_SESSION['firstname'];

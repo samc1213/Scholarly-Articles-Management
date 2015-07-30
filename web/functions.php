@@ -211,9 +211,10 @@
 				curl_setopt($resource, CURLOPT_HEADER, 1);
 				curl_setopt($resource, CURLOPT_RETURNTRANSFER, 1);
 				curl_setopt($resource, CURLOPT_BINARYTRANSFER, 1);
-				
-				curl_exec($resource);
-				$file = curl_exec($resource);
+
+				$response = curl_exec($resource);			
+				$header_size = curl_getinfo($ch, CURLINFO_HEADER_SIZE);
+				$file = substr($response, $header_size);				
 				curl_close($resource);
 				echo var_dump($file);
 				
