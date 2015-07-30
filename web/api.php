@@ -51,8 +51,8 @@
 	}
 	
 	else if ($_POST['type'] == "download") {
-		$file = download($_POST['message'], $_POST['data']);
-		if (file_exists($file)) {
+		download($_POST['message'], $_POST['data']);
+		if (file_exists('localfile.docx')) {
 			echo "file exists";
 				    // header("Cache-Control: public");
 				    // header("Content-Description: File Transfer");

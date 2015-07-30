@@ -205,20 +205,22 @@
 				curl_close($ch);
 				
 				$url = 'https://morning-bastion-4519.herokuapp.com/';
-				$resource = curl_init();
 				
-				curl_setopt($resource, CURLOPT_URL, $url);
-				curl_setopt($resource, CURLOPT_HEADER, 1);
-				curl_setopt($resource, CURLOPT_RETURNTRANSFER, 1);
+				$fp = fopen ('localfile.docx', 'w+');//This is the file where we save the    information
 				
-				curl_setopt($resource, CURLOPT_BINARYTRANSFER, 1);
+				$ch = curl_init();
+				
+				curl_setopt($ch, CURLOPT_URL, $url);
+				curl_setopt($ch, CURLOPT_HEADER, 1);
+				curl_setopt($ch, CURLOPT_TIMEOUT, 50);
+				curl_setopt($ch, CURLOPT_FILE, $fp); // write curl response to file
+				curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 
-				$response = curl_exec($resource);			
-				$header_size = curl_getinfo($resource, CURLINFO_HEADER_SIZE);
-				$file = substr($response, $header_size);				
-				curl_close($resource);
+				curl_exec($ch);			
+			
+				curl_close($ch);
 				
-				return $file;		
+				fclose($fp);		
 				
 			} catch (Exception $e) {
 				// echo $e -> getMessage();
