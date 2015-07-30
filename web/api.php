@@ -61,6 +61,9 @@
 				    // header("Content-Transfer-Encoding: binary");
 				    // readfile($file);
 				}
+		else {
+			echo "file no exists";
+		}
 	}
 	
 ?>
