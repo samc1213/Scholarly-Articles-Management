@@ -51,7 +51,7 @@
 	        	if (isset($_SESSION['username'])) {
 	        		echo $_SESSION['firstname'];
 					echo "'s Grants</h2>";
-					require __DIR__.'../../vendor.autoload.php';
+					require ('/app/vendor/autoload.php');
 					
 					$config = array('key' => getenv('AWS_ACCESS_KEY_ID'), 'secret' => getenv('AWS_SECRET_ACCESS_KEY'));
 					$s3 = Aws\S3\S3Client::factory();
