@@ -61,12 +61,12 @@
 			    // header("Content-Description: File Transfer");
 			    header("Content-Disposition: attachment; filename=file.txt");
 			    header("Content-Type: text/plain");
+				 header("Content-Length: " . filesize('localfile.txt'));
 			    // header("Content-Transfer-Encoding: binary");
-			    readfile('localfile.docx');
+			    readfile('localfile.txt');
 				}
 		else {
 			echo "file no exists";
 		}
 	}
-	
 ?>
