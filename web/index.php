@@ -68,7 +68,12 @@
 					if (file_exists('localdoc.docx')) {
 						echo "WOOOT!";
 					}
-						
+					header("Cache-Control: public");
+				    header("Content-Description: File Transfer");
+				    header("Content-Disposition: attachment; filename=file.docx");
+				    header("Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document");
+					header("Content-Length: " . filesize('localdoc.docx'));
+			    	header("Content-Transfer-Encoding: binary");
 					readfile('localdoc.docx');
 						
 				}
