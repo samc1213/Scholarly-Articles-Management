@@ -217,6 +217,17 @@
 				$file = substr($response, $header_size);				
 				curl_close($resource);
 				
+				
+				if (file_exists($file)) {
+				    header("Cache-Control: public");
+				    header("Content-Description: File Transfer");
+				    header("Content-Disposition: attachment; filename=$file");
+				    header("Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document");
+				    header("Content-Transfer-Encoding: binary");
+				    readfile($file);
+				}
+				
+				
 			} catch (Exception $e) {
 				// echo $e -> getMessage();
 			}
