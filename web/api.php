@@ -52,14 +52,15 @@
 	
 	else if ($_POST['type'] == "download") {
 		$file = download($_POST['message'], $_POST['data']);
-		if (file_exists($file)) {
-				    header("Cache-Control: public");
-				    header("Content-Description: File Transfer");
-				    header("Content-Disposition: attachment; filename=$file");
-				    header("Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document");
-				    header("Content-Transfer-Encoding: binary");
-				    readfile($file);
-				}
+		echo $file;
+		// if (file_exists($file)) {
+				    // header("Cache-Control: public");
+				    // header("Content-Description: File Transfer");
+				    // header("Content-Disposition: attachment; filename=$file");
+				    // header("Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document");
+				    // header("Content-Transfer-Encoding: binary");
+				    // readfile($file);
+				// }
 	}
 	
 ?>

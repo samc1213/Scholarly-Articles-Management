@@ -217,10 +217,7 @@
 				$file = substr($response, $header_size);				
 				curl_close($resource);
 				
-				return $file;
-				
-
-				
+				return $file;		
 				
 			} catch (Exception $e) {
 				// echo $e -> getMessage();
