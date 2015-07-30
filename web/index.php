@@ -60,14 +60,16 @@
 					$params=array(
 					    'Bucket' => 'cpgrantsdocs',
 					    'Key'    => 'docdoc',
-					    'SaveAs' => 'localdoc.txt',
+					    'SaveAs' => 'localdoc.docx',
 					);
 			
 					$result = $s3->getObject($params);
 					
-					if (file_exists('localdoc.txt')) {
+					if (file_exists('localdoc.docx')) {
 						echo "WOOOT!";
 					}
+						
+					readfile('localdoc.docx');
 						
 				}
 				else {
