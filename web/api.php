@@ -53,13 +53,12 @@
 	else if ($_POST['type'] == "download") {
 		download($_POST['message'], $_POST['data']);
 		if (file_exists('localfile.docx')) {
-			echo "file exists";
-				    // header("Cache-Control: public");
-				    // header("Content-Description: File Transfer");
-				    // header("Content-Disposition: attachment; filename=$file");
-				    // header("Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document");
-				    // header("Content-Transfer-Encoding: binary");
-				    // readfile($file);
+			    header("Cache-Control: public");
+			    header("Content-Description: File Transfer");
+			    header("Content-Disposition: attachment; filename=$file");
+			    header("Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document");
+			    header("Content-Transfer-Encoding: binary");
+			    readfile($file);
 				}
 		else {
 			echo "file no exists";
