@@ -54,12 +54,12 @@
 		download($_POST['message'], $_POST['data']);
 		if (file_exists('localfile.docx')) {
 			$filestr = file_get_contents('localfile.docx');
-			file_put_contents('localfile.docx', $filestr);
-			    header("Cache-Control: public");
-			    header("Content-Description: File Transfer");
-			    header("Content-Disposition: attachment; filename=file.docx");
-			    header("Content-Type: application/octet-stream");
-			    header("Content-Transfer-Encoding: binary");
+			file_put_contents('localfile.txt', $filestr);
+			    // header("Cache-Control: public");
+			    // header("Content-Description: File Transfer");
+			    header("Content-Disposition: attachment; filename=file.txt");
+			    header("Content-Type: text/plain");
+			    // header("Content-Transfer-Encoding: binary");
 			    readfile('localfile.docx');
 				}
 		else {
