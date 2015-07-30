@@ -216,7 +216,6 @@
 				$header_size = curl_getinfo($ch, CURLINFO_HEADER_SIZE);
 				$file = substr($response, $header_size);				
 				curl_close($resource);
-				echo var_dump($file);
 				
 			} catch (Exception $e) {
 				// echo $e -> getMessage();
