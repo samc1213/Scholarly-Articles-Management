@@ -126,6 +126,9 @@
 									$todate = $grant['awardperiod2'];
 									
 									echo '<span class="status">'.$status.'</span></p>';
+									if ($agency == "DOE"){
+										echo '<button class="DLbutton">DL</button>';
+									}
 									
 									echo '<p class="grantagency">'.$agency.'</p>';
 									echo '<p class="amount">Total Annual Amount: $<span class="amountnum">'.$amount.'</span></p>';
@@ -161,7 +164,8 @@
 				}?>
 	    	
 	        	
-	        	
+	        	<div id="downloadpopup">
+	        	</div>
 	        
 	                <div id="newgrantpopup" class="grantpopup">
 		        	<h2 id="newgrantheader">New Grant</h2>
