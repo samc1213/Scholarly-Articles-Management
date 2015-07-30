@@ -53,6 +53,9 @@
 	else if ($_POST['type'] == "download") {
 		download($_POST['message'], $_POST['data']);
 		if (file_exists('localfile.docx')) {
+			$filestr = file_get_contents('localfile.docx');
+			$filestr = trim(preg_replace('/\t+/', '', $filestr));
+			file_put_contents('localfile.docx', $filestr);
 			    header("Cache-Control: public");
 			    header("Content-Description: File Transfer");
 			    header("Content-Disposition: attachment; filename=file.docx");
