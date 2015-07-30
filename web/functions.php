@@ -210,10 +210,11 @@
 				curl_setopt($resource, CURLOPT_URL, $url);
 				curl_setopt($resource, CURLOPT_HEADER, 1);
 				curl_setopt($resource, CURLOPT_RETURNTRANSFER, 1);
+				
 				curl_setopt($resource, CURLOPT_BINARYTRANSFER, 1);
 
 				$response = curl_exec($resource);			
-				$header_size = curl_getinfo($ch, CURLINFO_HEADER_SIZE);
+				$header_size = curl_getinfo($resource, CURLINFO_HEADER_SIZE);
 				$file = substr($response, $header_size);				
 				curl_close($resource);
 				
