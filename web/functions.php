@@ -194,33 +194,23 @@
 				
 				$str = "https://morning-bastion-4519.herokuapp.com/jobs";
 				
+				$fp = fopen ('localfile.docx', 'w+');//This is the file where we save the    information
+							
 				$ch = curl_init();
 		
 				curl_setopt($ch, CURLOPT_URL, $str);
 				
 				curl_setopt($ch, CURLOPT_POST, true);
-				curl_setopt($ch, CURLOPT_POSTFIELDS, $fields);
-				
-				$response = curl_exec($ch);
-				curl_close($ch);
-				
-				$url = 'https://morning-bastion-4519.herokuapp.com/';
-				
-				$fp = fopen ('localfile.docx', 'w+');//This is the file where we save the    information
-				
-				$ch = curl_init();
-				
-				curl_setopt($ch, CURLOPT_URL, $url);
-				  curl_setopt( $ch, CURLOPT_RETURNTRANSFER, false );
 				curl_setopt($ch, CURLOPT_TIMEOUT, 50);
-				  curl_setopt( $ch, CURLOPT_BINARYTRANSFER, true );
 				curl_setopt($ch, CURLOPT_HEADER, 0);
+				curl_setopt($ch, CURLOPT_POSTFIELDS, $fields);
+				curl_setopt( $ch, CURLOPT_RETURNTRANSFER, false );
+				curl_setopt( $ch, CURLOPT_BINARYTRANSFER, true );
 				curl_setopt($ch, CURLOPT_FILE, $fp); // write curl response to file
 				curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
 
-				curl_exec($ch);			
-			
-				curl_close($ch);
+				curl_exec($ch);
+				curl_close($ch);						
 				
 				fclose($fp);		
 				

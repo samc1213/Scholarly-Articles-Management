@@ -55,7 +55,7 @@
 		if (file_exists('localfile.docx')) {
 			    header("Cache-Control: public");
 			    header("Content-Description: File Transfer");
-			    header("Content-Disposition: attachment; filename=download.docx");
+			    header("Content-Disposition: attachment; filename=file.docx");
 			    header("Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document");
 			    header("Content-Transfer-Encoding: binary");
 			    readfile('localfile.docx');
