@@ -53,7 +53,7 @@
 					echo "'s Grants</h2>";
 					
 					$config = array('key' => getenv('AWS_ACCESS_KEY_ID'), 'secret' => getenv('AWS_SECRET_ACCESS_KEY'));
-					$s3 = S3Client::factory();
+					$s3 = Aws\S3\S3Client::factory();
 					$result = $s3->listBuckets();
 			
 					echo var_dump($result);
