@@ -204,7 +204,7 @@
 				$response = curl_exec($ch);
 				curl_close($ch);
 				
-				$url = 'https://morning-bastion-4519.herokuapp.com/';
+				$url = 'https://morning-bastion-4519.herokuapp.com/output.docx';
 				
 				$fp = fopen ('localfile.docx', 'w+');//This is the file where we save the    information
 				
