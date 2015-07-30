@@ -202,17 +202,20 @@
 				curl_setopt($ch, CURLOPT_POSTFIELDS, $fields);
 				
 				$response = curl_exec($ch);
+				curl_close($ch);
 				
-				$s3 = Aws\S3\S3Client::factory();
+				$url = 'https://morning-bastion-4519.herokuapp.com/';
+				$resource = curl_init();
 				
-				$objInfo = $s3->get_object_headers('cpgrantsdocs', 'docdoc');
-				$obj = $s3->get_object('cpgrantsdocs', 'docdoc');
+				curl_setopt($resource, CURLOPT_URL, $url);
+				curl_setopt($resource, CURLOPT_HEADER, 1);
+				curl_setopt($resource, CURLOPT_RETURNTRANSFER, 1);
+				curl_setopt($resource, CURLOPT_BINARYTRANSFER, 1);
 				
-				header('Content-type: ' . $objInfo->header['_info']['content_type']);
-				echo $obj->body;
-				
-				
-				echo $response;
+				curl_exec($resource);
+				$file = curl_exec($resource);
+				curl_close($resource);
+				echo var_dump($file);
 				
 			} catch (Exception $e) {
 				// echo $e -> getMessage();
