@@ -54,9 +54,6 @@
 		download($_POST['message'], $_POST['data']);
 		if (file_exists('localfile.docx')) {
 			$filestr = file_get_contents('localfile.docx');
-			echo "FIRST:".$filestr;
-			$str = substr($filestr, 1);
-			echo "SECOND:".$str;
 			file_put_contents('localfile.docx', $filestr);
 			    header("Cache-Control: public");
 			    header("Content-Description: File Transfer");
