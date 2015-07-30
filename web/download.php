@@ -9,6 +9,6 @@ file_put_contents('localfile.txt', $retrim);
 // header("Content-Description: File Transfer");
 header("Content-Disposition: attachment; filename=file.txt");
 header("Content-Type: text/plain");
- header("Content-Length: " . filesize('localfile.txt'));
+header("Content-Length: " . filesize('localfile.txt'));
 // header("Content-Transfer-Encoding: binary");
 readfile('localfile.txt');
