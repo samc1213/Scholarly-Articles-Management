@@ -57,7 +57,17 @@
 					$s3 = Aws\S3\S3Client::factory();
 					$result = $s3->listBuckets();
 			
-					echo var_dump($result);
+					$params=array(
+					    'Bucket' => 'cpgrantsdocs',
+					    'Key'    => 'docdoc',
+					    'SaveAs' => 'localdoc.txt',
+					);
+			
+					$result = $s3->getObject($params);
+					
+					if (file_exists('localdoc.txt')) {
+						echo "WOOOT!";
+					}
 						
 				}
 				else {
