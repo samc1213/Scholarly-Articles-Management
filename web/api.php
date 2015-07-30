@@ -55,10 +55,10 @@
 		if (file_exists('localfile.docx')) {
 			    header("Cache-Control: public");
 			    header("Content-Description: File Transfer");
-			    header("Content-Disposition: attachment; filename=$file");
+			    header("Content-Disposition: attachment; filename=download.docx");
 			    header("Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document");
 			    header("Content-Transfer-Encoding: binary");
-			    readfile($file);
+			    readfile('localfile.docx');
 				}
 		else {
 			echo "file no exists";
