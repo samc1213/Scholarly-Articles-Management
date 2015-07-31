@@ -51,14 +51,14 @@
 	}
 	
 	else if ($_POST['type'] == "download") {
-		$id = '2342342341';
+		// $id = '2342342341';
 		// download($_POST['data'], $id);
 		require ('/app/vendor/autoload.php');
 		$s3 = Aws\S3\S3Client::factory();
 		
 		$params=array(
 		    'Bucket' => 'cpgrantsdocs',
-		    'Key'    => $id,
+		    'Key'    => '2342342341',
 		    'SaveAs' => 'localdoc.docx',
 		);
 		
