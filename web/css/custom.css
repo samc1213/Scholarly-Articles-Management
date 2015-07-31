@@ -176,3 +176,8 @@ header {
 	border: solid black 2px;
 	display: none;
 }
+
+#downloadform {
+	position: absolute;
+	top: 50%;
+}
