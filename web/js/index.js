@@ -34,9 +34,14 @@ $(document).ready( function () {
 			},
 			success: function(data)
 			{
-				$("#downloadpopup").append("<form action='download.php' method='post'><input name='id' value='222231'/><button type='submit'>DL!</button></form>");
+				console.log("success");
+				$("#downloadpopup").append("<form action='download.php' method='post' id='downloadform'><input name='id' value='222231' type='hidden'/><button type='submit'>Download The File!</button></form>");
 			}
 		});
+	});
+	
+	$("#downloadform").submit( function () {
+		$("#downloadpopup").hide();
 	});
 
 	$("#logoutheaderbutton").click( function () {
