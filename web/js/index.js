@@ -6,16 +6,16 @@ $(document).ready( function () {
 		var data = [];
 		$(".grant").each(function (i) {
 			var grant = {};
-			grant.push({'name': $(this).find(".granttitle").text()});
-			grant.push({'status': $(this).find(".status").text()});
-			grant.push({'source': $(this).find(".grantagency").text()});
-			grant.push({'amount': $(this).find(".amount").text()});
-			grant.push({'piamount': $(this).find(".piamount").text()});
-			grant.push({'personmonths': $(this).find(".pmonths").text()});
-			grant.push({'specify': $(this).find(".pmonthunits").text()});
-			grant.push({'description': $(this).find(".summary").text()});
-			grant.push({'awardperiod1': $(this).find(".fromdate").text()});
-			grant.push({'awardperiod2': $(this).find(".todate").text()});
+			grant.name = $(this).find(".granttitle").text();
+			grant.status = $(this).find(".status").text();
+			grant.source = $(this).find(".grantagency").text();
+			grant.amount = $(this).find(".amount").text();
+			grant.piamount = $(this).find(".piamount").text();
+			grant.personmonths = $(this).find(".pmonths").text();
+			grant.specify = $(this).find(".pmonthunits").text();
+			grant.description = $(this).find(".summary").text();
+			grant.awardperiod1 = $(this).find(".fromdate").text();
+			grant.awardperiod2 = $(this).find(".todate").text();
 			data.push(grant);
 		});
 		console.log(data);
