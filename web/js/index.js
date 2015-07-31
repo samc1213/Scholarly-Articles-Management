@@ -2,10 +2,18 @@ $(document).ready( function () {
 	var originalname;
 	var originalperiod1;
 
+	$(".dlform").submit(function () {
+		var data = [];
+		$(".grant").each(function (i) {
+			data.push($(this).find("#granttitle").text());
+		});
+		console.log(data);
+		
+	});
 
 	$("#download").submit(function () {
 		var data = [];
-		$(".granttitle").each(function (i) {
+		$(".grant").each(function (i) {
 			data.push($(this).text());
 		});
 		console.log(data);

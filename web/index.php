@@ -43,10 +43,7 @@
 	        	
 	        	
 	        </header>
-	        	<form id="download" method="post" action="download.php">
-	        		<input name="type" value="download" type="hidden">
-	        		<input name="message" value="hihi" type="hidden">
-	        		<h2><button>Download</button></h2></form>
+	        	
 	        	<h2 id="grantheader"><?php session_start();
 	        	if (isset($_SESSION['username'])) {
 	        		echo $_SESSION['firstname'];
@@ -127,7 +124,10 @@
 									
 									echo '<span class="status">'.$status.'</span></p>';
 									if ($agency == "DOE"){
-										echo '<form action="download.php"><button type = "submit" class="DLbutton">DL</button></form>';
+										echo '<form action="download.php" class="dlform"';
+										echo ' id = "dlform';
+										echo $count;
+										echo '"><button type = "submit" class="DLbutton">DL</button></form>';
 										
 									}
 									
