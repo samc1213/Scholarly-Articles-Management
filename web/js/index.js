@@ -18,6 +18,8 @@ $(document).ready( function () {
 			grant.description = $(this).find(".summary").text();
 			grant.awardperiod1 = $(this).find(".fromdate").text();
 			grant.awardperiod2 = $(this).find(".todate").text();
+			grant.firstname = $(document).find("#firstname").text();
+			grant.lastname = $(document).find("#lastname").text();
 			data.push(grant);
 		});
 		console.log(data);
@@ -35,7 +37,7 @@ $(document).ready( function () {
 			success: function(data)
 			{
 				console.log("success");
-				$("#downloadpopup").append("<form action='download.php' method='post' id='downloadform'><input name='id' value='222231' type='hidden'/><button type='submit'>Download The File!</button></form>");
+				$("#downloadpopup").append("<form action='download.php' method='post' id='downloadform'><input name='id' value='222231' type='hidden'/><button type='submit' style='margin-top: 5px;'>Download The File!</button></form>");
 			}
 		});
 	});
