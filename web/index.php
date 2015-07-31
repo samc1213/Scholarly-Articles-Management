@@ -66,11 +66,6 @@
 			
 					$result = $s3->getObject($params);
 					
-					if (file_exists('localdoc.docx')) {
-						echo "WOOOT!";
-					}
-						
-					echo "<a href='localdoc.docx'>Download, MOFO!</a>";
 						
 				}
 				else {
@@ -131,7 +126,7 @@
 										echo '<form action="" class="dlform" method=""';
 										echo ' id = "dlform';
 										echo $count;
-										echo '"><button type = "submit" class="DLbutton">DL</button></form>';
+										echo '"><button type = "submit" class="DLbutton">DOWNLOAD C&P FORM</button></form>';
 										
 									}
 									

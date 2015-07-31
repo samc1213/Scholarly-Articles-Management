@@ -37,6 +37,7 @@ $(document).ready( function () {
 			success: function(data)
 			{
 				console.log("success");
+				$(".waiter").hide();
 				$("#downloadpopup").append("<form action='download.php' method='post' id='downloadform'><input name='id' value='222231' type='hidden'/><button type='submit' style='margin-top: 5px;'>Download The File!</button></form>");
 			}
 		});
