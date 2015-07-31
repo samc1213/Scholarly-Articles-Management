@@ -1,6 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="">
     <head>
+    	<link rel="icon" href="favicon.ico" type="image/x-icon"/>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>Grants</title>
