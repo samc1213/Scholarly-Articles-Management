@@ -5,7 +5,18 @@ $(document).ready( function () {
 	$(".dlform").submit(function () {
 		var data = [];
 		$(".grant").each(function (i) {
-			data.push($(this).find("#granttitle").text());
+			var grant = {};
+			grant.push({'name': $(this).find(".granttitle").text()});
+			grant.push({'status': $(this).find(".status").text()});
+			grant.push({'source': $(this).find(".grantagency").text()});
+			grant.push({'amount': $(this).find(".amount").text()});
+			grant.push({'piamount': $(this).find(".piamount").text()});
+			grant.push({'personmonths': $(this).find(".pmonths").text()});
+			grant.push({'specify': $(this).find(".pmonthunits").text()});
+			grant.push({'description': $(this).find(".summary").text()});
+			grant.push({'awardperiod1': $(this).find(".fromdate").text()});
+			grant.push({'awardperiod2': $(this).find(".todate").text()});
+			data.push(grant);
 		});
 		console.log(data);
 		
