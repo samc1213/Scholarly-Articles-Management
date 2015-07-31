@@ -2,9 +2,9 @@ $(document).ready( function () {
 	var originalname;
 	var originalperiod1;
 
-	$(".dlform").submit(function () {
-		var input = $("<input>").attr("type", "hidden").attr("name", "type").val("download");
-		$(this).append(input);
+	$(".dlform").submit(function (e) {
+		e.preventDefault();
+		$("#downloadpopup").show();
 		var data = [];
 		$(".grant").each(function (i) {
 			var grant = {};
@@ -21,9 +21,22 @@ $(document).ready( function () {
 			data.push(grant);
 		});
 		console.log(data);
-		var jsondata = JSON.stringify(data);
-		var input = $("<input>").attr("type", "hidden").attr("name", "data").val(jsondata);
+		var id = '222231';
 		$(this).append(input);
+				$.ajax ({
+			type: "POST",
+			url: "api.php",
+			data:
+			{
+				type: "download",
+				data: jsondata,
+				id: id,
+			},
+			success: function(data)
+			{
+				$("#downloadpopup").append("<form action='download.php' method='post'><input name='id' value='222231'/><button type='submit'>DL!</button></form>");
+			}
+		});
 	});
 
 	$("#logoutheaderbutton").click( function () {

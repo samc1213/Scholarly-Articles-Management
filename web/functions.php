@@ -26,17 +26,6 @@
 				throw new Exception($e);
 			}
 			
-	// 		
-			// $query = array('weeksAtOne' => array('$gte' => 10));
-			// $cursor = $songs->find($query)->sort(array('decade' => 1));
-			// foreach($cursor as $doc) {
-			    // echo 'In the ' .$doc['decade'];
-			    // echo ', ' .$doc['song']; 
-			    // echo ' by ' .$doc['artist'];
-			    // echo ' topped the charts for ' .$doc['weeksAtOne']; 
-			    // echo ' straight weeks.', "\n";
-			// }	
-			
 		}	//end create user
 		
 		function loginuser($username, $password) {
@@ -46,9 +35,7 @@
 					
 			try{
 				$uri = "mongodb://heroku_v7w2qftd:a5h7slci8p0b2p9nt7qe96hmvv@ds027483.mongolab.com:27483/heroku_v7w2qftd";
-				
-				// $uri = "mongodb://localhost/";		
-						
+									
 				$client = new MongoClient($uri);
 				
 				$db = $client->selectDB("heroku_v7w2qftd");
@@ -173,7 +160,7 @@
 		
 
 		// function download($message, $jsondata) {
-		function download($data, $id) {							
+		function generateDoc($data, $id) {							
 			try {
 				$str = "https://morning-bastion-4519.herokuapp.com/jobs";
 							

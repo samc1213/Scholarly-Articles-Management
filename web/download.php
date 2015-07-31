@@ -4,7 +4,7 @@ $s3 = Aws\S3\S3Client::factory();
 
 $params=array(
     'Bucket' => 'cpgrantsdocs',
-    'Key'    => 'docdoc',
+    'Key'    => $_POST['id'],
     'SaveAs' => 'localdoc.docx',
 );
 
