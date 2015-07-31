@@ -3,6 +3,8 @@ $(document).ready( function () {
 	var originalperiod1;
 
 	$(".dlform").submit(function () {
+		var input = $("<input>").attr("type", "hidden").attr("name", "type").val("download");
+		$(this).append(input);
 		var data = [];
 		$(".grant").each(function (i) {
 			var grant = {};
@@ -19,21 +21,9 @@ $(document).ready( function () {
 			data.push(grant);
 		});
 		console.log(data);
-		
-	});
-
-	$("#download").submit(function () {
-		var data = [];
-		$(".grant").each(function (i) {
-			data.push($(this).text());
-		});
-		console.log(data);
 		var jsondata = JSON.stringify(data);
-		
-		var input = $("<input>")
-               .attr("type", "hidden")
-               .attr("name", "data").val(jsondata);
-		$('#download').append($(input));
+		var input = $("<input>").attr("type", "hidden").attr("name", "data").val(jsondata);
+		$(this).append(input);
 	});
 
 	$("#logoutheaderbutton").click( function () {

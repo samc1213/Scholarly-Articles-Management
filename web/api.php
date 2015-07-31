@@ -51,22 +51,23 @@
 	}
 	
 	else if ($_POST['type'] == "download") {
-		download($_POST['message'], $_POST['data']);
-		if (file_exists('localfile.docx')) {
-			$filestr = file_get_contents('localfile.docx');
-			$trim = ltrim($filestr);
-			$retrim = ltrim($trim);
-			file_put_contents('localfile.txt', $retrim);
-			    // header("Cache-Control: public");
-			    // header("Content-Description: File Transfer");
-			    header("Content-Disposition: attachment; filename=file.txt");
-			    header("Content-Type: text/plain");
-				 header("Content-Length: " . filesize('localfile.txt'));
-			    // header("Content-Transfer-Encoding: binary");
-			    readfile('localfile.txt');
-				}
-		else {
-			echo "file no exists";
-		}
+		$phpdata = json_decode($_POST['data']);
+		echo var_dump($phpdata);
+		require ('/app/vendor/autoload.php');
+		$s3 = Aws\S3\S3Client::factory();
+		
+		$params=array(
+		    'Bucket' => 'cpgrantsdocs',
+		    'Key'    => 'docdoc',
+		    'SaveAs' => 'localdoc.docx',
+		);
+		
+		$result = $s3->getObject($params);
+		
+		$file_url = 'localdoc.docx';
+		header('Content-Type: application/octet-stream');
+		header("Content-Transfer-Encoding: Binary"); 
+		header("Content-disposition: attachment; filename=downloadedfile.docx"); 
+		readfile($file_url);	
 	}
 ?>
