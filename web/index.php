@@ -46,9 +46,11 @@
 	        	
 	        	<h2 id="grantheader"><?php session_start();
 	        	if (isset($_SESSION['username'])) {
-	        		echo '<span id="firstname"> $_SESSION["firstname"] </span>';
+	        		echo '<span id="firstname">';
+	        		echo $_SESSION["firstname"];
+	        		echo '</span>';
 					echo ' ';
-					echo '<span id="lastname"> $_SESSION["lastname"] </span>';
+					echo '<span id="lastname">'.$_SESSION["lastname"].'</span>';
 					echo "'s Grants</h2>";
 					require ('/app/vendor/autoload.php');
 					
