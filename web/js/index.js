@@ -22,8 +22,7 @@ $(document).ready( function () {
 		});
 		console.log(data);
 		var id = '222231';
-		$(this).append(input);
-				$.ajax ({
+		$.ajax ({
 			type: "POST",
 			url: "api.php",
 			data:
