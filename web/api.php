@@ -52,7 +52,7 @@
 	
 	else if ($_POST['type'] == "download") {
 		$id = '2342342341';
-		download($_POST['data'], $id);
+		// download($_POST['data'], $id);
 		require ('/app/vendor/autoload.php');
 		$s3 = Aws\S3\S3Client::factory();
 		
