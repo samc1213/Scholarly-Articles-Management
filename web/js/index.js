@@ -9,9 +9,9 @@ $(document).ready( function () {
 			grant.name = $(this).find(".granttitle").text();
 			grant.status = $(this).find(".status").text();
 			grant.source = $(this).find(".grantagency").text();
-			grant.amount = $(this).find(".amount").text();
-			grant.piamount = $(this).find(".piamount").text();
-			grant.personmonths = $(this).find(".pmonths").text();
+			grant.amount = $(this).find(".amountnum").text();
+			grant.piamount = $(this).find(".piamountnum").text();
+			grant.personmonths = $(this).find(".pmonthnum").text();
 			grant.specify = $(this).find(".pmonthunits").text();
 			grant.description = $(this).find(".summary").text();
 			grant.awardperiod1 = $(this).find(".fromdate").text();
