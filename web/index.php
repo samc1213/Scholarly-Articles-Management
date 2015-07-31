@@ -139,7 +139,7 @@
 									echo '</div>';
 								}
 								
-								if (count($cleanphpgrants) <=2) 
+								if (count($grants) <=2) 
 								{
 									echo "<div style='height: 10em;'></div>";
 								}
