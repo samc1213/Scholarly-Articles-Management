@@ -124,7 +124,7 @@
 									
 									echo '<span class="status">'.$status.'</span></p>';
 									if ($agency == "DOE"){
-										echo '<form action="download.php" class="dlform" method="get"';
+										echo '<form action="api.php" class="dlform" method="post"';
 										echo ' id = "dlform';
 										echo $count;
 										echo '"><button type = "submit" class="DLbutton">DL</button></form>';
