@@ -21,6 +21,7 @@ $(document).ready( function () {
 			data.push(grant);
 		});
 		console.log(data);
+		var jsondata = JSON.stringify(data);
 		var id = '222231';
 		$.ajax ({
 			type: "POST",
