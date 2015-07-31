@@ -24,7 +24,7 @@ $(document).ready( function () {
 		});
 		console.log(data);
 		var jsondata = JSON.stringify(data);
-		var id = '222231';
+		var id = Math.random() * 10000;
 		$.ajax ({
 			type: "POST",
 			url: "api.php",

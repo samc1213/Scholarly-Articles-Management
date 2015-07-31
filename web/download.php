@@ -10,6 +10,11 @@ $params=array(
 
 $result = $s3->getObject($params);
 
+$result = $s3->deleteObject(array(
+    'Bucket' => 'cpgrantsdocs',
+    'Key'    => $_POST['id']
+));
+
 $file_url = 'localdoc.docx';
 header('Content-Type: application/octet-stream');
 header("Content-Transfer-Encoding: Binary"); 
