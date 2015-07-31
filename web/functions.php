@@ -173,47 +173,21 @@
 		
 
 		// function download($message, $jsondata) {
-		function download() {
-			// require('vendor/autoload.php');
-			
-			// $phpdata = json_decode($jsondata);
-			
-			$uri = "mongodb://heroku_v7w2qftd:a5h7slci8p0b2p9nt7qe96hmvv@ds027483.mongolab.com:27483/heroku_v7w2qftd";
-			
-			$message = array ("message" => $message, "done" => "false", "data" => $phpdata);
-			
+		function download($data, $id) {							
 			try {
-				$client = new MongoClient($uri);
-				
-				$db = $client->selectDB("heroku_v7w2qftd");
-						
-				$messages = $db->messages;
-
-				// $messages->insert($message);
-				// $mongoid = $message['_id']->{'$id'};
-				
-				// $fields = array("id" => $mongoid);
-				
-				$files = array ("id" => "testing");
-				
 				$str = "https://morning-bastion-4519.herokuapp.com/jobs";
-				
-				$fp = fopen ('localfile.docx', 'w+');//This is the file where we save the    information
 							
 				$ch = curl_init();
-		
-				curl_setopt($ch, CURLOPT_URL, $str);
 				
+				$fields = array("id" => $id, "data" => $data);
+
+				curl_setopt($ch, CURLOPT_URL, $str);
 				curl_setopt($ch, CURLOPT_POST, true);
-				curl_setopt($ch, CURLOPT_TIMEOUT, 50);
-				curl_setopt($ch, CURLOPT_HEADER, 0);
+				curl_setopt($ch, CURLOPT_HEADER, 1);
 				curl_setopt($ch, CURLOPT_POSTFIELDS, $fields);
-				curl_setopt( $ch, CURLOPT_RETURNTRANSFER, false );
-				curl_setopt( $ch, CURLOPT_BINARYTRANSFER, true );
-				curl_setopt($ch, CURLOPT_FILE, $fp); // write curl response to file
 				curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
 
-				curl_exec($ch);
+				$response = curl_exec($ch);
 				curl_close($ch);						
 				
 				fclose($fp);		
