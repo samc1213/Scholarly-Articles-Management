@@ -40,9 +40,11 @@ $(document).ready( function () {
 		});
 	});
 	
-	$("#downloadform").submit( function () {
-		$("#downloadpopup").hide();
-	});
+	
+	$(document).on('click', '#downloadform', function(){ 
+    	$("#downloadpopup").hide();
+
+	}); 
 
 	$("#logoutheaderbutton").click( function () {
 		$.ajax ({
