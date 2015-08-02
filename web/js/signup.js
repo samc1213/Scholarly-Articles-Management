@@ -38,6 +38,7 @@ $(document).ready (function () {
 				}
 				else
 				{
+					console.log(data);
 					$('#errorspace').text("THERE WAS AN ERROR ADDING THAT USERNAME");
 				}
 			}
