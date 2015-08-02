@@ -29,11 +29,11 @@ $(document).ready (function () {
 			success: function(data)
 			{
 				console.log("DATA" + data + "END");
-				if (data == "0") 
+				if (data == "	0") 
 				{
 					$('#errorspace').text("ERROR! THAT USERNAME EXISTS");
 				}
-				else if (data == "")
+				else if (data == "	")
 				{
 					window.location.replace("/");
 				}
