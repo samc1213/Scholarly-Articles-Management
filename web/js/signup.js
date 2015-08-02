@@ -28,14 +28,13 @@ $(document).ready (function () {
 				},
 			success: function(data)
 			{
-				console.log("DATA" + data);
+				console.log("DATA" + data + "END");
 				if (data == "0") 
 				{
 					$('#errorspace').text("ERROR! THAT USERNAME EXISTS");
 				}
 				else if (data == "")
 				{
-										console.log("DATA" + data);
 					window.location.replace("/");
 				}
 				else
