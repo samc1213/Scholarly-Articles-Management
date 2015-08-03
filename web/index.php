@@ -82,6 +82,7 @@
 								$user = $_SESSION['username'];
 
 								$grants = getgrants($user);
+								echo var_dump($grants);
 				
 								$count = 0;
 								

@@ -45,7 +45,7 @@ $(document).ready( function () {
 	});
 	
 	
-	$(document).on('click', '#downloadform', function(){ 
+	$(document).on('submit', '#downloadform', function(){ 
     	$(".waiter").show();
     	$("#downloadpopup").hide();
     	$("#downloadform").remove();
