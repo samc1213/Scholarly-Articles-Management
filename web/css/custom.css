@@ -58,9 +58,13 @@ header {
 	overflow: scroll;
 	z-index: 100;*/
 	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
 	display: none;
 	text-align: center;
 	z-index: 50;
+	background-color: white;
+	border: 2px black solid;
 }
 
 .grantpopup input {

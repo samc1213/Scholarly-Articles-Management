@@ -239,7 +239,7 @@
 				       
 				       
 				       <label class="biglabel" for="amount">Total Annual Amount:</label>
-				       <span>$</span><input type="text" id="amount"/> <br><br>
+				       <span>$</span><input type="text" id="amount"/>
 				       
 				       <label class="biglabel" for="piamount">Total Annual Amount to PI:</label>
 				       <span>$</span><input type="text" id="piamount"/> <br><br>
