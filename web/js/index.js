@@ -47,7 +47,7 @@ $(document).ready( function () {
 	
 	$(".compareform").submit( function (e) {
 		e.preventDefault();
-		var grantnum = $(this).find('input[name="grantnum"]');
+		var grantnum = $(this).find('input[name="grantnum"]').val();
 		console.log("grantnum: " + grantnum);
 		$("#comparepopup").show();
 		var count = 0;
