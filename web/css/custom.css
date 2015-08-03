@@ -58,15 +58,17 @@ header {
 	overflow: scroll;
 	z-index: 100;*/
 	width: 90%;
-}
-
-.grantpopup input {
-	display: inline;
 	display: none;
 	text-align: center;
 	z-index: 50;
 }
 
+.grantpopup input {
+	display: inline;
+}
+.grantpopup label {
+	display: inline;
+}
 
 #newgrantheader {
 	text-align: center;
