@@ -155,6 +155,10 @@
 									echo '<td class="dates"><span class="fromdate">'.$fromdate.'</span> to <span class="todate">'.$todate.'</span></td>';
 									echo '<td class = "location"><span class="locationval">'.$location.'</span></td>';
 									echo '<td class="summary">'.$summary.'</td>';
+									echo '<td> </span><span class="buttoncover"><button class="btn btn-default editbtn" style="padding: 0;" id="editbtn';
+									echo $count;
+									echo '"><i class="fa fa-pencil-square-o"';
+									echo '"></i></button></td>';
 									echo '<span class="comparison" style="display:none">';
 									echo '</tr>';
 								}
@@ -261,7 +265,7 @@
 		        	<h2 id="editgrantheader">Edit Grant</h2>
 		        	<form id="editgrantform">
 		        		<label class="biglabel" for="grantname">Grant Name:</label>
-				        <input type="text" id="egrantname" style="width: 90%;"/> <br><br>
+				        <input type="text" id="egrantname" class ="wideinput"/> <br><br>
 				        
 		        		<label class="biglabel" for="esource">Source:</label>
 				        <select id="esource">
@@ -307,10 +311,10 @@
 				       <span>$</span><input type="text" id="epiamount"/> <br><br>
 				       
 				       <label class="biglabel" for="elocation">Location:</label>
-				       <input type="text" id="elocation"/> <br><br>
+				       <input type="text" id="elocation" class ="wideinput"/> <br><br>
 				       
 				       <label class="biglabel" for="edescription">Description:</label>
-				       <textarea type="text" rows="4" id="edescription"></textarea> <br><br>
+				       <textarea type="text" rows="4" id="edescription" class ="wideinput"></textarea> <br><br>
 				       
 				       <button style="margin-bottom: 1em;">Save</button>
 						
