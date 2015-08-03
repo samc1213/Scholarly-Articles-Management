@@ -44,7 +44,7 @@ header {
 }
 
 .grantpopup {
-	position: relative;
+	/*position: relative;
 	left: 50%;
 	top: 50%;
 	margin-left: -15em;
@@ -56,8 +56,14 @@ header {
 	display: none;
 	text-align: center;
 	overflow: scroll;
-	z-index: 100;
+	z-index: 100;*/
+	width: 90%;
 }
+
+.grantpopup input {
+	display: block;
+}
+
 
 #newgrantheader {
 	text-align: center;
