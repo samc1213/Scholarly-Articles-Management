@@ -121,6 +121,7 @@
 									$summary = $grant['description'];
 									$fromdate = $grant['awardperiod1'];
 									$todate = $grant['awardperiod2'];
+									$location = $grant['location'];
 									
 									echo '<span class="status">'.$status.'</span></p>';
 									if ($agency == "DOE"){
@@ -136,6 +137,7 @@
 									echo '<p class="piamount">Total Annual Amount to PI: $<span class="piamountnum">'.$piamount.'</span></p>';
 									echo '<p class="pmonths"> <span class="pmonthnum">'.$pmonths.'</span> <span class="pmonthunits">'.$units. '</span> person-months</p>';
 									echo '<p class="dates"><span class="fromdate">'.$fromdate.'</span> to <span class="todate">'.$todate.'</span></p>';
+									echo '<p class = "location">'.$location.'</p>';
 									echo '<p class="summary">'.$summary.'</p>';
 									echo '</div>';
 								}
@@ -221,6 +223,9 @@
 				       <label class="biglabel" for="piamount">Total Annual Amount to PI:</label>
 				       <span>$</span><input type="text" id="piamount"/> <br><br>
 				       
+				       <label class="biglabel" for="location">Location:</label>
+				       <input type="text" id="location"/> <br><br>
+				       
 				       <label class="biglabel" for="description">Description:</label>
 				       <textarea type="text" rows="4" id="description"></textarea> <br><br>
 				       
@@ -279,6 +284,9 @@
 				       
 				       <label class="biglabel" for="epiamount">Total Annual Amount to PI:</label>
 				       <span>$</span><input type="text" id="epiamount"/> <br><br>
+				       
+				       <label class="biglabel" for="elocation">Location:</label>
+				       <input type="text" id="elocation"/> <br><br>
 				       
 				       <label class="biglabel" for="edescription">Description:</label>
 				       <textarea type="text" rows="4" id="edescription"></textarea> <br><br>

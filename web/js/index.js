@@ -91,6 +91,7 @@ $(document).ready( function () {
 		data['amount'] = $('#amount').val();
 		data['piamount'] = $('#piamount').val();
 		data['description'] = $("#description").val();
+		data['location'] = $("#location").val();
 		
 		var jsondata = JSON.stringify(data);
 		
@@ -137,6 +138,7 @@ $(document).ready( function () {
 		data['amount'] = $('#eamount').val();
 		data['piamount'] = $('#epiamount').val();
 		data['description'] = $("#edescription").val();
+		data['location'] = $("#elocation").val();
 
 		var jsondata = JSON.stringify(data);
 		

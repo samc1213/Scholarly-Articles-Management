@@ -36,7 +36,7 @@
 		$username = $_SESSION['username'];
 		$phpdata = (array)json_decode($_POST['data']);
 		echo var_dump($phpdata);
-		newgrant($phpdata['name'], $phpdata['source'], $phpdata['awardperiod1'], $phpdata['awardperiod2'], $phpdata['status'], $phpdata['personmonths'], $phpdata['specify'], $phpdata['amount'], $phpdata['piamount'], $phpdata['description'], $username);
+		newgrant($phpdata['name'], $phpdata['source'], $phpdata['awardperiod1'], $phpdata['awardperiod2'], $phpdata['status'], $phpdata['personmonths'], $phpdata['specify'], $phpdata['amount'], $phpdata['piamount'], $phpdata['description'], $username, $phpdata['location']);
 	}
 	
 	else if ($_POST["type"] == "editgrant") {
@@ -47,7 +47,7 @@
 		$user = $_SESSION['username'];
 		echo "user: ".$user;
 		echo "goname".$ogname;
-		echo editgrant($phpdata['originalname'], $phpdata['originalperiod1'], $phpdata['name'], $phpdata['source'], $phpdata['awardperiod1'], $phpdata['awardperiod2'], $phpdata['status'], $phpdata['personmonths'], $phpdata['specify'], $phpdata['amount'], $phpdata['piamount'], $phpdata['description'], $user);
+		echo editgrant($phpdata['originalname'], $phpdata['originalperiod1'], $phpdata['name'], $phpdata['source'], $phpdata['awardperiod1'], $phpdata['awardperiod2'], $phpdata['status'], $phpdata['personmonths'], $phpdata['specify'], $phpdata['amount'], $phpdata['piamount'], $phpdata['description'], $user, $phpdata['location']);
 	}
 	
 	else if ($_POST['type'] == "download") {
