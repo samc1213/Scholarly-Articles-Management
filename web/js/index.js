@@ -132,6 +132,7 @@ $(document).ready( function () {
 			// $("#newvalidspan").val("All fields required");
 			// return;
 		// }
+		
 					
 		var data = {};
 		
@@ -227,6 +228,7 @@ $(document).ready( function () {
 			$('#shield').css('background-color', 'white');
 			$(".grantpopup").hide();
 			$('.editbtn').show();	
+			$('#newgrantbutton').show();
 		}
 	});
 
@@ -234,6 +236,7 @@ $(document).ready( function () {
 	
 	$("#newgrantbutton").click(function(evt) {
 		evt.stopPropagation();
+		$(this).hide();
 		console.log('hi');
 		$("#newgrantpopup").show();
 		$('#shield').css('background-color', 'grey');
