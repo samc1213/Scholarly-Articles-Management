@@ -5,6 +5,13 @@ $(document).ready( function () {
 	var grantnum;
 	$("#maintable").stupidtable();
 
+	$("#newcpform").click (function () {
+		$("$comparisonbox").show();
+		$('#shield').css('background-color', 'grey');
+		$('.editbtn').hide();
+		$("#newgrantbutton").hide();		
+	});
+
 	$(".dlform").submit(function (e) {
 		e.preventDefault();
 		$("#downloadpopup").show();

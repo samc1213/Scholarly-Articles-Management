@@ -221,3 +221,18 @@ td {
 .wideinput {
 	width: 70%;
 }
+
+#newcpform {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#comparisonbox {
+	position: fixed;
+	width: 50%;
+	top: 50%;
+	left: 50%;
+	background-color: white;
+	border: black solid 2px;
+	display: none;
+}

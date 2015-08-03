@@ -74,6 +74,10 @@
 				}
 				
 				?>
+				
+				<button id="newcpform">Create New C&P Form</button>
+				<div id="comparisonbox"></div>
+				
 	        	<section id="grants">
 	        			<?php
 	        				include 'functions.php';
@@ -111,11 +115,11 @@
 									echo $count;
 									echo '" class="grant">';
 									
-									echo '<td class="grantnum">';
-									$count = $count + 1;
-									echo $count;
-									
-									echo '. </td>';
+									// echo '<td class="grantnum">';
+									// $count = $count + 1;
+									// echo $count;
+// 									
+									// echo '. </td>';
 									
 									echo '<td class="granttitle">';
 									echo $grant['name'];
