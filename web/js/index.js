@@ -81,7 +81,7 @@ $(document).ready( function () {
 		$compareegrant = $("#grant" + comparecount);
 		var compareename = $compareegrant.find(".grantname").text();
 		if (comparecount != grantnum) {
-			$("#comparelabel").text("Compare " + comparername + "to " + compareename);
+			$("#comparelabel").text("Compare " + comparername + " to " + compareename);
 			var grantstr = "#grant" + comparecount;
 			$grant = $(document).find(grantstr);
 			var str = $(this).find('input[name="comparisontext"]').val();
@@ -89,10 +89,10 @@ $(document).ready( function () {
 			$(this).find('input[name="comparisontext"]').val('');
 		}
 
-		if (comparecount == $(".grant").length)
+		if (comparecount == $(".grant").length - 1)
 		{
 			console.log("HIDE!");
-			$("#compareformpopup").hide();
+			$("#comparepopup").hide();
 		}
 		comparecount = comparecount + 1;
 	});
