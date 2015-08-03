@@ -61,7 +61,10 @@ header {
 }
 
 .grantpopup input {
-	display: block;
+	display: inline;
+	display: none;
+	text-align: center;
+	z-index: 50;
 }
 
 
