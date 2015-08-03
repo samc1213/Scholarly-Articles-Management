@@ -51,6 +51,6 @@
 	}
 	
 	else if ($_POST['type'] == "download") {
-		generateDoc($_POST['data'], $_POST['id']);
+		echo generateDoc($_POST['data'], $_POST['id']);
 	}
 ?>
