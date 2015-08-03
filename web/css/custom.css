@@ -193,6 +193,7 @@ header {
 }
 
 #maintable {
+	position: absolute;
 	width: 90%;
 	margin-left: auto;
 	margin-right: auto;
@@ -200,6 +201,6 @@ header {
 }
 
 td {
-	padding-left: 2em;
-	padding-right: 2em;
+	padding-left: .5em;
+	padding-right: .5em;
 }
