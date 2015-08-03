@@ -252,7 +252,8 @@ $(document).ready( function () {
 	});//end logout click
 	
 	$(".editbtn").click(function(evt) {
-		evt.stopPropagation();		
+		evt.stopPropagation();
+		$("#newgrantbutton").hide();		
 		console.log("yo");
 		
 		var buttonnumber = $(this).attr('id').substr(7);

@@ -102,7 +102,8 @@
 								<th data-sort="float">Person Months</th>
 								<th data-sort="int">Dates</th>
 								<th data-sort="string">Location</th>
-								<th data-sort="string">Description</th>																
+								<th data-sort="string">Description</th>
+								<th>Edit</th>																
 								</tr></thead> <tbody>';
 																
 								foreach ($grants as $grant) {
