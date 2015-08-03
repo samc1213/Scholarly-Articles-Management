@@ -91,7 +91,19 @@
 									
 								}
 								
-								echo '<table>';
+								echo '<table id="maintable">';
+								echo '<tr>
+								<th>#</th>
+								<th>Title</th>
+								<th>Status</th>
+								<th>Agency</th>
+								<th>Amount</th>
+								<th>Amount to PI</th>
+								<th>Person Months</th>
+								<th>Dates</th>
+								<th>Location</th>
+								<th>Description</th>																
+								</tr>';
 																
 								foreach ($grants as $grant) {
 									echo '<tr id="grant';
@@ -139,7 +151,7 @@
 									echo '<td class="grantagency">'.$agency.'</td>';
 									echo '<td class="amount">$<span class="amountnum">'.$amount.'</span></td>';
 									echo '<td class="piamount">$<span class="piamountnum">'.$piamount.'</span></td>';
-									echo '<td class="pmonths"> <span class="pmonthnum">'.$pmonths.'</span> <span class="pmonthunits">'.$units. '</span></td>';
+									echo '<td class="pmonths"> <span class="pmonthnum">'.$pmonths.'</span> <span class="pmonthunits">'.$units. '</span> </td>';
 									echo '<td class="dates"><span class="fromdate">'.$fromdate.'</span> to <span class="todate">'.$todate.'</span></td>';
 									echo '<td class = "location"><span class="locationval">'.$location.'</span></td>';
 									echo '<td class="summary">'.$summary.'</td>';
