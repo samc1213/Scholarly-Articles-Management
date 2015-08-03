@@ -6,10 +6,10 @@ $(document).ready( function () {
 	$("#maintable").stupidtable();
 
 	$(window).resize(function () {
-		if ($("#comparisonbox").show())
+		if ($("#comparisonbox").is(":visible"))
 		{
 			var h = $(window).height();
-			$("#junkdiv").height(h - $("header").height() - $("#grantheader").height() - $("#grants").height() - $("#comparisonbox").height());
+			$("#junkdiv").height(h - $("header").outerHeight(true) - $("#grantheader").outerHeight(true) - $("#grants").outerHeight(true) - $("#comparisonbox").outerHeight(true));
 		}
 	});
 
@@ -17,7 +17,7 @@ $(document).ready( function () {
 		e.stopPropagation();
 		$("#comparisonbox").show();
 		var h = $(window).height();
-		$("#junkdiv").height(h - $("header").height() - $("#grantheader").height() - $("#grants").height() - $("#comparisonbox").height());
+		$("#junkdiv").height(h - $("header").outerHeight(true) - $("#grantheader").outerHeight(true) - $("#grants").outerHeight(true) - $("#comparisonbox").outerHeight(true));
 		$('#shield').css('background-color', 'grey');
 		$('.editbtn').hide();
 		$("#newgrantbutton").hide();		
