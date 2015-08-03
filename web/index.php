@@ -95,13 +95,12 @@
 								}
 								
 								else {
-									echo '<button id="newcpform">Create New C&P Form</button>
+									echo '<div id="newcpdiv"><button id="newcpform">Create New C&P Form</button></div>
 									<div id="comparisonbox"></div>';
 								}
 								
 								echo '<table id="maintable" border="1">';
 								echo '<thead><tr>
-								<th>#</th>
 								<th data-sort="string">Title</th>
 								<th data-sort="string">Status</th>
 								<th data-sort="string">Agency</th>
