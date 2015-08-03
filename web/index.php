@@ -137,11 +137,11 @@
 									// }
 									
 									echo '<td class="grantagency">'.$agency.'</td>';
-									echo '<td class="amount">Total Annual Amount: $<span class="amountnum">'.$amount.'</span></td>';
-									echo '<td class="piamount">Total Annual Amount to PI: $<span class="piamountnum">'.$piamount.'</span></td>';
-									echo '<td class="pmonths"> <span class="pmonthnum">'.$pmonths.'</span> <span class="pmonthunits">'.$units. '</span> person-months</td>';
+									echo '<td class="amount">$<span class="amountnum">'.$amount.'</span></td>';
+									echo '<td class="piamount">$<span class="piamountnum">'.$piamount.'</span></td>';
+									echo '<td class="pmonths"> <span class="pmonthnum">'.$pmonths.'</span> <span class="pmonthunits">'.$units. '</span></td>';
 									echo '<td class="dates"><span class="fromdate">'.$fromdate.'</span> to <span class="todate">'.$todate.'</span></td>';
-									echo '<td class = "location">Location: <span class="locationval">'.$location.'</span></td>';
+									echo '<td class = "location"><span class="locationval">'.$location.'</span></td>';
 									echo '<td class="summary">'.$summary.'</td>';
 									echo '<span class="comparison" style="display:none">';
 									echo '</tr>';
