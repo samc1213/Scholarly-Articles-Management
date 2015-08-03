@@ -119,9 +119,6 @@ header {
 }
 
 .status {
-	font-style: italic;
-	font-weight: normal;
-	float: right;
 }
 
 .amount {
@@ -202,7 +199,7 @@ header {
 	border: solid black 2px;
 }
 
-tr {
+td {
 	padding-left: 2em;
 	padding-right: 2em;
 }
