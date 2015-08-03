@@ -67,12 +67,12 @@ header {
 	border: 2px black solid;
 }
 
-.grantpopup input {
+/*.grantpopup input {
 	display: inline;
-}
-.grantpopup label {
+}*/
+/*.grantpopup label {
 	display: inline;
-}
+}*/
 
 #newgrantheader {
 	text-align: center;
