@@ -45,18 +45,22 @@ $(document).ready( function () {
 		});
 	});
 	
-	$("#compareform").submit( function () {
+	$(".compareform").submit( function (e) {
 		e.preventDefault();
 		var grantnum = $(this).find('input[name="grantnum"]');
 		console.log("grantnum: " + grantnum);
-		// $("$comparepopup").show();
-		// var count = 0;
-		// while (count < $(".grant").length) {
-			// var grantstr = "#grant" + count;
-			// $grant = $(document).find(grantstr);
-			// $grant.find("")
-		// }
-		
+		$("$comparepopup").show();
+		var count = 0;
+		while (count < $(".grant").length) {
+			$(".compareformpopup").submit( function (e) {
+				e.preventDefault();
+				var grantstr = "#grant" + count;
+				$grant = $(document).find(grantstr);
+				var str = $(this).find('input[name="comparisontext"]').text();
+				$grant.find(".comparison").text(str);
+			});
+			count = count + 1;
+		}
 	});
 	
 	$(document).on('submit', '#downloadform', function(){ 

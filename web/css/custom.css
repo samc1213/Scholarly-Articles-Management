@@ -181,3 +181,16 @@ header {
 	position: absolute;
 	top: 50%;
 }
+
+#comparepopup {
+	display: none;
+	position: fixed;
+	background-color: white;
+	border: solid black 4px;
+	top: 50%;
+	left: 50%;
+	width: 30em;
+	height: 5em;
+	margin-left: -15em;
+	margin-top: -2.5em;
+}
