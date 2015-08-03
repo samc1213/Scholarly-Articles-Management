@@ -92,18 +92,18 @@
 								}
 								
 								echo '<table id="maintable" border="1">';
-								echo '<tr>
+								echo '<thead><tr>
 								<th>#</th>
-								<th>Title</th>
-								<th>Status</th>
-								<th>Agency</th>
-								<th>Amount</th>
-								<th>Amount to PI</th>
-								<th>Person Months</th>
-								<th>Dates</th>
-								<th>Location</th>
-								<th>Description</th>																
-								</tr>';
+								<th data-sort="string">Title</th>
+								<th data-sort="string">Status</th>
+								<th data-sort="string">Agency</th>
+								<th data-sort="float">Amount</th>
+								<th data-sort="float">Amount to PI</th>
+								<th data-sort="float">Person Months</th>
+								<th data-sort="int">Dates</th>
+								<th data-sort="string">Location</th>
+								<th data-sort="string">Description</th>																
+								</tr></thead> <tbody>';
 																
 								foreach ($grants as $grant) {
 									echo '<tr id="grant';
@@ -158,7 +158,7 @@
 									echo '<span class="comparison" style="display:none">';
 									echo '</tr>';
 								}
-							echo '</table>';
+							echo '</tbody></table>';
 																
 							}
 	        			?>
@@ -325,6 +325,7 @@
         <script src="js/jquery.min.js"></script>
         <script src="js/jquery.modal.min.js" type="text/javascript" charset="utf-8"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+        <script src="js/stupidtable.min.js"></script>
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>        
         <script src="js/jquery.watermark.min.js"></script>
         <script src="js/plugins.js"></script>
