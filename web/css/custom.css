@@ -201,3 +201,8 @@ header {
 	margin-right: auto;
 	border: solid black 2px;
 }
+
+tr {
+	padding-left: 2em;
+	padding-right: 2em;
+}

@@ -91,7 +91,7 @@
 									
 								}
 								
-								echo '<table id="maintable">';
+								echo '<table id="maintable" border="1">';
 								echo '<tr>
 								<th>#</th>
 								<th>Title</th>
