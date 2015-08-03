@@ -20,7 +20,7 @@ $(document).ready( function () {
 			grant.awardperiod2 = $(this).find(".todate").text();
 			grant.firstname = $(document).find("#firstname").text();
 			grant.lastname = $(document).find("#lastname").text();
-			grant.lastname = $(this).find("#locationval").text();
+			grant.lastname = $(this).find(".locationval").text();
 			data.push(grant);
 		});
 		console.log(data);
