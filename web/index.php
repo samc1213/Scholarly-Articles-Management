@@ -90,27 +90,29 @@
 									echo "<h3 style='text-align: center; color: red;'>You don't have any grants at the moment. Add one below!</h3>";
 									
 								}
+								
+								echo '<table>';
 																
 								foreach ($grants as $grant) {
-									echo '<div id="grant';
+									echo '<tr id="grant';
 									echo $count;
 									echo '" class="grant">';
 									
-									echo '<p class="grantname"> <span class="grantnum">';
+									echo '<td class="grantnum">';
 									$count = $count + 1;
 									echo $count;
 									
-									echo '. </span>';
+									echo '. </td>';
 									
-									echo '<span class="granttitle">';
+									echo '<td class="granttitle">';
 									echo $grant['name'];
-									echo '</span>';
-									echo '<span> </span><span class="buttoncover"><button class="btn btn-default editbtn" style="padding: 0;" id="editbtn';
-									echo $count;
-									echo '"><i class="fa fa-pencil-square-o"';
-									
-									
-									echo '"></i></button></span>';
+									echo '</td>';
+									// echo '<span> </span><span class="buttoncover"><button class="btn btn-default editbtn" style="padding: 0;" id="editbtn';
+									// echo $count;
+									// echo '"><i class="fa fa-pencil-square-o"';
+// 									
+// 									
+									// echo '"></i></button></span>';
 																									
 									$status = $grant['status'];
 									$agency = $grant['source'];
@@ -123,33 +125,29 @@
 									$todate = $grant['awardperiod2'];
 									$location = $grant['location'];
 									
-									echo '<span class="status">'.$status.'</span></p>';
-									if ($agency == "DOE"){
-										echo '<form action="" class="compareform" method=""';
-										echo ' id = "compareform';
-										echo $count;
-										echo '"><input type = "hidden" name="grantnum" value="';
-										echo $count;
-										echo '"/><button type = "submit" class="comparebutton">Generate C&P Form</button></form>';
-										
-									}
+									echo '<td class="status">'.$status.'</span></td>';
+									// if ($agency == "DOE"){
+										// echo '<form action="" class="compareform" method=""';
+										// echo ' id = "compareform';
+										// echo $count;
+										// echo '"><input type = "hidden" name="grantnum" value="';
+										// echo $count;
+										// echo '"/><button type = "submit" class="comparebutton">Generate C&P Form</button></form>';
+// 										
+									// }
 									
-									echo '<p class="grantagency">'.$agency.'</p>';
-									echo '<p class="amount">Total Annual Amount: $<span class="amountnum">'.$amount.'</span></p>';
-									echo '<p class="piamount">Total Annual Amount to PI: $<span class="piamountnum">'.$piamount.'</span></p>';
-									echo '<p class="pmonths"> <span class="pmonthnum">'.$pmonths.'</span> <span class="pmonthunits">'.$units. '</span> person-months</p>';
-									echo '<p class="dates"><span class="fromdate">'.$fromdate.'</span> to <span class="todate">'.$todate.'</span></p>';
-									echo '<p class = "location">Location: <span class="locationval">'.$location.'</span></p>';
-									echo '<p class="summary">'.$summary.'</p>';
+									echo '<td class="grantagency">'.$agency.'</td>';
+									echo '<td class="amount">Total Annual Amount: $<span class="amountnum">'.$amount.'</span></td>';
+									echo '<td class="piamount">Total Annual Amount to PI: $<span class="piamountnum">'.$piamount.'</span></td>';
+									echo '<td class="pmonths"> <span class="pmonthnum">'.$pmonths.'</span> <span class="pmonthunits">'.$units. '</span> person-months</td>';
+									echo '<td class="dates"><span class="fromdate">'.$fromdate.'</span> to <span class="todate">'.$todate.'</span></td>';
+									echo '<td class = "location">Location: <span class="locationval">'.$location.'</span></td>';
+									echo '<td class="summary">'.$summary.'</td>';
 									echo '<span class="comparison" style="display:none">';
-									echo '</div>';
+									echo '</tr>';
 								}
-								
-								if (($grants->count()) <=2) 
-								{
-									echo "<div style='height: 10em;'></div>";
-								}
-								
+							echo '</table>';
+																
 							}
 	        			?>
 	        	
