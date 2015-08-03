@@ -37,6 +37,7 @@ $(document).ready( function () {
 			success: function(data)
 			{
 				console.log("data: " + data);
+				console.log("id: " + id);
 				$(".waiter").hide();
 				$("#downloadpopup").append("<form action='download.php' method='post' id='downloadform'><input name='id' value='" + id + "' type='hidden'/><button type='submit' style='margin-top: 5px;'>Download The File!</button></form>");
 			}
