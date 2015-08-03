@@ -82,11 +82,10 @@
 								$user = $_SESSION['username'];
 
 								$grants = getgrants($user);
-								echo var_dump($grants);
 				
 								$count = 0;
 								
-								if (empty($grants))
+								if (($grants->count()) == 0)
 								{
 									echo "<h3 style='text-align: center; color: red;'>You don't have any grants at the moment. Add one below!</h3>";
 									
@@ -141,7 +140,7 @@
 									echo '</div>';
 								}
 								
-								if (count($grants) <=2) 
+								if (($grants->count()) <=2) 
 								{
 									echo "<div style='height: 10em;'></div>";
 								}
