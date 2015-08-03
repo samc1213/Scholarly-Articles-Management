@@ -167,7 +167,6 @@
 				$ch = curl_init();
 				
 				$fields = array("id" => $id, "data" => $data);
-				echo $id;
 				
 				curl_setopt($ch, CURLOPT_URL, $str);
 				curl_setopt($ch, CURLOPT_POST, true);
