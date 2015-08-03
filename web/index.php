@@ -196,7 +196,7 @@
 	        		<img class="waiter" src="img/ajax-loader.gif"/>
 	        	</div>
 	        	
-				<div id="comparisonbox" style="display: none;>
+				<div id="comparisonbox" style="display: none;">
 					<h2>Compare</h2>
 					<input id="comparisoninput" type="text" rows="2""/>
 				</div>
