@@ -237,6 +237,7 @@ $(document).ready( function () {
 			$(".grantpopup").hide();
 			$('.editbtn').show();	
 			$('#newgrantbutton').show();
+			$("#comparisonbox").hide();
 		}
 	});
 

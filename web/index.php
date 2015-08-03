@@ -96,7 +96,7 @@
 								
 								else {
 									echo '<div id="newcpdiv"><button id="newcpform">Create New C&P Form</button></div>
-									<div id="comparisonbox"><input id="comparisoninput" type="text" rows="2"/></div>';
+';
 								}
 								
 								echo '<table id="maintable" border="1">';
@@ -196,14 +196,8 @@
 	        		<img class="waiter" src="img/ajax-loader.gif"/>
 	        	</div>
 	        	
-	        	<div id="comparepopup">
-	        		<form id="compareformpopup" action="">
-	        			<label id="comparelabel"></label>
-	        			<input type="text" rows="2" name="comparisontext"/>
-	        			<button id="nextcompare">Next</button>
-	        		</form>
-	        	</div>
-	        
+	        	<div id="comparisonbox"><input id="comparisoninput" type="text" rows="2"/></div>
+	        	
 	                <div id="newgrantpopup" class="grantpopup">
 		        	<h2 id="newgrantheader">New Grant</h2>
 		        	<form id="newgrantform">
