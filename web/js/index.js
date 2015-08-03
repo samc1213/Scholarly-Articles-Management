@@ -8,6 +8,8 @@ $(document).ready( function () {
 	$("#newcpform").click (function (e) {
 		e.stopPropagation();
 		$("#comparisonbox").show();
+		var h = $(window).height();
+		$("#junkdiv").height(h - $("#content").height());
 		$('#shield').css('background-color', 'grey');
 		$('.editbtn').hide();
 		$("#newgrantbutton").hide();		

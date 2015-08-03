@@ -197,7 +197,7 @@
 	        	</div>
 	        	
 	        	<div id="comparisonbox"><input id="comparisoninput" type="text" rows="2"/></div>
-	        	
+	        	<div id="junkdiv"></div>
 	                <div id="newgrantpopup" class="grantpopup">
 		        	<h2 id="newgrantheader">New Grant</h2>
 		        	<form id="newgrantform">
