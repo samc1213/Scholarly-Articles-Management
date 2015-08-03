@@ -196,7 +196,7 @@
 		        	<h2 id="newgrantheader">New Grant</h2>
 		        	<form id="newgrantform">
 		        		<label class="biglabel" for="grantname">Grant Name:</label>
-				        <input type="text" id="grantname" style="width: 90%;"/> <br><br>
+				        <input type="text" id="grantname" class ="wideinput"/> <br><br>
 				        
 		        		<label class="biglabel" for="source">Source:</label>
 				        <select id="source">
@@ -245,10 +245,10 @@
 				       <span>$</span><input type="text" id="piamount"/> <br><br>
 				       
 				       <label class="biglabel" for="location">Location:</label>
-				       <input type="text" id="location"/> <br><br>
+				       <input type="text" id="location" class ="wideinput"/> <br><br>
 				       
 				       <label class="biglabel" for="description">Description:</label>
-				       <textarea type="text" rows="4" id="description"></textarea> <br><br>
+				       <textarea type="text" rows="4" id="description" class ="wideinput"></textarea> <br><br>
 				       
 				       <span id="newvalidspan"></span>
 				       

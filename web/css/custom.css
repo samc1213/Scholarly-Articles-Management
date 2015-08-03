@@ -217,3 +217,7 @@ td {
 	padding-left: .5em;
 	padding-right: .5em;
 }
+
+.wideinput {
+	width: 70%;
+}
