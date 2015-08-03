@@ -176,6 +176,7 @@
 	        	
 	        	<div id="comparepopup">
 	        		<form id="compareformpopup" action="">
+	        			<label id="comparelabel"></label>
 	        			<input type="text" rows="2" name="comparisontext"/>
 	        			<button id="nextcompare">Next</button>
 	        		</form>

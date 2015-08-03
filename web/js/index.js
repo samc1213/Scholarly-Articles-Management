@@ -57,15 +57,24 @@ $(document).ready( function () {
 	
 	$("#compareformpopup").submit( function (e) {
 		e.preventDefault();
-		var grantstr = "#grant" + comparecount;
-		$grant = $(document).find(grantstr);
-		var str = $(this).find('input[name="comparisontext"]').val();
-		$grant.find(".comparison").text(str);
-		comparecount = comparecount + 1;
+		$comparergrant = $("#grant" + grantnum);
+		var comparername = $comparergrant.find(".name").text();
+		$compareegrant = $("#grant" + comparecount);
+		var compareename = $compareegrant.find(".name").text();
+		if (comparecount != grantnum) {
+			$("#comparelabel").text("Compare " + comparername + "to " + compareename);
+			var grantstr = "#grant" + comparecount;
+			$grant = $(document).find(grantstr);
+			var str = $(this).find('input[name="comparisontext"]').val();
+			$grant.find(".comparison").text(str);
+			$(this).find('input[name="comparisontext"]').val('');
+		}
+
 		if (comparecount == $(".grant").length)
 		{
-			$(this).hide();
+			$("#compareformpopup").hide();
 		}
+		comparecount = comparecount + 1;
 	});
 	
 	$(document).on('submit', '#downloadform', function(){ 
