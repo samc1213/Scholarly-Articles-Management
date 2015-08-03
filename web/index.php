@@ -96,7 +96,7 @@
 								
 								else {
 									echo '<div id="newcpdiv"><button id="newcpform">Create New C&P Form</button></div>
-									<div id="comparisonbox"></div>';
+									<div id="comparisonbox"><input id="comparisoninput" type="text" rows="2"/></div>';
 								}
 								
 								echo '<table id="maintable" border="1">';

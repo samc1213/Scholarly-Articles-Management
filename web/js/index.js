@@ -5,7 +5,8 @@ $(document).ready( function () {
 	var grantnum;
 	$("#maintable").stupidtable();
 
-	$("#newcpform").click (function () {
+	$("#newcpform").click (function (e) {
+		e.stopPropagation();
 		$("#comparisonbox").show();
 		$('#shield').css('background-color', 'grey');
 		$('.editbtn').hide();

@@ -223,6 +223,7 @@ td {
 }
 
 #newcpform {
+	margin-bottom: 1em;
 }
 
 #newcpdiv {
@@ -232,8 +233,7 @@ td {
 #comparisonbox {
 	position: fixed;
 	width: 50%;
-	height: 25%;
-	top: 50%;
+ 	top: 50%;
 	left: 50%;
 	margin-left: -25%;
 	background-color: white;
