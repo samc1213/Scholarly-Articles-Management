@@ -1,6 +1,8 @@
 $(document).ready( function () {
 	var originalname;
 	var originalperiod1;
+	var comparecount;
+	var grantnum;
 
 	$(".dlform").submit(function (e) {
 		e.preventDefault();
@@ -47,19 +49,22 @@ $(document).ready( function () {
 	
 	$(".compareform").submit( function (e) {
 		e.preventDefault();
-		var grantnum = $(this).find('input[name="grantnum"]').val();
+		comparecount = 0;
+		grantnum = $(this).find('input[name="grantnum"]').val();
 		console.log("grantnum: " + grantnum);
 		$("#comparepopup").show();
-		var count = 0;
-		while (count < $(".grant").length) {
-			$(".compareformpopup").submit( function (e) {
-				e.preventDefault();
-				var grantstr = "#grant" + count;
-				$grant = $(document).find(grantstr);
-				var str = $(this).find('input[name="comparisontext"]').text();
-				$grant.find(".comparison").text(str);
-			});
-			count = count + 1;
+	});
+	
+	$(".compareformpopup").submit( function (e) {
+		e.preventDefault();
+		var grantstr = "#grant" + comparecount;
+		$grant = $(document).find(grantstr);
+		var str = $(this).find('input[name="comparisontext"]').val();
+		$grant.find(".comparison").text(str);
+		comparecount = comparecount + 1;
+		if (comparecount == $(".grant").length)
+		{
+			$(this).hide();
 		}
 	});
 	
