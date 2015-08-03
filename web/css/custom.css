@@ -226,17 +226,14 @@ td {
 	margin-bottom: 1em;
 }
 
-#newcpdiv {
-	text-align: center;
-}
-
 #comparisonbox {
-	position: fixed;
-	width: 50%;
- 	top: 50%;
-	left: 50%;
-	margin-left: -25%;
-	background-color: white;
-	border: black solid 2px;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
 	display: none;
+	text-align: center;
+	z-index: 50;
+	background-color: white;
+	border: 2px black solid;
+	text-align: center;
 }
