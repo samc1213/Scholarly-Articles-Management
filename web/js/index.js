@@ -53,15 +53,20 @@ $(document).ready( function () {
 		grantnum = $(this).find('input[name="grantnum"]').val();
 		console.log("grantnum: " + grantnum);
 		$("#comparepopup").show();
+		var grantstr = "#grant" + grantnum;
+		$comparergrant = $(grantstr);
+		var comparername = $comparergrant.find(".grantname").text();
+		$compareegrant = $("#grant" + comparecount);
+		$("#comparelabel").text("Compare " + comparername + "to " + compareename);
 	});
 	
 	$("#compareformpopup").submit( function (e) {
 		e.preventDefault();
 		var grantstr = "#grant" + grantnum;
 		$comparergrant = $(grantstr);
-		var comparername = $comparergrant.find(".name").text();
+		var comparername = $comparergrant.find(".grantname").text();
 		$compareegrant = $("#grant" + comparecount);
-		var compareename = $compareegrant.find(".name").text();
+		var compareename = $compareegrant.find(".grantname").text();
 		if (comparecount != grantnum) {
 			$("#comparelabel").text("Compare " + comparername + "to " + compareename);
 			var grantstr = "#grant" + comparecount;
