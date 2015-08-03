@@ -57,18 +57,18 @@ $(document).ready( function () {
 		if (comparecount != grantnum) {
 			var grantstr = "#grant" + grantnum;
 			$comparergrant = $(grantstr);
-			var comparername = $comparergrant.find(".grantname").text();
+			var comparername = $comparergrant.find(".granttitle").text();
 			$compareegrant = $("#grant" + comparecount);
-			var compareename = $compareegrant.find(".grantname").text();
+			var compareename = $compareegrant.find(".granttitle").text();
 			$("#comparelabel").text("Compare " + comparername + "to " + compareename);
 		}
 		else {
 			comparecount = comparecount + 1;
 			var grantstr = "#grant" + grantnum;
 			$comparergrant = $(grantstr);
-			var comparername = $comparergrant.find(".grantname").text();
+			var comparername = $comparergrant.find(".granttitle").text();
 			$compareegrant = $("#grant" + comparecount);
-			var compareename = $compareegrant.find(".grantname").text();
+			var compareename = $compareegrant.find(".granttitle").text();
 			$("#comparelabel").text("Compare " + comparername + "to " + compareename);
 		}
 	});
@@ -77,9 +77,9 @@ $(document).ready( function () {
 		e.preventDefault();
 		var grantstr = "#grant" + grantnum;
 		$comparergrant = $(grantstr);
-		var comparername = $comparergrant.find(".grantname").text();
+		var comparername = $comparergrant.find(".granttitle").text();
 		$compareegrant = $("#grant" + comparecount);
-		var compareename = $compareegrant.find(".grantname").text();
+		var compareename = $compareegrant.find(".granttitle").text();
 		if (comparecount != grantnum) {
 			$("#comparelabel").text("Compare " + comparername + " to " + compareename);
 			var grantstr = "#grant" + comparecount;
@@ -89,9 +89,10 @@ $(document).ready( function () {
 			$(this).find('input[name="comparisontext"]').val('');
 		}
 
-		if (comparecount == $(".grant").length - 1)
+		if (comparecount == $(".grant").length - 2)
 		{
 			console.log("HIDE!");
+			$("#comparelabel").text("lastone");
 			$("#comparepopup").hide();
 		}
 		comparecount = comparecount + 1;
