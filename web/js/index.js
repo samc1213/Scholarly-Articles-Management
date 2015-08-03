@@ -6,7 +6,7 @@ $(document).ready( function () {
 	$("#maintable").stupidtable();
 
 	$("#newcpform").click (function () {
-		$("$comparisonbox").show();
+		$("#comparisonbox").show();
 		$('#shield').css('background-color', 'grey');
 		$('.editbtn').hide();
 		$("#newgrantbutton").hide();		

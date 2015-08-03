@@ -75,8 +75,7 @@
 				
 				?>
 				
-				<button id="newcpform">Create New C&P Form</button>
-				<div id="comparisonbox"></div>
+				
 				
 	        	<section id="grants">
 	        			<?php
@@ -93,6 +92,11 @@
 								{
 									echo "<h3 style='text-align: center; color: red;'>You don't have any grants at the moment. Add one below!</h3>";
 									
+								}
+								
+								else {
+									echo '<button id="newcpform">Create New C&P Form</button>
+									<div id="comparisonbox"></div>';
 								}
 								
 								echo '<table id="maintable" border="1">';
