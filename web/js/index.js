@@ -15,12 +15,16 @@ $(document).ready( function () {
 
 	$("#newcpform").click (function (e) {
 		e.stopPropagation();
+		$("#newcpdiv").hide();		
 		$("#comparisonbox").show();
 		var h = $(window).height();
 		$("#junkdiv").height(h - $("header").outerHeight(true) - $("#grantheader").outerHeight(true) - $("#grants").outerHeight(true) - $("#comparisonbox").outerHeight(true));
 		$('#shield').css('background-color', 'grey');
 		$('.editbtn').hide();
-		$("#newgrantbutton").hide();		
+		$("#newgrantbutton").hide();
+		$('html, body').animate({
+	        scrollTop: $("#comparisonbox").offset().top
+	    }, 1000);		
 	});
 
 	$(".dlform").submit(function (e) {
@@ -255,6 +259,7 @@ $(document).ready( function () {
 	
 	$("#newgrantbutton").click(function(evt) {
 		evt.stopPropagation();
+		$("#newcpdiv").hide();		
 		$(this).hide();
 		console.log('hi');
 		$("#newgrantpopup").show();
@@ -272,7 +277,8 @@ $(document).ready( function () {
 	
 	$(".editbtn").click(function(evt) {
 		evt.stopPropagation();
-		$("#newgrantbutton").hide();		
+		$("#newgrantbutton").hide();
+		$("#newcpdiv").hide();		
 		console.log("yo");
 		
 		var buttonnumber = $(this).attr('id').substr(7);

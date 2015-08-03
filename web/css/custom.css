@@ -225,6 +225,9 @@ td {
 #newcpform {
 	margin-bottom: 1em;
 }
+#newcpdiv {
+	text-align: center;
+}
 
 #comparisonbox {
 	width: 90%;
