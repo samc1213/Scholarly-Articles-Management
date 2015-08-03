@@ -5,6 +5,13 @@ $(document).ready( function () {
 	var grantnum;
 	$("#maintable").stupidtable();
 
+	$(window).resize(function () {
+		if ($("#comparisonbox").show())
+		{
+			$("#junkdiv").height(h - $("header").height() - $("#grantheader").height() - $("#grants").height() - $("#comparisonbox").height());
+		}
+	});
+
 	$("#newcpform").click (function (e) {
 		e.stopPropagation();
 		$("#comparisonbox").show();
