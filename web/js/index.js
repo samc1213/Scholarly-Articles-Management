@@ -11,6 +11,9 @@ $(document).ready( function () {
 			var h = $(window).height();
 			$("#junkdiv").height(h - $("header").outerHeight(true) - $("#grantheader").outerHeight(true) - $("#grants").outerHeight(true) - $("#comparisonbox").outerHeight(true));
 		}
+		else{
+			$("#junkdiv").height(0);
+		}
 	});
 
 	$("#newcpform").click (function (e) {
@@ -251,6 +254,7 @@ $(document).ready( function () {
 			$(".grantpopup").hide();
 			$('.editbtn').show();	
 			$('#newgrantbutton').show();
+			$("#newcpdiv").show();
 			$("#comparisonbox").hide();
 		}
 	});
