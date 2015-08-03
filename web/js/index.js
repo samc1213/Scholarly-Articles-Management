@@ -20,6 +20,7 @@ $(document).ready( function () {
 			grant.awardperiod2 = $(this).find(".todate").text();
 			grant.firstname = $(document).find("#firstname").text();
 			grant.lastname = $(document).find("#lastname").text();
+			grant.lastname = $(this).find("#locationval").text();
 			data.push(grant);
 		});
 		console.log(data);
@@ -81,8 +82,16 @@ $(document).ready( function () {
 					
 		var data = {};
 		
+		if ($('#source').val() == 'Other')
+		{
+			data['source'] = $('#otherval').val();
+		}
+		else
+		{
+			data['source'] = $('#source').val();
+		}
+		
 		data['name'] = $('#grantname').val();
-		data['source'] = $('#source').val();
 		data['awardperiod1'] = $('#awardperiod1').val();
 		data['awardperiod2'] = $('#awardperiod2').val();
 		data['status'] = $('#status').val();

@@ -137,7 +137,7 @@
 									echo '<p class="piamount">Total Annual Amount to PI: $<span class="piamountnum">'.$piamount.'</span></p>';
 									echo '<p class="pmonths"> <span class="pmonthnum">'.$pmonths.'</span> <span class="pmonthunits">'.$units. '</span> person-months</p>';
 									echo '<p class="dates"><span class="fromdate">'.$fromdate.'</span> to <span class="todate">'.$todate.'</span></p>';
-									echo '<p class = "location">'.$location.'</p>';
+									echo '<p class = "location">Location: <span class="locationval"'.$location.'</span></p>';
 									echo '<p class="summary">'.$summary.'</p>';
 									echo '</div>';
 								}
