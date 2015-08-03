@@ -57,7 +57,8 @@ $(document).ready( function () {
 	
 	$("#compareformpopup").submit( function (e) {
 		e.preventDefault();
-		$comparergrant = $("#grant" + grantnum);
+		var grantstr = "#grant" + grantnum;
+		$comparergrant = $(grantstr);
 		var comparername = $comparergrant.find(".name").text();
 		$compareegrant = $("#grant" + comparecount);
 		var compareename = $compareegrant.find(".name").text();
