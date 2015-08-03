@@ -9,7 +9,7 @@ $(document).ready( function () {
 		e.stopPropagation();
 		$("#comparisonbox").show();
 		var h = $(window).height();
-		$("#junkdiv").height(h - $("#content").height());
+		$("#junkdiv").height(h - $("header").height() - $("#grantheader").height() - $("#grants").height() - $("#comparisonbox").height());
 		$('#shield').css('background-color', 'grey');
 		$('.editbtn').hide();
 		$("#newgrantbutton").hide();		
