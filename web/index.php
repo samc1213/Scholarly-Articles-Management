@@ -125,10 +125,12 @@
 									
 									echo '<span class="status">'.$status.'</span></p>';
 									if ($agency == "DOE"){
-										echo '<form action="" class="dlform" method=""';
-										echo ' id = "dlform';
+										echo '<form action="" class="compareform" method=""';
+										echo ' id = "compareform';
 										echo $count;
-										echo '"><button type = "submit" class="DLbutton">DOWNLOAD C&P FORM</button></form>';
+										echo '"><input type = "hidden" name="grantnum" value="';
+										echo $count;
+										echo '"/><button type = "submit" class="comparebutton">Generate C&P Form</button></form>';
 										
 									}
 									
@@ -139,6 +141,7 @@
 									echo '<p class="dates"><span class="fromdate">'.$fromdate.'</span> to <span class="todate">'.$todate.'</span></p>';
 									echo '<p class = "location">Location: <span class="locationval">'.$location.'</span></p>';
 									echo '<p class="summary">'.$summary.'</p>';
+									echo '<span class="comparison" style="display:none">';
 									echo '</div>';
 								}
 								
@@ -169,6 +172,13 @@
 	        	
 	        	<div id="downloadpopup">
 	        		<img class="waiter" src="img/ajax-loader.gif"/>
+	        	</div>
+	        	
+	        	<div id="comparepopup">
+	        		<form id="compareform">
+	        			<input type="text" rows="2"/>
+	        			<button id="nextcompare">Next</button>
+	        		</form>
 	        	</div>
 	        
 	                <div id="newgrantpopup" class="grantpopup">
