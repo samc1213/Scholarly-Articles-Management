@@ -51,12 +51,14 @@ $(document).ready( function () {
 		e.preventDefault();
 		comparecount = 0;
 		grantnum = $(this).find('input[name="grantnum"]').val();
+		grantnum = grantnum - 1;
 		console.log("grantnum: " + grantnum);
 		$("#comparepopup").show();
 		var grantstr = "#grant" + grantnum;
 		$comparergrant = $(grantstr);
 		var comparername = $comparergrant.find(".grantname").text();
 		$compareegrant = $("#grant" + comparecount);
+		var compareename = $compareegrant.find(".grantname").text();
 		$("#comparelabel").text("Compare " + comparername + "to " + compareename);
 	});
 	
