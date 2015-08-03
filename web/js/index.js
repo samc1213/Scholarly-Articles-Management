@@ -8,6 +8,7 @@ $(document).ready( function () {
 	$(window).resize(function () {
 		if ($("#comparisonbox").show())
 		{
+			var h = $(window).height();
 			$("#junkdiv").height(h - $("header").height() - $("#grantheader").height() - $("#grants").height() - $("#comparisonbox").height());
 		}
 	});
