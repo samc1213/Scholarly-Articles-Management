@@ -196,9 +196,9 @@
 	        		<img class="waiter" src="img/ajax-loader.gif"/>
 	        	</div>
 	        	
-				<div id="comparisonbox">
+				<div id="comparisonbox" style="display: none;>
 					<h2>Compare</h2>
-					<input id="comparisoninput" type="text" rows="2" style="display: none;"/>
+					<input id="comparisoninput" type="text" rows="2""/>
 				</div>
 	        	<div id="junkdiv"></div>
 	                <div id="newgrantpopup" class="grantpopup">
