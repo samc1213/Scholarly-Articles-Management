@@ -55,7 +55,7 @@ $(document).ready( function () {
 		$("#comparepopup").show();
 	});
 	
-	$(".compareformpopup").submit( function (e) {
+	$("#compareformpopup").submit( function (e) {
 		e.preventDefault();
 		var grantstr = "#grant" + comparecount;
 		$grant = $(document).find(grantstr);
