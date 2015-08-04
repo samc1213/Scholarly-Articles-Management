@@ -36,8 +36,8 @@ $(document).ready( function () {
 	    	$("#comparisonbox").append('<form id="choosesourceform">');
 	    	$("#choosesourceform").append('<label for ="sourceformselect">Which form would you like to use?</label>');
 	    	$("#choosesourceform").append('<select id="sourceselect">');
-	    	$.each(['DOE'], function () {
-	    		$("#sourceselect").append('<option value ="' + $(this).text() + '">' + $(this).text() + '</option>');
+	    	$.each(['DOE'], function (i, v) {
+	    		$("#sourceselect").append('<option value ="' + v + '">' + v + '</option>');
 	    	});
 		    // $("#comparisonbox").append('<form id="choosecomparerform">');
 		    // $("#choosecomparerform").append('<label for="comparergrantselect">Which grant are you generating the C&P form for?</label>');
