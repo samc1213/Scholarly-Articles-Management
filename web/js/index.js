@@ -143,7 +143,10 @@ $(document).ready( function () {
 					}
 				});
 		}
-		var nextgrantdescription = $('.granttitle:contains("' + nextgrantname + '")').closest(".summary").text();
+		$gtitle = $('.granttitle:contains("' + nextgrantname + '")');
+		console.log($gtitle);
+		var nextgrantdescription = $gtitle.closest(".summary").text();
+		console.log(nextgrantdescription);
 		$(this).find('textarea[name="comparison"]').val(nextgrantdescription);
 		$(this).find('label').text(nextgrantname);
 	});
