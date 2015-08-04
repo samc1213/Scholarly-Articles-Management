@@ -194,9 +194,9 @@
 	        	
 				<div id="comparisonbox" style="display: none;" class="clearfix">
 					<h2>Compare</h2>
-					<div id="downloadpopup">
-						<img class="waiter" src="img/ajax-loader.gif"/>
-					</div>
+				</div>
+				<div id="downloadpopup">
+					<img class="waiter" src="img/ajax-loader.gif"/>
 				</div>
 	        	<div id="junkdiv"></div>
 	                <div id="newgrantpopup" class="grantpopup">

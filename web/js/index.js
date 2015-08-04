@@ -90,7 +90,7 @@ $(document).ready( function () {
 		grantcount++;
 		if (grantcount == grants.length + 1)
 		{
-			$("comparisonbox").hide();
+			$("#comparisonbox").hide();
 			$("#downloadpopup").show();
 			var data = [];
 			$(".grant").each(function (i) {

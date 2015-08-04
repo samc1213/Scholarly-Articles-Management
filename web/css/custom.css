@@ -244,3 +244,8 @@ td {
 #junkdiv {
 	margin: 0;
 }
+
+.waiter {
+	display: block;
+	margin: auto;
+}
