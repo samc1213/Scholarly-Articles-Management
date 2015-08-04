@@ -88,7 +88,7 @@ $(document).ready( function () {
 		var nextgrantname = grants[grantcount];
 		$(this).find('input[name="grantname"]').val(nextgrantname);
 		grantcount++;
-		if (grantcount == grants.length)
+		if (grantcount == grants.length + 1)
 		{
 			$(this).hide();
 		}
