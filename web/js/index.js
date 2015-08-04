@@ -89,7 +89,7 @@ $(document).ready( function () {
 		e.preventDefault();
 		console.log("grnatcount: " + grantcount);
 		console.log("glength: " + grants.length);
-		if (grantcount == grants.length)
+		if (grantcount == grants.length-1)
 		{
 			$("#nextcompareebtn").text("Submit");
 		}		
