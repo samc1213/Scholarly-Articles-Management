@@ -43,8 +43,9 @@ $(document).ready( function () {
 		$('html, body').animate({
 	        scrollTop: $("#comparisonbox").offset().top
 	    }, 1000);
-	    $("#comparisonbox").append('<label for="comparergrantselect">Which grant are you generating the C&P form for?</label>');
-	    $("#comparisonbox").append('<select id="comparergrantselect" style="margin-bottom: 2em;">');
+	    $("#comparisonbox").append('<form id="choosecomparerform">');
+	    $("#choosecomparerform").append('<label for="comparergrantselect">Which grant are you generating the C&P form for?</label>');
+	    $("#choosecomparerform").append('<select id="comparergrantselect" style="margin-bottom: 2em;">');
 	    $comparer = $("#comparergrantselect");
 	    $(".grant").each( function () {
 	    	var str = '<option value="' + $(this).find(".granttitle").text() + '">' + $(this).find(".granttitle").text() + '</option>';
@@ -53,7 +54,7 @@ $(document).ready( function () {
 	    $("#comparisonbox").append('<button id="choosecomparerbtn">Next</button>');
 	});
 
-	$(document).on('click', '#choosecomparerbtn', function () {
+	$(document).on('submit', '#choosecomparerform', function () {
 		var comparergrant = $("#comparergrantselect").val();
 		console.log(comparergrant);
 	});
