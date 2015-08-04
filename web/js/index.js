@@ -145,8 +145,11 @@ $(document).ready( function () {
 					{
 						console.log("data: " + data);
 						console.log("id: " + id);
-						$(".waiter").hide();
-						$("#comparisonbox").append("<form action='download.php' method='post' id='downloadform'><input name='id' value='" + id + "' type='hidden'/><button type='submit'>Download The File!</button></form>");
+						if ($(".waiter").is(":visible")) {
+
+							$("#comparisonbox").append("<form action='download.php' method='post' id='downloadform'><input name='id' value='" + id + "' type='hidden'/><button type='submit'>Download The File!</button></form>");
+						} 
+							$(".waiter").hide();
 					}
 				});
 		}
