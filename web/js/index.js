@@ -87,7 +87,7 @@ $(document).ready( function () {
 		console.log(nextgrantdescription);
 		
 		$("#comparetoform").append('<textarea type="text" rows="2" style="width: 80%;" name="comparison">' + nextgrantdescription + '</textarea>');
-		$("#comparetoform").append('<label for="comparison">' + comparee + '</label>');
+		$("#comparetoform").append('<label for="comparison">' + 'Add a line that shows how <strong>' + comparergrant + '</strong>compares to <strong>' + comparee + '</strong></label>');
 		$("#comparetoform").append('<input type="hidden" name="grantname" value="' +comparee + '">' );
 		$("#comparetoform").append('<div><button id="nextcompareebtn">Next Grant</button><div>');
 	});
