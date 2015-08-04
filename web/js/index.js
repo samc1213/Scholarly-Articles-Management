@@ -82,7 +82,8 @@ $(document).ready( function () {
 		grantcount++;
 		$gtitle = $(document).find('.granttitle:contains("' + comparee + '")');
 		console.log($gtitle);
-		var closest = $gtitle.closest('td.summary').text();
+		$tr = $gtitle.closest('tr');
+		var closest = $tr.find('td.summary').text();
 		console.log(closest);
 		$td = $gtitle[0];
 		$r = $td.closest('tr');
