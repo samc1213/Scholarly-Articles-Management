@@ -82,9 +82,9 @@ $(document).ready( function () {
 		grantcount++;
 		$gtitle = $('.granttitle:contains("' + comparee + '")');
 		$td = $gtitle[0];
-		$row = $td.closest('tr');
-		console.log($row);
-		var nextgrantdescription = $row.find("td.summary").text();
+		$r = $td.closest('tr');
+		console.log($r);
+		var nextgrantdescription = $r.find("td.summary").text();
 		console.log(nextgrantdescription);
 		
 		$("#comparetoform").append('<textarea type="text" rows="2" style="width: 80%;" name="comparison">' + nextgrantdescription + '</textarea>');
