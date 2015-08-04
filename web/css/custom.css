@@ -230,6 +230,7 @@ td {
 
 #comparisonbox {
 	width: 90%;
+	height: 15em;
 	margin-left: auto;
 	margin-right: auto;
 	display: none;

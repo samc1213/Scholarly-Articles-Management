@@ -223,7 +223,6 @@ $(document).ready( function () {
 	});
 	
 	$(document).on('submit', '#downloadform', function(){ 
-    	$(".waiter").show();
     	$("#downloadpopup").hide();
     	$("#downloadform").remove();
 
@@ -356,6 +355,7 @@ $(document).ready( function () {
 			$("#comparisonbox").hide();
 			$("#downloadpopup").hide();
 			$(".waiter").hide();
+			$("#downloadform").remove();
 		}
 	});
 
