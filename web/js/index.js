@@ -365,7 +365,7 @@ $(document).ready( function () {
 			$(".grantpopup").hide();
 			$('.editbtn').show();	
 			$('#newgrantbutton').show();
-			$("#newcpdiv").show();
+			$("#newcpform").show();
 			$("#comparisonbox").hide();
 			$("#downloadpopup").hide();
 			$(".waiter").hide();
@@ -377,7 +377,7 @@ $(document).ready( function () {
 	
 	$("#newgrantbutton").click(function(evt) {
 		evt.stopPropagation();
-		$("#newcpdiv").hide();		
+		$("#newcpform").hide();		
 		$(this).hide();
 		console.log('hi');
 		$("#newgrantpopup").show();
@@ -396,7 +396,7 @@ $(document).ready( function () {
 	$(".editbtn").click(function(evt) {
 		evt.stopPropagation();
 		$("#newgrantbutton").hide();
-		$("#newcpdiv").hide();		
+		$("#newcpform").hide();		
 		console.log("yo");
 		
 		var buttonnumber = $(this).attr('id').substr(7);
