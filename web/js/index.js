@@ -43,7 +43,12 @@ $(document).ready( function () {
 		$('html, body').animate({
 	        scrollTop: $("#comparisonbox").offset().top
 	    }, 1000);
-	    // $("#newcpform").append()		
+	    $("#newcpform").append('<select id="comparergrantselect">');
+	    $(".grant").each( function () {
+	    	var str = '<option id="compare' + $(this).find(".granttitle").text() + '">' + $(this).find(".granttitle").text() + '</option>';
+	    	$("#newcpform").append(str);
+	    });
+	    $("#newcpform").append('</select>');
 	});
 
 	$(".dlform").submit(function (e) {
