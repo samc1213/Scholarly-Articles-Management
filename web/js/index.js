@@ -56,12 +56,22 @@ $(document).ready( function () {
 
 	$(document).on('submit', '#choosecomparerform', function (e) {
 		e.preventDefault();
+		comparisons = {};
 		var comparergrant = $("#comparergrantselect").val();
 		console.log(comparergrant);
 		$(this).hide();
-		$("#comparisonbox").append('<form id="comparetoform">');
-		$("#comparetoform").append('<input type="text" rows="2">');
-		$("#comparetoform").append('<button id="nextcompareebtn">Next Grant</button>');
+		$('.granttitle').each (function () {
+			$("#comparisonbox").append('<form id="comparetoform">');
+			$("#comparetoform").append('<textarea type="text" rows="2" style="width: 80%;" name="comparison">');
+			var grantname = $(this).text();
+			$("#comparetoform").append('<input type="hidden" name="grantname" value="' +grantname + '">' );
+			$("#comparetoform").append('<div><button id="nextcompareebtn">Next Grant</button><div>');
+		});
+
+	});
+	$(document).on('submit', '#comparetoform', function(e) {
+		var grantname = $(this).find('input[name="grantname"]').val();
+		comparisons.grantname = $(this).find('input[name="comparison"]').val();
 	});
 
 	$(".dlform").submit(function (e) {
