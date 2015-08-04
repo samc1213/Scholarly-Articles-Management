@@ -144,6 +144,7 @@ $(document).ready( function () {
 				});
 		}
 		$nextgranttitle = $('.granttitle:contains("' + nextgrantname + '")');
+		console.log($nextgranttitle);
 		var nextgrantdescription = $nextgranttitle.closest(".summary").text();
 		$(this).find('textarea[name="comparison"]').val(nextgrantdescription);
 		$(this).find('label').text(nextgrantname);
