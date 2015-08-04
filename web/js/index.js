@@ -43,7 +43,8 @@ $(document).ready( function () {
 		$('html, body').animate({
 	        scrollTop: $("#comparisonbox").offset().top
 	    }, 1000);
-	    $("#comparisonbox").append('<select id="comparergrantselect">');
+	    $("#comparisonbox").append('<label for="comparergrantselect">Which grant are you generating the C&P form for?</label>)
+	    $("#comparisonbox").append('<select id="comparergrantselect" style="margin-bottom: 2em;">');
 	    $comparer = $("#comparergrantselect");
 	    $(".grant").each( function () {
 	    	var str = '<option value="' + $(this).find(".granttitle").text() + '">' + $(this).find(".granttitle").text() + '</option>';
