@@ -86,7 +86,7 @@ $(document).ready( function () {
 		comparisons[grantname] = $(this).find('textarea[name="comparison"]').val();
 		console.log(comparisons);
 		var nextgrantname = grants[grantcount];
-		$(this).find('input[name="grantname"]').val('nextgrantname');
+		$(this).find('input[name="grantname"]').val(nextgrantname);
 		grantcount++;
 		$(this).find('textarea[name="comparison"]').val('');
 		$(this).find('label').text(nextgrantname);
