@@ -230,16 +230,15 @@ td {
 
 #comparisonbox {
 	width: 90%;
-	height: 15em;
 	margin-left: auto;
 	margin-right: auto;
-	display: none;
+	display: table;
 	text-align: center;
 	z-index: 50;
 	background-color: white;
 	border: 2px black solid;
 	text-align: center;
-	padding-top: 7.5em;
+	padding-top: 2em;
 }
 
 #junkdiv {
