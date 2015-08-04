@@ -64,7 +64,7 @@ $(document).ready( function () {
 		$(this).hide();
 		$('.granttitle').each (function () {
 			var compareegrant = $(this).text();
-			if (comparee != comparergrant)
+			if (compareegrant != comparergrant)
 			{
 				grants.push(compareegrant);
 			}
@@ -88,7 +88,7 @@ $(document).ready( function () {
 		var nextgrantname = grants[grantcount];
 		$(this).find('input[name="grantname"]').val('nextgrantname');
 		grantcount++;
-		$(this).find('textarea[name="grantname"]').val('');
+		$(this).find('textarea[name="comparison"]').val('');
 		$(this).find('label').text(nextgrantname);
 	});
 
