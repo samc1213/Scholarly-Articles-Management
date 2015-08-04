@@ -248,7 +248,11 @@ td {
 }
 
 .waiter {
-	display: block;
-	width: 5em;
-	margin: auto;
+	display: none;
+	width: 4em;
+	height: 4em;
+	margin-top: 3em;
+	margin-left: auto;
+	margin-right: auto;
+
 }

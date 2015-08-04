@@ -83,8 +83,8 @@ $(document).ready( function () {
 		grantcount++;
 		if (grantcount == grants.length + 1)
 		{
-			$("#comparisonbox").hide();
-			$("#downloadpopup").show();
+			$("#comparetoform").remove();
+			$(".waiter").show();
 			var data = [];
 			$(".grant").each(function (i) {
 				var grant = {};
@@ -120,7 +120,7 @@ $(document).ready( function () {
 						console.log("data: " + data);
 						console.log("id: " + id);
 						$(".waiter").hide();
-						$("#downloadpopup").append("<form action='download.php' method='post' id='downloadform'><input name='id' value='" + id + "' type='hidden'/><button type='submit' style='margin-top: 5px;'>Download The File!</button></form>");
+						$("#comparetoform").append("<form action='download.php' method='post' id='downloadform'><input name='id' value='" + id + "' type='hidden'/><button type='submit' style='margin-top: 5px;'>Download The File!</button></form>");
 					}
 				});
 		}
