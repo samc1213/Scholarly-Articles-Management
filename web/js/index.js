@@ -50,7 +50,12 @@ $(document).ready( function () {
 	    	var str = '<option value="' + $(this).find(".granttitle").text() + '">' + $(this).find(".granttitle").text() + '</option>';
 	    	$comparer.append(str);
 	    });
-	    $("#newcpform").append('</select>');
+	    $("#comparisonbox").append('<button id="choosecomparerbtn">');
+	});
+
+	$(document).on('click', '#choosecomparerbtn', function () {
+		var comparergrant = $("#comparergrantselect").val();
+		console.log(comparergrant);
 	});
 
 	$(".dlform").submit(function (e) {
