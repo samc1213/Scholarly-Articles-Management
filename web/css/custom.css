@@ -249,5 +249,6 @@ td {
 
 .waiter {
 	display: block;
+	width: 5em;
 	margin: auto;
 }
