@@ -54,9 +54,14 @@ $(document).ready( function () {
 	    $("#choosecomparerform").append('<button id="choosecomparerbtn">Next</button>');
 	});
 
-	$(document).on('submit', '#choosecomparerform', function () {
+	$(document).on('submit', '#choosecomparerform', function (e) {
+		e.preventDefault();
 		var comparergrant = $("#comparergrantselect").val();
 		console.log(comparergrant);
+		$(this).hide();
+		$("#comparisonbox").append('<form id="comparetoform">');
+		$("#comparetoform").append('<input type="text" rows="2">');
+		$("#comparetoform").append('<button id="nextcompareebtn">Next Grant</button>');
 	});
 
 	$(".dlform").submit(function (e) {
