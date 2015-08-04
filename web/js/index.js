@@ -91,6 +91,7 @@ $(document).ready( function () {
 		if (grantcount == grants.length + 1)
 		{
 			$(this).hide();
+			$("#downloadpopup").show();
 		}
 		$(this).find('textarea[name="comparison"]').val('');
 		$(this).find('label').text(nextgrantname);
