@@ -4,7 +4,11 @@ $(document).ready( function () {
 	var comparecount;
 	var grantnum;
 	$("#maintable").stupidtable();
-
+	
+	$("#comparisonbox").click( function (e) {
+		e.stopPropagation();
+	});
+	
 	$(window).click(function () {
 		if ($("#comparisonbox").is(":visible"))
 		{
@@ -38,7 +42,8 @@ $(document).ready( function () {
 		$("#newgrantbutton").hide();
 		$('html, body').animate({
 	        scrollTop: $("#comparisonbox").offset().top
-	    }, 1000);		
+	    }, 1000);
+	    // $("#newcpform").append()		
 	});
 
 	$(".dlform").submit(function (e) {
