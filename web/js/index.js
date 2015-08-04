@@ -145,6 +145,8 @@ $(document).ready( function () {
 		}
 		$gtitle = $('.granttitle:contains("' + nextgrantname + '")');
 		console.log($gtitle);
+		$trplz = $gtitle[0];
+		console.log($trplz);
 		var nextgrantdescription = $gtitle.closest(".summary").text();
 		console.log(nextgrantdescription);
 		$(this).find('textarea[name="comparison"]').val(nextgrantdescription);
