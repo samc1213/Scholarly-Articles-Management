@@ -83,12 +83,7 @@ $(document).ready( function () {
 		$gtitle = $(document).find('.granttitle:contains("' + comparee + '")');
 		console.log($gtitle);
 		$tr = $gtitle.closest('tr');
-		var closest = $tr.find('td.summary').text();
-		console.log(closest);
-		$td = $gtitle[0];
-		$r = $td.closest('tr');
-		console.log($r);
-		var nextgrantdescription = $r.find("td.summary").text();
+		var nextgrantdescription = $tr.find('td.summary').text();
 		console.log(nextgrantdescription);
 		
 		$("#comparetoform").append('<textarea type="text" rows="2" style="width: 80%;" name="comparison">' + nextgrantdescription + '</textarea>');
@@ -155,12 +150,11 @@ $(document).ready( function () {
 					}
 				});
 		}
-		$gtitle = $('.granttitle:contains("' + nextgrantname + '")');
-		$tr = $gtitle[0];
-		var nextgrantdescription = $tr.closest(".summary").text();
+		$gtitle = $(document).find('.granttitle:contains("' + nextgrantname + '")');
+		console.log($gtitle);
+		$tr = $gtitle.closest('tr');
+		var nextgrantdescription = $tr.find('td.summary').text();
 		console.log(nextgrantdescription);
-		$(this).find('textarea[name="comparison"]').val(nextgrantdescription);
-		$(this).find('label').text(nextgrantname);
 	});
 
 	$(".dlform").submit(function (e) {
