@@ -155,6 +155,8 @@ $(document).ready( function () {
 		$tr = $gtitle.closest('tr');
 		var nextgrantdescription = $tr.find('td.summary').text();
 		console.log(nextgrantdescription);
+		$(this).find('textarea[name="comparison"]').val(nextgrantdescription);
+		$(this).find('label').text(nextgrantname);
 	});
 
 	$(".dlform").submit(function (e) {
