@@ -76,10 +76,16 @@ $(document).ready( function () {
 			}
 			console.log(grants);
 		});
-		$("#comparisonbox").append('<form id="comparetoform">');
-		$("#comparetoform").append('<textarea type="text" rows="2" style="width: 80%;" name="comparison">');
+		$("#comparisonbox").append('<form id="comparetoform">');		
+		
 		var comparee = grants[grantcount];
 		grantcount++;
+		$gtitle = $('.granttitle:contains("' + comparee + '")');
+		$tr = $gtitle[0];
+		var nextgrantdescription = $tr.closest(".summary").text();
+		console.log(nextgrantdescription);
+		
+		$("#comparetoform").append('<textarea type="text" rows="2" style="width: 80%;" name="comparison">' + nextgrantdescription + '</textarea>');
 		$("#comparetoform").append('<label for="comparison">' + comparee + '</label>');
 		$("#comparetoform").append('<input type="hidden" name="grantname" value="' +comparee + '">' );
 		$("#comparetoform").append('<div><button id="nextcompareebtn">Next Grant</button><div>');
@@ -144,10 +150,8 @@ $(document).ready( function () {
 				});
 		}
 		$gtitle = $('.granttitle:contains("' + nextgrantname + '")');
-		console.log($gtitle);
-		$trplz = $gtitle[0];
-		console.log($trplz);
-		var nextgrantdescription = $gtitle.closest(".summary").text();
+		$tr = $gtitle[0];
+		var nextgrantdescription = $tr.closest(".summary").text();
 		console.log(nextgrantdescription);
 		$(this).find('textarea[name="comparison"]').val(nextgrantdescription);
 		$(this).find('label').text(nextgrantname);
