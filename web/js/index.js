@@ -10,14 +10,8 @@ $(document).ready( function () {
 	});
 	
 	$(window).click(function () {
-		if ($("#comparisonbox").is(":visible"))
-		{
 			var h = $(window).height();
 			$("#junkdiv").height(h - $("header").outerHeight(true) - $("#grantheader").outerHeight(true) - $("#grants").outerHeight(true) - $("#comparisonbox").outerHeight(true));
-		}
-		else{
-			$("#junkdiv").height(0);
-		}
 	});
 
 	$(window).resize(function () {
@@ -360,6 +354,7 @@ $(document).ready( function () {
 			$('#newgrantbutton').show();
 			$("#newcpdiv").show();
 			$("#comparisonbox").hide();
+			$("#downloadpopup").hide();
 		}
 	});
 
