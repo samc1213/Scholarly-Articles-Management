@@ -87,6 +87,8 @@ $(document).ready( function () {
 	
 	$(document).on('submit', '#comparetoform', function(e) {
 		e.preventDefault();
+		console.log("grnatcount: " + grantcount);
+		console.log("glength: " + grants.length);		
 		console.log("submit");
 		var grantname = $(this).find('input[name="grantname"]').val();
 		comparisons[grantname] = $(this).find('textarea[name="comparison"]').val();
