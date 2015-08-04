@@ -81,8 +81,8 @@ $(document).ready( function () {
 		var comparee = grants[grantcount];
 		grantcount++;
 		$gtitle = $('.granttitle:contains("' + comparee + '")');
-		$tr = $gtitle[0];
-		$row = $tr.parent();
+		$td = $gtitle[0];
+		$row = $td.closest('tr');
 		console.log($row);
 		var nextgrantdescription = $row.find(".summary").text();
 		console.log(nextgrantdescription);
