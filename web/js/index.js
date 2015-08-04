@@ -37,15 +37,18 @@ $(document).ready( function () {
 		$('html, body').animate({
 	        scrollTop: $("#comparisonbox").offset().top
 	    }, 1000);
-	    $("#comparisonbox").append('<form id="choosecomparerform">');
-	    $("#choosecomparerform").append('<label for="comparergrantselect">Which grant are you generating the C&P form for?</label>');
-	    $("#choosecomparerform").append('<select id="comparergrantselect" style="margin-bottom: 2em;">');
-	    $comparer = $("#comparergrantselect");
-	    $(".grant").each( function () {
-	    	var str = '<option value="' + $(this).find(".granttitle").text() + '">' + $(this).find(".granttitle").text() + '</option>';
-	    	$comparer.append(str);
-	    });
-	    $("#choosecomparerform").append('<button id="choosecomparerbtn">Next</button>');
+	    if(! $("#choosecomparerform").length)
+	    {
+		    $("#comparisonbox").append('<form id="choosecomparerform">');
+		    $("#choosecomparerform").append('<label for="comparergrantselect">Which grant are you generating the C&P form for?</label>');
+		    $("#choosecomparerform").append('<select id="comparergrantselect" style="margin-bottom: 2em;">');
+		    $comparer = $("#comparergrantselect");
+		    $(".grant").each( function () {
+		    	var str = '<option value="' + $(this).find(".granttitle").text() + '">' + $(this).find(".granttitle").text() + '</option>';
+		    	$comparer.append(str);
+		    });
+		    $("#choosecomparerform").append('<button id="choosecomparerbtn">Next</button>');
+	    }
 	    $("#choosecomparerform").show();
 	    $("#comparetoform").hide();
 	});
