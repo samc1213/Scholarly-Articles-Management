@@ -21,14 +21,8 @@ $(document).ready( function () {
 	});
 
 	$(window).resize(function () {
-		if ($("#comparisonbox").is(":visible"))
-		{
 			var h = $(window).height();
 			$("#junkdiv").height(h - $("header").outerHeight(true) - $("#grantheader").outerHeight(true) - $("#grants").outerHeight(true) - $("#comparisonbox").outerHeight(true));
-		}
-		else{
-			$("#junkdiv").height(0);
-		}
 	});
 
 	$("#newcpform").click (function (e) {
@@ -52,6 +46,8 @@ $(document).ready( function () {
 	    	$comparer.append(str);
 	    });
 	    $("#choosecomparerform").append('<button id="choosecomparerbtn">Next</button>');
+	    $("#choosecomparerform").show();
+	    $("#comparetoform").hide();
 	});
 
 	$(document).on('submit', '#choosecomparerform', function (e) {
