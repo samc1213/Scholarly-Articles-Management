@@ -120,7 +120,7 @@ $(document).ready( function () {
 						console.log("data: " + data);
 						console.log("id: " + id);
 						$(".waiter").hide();
-						$("#comparisonbox").append("<form action='download.php' method='post' id='downloadform'><input name='id' value='" + id + "' type='hidden'/><button type='submit' style='margin-top: 5px;'>Download The File!</button></form>");
+						$("#comparisonbox").append("<form action='download.php' method='post' id='downloadform'><input name='id' value='" + id + "' type='hidden'/><button type='submit'>Download The File!</button></form>");
 					}
 				});
 		}
@@ -355,6 +355,7 @@ $(document).ready( function () {
 			$("#newcpdiv").show();
 			$("#comparisonbox").hide();
 			$("#downloadpopup").hide();
+			$(".waiter").hide();
 		}
 	});
 
