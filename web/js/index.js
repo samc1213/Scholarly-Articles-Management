@@ -39,18 +39,25 @@ $(document).ready( function () {
 	    	$.each(['DOE'], function (i, v) {
 	    		$("#sourceselect").append('<option value ="' + v + '">' + v + '</option>');
 	    	});
-		    // $("#comparisonbox").append('<form id="choosecomparerform">');
-		    // $("#choosecomparerform").append('<label for="comparergrantselect">Which grant are you generating the C&P form for?</label>');
-		    // $("#choosecomparerform").append('<select id="comparergrantselect" style="margin-bottom: 2em;">');
-		    // $comparer = $("#comparergrantselect");
-		    // $(".grant").each( function () {
-		    	// var str = '<option value="' + $(this).find(".granttitle").text() + '">' + $(this).find(".granttitle").text() + '</option>';
-		    	// $comparer.append(str);
-		    // });
-		    // $("#choosecomparerform").append('<button id="choosecomparerbtn">Next</button>');
+	    	$("#choosesourceform").append('<button id="choosesourcebtn">Next</button>');
 	    }
-	    $("#choosecomparerform").show();
+	    $("#choosecomparerform").remove();
 	    $("#comparetoform").remove();
+	});
+
+	$(document).on('submit', '#choosesourceform', function (e) {
+		e.preventDefault();
+		$(this).remove();
+		$("#comparisonbox").append('<form id="choosecomparerform">');
+	    $("#choosecomparerform").append('<label for="comparergrantselect">Which grant are you generating the C&P form for?</label>');
+	    $("#choosecomparerform").append('<select id="comparergrantselect" style="margin-bottom: 2em;">');
+	    $comparer = $("#comparergrantselect");
+	    $(".grant").each( function () {
+	    	var str = '<option value="' + $(this).find(".granttitle").text() + '">' + $(this).find(".granttitle").text() + '</option>';
+	    	$comparer.append(str);
+	    });
+	    $("#choosecomparerform").append('<button id="choosecomparerbtn">Next</button>');
+		
 	});
 
 	$(document).on('submit', '#choosecomparerform', function (e) {
@@ -60,7 +67,7 @@ $(document).ready( function () {
 		grantcount = 0;
 		var comparergrant = $("#comparergrantselect").val();
 		console.log(comparergrant);
-		$(this).hide();
+		$(this).remove();
 		$('.granttitle').each (function () {
 			var compareegrant = $(this).text();
 			if (compareegrant != comparergrant)
