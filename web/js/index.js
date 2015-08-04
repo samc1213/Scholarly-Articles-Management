@@ -50,7 +50,7 @@ $(document).ready( function () {
 	    	var str = '<option value="' + $(this).find(".granttitle").text() + '">' + $(this).find(".granttitle").text() + '</option>';
 	    	$comparer.append(str);
 	    });
-	    $("#comparisonbox").append('<button id="choosecomparerbtn">');
+	    $("#comparisonbox").append('<button id="choosecomparerbtn">Next</button>');
 	});
 
 	$(document).on('click', '#choosecomparerbtn', function () {
