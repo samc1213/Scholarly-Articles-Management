@@ -34,7 +34,7 @@ $(document).ready( function () {
 	    if(! $("#choosesourceform").length)
 	    {
 	    	$("#comparisonbox").append('<form id="choosesourceform">');
-	    	$("#choosesourceform").append('label <for ="sourceformselect">Which form would you like to use?</label>');
+	    	$("#choosesourceform").append('<label for ="sourceformselect">Which form would you like to use?</label>');
 	    	$("#choosesourceform").append('<select id="sourceselect">');
 	    	$.each(['DOE'], function () {
 	    		$("#sourceselect").append('<option value ="' + $(this).text() + '">' + $(this).text() + '</option>');
