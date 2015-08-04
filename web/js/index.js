@@ -84,7 +84,7 @@ $(document).ready( function () {
 		$td = $gtitle[0];
 		$row = $td.closest('tr');
 		console.log($row);
-		var nextgrantdescription = $row.find(".summary").text();
+		var nextgrantdescription = $row.find("td.summary").text();
 		console.log(nextgrantdescription);
 		
 		$("#comparetoform").append('<textarea type="text" rows="2" style="width: 80%;" name="comparison">' + nextgrantdescription + '</textarea>');
