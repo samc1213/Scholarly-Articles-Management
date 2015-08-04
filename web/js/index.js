@@ -225,6 +225,7 @@ $(document).ready( function () {
 	$(document).on('submit', '#downloadform', function(){ 
     	$("#downloadpopup").hide();
     	$("#downloadform").remove();
+    	$("#comparisonbox").hide();
 
 	}); 
 

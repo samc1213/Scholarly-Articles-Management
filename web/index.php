@@ -193,6 +193,7 @@
 	    	
 	        	
 				<div id="comparisonbox" style="display: none;" class="clearfix">
+					<h2>New C&P Form</h2>
 					<img class="waiter" src="img/ajax-loader.gif"/>
 				</div>
 	        	<div id="junkdiv"></div>
