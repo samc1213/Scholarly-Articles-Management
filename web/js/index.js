@@ -57,21 +57,30 @@ $(document).ready( function () {
 	$(document).on('submit', '#choosecomparerform', function (e) {
 		e.preventDefault();
 		comparisons = {};
+		grants = [];
 		var comparergrant = $("#comparergrantselect").val();
 		console.log(comparergrant);
 		$(this).hide();
 		$('.granttitle').each (function () {
-			$("#comparisonbox").append('<form id="comparetoform">');
-			$("#comparetoform").append('<textarea type="text" rows="2" style="width: 80%;" name="comparison">');
-			var grantname = $(this).text();
-			$("#comparetoform").append('<input type="hidden" name="grantname" value="' +grantname + '">' );
-			$("#comparetoform").append('<div><button id="nextcompareebtn">Next Grant</button><div>');
+			var compareegrant = $(this).text();
+			if (comparee != comparergrant)
+			{
+				grants.push(compareegrant);
+			}
+			console.log(grants);
 		});
-
+		$("#comparisonbox").append('<form id="comparetoform">');
+		$("#comparetoform").append('<textarea type="text" rows="2" style="width: 80%;" name="comparison">');
+		var comparee = grants[0];
+		$("#comparetoform").append('<label for="comparison">' + comparee + '</label>');
+		$("#comparetoform").append('<input type="hidden" name="grantname" value="' +comparee + '">' );
+		$("#comparetoform").append('<div><button id="nextcompareebtn">Next Grant</button><div>');
 	});
+	
 	$(document).on('submit', '#comparetoform', function(e) {
+		e.preventDefault();
 		var grantname = $(this).find('input[name="grantname"]').val();
-		comparisons.grantname = $(this).find('input[name="comparison"]').val();
+		comparisons.grantname = $(this).find('textarea[name="comparison"]').val();
 	});
 
 	$(".dlform").submit(function (e) {
