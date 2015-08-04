@@ -39,7 +39,7 @@ $(document).ready( function () {
 	    	$.each(['DOE'], function (i, v) {
 	    		$("#sourceselect").append('<option value ="' + v + '">' + v + '</option>');
 	    	});
-	    	$("#choosesourceform").append('<button id="choosesourcebtn">Next</button>');
+	    	$("#choosesourceform").append('<div><button id="choosesourcebtn">Next</button></div>');
 	    }
 	    $("#choosecomparerform").remove();
 	    $("#comparetoform").remove();
@@ -56,7 +56,7 @@ $(document).ready( function () {
 	    	var str = '<option value="' + $(this).find(".granttitle").text() + '">' + $(this).find(".granttitle").text() + '</option>';
 	    	$comparer.append(str);
 	    });
-	    $("#choosecomparerform").append('<button id="choosecomparerbtn">Next</button>');
+	    $("#choosecomparerform").append('<div><button id="choosecomparerbtn">Next</button></div>');
 		
 	});
 
@@ -159,7 +159,7 @@ $(document).ready( function () {
 		var nextgrantdescription = $tr.find('td.summary').text();
 		console.log(nextgrantdescription);
 		$(this).find('textarea[name="comparison"]').val(nextgrantdescription);
-		$(this).find('label').text('Add a line that shows how <strong>' + grants[0] + '</strong> compares to <strong>' + nextgrantname + '</strong>');
+		$(this).find('label').val('Add a line that shows how <strong>' + grants[0] + '</strong> compares to <strong>' + nextgrantname + '</strong>');
 	});
 
 	$(".dlform").submit(function (e) {
