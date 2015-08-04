@@ -88,6 +88,10 @@ $(document).ready( function () {
 		var nextgrantname = grants[grantcount];
 		$(this).find('input[name="grantname"]').val(nextgrantname);
 		grantcount++;
+		if (grantcount == grants.length)
+		{
+			$(this).hide();
+		}
 		$(this).find('textarea[name="comparison"]').val('');
 		$(this).find('label').text(nextgrantname);
 	});
