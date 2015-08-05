@@ -3,6 +3,9 @@ $(document).ready( function () {
 	var originalperiod1;
 	var comparecount;
 	var grantnum;
+	
+	$('#input_file').filer();
+	
 	$("#maintable").stupidtable();
 	
 	$("#comparisonbox").click( function (e) {

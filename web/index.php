@@ -19,8 +19,10 @@
         <link rel="stylesheet" href="css/jquery.modal.css" type="text/css" media="screen" />
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
         
-        <link rel="stylesheet" href="css/dropzone.css" type="text/css">
-        
+        <link href="css/jquery.filer.css" type="text/css" rel="stylesheet" />
+		<link href="css/jquery.filer-dragdropbox-theme.css" type="text/css" rel="stylesheet" />
+
+                
         <!--Keep custom css last  -->
 		<link rel="stylesheet"  type="text/css" href="css/custom.css">
     </head>
@@ -200,12 +202,9 @@
 	        	</section>
 	        	
 			<div>
-				<form action="upload.php"
-				<!-- class="dropzone" -->
-				id="my-awesome-dropzone" method="post" enctype="multipart/form-data">
-				Select image to upload:
-			    <input type="file" name="fileToUpload" id="fileToUpload">
-			    <input type="submit" value="Upload Image" name="submit">
+			<form action="upload.php" method="post" enctype="multipart/form-data">
+			    <input type="file" name="files[]" id="input_file" multiple="multiple">
+			    <input type="submit">
 			</form>
 			</div>
 	        	
@@ -354,7 +353,7 @@
         <script src="js/jquery.modal.min.js" type="text/javascript" charset="utf-8"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
         <script src="js/stupidtable.min.js"></script>
-        <script src="js/dropzone.js"></script>
+        <script src="js/jquery.filer.min.js"></script>
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>        
         <script src="js/jquery.watermark.min.js"></script>
         <script src="js/plugins.js"></script>
