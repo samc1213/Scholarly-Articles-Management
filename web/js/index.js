@@ -119,6 +119,7 @@ $(document).ready( function () {
 				grant.firstname = $(document).find("#firstname").text();
 				grant.lastname = $(document).find("#lastname").text();
 				grant.middlename = $(document).find("#middlename").text();
+				console.log("mname" + grant.middlename);
 				grant.location = $(this).find(".locationval").text();
 				data.push(grant);			
 			});
