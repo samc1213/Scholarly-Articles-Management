@@ -14,7 +14,7 @@ $(document).ready( function () {
 	var config = { attributes: true, childList: true, characterData: true };
 
 	
-	var observer = MutationObserver(function () {
+	var observer = new MutationObserver(function () {
 		if ($("#grantheader").is(":visible"))
 		{
 			var h = $(window).height();
