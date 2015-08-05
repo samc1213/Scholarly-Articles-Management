@@ -15,8 +15,10 @@ $result = $s3->deleteObject(array(
     'Key'    => $_POST['id']
 ));
 
+$filename = $_POST['filename'];
+
 $file_url = 'localdoc.docx';
 header('Content-Type: application/octet-stream');
 header("Content-Transfer-Encoding: Binary"); 
-header("Content-disposition: attachment; filename=downloadedfile.docx"); 
+header("Content-disposition: attachment; filename=".$filename.".docx"); 
 readfile($file_url);
