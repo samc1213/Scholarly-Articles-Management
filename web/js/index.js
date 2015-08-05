@@ -21,7 +21,7 @@ $(document).ready( function () {
 	
 	});
 
-	$(window).load(function () {
+	$(window).onload(function () {
 		var h = $(window).height();
 		$("#junkdiv").height(h - $("header").outerHeight(true) - $("#grantheader").outerHeight(true) - $("#grants").outerHeight(true) - $("#comparisonbox").outerHeight(true));
 		if ($("#newgrantpopup").is(":visible")) {
@@ -90,54 +90,48 @@ $(document).ready( function () {
 		comparisons = {};
 		grants = [];
 		grantcount = 0;
+		
 		var comparergrant = $("#comparergrantselect").val();
 		$gtitle = $(document).find('.granttitle:contains("' + comparergrant + '")');
-		console.log($gtitle);
 		$tr = $gtitle.closest('tr');
-		var nextgrantdescription = $tr.find('td.summary').text();
-		comparisons[comparergrant] = nextgrantdescription;
-		console.log(comparergrant);
-		$(this).remove();
+		var comparerdescription = $tr.find('td.summary').text();
+		comparisons[comparergrant] = comparerdescription;
+		grants[grantcount] = comparergrant;
+		grantcount++;
+
 		$('.granttitle').each (function () {
 			var compareegrant = $(this).text();
 			if (compareegrant != comparergrant)
 			{
 				grants.push(compareegrant);
 			}
-			console.log(grants);
-		});
+			console.log("grants array: " + grants);
+		});	
+		$(this).remove();
+		
 		$("#comparisonbox").append('<form id="comparetoform">');		
 		
 		var comparee = grants[grantcount];
-		grantcount++;
 		$gtitle = $(document).find('.granttitle:contains("' + comparee + '")');
-		console.log($gtitle);
 		$tr = $gtitle.closest('tr');
-		var nextgrantdescription = $tr.find('td.summary').text();
-		console.log(nextgrantdescription);
+		var compareedescription = $tr.find('td.summary').text();
 		
-		$("#comparetoform").append('<textarea type="text" rows="2" style="width: 80%;" name="comparison">' + nextgrantdescription + '</textarea>');
-		$("#comparetoform").append('<label for="comparison">' + 'Add a line that shows how <strong>' + comparergrant + '</strong> compares to <strong>' + comparee + '</strong></label>');
-		$("#comparetoform").append('<input type="hidden" name="grantname" value="' +comparee + '">' );
+		$("#comparetoform").append('<textarea type="text" rows="2" style="width: 80%;" name="comparison">' + compareedescription + '</textarea>');
+		$("#comparetoform").append('<label for="comparison">' + 'Add a line that shows how <strong>' + grants[0] + '</strong> compares to <strong>' + comparee + '</strong></label>');
+		$("#comparetoform").append('<input type="hidden" name="grantname" value="' + comparee + '">' );
 		$("#comparetoform").append('<div><button id="nextcompareebtn">Next Grant</button><div>');
+		
+		if (grantcount == grants.length-1)  //if there are only two grants total, make the button say submit
+		{
+			$("#nextcompareebtn").text("Submit");
+		}
+		
 	});
 	
 	$(document).on('submit', '#comparetoform', function(e) {
 		e.preventDefault();
-		console.log("grnatcount: " + grantcount);
-		console.log("glength: " + grants.length);
-		if (grantcount == grants.length-1)
-		{
-			$("#nextcompareebtn").text("Submit");
-		}		
-		console.log("submit");
-		var grantname = $(this).find('input[name="grantname"]').val();
-		comparisons[grantname] = $(this).find('textarea[name="comparison"]').val();
-		console.log(comparisons);
-		var nextgrantname = grants[grantcount];
-		$(this).find('input[name="grantname"]').val(nextgrantname);
-		grantcount++;
-		if (grantcount == grants.length + 1)
+		
+		if (grantcount == grants.length-1)		//on submit, check if we've compared every grant
 		{
 			$("#comparetoform").remove();
 			$(".waiter").show();
@@ -183,14 +177,26 @@ $(document).ready( function () {
 					}
 				});
 		}
-		$gtitle = $(document).find('.granttitle:contains("' + nextgrantname + '")');
-		console.log($gtitle);
+
+		if (grantcount == grants.length-2)
+		{
+			$("#nextcompareebtn").text("Submit");
+		}
+		
+		var submittedgrantname = $(this).find('input[name="grantname"]').val();
+		comparisons[submittedgrantname] = $(this).find('textarea[name="comparison"]').val(); //when its submitted, save submitted grant name and comparison
+		
+		grantcount++; //once we've saved submission, go to next grant
+		
+		var comparee = grants[grantcount];
+		$(this).find('input[name="grantname"]').val(comparee); //prepare for next submission
+		
+		$gtitle = $(document).find('.granttitle:contains("' + comparee + '")');
 		$tr = $gtitle.closest('tr');
-		var nextgrantdescription = $tr.find('td.summary').text();
-		console.log(nextgrantdescription);
-		$(this).find('textarea[name="comparison"]').val(nextgrantdescription);
-		console.log("NEXTGRANT" + nextgrantname);
-		$(this).find('label').html('Add a line that shows how <strong>' + grants[0] + '</strong> compares to <strong>' + nextgrantname + '</strong>');
+		var compareedescription = $tr.find('td.summary').text();
+		$(this).find('textarea[name="comparison"]').val(compareedescription);
+
+		$(this).find('label').html('Add a line that shows how <strong>' + grants[0] + '</strong> compares to <strong>' + comparee + '</strong>');
 	});
 
 	// $(".dlform").submit(function (e) {
@@ -291,7 +297,7 @@ $(document).ready( function () {
     	$("#downloadpopup").hide();
     	$("#downloadform").remove();
     	$("#comparisonbox").hide();
-
+    	$("#shield").css('background-color', 'white');
 	}); 
 
 	$("#logoutheaderbutton").click( function () {
@@ -421,6 +427,7 @@ $(document).ready( function () {
 	
 	$("#newgrantbutton").click(function(evt) {
 		evt.stopPropagation();
+		$("#junkdiv").height(0);
 		$("#newcpform").hide();		
 		$(this).hide();
 		console.log('hi');
@@ -439,6 +446,7 @@ $(document).ready( function () {
 	
 	$(".editbtn").click(function(evt) {
 		evt.stopPropagation();
+		$("#junkdiv").height(0);
 		$("#newgrantbutton").hide();
 		$("#newcpform").hide();		
 		console.log("yo");
