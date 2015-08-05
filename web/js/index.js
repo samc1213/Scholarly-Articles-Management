@@ -135,6 +135,7 @@ $(document).ready( function () {
 		if($('.granttitle').length == 1)
 		{
 			$("#comparetoform").remove();
+			$("#choosecomparerform").remove();
 			$(".waiter").show();
 			var data = [];
 			$(".grant").each(function (i) {
