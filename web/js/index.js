@@ -9,7 +9,12 @@ $(document).ready( function () {
 		e.stopPropagation();
 	});
 	
-	MutationObserver(function () {
+	var target = document.querySelector("body");
+	
+	var config = { attributes: true, childList: true, characterData: true };
+
+	
+	var observer = MutationObserver(function () {
 		if ($("#grantheader").is(":visible"))
 		{
 			var h = $(window).height();
@@ -23,6 +28,7 @@ $(document).ready( function () {
 		}	
 	});
 
+	observer.observe(target, config);
 	
 	// $(window).resize(function () {
 		// if ($("#grantheader").is(":visible")) {		
