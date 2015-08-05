@@ -19,7 +19,7 @@
         <link rel="stylesheet" href="css/jquery.modal.css" type="text/css" media="screen" />
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
         
-        <link rel="stylesheet" href="css/dropzone.scss" type="text/css">
+        <link rel="stylesheet" href="css/dropzone.css" type="text/css">
         
         <!--Keep custom css last  -->
 		<link rel="stylesheet"  type="text/css" href="css/custom.css">
