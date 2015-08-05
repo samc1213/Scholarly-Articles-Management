@@ -9,26 +9,26 @@ $(document).ready( function () {
 		e.stopPropagation();
 	});
 	
-	var target = document.querySelector("body");
-	
-	var config = { attributes: true, childList: true, characterData: true };
-
-	
-	var observer = new MutationObserver(function () {
-		if ($("#grantheader").is(":visible"))
-		{
-			var h = $(window).height();
-			$("#junkdiv").height(h - $("header").outerHeight(true) - $("#grantheader").outerHeight(true) - $("#grants").outerHeight(true) - $("#comparisonbox").outerHeight(true));
-			if ($("#newgrantpopup").is(":visible")) {
-				$("#junkdiv").height(0);
-			}
-			if ($("#editgrantpopup").is(":visible")) {
-				$("#junkdiv").height(0);
-			}
-		}	
-	});
-
-	observer.observe(target, config);
+	// var target = document.querySelector("body");
+// 	
+	// var config = { attributes: true, childList: true, characterData: true };
+// 
+// 	
+	// var observer = new MutationObserver(function () {
+		// if ($("#grantheader").is(":visible"))
+		// {
+			// var h = $(window).height();
+			// $("#junkdiv").height(h - $("header").outerHeight(true) - $("#grantheader").outerHeight(true) - $("#grants").outerHeight(true) - $("#comparisonbox").outerHeight(true));
+			// if ($("#newgrantpopup").is(":visible")) {
+				// $("#junkdiv").height(0);
+			// }
+			// if ($("#editgrantpopup").is(":visible")) {
+				// $("#junkdiv").height(0);
+			// }
+		// }	
+	// });
+// 
+	// observer.observe(target, config);
 	
 	// $(window).resize(function () {
 		// if ($("#grantheader").is(":visible")) {		

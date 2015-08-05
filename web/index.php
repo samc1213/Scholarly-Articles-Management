@@ -205,7 +205,6 @@
 					<h2>New C&P Form</h2>
 					<img class="waiter" src="img/ajax-loader.gif"/>
 				</div>
-	        	<div id="junkdiv"></div>
 	                <div id="newgrantpopup" class="grantpopup">
 		        	<h2 id="newgrantheader">New Grant</h2>
 		        	<form id="newgrantform">
