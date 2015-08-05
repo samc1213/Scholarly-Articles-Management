@@ -51,6 +51,14 @@
 	        		echo $_SESSION["firstname"];
 	        		echo '</span>';
 					echo ' ';
+					$middlename = $_SESSION["middlename"];
+					if ($middlename != '')
+					{
+						echo '<span id="middlename">';
+						echo $middlename;
+						echo '</span>';
+						echo ' ';
+					}
 					echo '<span id="lastname">'.$_SESSION["lastname"].'</span>';
 					echo "'s Grants</h2>";
 					require ('/app/vendor/autoload.php');

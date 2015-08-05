@@ -5,7 +5,7 @@
 	if ($_POST["type"] == "create") {
 		$passhash = password_hash($_POST['password'], PASSWORD_DEFAULT);
 		try {
-			createuser($_POST['username'], $passhash, $_POST['email'], $_POST['firstname'], $_POST['lastname']);
+			createuser($_POST['username'], $passhash, $_POST['email'], $_POST['firstname'], $_POST['lastname'], $_POST['middlename']);
 		} catch (Exception $e) {
 			echo $e -> getCode();
 		}
@@ -20,6 +20,7 @@
 				$_SESSION['username'] = $result['username'];
 				$_SESSION['firstname'] = $result['firstname'];
 				$_SESSION['lastname'] = $result['lastname'];
+				$_SESSION['middlename'] = $result['middlename'];
 				$_SESSION['email'] = $result['email'];
 			}
 		} catch (Exception $e) {

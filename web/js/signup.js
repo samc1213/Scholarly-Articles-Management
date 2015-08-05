@@ -14,6 +14,7 @@ $(document).ready (function () {
 	password = $('#password').val();
 	email = $('#email').val();
 	firstname = $('#firstname').val();
+	middlename = $('#middlename').val();
 	lastname = $('#lastname').val();
 		$.ajax ({
 			type: "POST",
@@ -25,6 +26,7 @@ $(document).ready (function () {
 				email: email,
 				firstname: firstname,
 				lastname: lastname,
+				middlename: middlename,
 				},
 			success: function(data)
 			{

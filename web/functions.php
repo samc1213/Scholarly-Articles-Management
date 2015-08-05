@@ -1,5 +1,5 @@
 	<?php
-		function createuser($username, $password, $email, $firstname, $lastname) {
+		function createuser($username, $password, $email, $firstname, $lastname, $middlename) {
 			// require('../vendor/autoload.php');				
 			try{
 				$uri = "mongodb://heroku_v7w2qftd:a5h7slci8p0b2p9nt7qe96hmvv@ds027483.mongolab.com:27483/heroku_v7w2qftd";
@@ -11,7 +11,8 @@
 				        'password' => $password,
 				        'email' => $email,
 				        'firstname' => $firstname,
-				        'lastname' => $lastname
+				        'lastname' => $lastname,
+				        'middlename' => $middlename,
 				    ),
 				);
 			
@@ -47,6 +48,7 @@
 				$passhash = $user["password"];
 				$firstname = $user["firstname"];
 				$lastname = $user["lastname"];
+				$middlename = $user["middlename"];
 				$email = $user["email"];
 					
 			} catch (Exception $e) {
@@ -62,6 +64,7 @@
 				$result["username"] = $username;
 				$result["firstname"] = $firstname;
 				$result["lastname"] = $lastname;
+				$result["middlename"] = $middlename;
 				$result["email"] = $email;
 			}
 			else
