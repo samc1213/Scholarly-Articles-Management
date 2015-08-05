@@ -202,7 +202,8 @@
 			<div>
 				<form action="upload.php"
 				class="dropzone"
-				id="my-awesome-dropzone" method="post"></form>
+				id="my-awesome-dropzone" method="post">
+				<button type="submit">SUB</button></form>
 			</div>
 	        	
 
