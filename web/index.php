@@ -29,6 +29,7 @@
 
         <!-- Add your site or application content here -->
         <div id='shield'>
+        </div>
         <section id="content" class="clearfix">
 	        <header class="clearfix">
 	        	<a href="/"> <img id="mainlogo" src="img/sofilogo.png"/> </a>
@@ -332,7 +333,6 @@
 
         </section>
         <!-- ^ end of content section -->
-	        </div>
 
 
         <script src="js/jquery.min.js"></script>
