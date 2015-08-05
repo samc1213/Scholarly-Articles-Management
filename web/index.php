@@ -202,7 +202,7 @@
 			<div>
 				<form action="upload.php"
 				class="dropzone"
-				id="my-awesome-dropzone"></form>
+				id="my-awesome-dropzone" method="post"></form>
 			</div>
 	        	
 
