@@ -21,7 +21,7 @@ $(document).ready( function () {
 	
 	});
 
-	$(window).onload(function () {
+	$(window).load(function () {
 		var h = $(window).height();
 		$("#junkdiv").height(h - $("header").outerHeight(true) - $("#grantheader").outerHeight(true) - $("#grants").outerHeight(true) - $("#comparisonbox").outerHeight(true));
 		if ($("#newgrantpopup").is(":visible")) {
@@ -199,100 +199,6 @@ $(document).ready( function () {
 		$(this).find('label').html('Add a line that shows how <strong>' + grants[0] + '</strong> compares to <strong>' + comparee + '</strong>');
 	});
 
-	// $(".dlform").submit(function (e) {
-		// e.preventDefault();
-		// $("#downloadpopup").show();
-		// var data = [];
-		// $(".grant").each(function (i) {
-			// var grant = {};
-			// grant.name = $(this).find(".granttitle").text();
-			// grant.status = $(this).find(".status").text();
-			// grant.source = $(this).find(".grantagency").text();
-			// grant.amount = $(this).find(".amountnum").text();
-			// grant.piamount = $(this).find(".piamountnum").text();
-			// grant.personmonths = $(this).find(".pmonthnum").text();
-			// grant.specify = $(this).find(".pmonthunits").text();
-			// grant.description = $(this).find(".summary").text();
-			// grant.awardperiod1 = $(this).find(".fromdate").text();
-			// grant.awardperiod2 = $(this).find(".todate").text();
-			// grant.firstname = $(document).find("#firstname").text();
-			// grant.lastname = $(document).find("#lastname").text();
-			// grant.location = $(this).find(".locationval").text();
-			// data.push(grant);
-		// });
-		// console.log(data);
-		// var jsondata = JSON.stringify(data);
-		// var id = Math.random() * 10000;
-		// $.ajax ({
-			// type: "POST",
-			// url: "api.php",
-			// data:
-			// {
-				// type: "download",
-				// data: jsondata,
-				// id: id,
-			// },
-			// success: function(data)
-			// {
-				// console.log("data: " + data);
-				// console.log("id: " + id);
-				// $(".waiter").hide();
-				// $("#downloadpopup").append("<form action='download.php' method='post' id='downloadform'><input name='id' value='" + id + "' type='hidden'/><button type='submit' style='margin-top: 5px;'>Download The File!</button></form>");
-			// }
-		// });
-	// });
-	
-	// $(".compareform").submit( function (e) {
-		// e.preventDefault();
-		// comparecount = 0;
-		// grantnum = $(this).find('input[name="grantnum"]').val();
-		// grantnum = grantnum - 1;
-		// console.log("grantnum: " + grantnum);
-		// $("#comparepopup").show();
-		// if (comparecount != grantnum) {
-			// var grantstr = "#grant" + grantnum;
-			// $comparergrant = $(grantstr);
-			// var comparername = $comparergrant.find(".granttitle").text();
-			// $compareegrant = $("#grant" + comparecount);
-			// var compareename = $compareegrant.find(".granttitle").text();
-			// $("#comparelabel").text("Compare " + comparername + "to " + compareename);
-		// }
-		// else {
-			// comparecount = comparecount + 1;
-			// var grantstr = "#grant" + grantnum;
-			// $comparergrant = $(grantstr);
-			// var comparername = $comparergrant.find(".granttitle").text();
-			// $compareegrant = $("#grant" + comparecount);
-			// var compareename = $compareegrant.find(".granttitle").text();
-			// $("#comparelabel").text("Compare " + comparername + "to " + compareename);
-		// }
-	// });
-	
-	// $("#compareformpopup").submit( function (e) {
-		// e.preventDefault();
-		// var grantstr = "#grant" + grantnum;
-		// $comparergrant = $(grantstr);
-		// var comparername = $comparergrant.find(".granttitle").text();
-		// $compareegrant = $("#grant" + comparecount);
-		// var compareename = $compareegrant.find(".granttitle").text();
-		// if (comparecount != grantnum) {
-			// $("#comparelabel").text("Compare " + comparername + " to " + compareename);
-			// var grantstr = "#grant" + comparecount;
-			// $grant = $(document).find(grantstr);
-			// var str = $(this).find('input[name="comparisontext"]').val();
-			// $grant.find(".comparison").text(str);
-			// $(this).find('input[name="comparisontext"]').val('');
-		// }
-// 
-		// if (comparecount == $(".grant").length - 2)
-		// {
-			// console.log("HIDE!");
-			// $("#comparelabel").text("lastone");
-			// $("#comparepopup").hide();
-		// }
-		// comparecount = comparecount + 1;
-	// });
-	
 	$(document).on('submit', '#downloadform', function(){ 
     	$("#downloadpopup").hide();
     	$("#downloadform").remove();
