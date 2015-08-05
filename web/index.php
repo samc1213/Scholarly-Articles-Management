@@ -119,6 +119,7 @@
 								<th data-sort="int">Dates</th>
 								<th data-sort="string">Location</th>
 								<th data-sort="string">Description</th>
+								<th data-sort="int">Modified</th>
 								<th>Edit</th>																
 								</tr></thead> <tbody>';
 																
@@ -153,6 +154,7 @@
 									$fromdate = $grant['awardperiod1'];
 									$todate = $grant['awardperiod2'];
 									$location = $grant['location'];
+									$edited = $grant['edited'];
 									
 									echo '<td class="status">'.$status.'</span></td>';
 									// if ($agency == "DOE"){
@@ -172,6 +174,7 @@
 									echo '<td class="dates"><span class="fromdate">'.$fromdate.'</span> to <span class="todate">'.$todate.'</span></td>';
 									echo '<td class = "location"><span class="locationval">'.$location.'</span></td>';
 									echo '<td class="summary">'.$summary.'</td>';
+									echo '<td class="edited">'.$edited.'</td>';
 									echo '<td> </span><span class="buttoncover"><button class="btn btn-default editbtn" style="padding: 0;" id="editbtn';
 									echo $count;
 									echo '"><i class="fa fa-pencil-square-o"';
