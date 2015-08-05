@@ -199,9 +199,11 @@
 	        		
 	        	</section>
 	        	
-	        	<div><form action="/file-upload"
-      class="dropzone"
-      id="my-awesome-dropzone"></form></div>
+			<div>
+				<form action="upload.php"
+				class="dropzone"
+				id="my-awesome-dropzone"></form>
+			</div>
 	        	
 
 	        	<?php
