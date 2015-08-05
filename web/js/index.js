@@ -32,6 +32,16 @@ $(document).ready( function () {
 		}
 	});
 
+	$(document).on('DOMNodeInserted', function(e) {
+		var h = $(window).height();
+		$("#junkdiv").height(h - $("header").outerHeight(true) - $("#grantheader").outerHeight(true) - $("#grants").outerHeight(true) - $("#comparisonbox").outerHeight(true));
+		if ($("#newgrantpopup").is(":visible")) {
+			$("#junkdiv").height(0);
+		}
+		if ($("#editgrantpopup").is(":visible")) {
+			$("#junkdiv").height(0);
+	});
+
 	$(window).resize(function () {		
 		var h = $(window).height();
 		$("#junkdiv").height(h - $("header").outerHeight(true) - $("#grantheader").outerHeight(true) - $("#grants").outerHeight(true) - $("#comparisonbox").outerHeight(true));
@@ -96,14 +106,14 @@ $(document).ready( function () {
 		$tr = $gtitle.closest('tr');
 		var comparerdescription = $tr.find('td.summary').text();
 		comparisons[comparergrant] = comparerdescription;
-		grants[grantcount] = comparergrant;
+		grants[grantcount] = comparergrant;		//save the grant we're comparing in the object and increment counter
 		grantcount++;
 
 		$('.granttitle').each (function () {
 			var compareegrant = $(this).text();
 			if (compareegrant != comparergrant)
 			{
-				grants.push(compareegrant);
+				grants.push(compareegrant);		//store all of the other grants in the grants array (the comparer is in position 0)
 			}
 			console.log("grants array: " + grants);
 		});	
@@ -114,7 +124,7 @@ $(document).ready( function () {
 		var comparee = grants[grantcount];
 		$gtitle = $(document).find('.granttitle:contains("' + comparee + '")');
 		$tr = $gtitle.closest('tr');
-		var compareedescription = $tr.find('td.summary').text();
+		var compareedescription = $tr.find('td.summary').text();			//do first comparison in this function
 		
 		$("#comparetoform").append('<textarea type="text" rows="2" style="width: 80%;" name="comparison">' + compareedescription + '</textarea>');
 		$("#comparetoform").append('<label for="comparison">' + 'Add a line that shows how <strong>' + grants[0] + '</strong> compares to <strong>' + comparee + '</strong></label>');
@@ -128,10 +138,13 @@ $(document).ready( function () {
 		
 	});
 	
-	$(document).on('submit', '#comparetoform', function(e) {
+	$(document).on('submit', '#comparetoform', function(e) {		//all subsequent comparisions
 		e.preventDefault();
 		
-		if (grantcount == grants.length-1)		//on submit, check if we've compared every grant
+		var submittedgrantname = $(this).find('input[name="grantname"]').val();
+		comparisons[submittedgrantname] = $(this).find('textarea[name="comparison"]').val(); //when its submitted, save submitted grant name and comparison
+
+		if (grantcount == grants.length-1)		//on submit, check if we've compared every grant, if so, submit to API
 		{
 			$("#comparetoform").remove();
 			$(".waiter").show();
@@ -151,7 +164,7 @@ $(document).ready( function () {
 				grant.firstname = $(document).find("#firstname").text();
 				grant.lastname = $(document).find("#lastname").text();
 				grant.location = $(this).find(".locationval").text();
-				data.push(grant);
+				data.push(grant);			
 			});
 				console.log(data);
 				var jsondata = JSON.stringify(data);
@@ -169,8 +182,7 @@ $(document).ready( function () {
 					{
 						console.log("data: " + data);
 						console.log("id: " + id);
-						if ($(".waiter").is(":visible")) {
-
+						if ($(".waiter").is(":visible")) {		//make sure waiter is there in case someone gets bored and closes box before ajax callback
 							$("#comparisonbox").append("<form action='download.php' method='post' id='downloadform'><input name='id' value='" + id + "' type='hidden'/><button type='submit'>Download The File!</button></form>");
 						} 
 							$(".waiter").hide();
@@ -182,9 +194,6 @@ $(document).ready( function () {
 		{
 			$("#nextcompareebtn").text("Submit");
 		}
-		
-		var submittedgrantname = $(this).find('input[name="grantname"]').val();
-		comparisons[submittedgrantname] = $(this).find('textarea[name="comparison"]').val(); //when its submitted, save submitted grant name and comparison
 		
 		grantcount++; //once we've saved submission, go to next grant
 		
