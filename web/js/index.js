@@ -402,7 +402,6 @@ $(document).ready( function () {
 	
 	$(".editbtn").click(function(evt) {
 		evt.stopPropagation();
-		$("#junkdiv").height(0);
 		$("#newgrantbutton").hide();
 		$("#newcpform").hide();		
 		console.log("yo");
@@ -413,6 +412,7 @@ $(document).ready( function () {
 		
 		$("#editgrantpopup").show();
 		$grantdiv = $("#grant" + divnumber);
+		console.log($grantdiv);
 		$grantname = $grantdiv.find(".granttitle");
 		originalname = $grantname.text();
 		$("#egrantname").val($grantname.text());
