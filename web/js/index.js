@@ -118,7 +118,13 @@ $(document).ready( function () {
 				grant.awardperiod2 = $(this).find(".todate").text();
 				grant.firstname = $(document).find("#firstname").text();
 				grant.lastname = $(document).find("#lastname").text();
-				grant.middlename = $(document).find("#middlename").text();
+				$mname = $(document).find("#middlename");
+				if ($mname.is(":empty")){
+					grant.middlename = '';
+				}
+				else {
+					grant.middlename = $mname.text();
+				}
 				console.log("mname" + grant.middlename);
 				grant.location = $(this).find(".locationval").text();
 				data.push(grant);			
