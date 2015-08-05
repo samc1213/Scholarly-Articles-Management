@@ -21,7 +21,7 @@ $(document).ready( function () {
 	
 	});
 
-	window.onload(function () {
+	$(window).load(function () {
 		var h = $(window).height();
 		$("#junkdiv").height(h - $("header").outerHeight(true) - $("#grantheader").outerHeight(true) - $("#grants").outerHeight(true) - $("#comparisonbox").outerHeight(true));
 		if ($("#newgrantpopup").is(":visible")) {
