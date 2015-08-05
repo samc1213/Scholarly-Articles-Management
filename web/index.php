@@ -52,12 +52,12 @@
 	        		echo $_SESSION["firstname"];
 	        		echo '</span>';
 					echo ' ';
+					echo '<span id="middlename">';
 					$middlename = $_SESSION["middlename"];
+					echo $middlename;
+					echo '</span>';
 					if ($middlename != '')
 					{
-						echo '<span id="middlename">';
-						echo $middlename;
-						echo '</span>';
 						echo ' ';
 					}
 					echo '<span id="lastname">'.$_SESSION["lastname"].'</span>';
