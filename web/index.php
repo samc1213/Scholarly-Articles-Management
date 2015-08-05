@@ -19,6 +19,8 @@
         <link rel="stylesheet" href="css/jquery.modal.css" type="text/css" media="screen" />
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
         
+        <link rel="stylesheet" href="css/dropzone.scss" type="text/css">
+        
         <!--Keep custom css last  -->
 		<link rel="stylesheet"  type="text/css" href="css/custom.css">
     </head>
@@ -196,6 +198,11 @@
 	        	</div> -->
 	        		
 	        	</section>
+	        	
+	        	<div><form action="/file-upload"
+      class="dropzone"
+      id="my-awesome-dropzone"></form></div>
+	        	
 
 	        	<?php
 	        	session_start();
@@ -341,6 +348,7 @@
         <script src="js/jquery.modal.min.js" type="text/javascript" charset="utf-8"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
         <script src="js/stupidtable.min.js"></script>
+        <script src="js/dropzone.js"></script>
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>        
         <script src="js/jquery.watermark.min.js"></script>
         <script src="js/plugins.js"></script>
