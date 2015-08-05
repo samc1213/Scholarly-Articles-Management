@@ -234,7 +234,7 @@
 		      			<label class="biglabel" for="status">Status:</label>
 						<select id="status">
 							<option selected disabled>Choose status</option>
-				        	<option value="Completed">Completed</option>
+				        	<option value="Current">Current</option>
 		    				<option value="Pending">Pending</option>
 		    				<option value="Submission Planned">Submission Planned</option>
 		    				<option value="Transfer of Support">Transfer of Support</option>

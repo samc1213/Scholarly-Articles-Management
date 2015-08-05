@@ -131,7 +131,54 @@ $(document).ready( function () {
 		comparisons[comparergrant] = comparerdescription;
 		grants[grantcount] = comparergrant;		//save the grant we're comparing in the object and increment counter
 		grantcount++;
-
+		
+		if($('.granttitle').length == 1)
+		{
+			$("#comparetoform").remove();
+			$(".waiter").show();
+			var data = [];
+			$(".grant").each(function (i) {
+				var grant = {};
+				grant.name = $(this).find(".granttitle").text();
+				grant.status = $(this).find(".status").text();
+				grant.source = $(this).find(".grantagency").text();
+				grant.amount = $(this).find(".amountnum").text();
+				grant.piamount = $(this).find(".piamountnum").text();
+				grant.personmonths = $(this).find(".pmonthnum").text();
+				grant.specify = $(this).find(".pmonthunits").text();
+				grant.description = comparisons[grant.name];
+				grant.awardperiod1 = $(this).find(".fromdate").text();
+				grant.awardperiod2 = $(this).find(".todate").text();
+				grant.firstname = $(document).find("#firstname").text();
+				grant.lastname = $(document).find("#lastname").text();
+				grant.location = $(this).find(".locationval").text();
+				data.push(grant);			
+			});
+				console.log(data);
+				var jsondata = JSON.stringify(data);
+				var id = Math.random() * 10000;
+				$.ajax ({
+					type: "POST",
+					url: "api.php",
+					data:
+					{
+						type: "download",
+						data: jsondata,
+						id: id,
+					},
+					success: function(data)
+					{
+						console.log("data: " + data);
+						console.log("id: " + id);
+						if ($(".waiter").is(":visible")) {		//make sure waiter is there in case someone gets bored and closes box before ajax callback
+							$("#comparisonbox").append("<form action='download.php' method='post' id='downloadform'><input name='id' value='" + id + "' type='hidden'/><button type='submit'>Download The File!</button></form>");
+						} 
+							$(".waiter").hide();
+					}
+				});
+				return;
+		}
+		
 		$('.granttitle').each (function () {
 			var compareegrant = $(this).text();
 			if (compareegrant != comparergrant)
