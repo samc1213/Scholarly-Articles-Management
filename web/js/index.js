@@ -42,7 +42,29 @@ $(document).ready( function () {
 			$("#junkdiv").height(0);
 		}
 	});
-
+	
+	$(document).on('DOMNodeRemoved', function(e) {
+		var h = $(window).height();
+		$("#junkdiv").height(h - $("header").outerHeight(true) - $("#grantheader").outerHeight(true) - $("#grants").outerHeight(true) - $("#comparisonbox").outerHeight(true));
+		if ($("#newgrantpopup").is(":visible")) {
+			$("#junkdiv").height(0);
+		}
+		if ($("#editgrantpopup").is(":visible")) {
+			$("#junkdiv").height(0);
+		}
+	});
+	
+	$(document).on('DOMAttrModified', function(e) {
+		var h = $(window).height();
+		$("#junkdiv").height(h - $("header").outerHeight(true) - $("#grantheader").outerHeight(true) - $("#grants").outerHeight(true) - $("#comparisonbox").outerHeight(true));
+		if ($("#newgrantpopup").is(":visible")) {
+			$("#junkdiv").height(0);
+		}
+		if ($("#editgrantpopup").is(":visible")) {
+			$("#junkdiv").height(0);
+		}
+	});
+	
 	$(window).resize(function () {		
 		var h = $(window).height();
 		$("#junkdiv").height(h - $("header").outerHeight(true) - $("#grantheader").outerHeight(true) - $("#grants").outerHeight(true) - $("#comparisonbox").outerHeight(true));
@@ -214,6 +236,9 @@ $(document).ready( function () {
     	$("#downloadform").remove();
     	$("#comparisonbox").hide();
     	$("#shield").css('background-color', 'white');
+    	$(".editbtn").show();    	
+    	$("#newcpform").show();
+		$('#newgrantbutton').show();
 	}); 
 
 	$("#logoutheaderbutton").click( function () {
