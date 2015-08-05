@@ -164,6 +164,7 @@ $(document).ready( function () {
 		var nextgrantdescription = $tr.find('td.summary').text();
 		console.log(nextgrantdescription);
 		$(this).find('textarea[name="comparison"]').val(nextgrantdescription);
+		console.log("NEXTGRANT" + nextgrantname);
 		$(this).find('label').val('Add a line that shows how <strong>' + grants[0] + '</strong> compares to <strong>' + nextgrantname + '</strong>');
 	});
 
