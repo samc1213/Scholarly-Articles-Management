@@ -368,7 +368,6 @@ $(document).ready( function () {
 	
 	$("#newgrantbutton").click(function(evt) {
 		evt.stopPropagation();
-		$("#junkdiv").height(0);
 		$("#newcpform").hide();		
 		$(this).hide();
 		console.log('hi');
@@ -378,6 +377,7 @@ $(document).ready( function () {
 		 $('html, body').animate({
 	        scrollTop: $("#newgrantpopup").offset().top
 	    }, 1000);
+	    $("#junkdiv").height(0);
 				
 	});//end logout click
 	
