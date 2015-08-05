@@ -40,6 +40,7 @@ $(document).ready( function () {
 		}
 		if ($("#editgrantpopup").is(":visible")) {
 			$("#junkdiv").height(0);
+		}
 	});
 
 	$(window).resize(function () {		
