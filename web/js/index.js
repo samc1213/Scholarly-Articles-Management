@@ -80,7 +80,7 @@ $(document).ready( function () {
 	});
 	
 	$(window).resize(function () {
-		{		
+		if ($("#grantheader").is(":visible")) {		
 			var h = $(window).height();
 			$("#junkdiv").height(h - $("header").outerHeight(true) - $("#grantheader").outerHeight(true) - $("#grants").outerHeight(true) - $("#comparisonbox").outerHeight(true));
 			if ($("#newgrantpopup").is(":visible")) {
@@ -167,6 +167,7 @@ $(document).ready( function () {
 				grant.awardperiod2 = $(this).find(".todate").text();
 				grant.firstname = $(document).find("#firstname").text();
 				grant.lastname = $(document).find("#lastname").text();
+				grant.middlename = $(document).find("#middlename").text();
 				grant.location = $(this).find(".locationval").text();
 				data.push(grant);			
 			});
