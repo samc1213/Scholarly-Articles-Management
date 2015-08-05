@@ -374,10 +374,10 @@ $(document).ready( function () {
 		$("#newgrantpopup").show();
 		$('#shield').css('background-color', 'grey');
 		$('.editbtn').hide();	
-		 $('html, body').animate({
+	    $("#junkdiv").height(0);
+	    $('html, body').animate({
 	        scrollTop: $("#newgrantpopup").offset().top
 	    }, 1000);
-	    $("#junkdiv").height(0);
 				
 	});//end logout click
 	
