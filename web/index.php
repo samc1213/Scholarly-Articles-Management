@@ -201,9 +201,12 @@
 	        	
 			<div>
 				<form action="upload.php"
-				class="dropzone"
-				id="my-awesome-dropzone" method="post">
-				<button type="submit">SUB</button></form>
+				<!-- class="dropzone" -->
+				id="my-awesome-dropzone" method="post" enctype="multipart/form-data">
+				Select image to upload:
+			    <input type="file" name="fileToUpload" id="fileToUpload">
+			    <input type="submit" value="Upload Image" name="submit">
+			</form>
 			</div>
 	        	
 
