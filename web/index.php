@@ -18,10 +18,7 @@
         
         <link rel="stylesheet" href="css/jquery.modal.css" type="text/css" media="screen" />
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-        
-        <link href="css/jquery.filer.css" type="text/css" rel="stylesheet" />
-		<link href="css/jquery.filer-dragdropbox-theme.css" type="text/css" rel="stylesheet" />
-		
+        		
 		<link href="css/dropzone.css" type="text/css" rel="stylesheet">
 
                 
