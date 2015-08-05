@@ -407,11 +407,12 @@ $(document).ready( function () {
 		console.log("yo");
 		
 		var buttonnumber = $(this).attr('id').substr(7);
+		console.log("btnnumber:"+buttonnumber);
 		
 		var divnumber = buttonnumber -1;
 		
 		$("#editgrantpopup").show();
-		$grantdiv = $("#grant" + divnumber);
+		$grantdiv = $("#grant" + buttonnumber);
 		console.log($grantdiv);
 		$grantname = $grantdiv.find(".granttitle");
 		originalname = $grantname.text();
