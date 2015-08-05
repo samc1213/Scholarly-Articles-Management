@@ -10,13 +10,38 @@ $(document).ready( function () {
 	});
 	
 	$(window).click(function () {
-			var h = $(window).height();
-			$("#junkdiv").height(h - $("header").outerHeight(true) - $("#grantheader").outerHeight(true) - $("#grants").outerHeight(true) - $("#comparisonbox").outerHeight(true));
+		var h = $(window).height();
+		$("#junkdiv").height(h - $("header").outerHeight(true) - $("#grantheader").outerHeight(true) - $("#grants").outerHeight(true) - $("#comparisonbox").outerHeight(true));
+		if ($("#newgrantpopup").is(":visible")) {
+			$("#junkdiv").height(0);
+		}
+		if ($("#editgrantpopup").is(":visible")) {
+			$("#junkdiv").height(0);
+		}
+	
 	});
 
-	$(window).resize(function () {
-			var h = $(window).height();
-			$("#junkdiv").height(h - $("header").outerHeight(true) - $("#grantheader").outerHeight(true) - $("#grants").outerHeight(true) - $("#comparisonbox").outerHeight(true));
+	$(window).onload(function () {
+		var h = $(window).height();
+		$("#junkdiv").height(h - $("header").outerHeight(true) - $("#grantheader").outerHeight(true) - $("#grants").outerHeight(true) - $("#comparisonbox").outerHeight(true));
+		if ($("#newgrantpopup").is(":visible")) {
+			$("#junkdiv").height(0);
+		}
+		if ($("#editgrantpopup").is(":visible")) {
+			$("#junkdiv").height(0);
+		}
+	});
+
+	$(window).resize(function () {		
+		var h = $(window).height();
+		$("#junkdiv").height(h - $("header").outerHeight(true) - $("#grantheader").outerHeight(true) - $("#grants").outerHeight(true) - $("#comparisonbox").outerHeight(true));
+		if ($("#newgrantpopup").is(":visible")) {
+			$("#junkdiv").height(0);
+		}
+		if ($("#editgrantpopup").is(":visible")) {
+			$("#junkdiv").height(0);
+		}
+		
 	});
 
 	$("#newcpform").click (function (e) {
@@ -165,7 +190,7 @@ $(document).ready( function () {
 		console.log(nextgrantdescription);
 		$(this).find('textarea[name="comparison"]').val(nextgrantdescription);
 		console.log("NEXTGRANT" + nextgrantname);
-		$(this).find('label').val('Add a line that shows how <strong>' + grants[0] + '</strong> compares to <strong>' + nextgrantname + '</strong>');
+		$(this).find('label').html('Add a line that shows how <strong>' + grants[0] + '</strong> compares to <strong>' + nextgrantname + '</strong>');
 	});
 
 	// $(".dlform").submit(function (e) {
