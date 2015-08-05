@@ -21,6 +21,8 @@
         
         <link href="css/jquery.filer.css" type="text/css" rel="stylesheet" />
 		<link href="css/jquery.filer-dragdropbox-theme.css" type="text/css" rel="stylesheet" />
+		
+		<link href="css/dropzone.css" type="text/css" rel="stylesheet">
 
                 
         <!--Keep custom css last  -->
@@ -201,13 +203,13 @@
 	        		
 	        	</section>
 	        	
-			<div>
-			<form action="upload.php" method="post" enctype="multipart/form-data">
+			<!-- <div>
+			<form action="upload.php" method="post" enctype="multipart/form-data" class="dropzone">
 			    <input type="file" name="files[]" id="input_file" multiple="multiple">
 			    <input type="submit">
 			</form>
 			</div>
-	        	
+	        	 -->
 
 	        	<?php
 	        	session_start();
@@ -353,7 +355,7 @@
         <script src="js/jquery.modal.min.js" type="text/javascript" charset="utf-8"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
         <script src="js/stupidtable.min.js"></script>
-        <script src="js/jquery.filer.min.js"></script>
+        <script src="js/dropzone.js"></script>
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>        
         <script src="js/jquery.watermark.min.js"></script>
         <script src="js/plugins.js"></script>
