@@ -119,6 +119,7 @@ $(document).ready( function () {
 				grant.firstname = $(document).find("#firstname").text();
 				grant.lastname = $(document).find("#lastname").text();
 				$mname = $(document).find("#middlename");
+				console.log($mname);
 				if ($mname.is(":empty")){
 					grant.middlename = '';
 				}
