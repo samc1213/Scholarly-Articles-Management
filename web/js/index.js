@@ -383,6 +383,7 @@ $(document).ready( function () {
 			$(".waiter").hide();
 			$("#downloadform").remove();
 			$("#deleteconfirmbox").hide();
+			$(".deletebtn").show();
 		}
 	});
 
