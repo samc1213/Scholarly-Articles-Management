@@ -183,7 +183,7 @@
 									echo '<td class = "location"><span class="locationval">'.$location.'</span></td>';
 									echo '<td class="summary">'.$summary.'</td>';
 									echo '<td class="edited">'.$edited.'</td>';
-									echo '<td><button class="btn btn-default editbtn" style="padding: 0;" id="editbtn';
+									echo '<td class="edittd"><button class="editbtn" style="padding: 0;" id="editbtn';
 									echo $count;
 									echo '"><i class="fa fa-pencil-square-o"';
 									echo '"></i></button></td>';
@@ -225,7 +225,7 @@
 	        		echo '<button id="newgrantbutton"><i class="fa fa-plus-square" id="newgrantplus"></i> Add another grant</button>';
 				}?>
 	    	
-				<input id="sortpicture" type="file" name="sortpic" />
+				<input id="fileinput" type="file" name="fileinput" multiple/>
 				<button id="upload">Upload</button>
 	
 	        	
