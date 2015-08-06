@@ -19,7 +19,4 @@ if(isset($_POST["submit"])) {
         echo "Sorry, there was an error uploading your file.";
     }
 }
-
-
-
 ?>

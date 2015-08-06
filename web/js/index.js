@@ -4,13 +4,39 @@ $(document).ready( function () {
 	var comparecount;
 	var grantnum;
 	
-	$("#testingaws").click(function () {
-		var s3 = new AWS.S3();
+	$("#file-form").submit(function (e) {
+		e.preventDefault();
+		$("upload-button").html('Uploading...');
+		$fileselect = $("#file-select");
 		
-		s3.listBuckets(function(err, data) {
-		 	if (err) console.log(err, err.stack); // an error occurred
-		  	else console.log(data);
-		});		
+		var files = $fileselect.files;
+		
+		var formData = new FormData();
+		
+		for (var i = 0; i < files.length; i++) {
+		  var file = files[i];
+		
+		  // Add the file to the request.
+		  formData.append('photos[]', file, file.name);
+		}
+		
+		$.ajax({
+			type: "POST",
+			url: "upload.php",
+			data:
+			{
+				data: formdata
+			},
+			success: function(data)
+			{
+				
+			},
+			statusCode: {
+			    200: function() {
+			      alert( "upload" );
+		    	}
+		   }
+		});
 	});
 
 	
