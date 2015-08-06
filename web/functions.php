@@ -169,7 +169,24 @@
 			}
 		} //end editgrant
 		
+		function deleteGrant($name, $user) {
+			$uri = "mongodb://heroku_v7w2qftd:a5h7slci8p0b2p9nt7qe96hmvv@ds027483.mongolab.com:27483/heroku_v7w2qftd";
+			
+			try {
+				$client = new MongoClient($uri);
+				
+				$db = $client->selectDB("heroku_v7w2qftd");
+						
+				$grants = $db->grants;
 
+				$grants->remove(array("name" => $name, "user" => $user));
+			} catch (Exception $e) {
+				echo $e -> getMessage();
+			}	
+			
+		}	
+		
+		
 		// function download($message, $jsondata) {
 		function generateDoc($data, $id) {							
 			try {

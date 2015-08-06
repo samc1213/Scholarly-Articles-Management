@@ -414,9 +414,7 @@ $(document).ready( function () {
 		
 		var buttonnumber = $(this).attr('id').substr(7);
 		console.log("btnnumber:"+buttonnumber);
-		
-		var divnumber = buttonnumber -1;
-		
+				
 		$("#editgrantpopup").show();
 		$grantdiv = $("#grant" + buttonnumber);
 		console.log($grantdiv);
@@ -480,7 +478,33 @@ $(document).ready( function () {
 		$('html, body').animate({
 	        scrollTop: $("#editgrantpopup").offset().top
 	    }, 1000);	
-	});//end logout click
+	});//end edit click
+	
+	$(".deletebtn").click( function (e) {
+		e.stopPropagation();
+		var buttonnumber = $(this).attr('id').substr(9);
+		
+		console.log(buttonnumber);
+		
+		$grantdiv = $("#grant" + buttonnumber);
+		
+		var grantname = $grantdiv.find(".granttitle").text();
+		
+		$.ajax ({
+			type: "POST",
+			url: "api.php",
+			data:
+			{
+				type: "deletegrant",
+				name: grantname,
+			},
+			success: function(data)
+			{
+				console.log("Grant successfully deleted");
+				location.reload();
+			}
+		});
+	}); //end delete
 	
 	$('#source').change(function() {
 	    var selected = $(this).val();

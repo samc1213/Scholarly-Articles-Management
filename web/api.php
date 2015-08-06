@@ -54,4 +54,8 @@
 	else if ($_POST['type'] == "download") {
 		echo generateDoc($_POST['data'], $_POST['id']);
 	}
+	
+	else if ($_POST['type'] == "deletegrant") {
+		echo deleteGrant($_POST['name'], $_SESSION['username']);
+	}
 ?>
