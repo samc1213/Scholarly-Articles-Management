@@ -8,7 +8,7 @@
     ],
     "require": {
     	"ext-mongo": "*",
-        "aws/aws-sdk-php": "~2.6"
+        "aws/aws-sdk-php": "~2.6"      
     }
     
 }

@@ -39,7 +39,7 @@
 			    'ACL'          => 'public-read',
 			    'StorageClass' => 'REDUCED_REDUNDANCY',
 				));
-				$message = var_dump($result);
+				$message = var_dump($result['data']);
 			}
 				
 			else {
