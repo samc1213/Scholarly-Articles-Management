@@ -10,31 +10,23 @@ $(document).ready( function () {
 	    }
 	}
 	
-	$("#file-form").submit(function (e) {
-		e.preventDefault();
-		var formData = new FormData($('#file-form')[0]);
+	$('#upload').on('click', function() {
+	    var file_data = $('#sortpicture').prop('files')[0];   
+	    var form_data = new FormData();                  
+	    form_data.append('file', file_data);
+	    alert(form_data);                             
 	    $.ajax({
-	        url: 'upload.php',  //Server script to process data
-	        type: 'POST',
-	        xhr: function() {  // Custom XMLHttpRequest
-	            var myXhr = $.ajaxSettings.xhr();
-	            if(myXhr.upload){ // Check if upload property exists
-	                myXhr.upload.addEventListener('progress',progressHandlingFunction, false); // For handling the progress of the upload
-	            }
-	            return myXhr;
-	        },
-	        //Ajax events
-	        success: function(data) {
-	        	$("#uploadresult").text(data);
-	        },
-	        // error: errorHandler,
-	        // Form data
-	        data: formData,
-	        //Options to tell jQuery not to process data or worry about content-type.
-	        cache: false,
-	        contentType: false,
-	        processData: false
-	    });
+	                url: 'upload.php', // point to server-side PHP script 
+	                dataType: 'text',  // what to expect back from the PHP script, if anything
+	                cache: false,
+	                contentType: false,
+	                processData: false,
+	                data: form_data,                         
+	                type: 'post',
+	                success: function(php_script_response){
+	                    alert(php_script_response); // display response from the PHP script, if any
+	                }
+	     });
 	});
 
 	

@@ -225,14 +225,8 @@
 	        		echo '<button id="newgrantbutton"><i class="fa fa-plus-square" id="newgrantplus"></i> Add another grant</button>';
 				}?>
 	    	
-				<form id="file-form" action="upload.php" method="post" enctype="multipart/form-data">
-					<input type="file" id="file-select" name="photos[]" multiple/>
-					<button type="submit" id="upload-button">
-						Upload
-					</button>
-					<div id="uploadresult"></div>
-					<progress id="progressbar"></progress>
-				</form>
+				<input id="sortpicture" type="file" name="sortpic" />
+				<button id="upload">Upload</button>
 	
 	        	
 				<div id="comparisonbox" style="display: none;" class="clearfix">
