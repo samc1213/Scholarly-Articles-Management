@@ -181,6 +181,10 @@ header {
 	color: black;
 }
 
+.deletebtn {
+	position: relative;
+}
+
 #downloadpopup {
 	position: fixed;
 	background-color: white;
