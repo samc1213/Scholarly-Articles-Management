@@ -504,7 +504,7 @@ $(document).ready( function () {
 			{
 				console.log(data);
 				console.log("Grant successfully deleted");
-				location.reload();`
+				location.reload();
 			}
 		});
 	}); //end delete
