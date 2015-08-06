@@ -11,6 +11,8 @@
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
 
+        <link rel="stylesheet" href="css/normalize.css">
+
         <link rel="stylesheet" href="css/main.css">
         
         <link rel="stylesheet" href="css/font-awesome-4.3.0/css/font-awesome.min.css">
