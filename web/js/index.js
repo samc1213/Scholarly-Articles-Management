@@ -505,7 +505,8 @@ $(document).ready( function () {
 		
 		$("#confirmmessage").html("Are you sure you want to delete <strong>" + grantname + "</strong>?");
 		
-		$("#confirmdeleteform").append('<input type="hidden" name="grantname" value="' + grantname + '">');
+		$("#confirmdeleteform").find("input[name='grantname']").val(grantname);
+		
 	}); //end delete
 	
 	$("#confirmdeleteform").submit (function () {
