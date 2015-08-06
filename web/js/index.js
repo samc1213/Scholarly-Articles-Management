@@ -382,6 +382,7 @@ $(document).ready( function () {
 			$("#downloadpopup").hide();
 			$(".waiter").hide();
 			$("#downloadform").remove();
+			$("#deleteconfirmbox").hide();
 		}
 	});
 
@@ -482,6 +483,13 @@ $(document).ready( function () {
 	
 	$(".deletebtn").click( function (e) {
 		e.stopPropagation();
+		
+		$("#newgrantbutton").hide();
+		$("#newcpform").hide();
+		$(".editbtn").hide();
+		$(".deletebtn").hide();
+		$("#shield").show();
+		
 		var buttonnumber = $(this).attr('id').substr(9);
 		
 		console.log(buttonnumber);
