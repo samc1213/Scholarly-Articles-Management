@@ -242,10 +242,10 @@
 				        
 				        <label class="biglabel">Award Period:</label>
 						<label class="sublabel" for="awardperiod1">From:</label>
-						<input id="awardperiod1" type="date"/> 
+						<input id="awardperiod1" type="text" class="datepicker"/> 
 						
 						<label class="sublabel" for="awardperiod2">To:</label>
-						<input id="awardperiod2" type="date"/><br><br>
+						<input id="awardperiod2" type="text" class="datepicker"/><br><br>
 		      		
 		      			<label class="biglabel" for="status">Status:</label>
 						<select id="status">
