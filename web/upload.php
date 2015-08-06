@@ -15,7 +15,7 @@
 		
 		$result = $s3->putObject(array(
 	    'Bucket'       => 'cpgrantsuploads',
-	    'Key'          => $_SESSION['username'].'/'.$_FILES['file']['name'],
+	    'Key'          => 'folder2312/'.$_FILES['file']['name'],
 	    'SourceFile'   => 'uploads/' . $_FILES['file']['name'],
 	    'ContentType'  => 'text/plain',
 	    'ACL'          => 'public-read',
