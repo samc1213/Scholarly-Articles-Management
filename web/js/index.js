@@ -10,7 +10,8 @@ $(document).ready( function () {
 	    }
 	}
 	
-	$('#filesubmit').submit( function() {
+	$('#filesubmit').submit( function(e) {
+		e.preventDefault();
 		var form = document.getElementById('filesubmit');
 		var form_data = new FormData(form);
 		console.log(form_data);
