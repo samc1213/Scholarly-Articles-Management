@@ -56,6 +56,7 @@
 	}
 	
 	else if ($_POST['type'] == "deletegrant") {
+		session_start();
 		echo deleteGrant($_POST['name'], $_SESSION['username']);
 	}
 ?>
