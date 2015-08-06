@@ -46,11 +46,7 @@
 					}
 					else {
 						echo '<a href="/login.html"><button id="loginheaderbutton" class="logbutton">Login</button></a>';
-						echo '<form action="upload.php" method="post" enctype="multipart/form-data">
-						Select image to upload:
-						<input type="file" name="fileToUpload" id="fileToUpload">
-						<input type="submit" value="Upload Image" name="submit">
-						</form>';
+
 					}
 	        	?>
 	        	
@@ -229,6 +225,12 @@
 	        		echo '<button id="newgrantbutton"><i class="fa fa-plus-square" id="newgrantplus"></i> Add another grant</button>';
 				}?>
 	    	
+				<form action="upload.php" method="post" enctype="multipart/form-data">
+					Select image to upload:
+					<input type="file" name="fileToUpload" id="fileToUpload">
+					<input type="submit" value="Upload Image" name="submit">
+				</form>;
+	        	
 	        	
 				<div id="comparisonbox" style="display: none;" class="clearfix">
 					<h2>New C&P Form</h2>
