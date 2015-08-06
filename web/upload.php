@@ -1,6 +1,7 @@
 <?php
 	require ('/app/vendor/autoload.php');
 	
+	session_start();
 	
     if ( 0 < $_FILES['file']['error'] ) {
         echo 'Error: ' . $_FILES['file']['error'] . '<br>';
@@ -14,7 +15,7 @@
 		
 		$result = $s3->putObject(array(
 	    'Bucket'       => 'cpgrantsuploads',
-	    'Key'          => $_FILES['file']['name'],
+	    'Key'          => $_SESSION['username'].'/'.$_FILES['file']['name'],
 	    'SourceFile'   => 'uploads/' . $_FILES['file']['name'],
 	    'ContentType'  => 'text/plain',
 	    'ACL'          => 'public-read',
