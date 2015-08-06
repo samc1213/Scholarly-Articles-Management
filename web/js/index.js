@@ -471,6 +471,9 @@ $(document).ready( function () {
 		$description = $grantdiv.find(".summary");
 		$("#edescription").val($description.text());
 		
+		$location = $grantdiv.find(".location");
+		$("#elocation").val($location.text());
+		
 		$('.editbtn').hide();	
 		$('#shield').show();
 		

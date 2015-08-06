@@ -313,7 +313,7 @@
 		      			<label class="biglabel" for="estatus">Status:</label>
 						<select id="estatus">
 							<option selected disabled>Choose status</option>
-				        	<option value="Completed">Completed</option>
+				        	<option value="Current">Current</option>
 		    				<option value="Pending">Pending</option>
 		    				<option value="Submission Planned">Submission Planned</option>
 		    				<option value="Transfer of Support">Transfer of Support</option>
