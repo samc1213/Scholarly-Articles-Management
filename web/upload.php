@@ -32,8 +32,10 @@
 				$s3 = Aws\S3\S3Client::factory();
 				
 				$objects = $s3->getIterator('ListObjects', array('Bucket' => $bucket, 'Prefix' => $_SESSION['username']));
+				foreach ($objects as $object) {
+					$message += $object['Key'];
+				}
 				
-				$message = var_dump($objects);
 				
 				// $result = $s3->putObject(array(
 			    // 'Bucket'       => 'cpgrantsuploads',
