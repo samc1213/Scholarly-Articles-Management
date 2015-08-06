@@ -228,6 +228,10 @@ td {
 	padding-right: .5em;
 }
 
+.deletetd {
+	text-align: center;
+}
+
 .wideinput {
 	width: 70%;
 }

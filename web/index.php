@@ -186,7 +186,7 @@
 									echo $count;
 									echo '"><i class="fa fa-pencil-square-o"';
 									echo '"></i></button></td>';
-									echo '<td><button class="btn btn-default deletebtn" style="padding: 0;" id="deletebtn';
+									echo '<td class="deletetd"><button class="btn btn-default deletebtn" style="padding: 0;" id="deletebtn';
 									echo $count;
 									echo '"><i class="fa fa-trash-o"';
 									echo '"></i></button></td>';
