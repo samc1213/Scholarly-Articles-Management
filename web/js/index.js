@@ -23,7 +23,7 @@ $(document).ready( function () {
 	                data: form_data,                         
 	                type: 'post',
 	                success: function(php_script_response){
-	                    alert(php_script_response); // display response from the PHP script, if any
+	                    console.log(php_script_response); // display response from the PHP script, if any
 	                }
 	     });
 	});
