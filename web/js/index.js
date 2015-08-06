@@ -4,39 +4,37 @@ $(document).ready( function () {
 	var comparecount;
 	var grantnum;
 	
+	function progressHandlingFunction(e){
+    if(e.lengthComputable){
+        $('progress').attr({value:e.loaded,max:e.total});
+	    }
+	}
+	
 	$("#file-form").submit(function (e) {
 		e.preventDefault();
-		$("upload-button").html('Uploading...');
-		$fileselect = $("#file-select");
-		
-		var files = $fileselect.files;
-		
-		var formData = new FormData();
-		
-		for (var i = 0; i < files.length; i++) {
-		  var file = files[i];
-		
-		  // Add the file to the request.
-		  formData.append('photos[]', file, file.name);
-		}
-		
-		$.ajax({
-			type: "POST",
-			url: "upload.php",
-			data:
-			{
-				data: formdata
-			},
-			success: function(data)
-			{
-				
-			},
-			statusCode: {
-			    200: function() {
-			      alert( "upload" );
-		    	}
-		   }
-		});
+		var formData = new FormData($('form')[0]);
+	    $.ajax({
+	        url: 'upload.php',  //Server script to process data
+	        type: 'POST',
+	        xhr: function() {  // Custom XMLHttpRequest
+	            var myXhr = $.ajaxSettings.xhr();
+	            if(myXhr.upload){ // Check if upload property exists
+	                myXhr.upload.addEventListener('progress',progressHandlingFunction, false); // For handling the progress of the upload
+	            }
+	            return myXhr;
+	        },
+	        //Ajax events
+	        success: function(data) {
+	        	$("#uploadresult").text(data);
+	        },
+	        // error: errorHandler,
+	        // Form data
+	        data: formData,
+	        //Options to tell jQuery not to process data or worry about content-type.
+	        cache: false,
+	        contentType: false,
+	        processData: false
+	    });
 	});
 
 	

@@ -230,6 +230,8 @@
 					<button type="submit" id="upload-button">
 						Upload
 					</button>
+					<div id="uploadresult"></div>
+					<progress id="progressbar"></progress>
 				</form>
 	
 	        	
