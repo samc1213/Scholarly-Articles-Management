@@ -68,22 +68,7 @@
 						echo ' ';
 					}
 					echo '<span id="lastname">'.$_SESSION["lastname"].'</span>';
-					echo "'s Grants</h2>";
-					require ('/app/vendor/autoload.php');
-					
-					$config = array('key' => getenv('AWS_ACCESS_KEY_ID'), 'secret' => getenv('AWS_SECRET_ACCESS_KEY'));
-					$s3 = Aws\S3\S3Client::factory();
-					$result = $s3->listBuckets();
-			
-					$params=array(
-					    'Bucket' => 'cpgrantsdocs',
-					    'Key'    => 'docdoc',
-					    'SaveAs' => 'localdoc.docx',
-					);
-			
-					$result = $s3->getObject($params);
-					
-						
+					echo "'s Grants</h2>";						
 				}
 				else {
 					echo "<h1 style='text-align: center;'>Login!</h1>";
