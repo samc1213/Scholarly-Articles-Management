@@ -178,8 +178,12 @@
 				$db = $client->selectDB("heroku_v7w2qftd");
 						
 				$grants = $db->grants;
-
-				$grants->remove(array("name" => $name, "user" => $user));
+	
+				$query = array("name" => $name, "user" => $user);
+				
+				echo var_dump($query);
+		
+				$grants->remove($query);
 			} catch (Exception $e) {
 				echo $e -> getMessage();
 			}	
