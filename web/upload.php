@@ -31,7 +31,7 @@
 				$config = array('key' => getenv('AWS_ACCESS_KEY_ID'), 'secret' => getenv('AWS_SECRET_ACCESS_KEY'));
 				$s3 = Aws\S3\S3Client::factory();
 				
-				$objects = $s3->getIterator('ListObjects', array('Bucket' => $bucket, 'Prefix' => $_SESSION['username']));
+				$objects = $s3->getIterator('ListObjects', array('Bucket' => 'cpgrantsuploads', 'Prefix' => $_SESSION['username']));
 				foreach ($objects as $object) {
 					$message += $object['Key'];
 				}
