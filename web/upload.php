@@ -35,11 +35,11 @@
 			    'Bucket'       => 'cpgrantsuploads',
 			    'Key'          => $_SESSION['username'].'/'.$_FILES['fileinput']['name'][$i],
 			    'SourceFile'   => 'uploads/' . $_FILES['fileinput']['name'][$i],
-			    'ContentType'  => 'text/plain',
+			    'ContentType'  => $_FILES['fileinput']['type'][$i],
 			    'ACL'          => 'public-read',
 			    'StorageClass' => 'REDUCED_REDUNDANCY',
 				));
-				$message = var_dump($result['data']);
+				$message = var_dump($result);
 			}
 				
 			else {
