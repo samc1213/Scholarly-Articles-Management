@@ -31,15 +31,19 @@
 				$config = array('key' => getenv('AWS_ACCESS_KEY_ID'), 'secret' => getenv('AWS_SECRET_ACCESS_KEY'));
 				$s3 = Aws\S3\S3Client::factory();
 				
-				$result = $s3->putObject(array(
-			    'Bucket'       => 'cpgrantsuploads',
-			    'Key'          => $_SESSION['username'].'/'.$_FILES['fileinput']['name'][$i],
-			    'SourceFile'   => 'uploads/' . $_FILES['fileinput']['name'][$i],
-			    'ContentType'  => $_FILES['fileinput']['type'][$i],
-			    'ACL'          => 'public-read',
-			    'StorageClass' => 'REDUCED_REDUNDANCY',
-				));
-				$message = var_dump($result);
+				$objects = $s3->getIterator('ListObjects', array('Bucket' => $bucket, 'Prefix' => $_SESSION['username']));
+				
+				$message = var_dump($objects);
+				
+				// $result = $s3->putObject(array(
+			    // 'Bucket'       => 'cpgrantsuploads',
+			    // 'Key'          => $_SESSION['username'].'/'.$_FILES['fileinput']['name'][$i],
+			    // 'SourceFile'   => 'uploads/' . $_FILES['fileinput']['name'][$i],
+			    // 'ContentType'  => $_FILES['fileinput']['type'][$i],
+			    // 'ACL'          => 'public-read',
+			    // 'StorageClass' => 'REDUCED_REDUNDANCY',
+				// ));
+				// $message = var_dump($result);
 			}
 				
 			else {
