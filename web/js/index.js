@@ -490,6 +490,8 @@ $(document).ready( function () {
 		
 		var grantname = $grantdiv.find(".granttitle").text();
 		
+		console.log(grantname);
+		
 		$.ajax ({
 			type: "POST",
 			url: "api.php",
@@ -500,8 +502,9 @@ $(document).ready( function () {
 			},
 			success: function(data)
 			{
+				console.log(data);
 				console.log("Grant successfully deleted");
-				location.reload();
+				location.reload();`
 			}
 		});
 	}); //end delete
