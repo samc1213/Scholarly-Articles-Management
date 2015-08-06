@@ -259,6 +259,20 @@ td {
 
 }
 
+#deleteconfirmbox {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	background-color: white;
+	border: 2px black solid;
+	z-index: 50;
+	padding-top: 2em;
+	padding-bottom: 2em;
+	position: relative;
+	display: none;
+}
+
 #junkdiv {
 	margin: 0;
 }

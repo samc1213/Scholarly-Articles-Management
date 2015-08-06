@@ -229,6 +229,15 @@
 					<h2>New C&P Form</h2>
 					<img class="waiter" src="img/ajax-loader.gif"/>
 				</div>
+				
+				<div id="deleteconfirmbox">
+					<h2>Confirm Delete</h2>
+					<p id="confirmmessage"></p>
+					<form id="confirmdeleteform">
+						<button id="deleteconfirmbtn" type="submit">Delete</button>
+					</form>
+				</div>
+				
 	                <div id="newgrantpopup" class="grantpopup">
 		        	<h2 id="newgrantheader">New Grant</h2>
 		        	<form id="newgrantform">

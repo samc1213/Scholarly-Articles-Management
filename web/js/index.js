@@ -492,6 +492,16 @@ $(document).ready( function () {
 		
 		console.log(grantname);
 		
+		$("#deleteconfirmbox").show();
+		
+		$("#confirmmessage").html("Are you sure you want to delete <strong>" + grantname + "</strong>?");
+		
+		$("#confirmdeleteform").append('<input type="hidden" name="grantname" value="' + grantname + '">');
+	}); //end delete
+	
+	$("#confirmdeleteform").submit (function () {
+		var grantname = $(this).find('input[name="grantname"]').val();
+		
 		$.ajax ({
 			type: "POST",
 			url: "api.php",
@@ -507,7 +517,7 @@ $(document).ready( function () {
 				location.reload();
 			}
 		});
-	}); //end delete
+	});
 	
 	$('#source').change(function() {
 	    var selected = $(this).val();
