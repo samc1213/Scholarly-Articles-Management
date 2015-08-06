@@ -12,7 +12,7 @@ $(document).ready( function () {
 	
 	$("#file-form").submit(function (e) {
 		e.preventDefault();
-		var formData = new FormData($('form')[0]);
+		var formData = new FormData($('#file-form')[0]);
 	    $.ajax({
 	        url: 'upload.php',  //Server script to process data
 	        type: 'POST',
