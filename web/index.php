@@ -126,7 +126,8 @@
 								<th data-sort="string">Location</th>
 								<th data-sort="string">Description</th>
 								<th data-sort="int">Modified</th>
-								<th>Edit</th>																
+								<th>Edit</th>					
+								<th>Delete</th>											
 								</tr></thead> <tbody>';
 																
 								foreach ($grants as $grant) {
@@ -181,12 +182,17 @@
 									echo '<td class = "location"><span class="locationval">'.$location.'</span></td>';
 									echo '<td class="summary">'.$summary.'</td>';
 									echo '<td class="edited">'.$edited.'</td>';
-									echo '<td> </span><span class="buttoncover"><button class="btn btn-default editbtn" style="padding: 0;" id="editbtn';
+									echo '<td><button class="btn btn-default editbtn" style="padding: 0;" id="editbtn';
 									echo $count;
 									echo '"><i class="fa fa-pencil-square-o"';
 									echo '"></i></button></td>';
+									echo '<td><button class="btn btn-default deletebtn" style="padding: 0;" id="deletebtn';
+									echo $count;
+									echo '"><i class="fa fa-trash-o"';
+									echo '"></i></button></td>';
 									echo '<span class="comparison" style="display:none">';
 									echo '</tr>';
+									
 									$count = $count + 1;
 								}
 							echo '</tbody></table>';
