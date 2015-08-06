@@ -18,6 +18,8 @@
         
         <link rel="stylesheet" href="css/jquery.modal.css" type="text/css" media="screen" />
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+		
+		<link rel="stylesheet" href="css/jquery-ui.css" type="text/css"/>
         		
 		<link href="css/dropzone.css" type="text/css" rel="stylesheet">
 
@@ -303,10 +305,10 @@
 				        
 				        <label class="biglabel">Award Period:</label>
 						<label class="sublabel" for="eawardperiod1">From:</label>
-						<input id="eawardperiod1" type="date"/> 
+						<input id="eawardperiod1" type="text" class="datepicker"/> 
 						
 						<label class="sublabel" for="eawardperiod2">To:</label>
-						<input id="eawardperiod2" type="date"/><br><br>
+						<input id="eawardperiod2" type="text" class="datepicker"/><br><br>
 		      		
 		      			<label class="biglabel" for="estatus">Status:</label>
 						<select id="estatus">
@@ -351,6 +353,7 @@
         <script src="js/jquery.min.js"></script>
         <script src="js/jquery.modal.min.js" type="text/javascript" charset="utf-8"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+        <script src="js/jquery-ui.min.js"></script>
         <script src="js/stupidtable.min.js"></script>
         <script src="js/dropzone.js"></script>
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>        

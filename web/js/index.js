@@ -3,8 +3,10 @@ $(document).ready( function () {
 	var originalperiod1;
 	var comparecount;
 	var grantnum;
-		
+	
 	$("#maintable").stupidtable();
+	
+	$(".datepicker").datepicker();
 	
 	$("#comparisonbox").click( function (e) {
 		e.stopPropagation();
