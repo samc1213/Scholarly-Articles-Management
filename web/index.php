@@ -186,6 +186,7 @@
 									echo '"></i></button></td>';
 									echo '<span class="comparison" style="display:none">';
 									echo '</tr>';
+									$count = $count + 1;
 								}
 							echo '</tbody></table>';
 																
