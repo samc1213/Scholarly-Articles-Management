@@ -10,8 +10,11 @@ $(document).ready( function () {
 	    }
 	}
 	
-	$('#upload').on('click', function() {
-		console.log($("#fileinput").files.length);
+	$('#filesubmit').submit( function() {
+		var form = $("#filesubmit");
+		console.log(form);
+		var form_data = new FormData(form);
+		console.log(form_data);
 	    // var form_data = new FormData();                  
 	    // form_data.append('file', file_data);
 	    // $.ajax({
