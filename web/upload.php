@@ -36,7 +36,7 @@
 				
 				$objects = $s3->getIterator('ListObjects', array('Bucket' => 'cpgrantsuploads', 'Prefix' => $prefixstr));
 				foreach ($objects as $object) {
-					$message += $object['Key'];
+					echo $object['Key'];
 				}
 				
 				
