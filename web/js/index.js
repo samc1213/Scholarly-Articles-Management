@@ -20,6 +20,7 @@ $(document).ready( function () {
 		  	if(inp.files[i].size >= 2000000)
 		  	{
 				problemfile = inp.files[i].name;
+				sizeOk = false;
 		  	}
 		  }
 		if (sizeOk != true)
