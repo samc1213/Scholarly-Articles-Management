@@ -1,8 +1,11 @@
 <?php
+	echo ini_get("upload_max_filesize");
+
 	echo var_dump($_FILES);
 	require ('/app/vendor/autoload.php');
 	
 	session_start();
+	
 	
 	$uploadOk = 1;
 	$message = var_dump($_FILES['fileinput']['name']);
