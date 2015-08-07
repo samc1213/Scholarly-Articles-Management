@@ -117,7 +117,7 @@ $(document).ready( function () {
 		if ($theresanoncomplete == false)
 		{
 			$("#comparergrantselect").remove();
-			$("#choosecomparerform").find('label').text("There are no grants that aren't completed");
+			$("#choosecomparerform").find('label').html("<a href='https://en.wikipedia.org/wiki/Double_negative'>There are no grants that aren't completed</a>");
 		}
 	    
 	    else 
