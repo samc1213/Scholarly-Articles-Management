@@ -81,7 +81,6 @@ $(document).ready( function () {
 		var h = $(window).height();
 		$("#junkdiv").height(h - $("header").outerHeight(true) - $("#grantheader").outerHeight(true) - $("#grants").outerHeight(true) - $("#comparisonbox").outerHeight(true));
 		$('#shield').show();
-		$('.editbtn').hide();
 		$('.filestorebtn').hide();
 		$("#newgrantbutton").hide();
 		$('html, body').animate({
@@ -323,8 +322,6 @@ $(document).ready( function () {
     	$("#downloadform").remove();
     	$("#comparisonbox").hide();
     	$("#shield").hide();
-    	$(".editbtn").show(); 
-    	$('.filestorebtn').show();   	
     	$("#newcpform").show();
 		$('#newgrantbutton').show();
 	}); 
@@ -480,8 +477,6 @@ $(document).ready( function () {
 		{
 			$('#shield').hide();
 			$(".grantpopup").hide();
-			$('.editbtn').show();
-			$('.filestorebtn').show();
 			$('#newgrantbutton').show();
 			$("#newcpform").show();
 			$("#comparisonbox").hide();
@@ -504,8 +499,6 @@ $(document).ready( function () {
 		$('#newgrantform').trigger("reset");
 		$('#newgranterror').html('');
 		$('#shield').show();
-		$('.editbtn').hide();
-		$('.filestorebtn').hide();	
 	    $("#junkdiv").height(0);
 	    $('html, body').animate({
 	        scrollTop: $("#newgrantpopup").offset().top
@@ -580,8 +573,6 @@ $(document).ready( function () {
 		$location = $grantdiv.find(".location");
 		$("#elocation").val($location.text());
 		
-		$('.editbtn').hide();
-		$('.filestorebtn').hide();	
 		$('#shield').show();
 		
 		$('html, body').animate({
@@ -594,9 +585,6 @@ $(document).ready( function () {
 		
 		$("#newgrantbutton").hide();
 		$("#newcpform").hide();
-		$(".editbtn").hide();
-		$('.filestorebtn').hide();
-		$(".deletebtn").hide();
 		$("#shield").show();
 		
 		var buttonnumber = $(this).attr('id').substr(9);
