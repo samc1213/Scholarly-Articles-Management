@@ -310,15 +310,8 @@ $(document).ready( function () {
 					
 		var data = {};
 		
-		if ($('#source').val() == 'Other')
-		{
-			data['source'] = $('#otherval').val();
-		}
-		else
-		{
-			data['source'] = $('#source').val();
-		}
-		
+
+		data['source'] = $('#source').val();
 		data['name'] = $('#grantname').val();
 		data['awardperiod1'] = $('#awardperiod1').val();
 		data['awardperiod2'] = $('#awardperiod2').val();
@@ -358,15 +351,9 @@ $(document).ready( function () {
 		data['originalperiod1'] = originalperiod1;
 		
 		data['name'] = $('#egrantname').val();
-		
-		if ($('#esource').val() == 'Other')
-		{
-			data['source'] = $('#eotherval').val();
-		}
-		else
-		{
-			data['source'] = $('#esource').val();
-		}
+
+
+		data['source'] = $('#esource').val();
 		data['awardperiod1'] = $('#eawardperiod1').val();
 		data['awardperiod2'] = $('#eawardperiod2').val();
 		data['status'] = $('#estatus').val();
@@ -451,26 +438,8 @@ $(document).ready( function () {
 		$("#egrantname").val($grantname.text());
 		
 		$grantagency = $grantdiv.find(".grantagency");
+		$("#esource").val($grantagency.text());
 
-		if ($grantagency.text() != 'NSF' && $grantagency.text() != 'DOE' && $grantagency.text() != 'NIH')
-		{
-			$("#esource").val("Other");
-			$("#eotherval").val($grantagency.text());
-		}
-		else
-		{
-				$("#esource").val($grantagency.text());
-		}
-		
-		var selected = $("#esource").val();
-	    if(selected == 'Other'){
-	      $('#eotherval').show();
-	      $('#eotherlabel').show();
-	    }
-	    else{
-	    	$('#eotherval').hide();
-	      $('#eotherlabel').hide();
-	    }
 
 		$fromdate = $grantdiv.find(".fromdate");
 		originalperiod1 = $fromdate.text();
@@ -555,29 +524,6 @@ $(document).ready( function () {
 		});
 	});
 	
-	$('#source').change(function() {
-	    var selected = $(this).val();
-	    if(selected == 'Other'){
-	      $('#otherval').show();
-	      $('#otherlabel').show();
-	    }
-	    else{
-	    	$('#otherval').hide();
-	      $('#otherlabel').hide();
-	    }
- 	}); //end source
-    
-    $('#esource').change(function() {
-	    var selected = $(this).val();
-	    if(selected == 'Other'){
-	      $('#eotherval').show();
-	      $('#eotherlabel').show();
-	    }
-	    else{
-	    	$('#eotherval').hide();
-	      $('#eotherlabel').hide();
-	    }
-	}); //end esource
 	
 });//end doc ready
 

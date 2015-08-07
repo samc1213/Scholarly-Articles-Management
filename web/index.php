@@ -237,17 +237,7 @@
 				        <input type="text" id="grantname" class ="wideinput"/> <br><br>
 				        
 		        		<label class="biglabel" for="source">Source:</label>
-				        <select id="source">
-				        	<option value="DOE">DOE</option>
-		    				<option value="NIH">NIH</option>
-		    				<option value="NSF">NSF</option>
-		    				<option value="Other">Other</option>
-
-				        </select> <br><br>
-				        
-				        <label class="sublabel" for="otherval" id="otherlabel" style="display: none;">Specify other:</label>
-				       	<input type="text" id="otherval" style="display: none;"/>
-
+				        <input type="text" id="source"/><br><br>
 				        
 				        <label class="biglabel">Award Period:</label>
 						<label class="sublabel" for="awardperiod1">From:</label>
@@ -302,15 +292,8 @@
 				        <input type="text" id="egrantname" class ="wideinput"/> <br><br>
 				        
 		        		<label class="biglabel" for="esource">Source:</label>
-				        <select id="esource">
-				        	<option value="DOE">DOE</option>
-		    				<option value="NIH">NIH</option>
-		    				<option value="NSF">NSF</option>
-		    				<option value="Other">Other</option>
-				        </select> <br><br>
-				        
-						<label class="sublabel" for="otherval" id="eotherlabel" style="display: none;">Specify other:</label>
-				       	<input type="text" id="eotherval" style="display: none;"/>
+				        <input type="text" id="esource"/>
+				       <br><br>
 				        
 				        <label class="biglabel">Award Period:</label>
 						<label class="sublabel" for="eawardperiod1">From:</label>
