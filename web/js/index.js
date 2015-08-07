@@ -46,6 +46,7 @@ $(document).ready( function () {
 				console.log(filenames);
 			}
 	    });
+	    console.log(filenames);
 	    
 	});
 	
