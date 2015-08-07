@@ -460,6 +460,7 @@ $(document).ready( function () {
 		console.log('hi');
 		$("#newgrantpopup").show();
 		$('#newgrantform').trigger("reset");
+		$('#newgranterror').html('');
 		$('#shield').show();
 		$('.editbtn').hide();	
 	    $("#junkdiv").height(0);
@@ -483,6 +484,7 @@ $(document).ready( function () {
 		console.log("btnnumber:"+buttonnumber);
 				
 		$("#editgrantpopup").show();
+		$('#editgranterror').html('');
 		$grantdiv = $("#grant" + buttonnumber);
 		console.log($grantdiv);
 		$grantname = $grantdiv.find(".granttitle");
