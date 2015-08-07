@@ -381,7 +381,7 @@ $(document).ready( function () {
 		
 		
 		$('.granttitle').each( function () {
-			if ($(this).text() == ($("#egrantname").val()) && ($(this).closest('tr').attr('id') != "grant" + $("#editgrantform").find("input[name='buttonnumber']").val())) {
+			if (($(this).text() == ($("#egrantname").val())) && ($(this).closest('tr').attr('id') != "grant" + $("#editgrantform").find("input[name='buttonnumber']").val())) {
 				$("#editgranterror").html('<p style="color: red;">You may not have multiple grants with the same name.</p><br><br>');
 				okSubmit = false;
 			}
