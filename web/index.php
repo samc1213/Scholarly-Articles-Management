@@ -130,23 +130,19 @@
 									$amount = $grant['amount'];
 									$piamount = $grant['piamount'];
 									$apmonths = $grant['apersonmonths'];
-									$pmonthcount = 0;
 									if ($apmonths != '')
 									{
-										$apmonths = $apmonths.'Academic ';
-										$pmonthcount++;
+										$alabel = ' Academic ';
 									}
 									$cpmonths = $grant['cpersonmonths'];
 									if ($cpmonths != '')
 									{
-										$cpmonths = $cpmonths.'Calendar ';
-										$pmonthcount++;
+										$clabel = ' Calendar ';
 									}
 									$spmonths = $grant['spersonmonths'];
 									if ($spmonths != '')
 									{
-										$spmonths = $pmonths.'Summer';
-										$pmonthcount++;
+										$slabel = ' Summer';
 									}
 									$summary = $grant['description'];
 									$fromdate = $grant['awardperiod1'];
@@ -155,20 +151,11 @@
 									$edited = $grant['edited'];
 									
 									echo '<td class="status">'.$status.'</span></td>';
-									// if ($agency == "DOE"){
-										// echo '<form action="" class="compareform" method=""';
-										// echo ' id = "compareform';
-										// echo $count;
-										// echo '"><input type = "hidden" name="grantnum" value="';
-										// echo $count;
-										// echo '"/><button type = "submit" class="comparebutton">Generate C&P Form</button></form>';
-// 										
-									// }
 									echo '<td class="awardnumber" style="display:none;">'.$awardnumber.'</td>';
 									echo '<td class="grantagency">'.$agency.'</td>';
 									echo '<td class="amount">$<span class="amountnum">'.$amount.'</span></td>';
 									echo '<td class="piamount">$<span class="piamountnum">'.$piamount.'</span></td>';
-									echo '<td class="pmonths"><span class="apmonthnum">'.$apmonths.'</span><span class="cpmonthnum">'.$cpmonths.'</span><span class="spmonthnum">'.$spmonths.'</span></td>';
+									echo '<td class="pmonths"><span class="apmonthnum">'.$apmonths.'</span>'.$alabel.'<span class="cpmonthnum">'.$cpmonths.'</span>'.$clabel.'<span class="spmonthnum">'.$spmonths.'</span>'.$slabel.'</td>';
 									echo '<td class="dates"><span class="fromdate">'.$fromdate.'</span> to <span class="todate">'.$todate.'</span></td>';
 									echo '<td class = "location"><span class="locationval">'.$location.'</span></td>';
 									echo '<td class="summary" style="display: none;">'.$summary.'</td>';
