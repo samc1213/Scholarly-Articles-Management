@@ -482,6 +482,7 @@ $(document).ready( function () {
 			$('#newgrantbutton').show();
 			$("#newcpform").show();
 			$("#comparisonbox").hide();
+			$("#filestorebox").hide();
 			$("#downloadpopup").hide();
 			$(".waiter").hide();
 			$("#downloadform").remove();
