@@ -143,7 +143,9 @@ $(document).ready( function () {
 			
 			$gtitle = $(document).find('.granttitle:contains("' + compareegrant + '")');
 			$tr = $gtitle.closest('tr');
+			console.log("TR:" + $tr);
 			var compareestatus = $tr.find('td.status').text();
+			console.log(compareestatus);
 			
 			if (compareegrant != comparergrant && compareestatus != 'Completed')
 			{
