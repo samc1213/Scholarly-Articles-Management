@@ -167,7 +167,7 @@ $(document).ready( function () {
 						console.log("data: " + data);
 						console.log("id: " + id);
 						if ($(".waiter").is(":visible")) {		//make sure waiter is there in case someone gets bored and closes box before ajax callback
-							$("#comparisonbox").append("<form action='download.php' method='post' id='downloadform'><input name='id' value='" + id + "' type='hidden'/><button type='submit'>Download The File!</button></form>");
+							$("#comparisonbox").append("<form action='download.php' method='post' id='downloadform'><input name='id' value='" + id + "' type='hidden'/><input name='filename' value='"+ comparergrant + "' type='hidden'/><button type='submit'>Download The File!</button></form>");
 						} 
 							$(".waiter").hide();
 					}
