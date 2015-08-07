@@ -16,7 +16,7 @@ $(document).ready( function () {
 		$('#shield').show();
 		$('#newgrantbutton').hide();
 		$('#newcpform').hide();
-		var buttonnumber = $(this).attr('id').substr(7);
+		var buttonnumber = $(this).attr('id').substr(12);
 		var trstr = "grant" + buttonnumber;
 		$tr = $(trstr);
 		var grantname = $tr.find('td.granttitle').text();
