@@ -5,7 +5,7 @@
 	session_start();
 	
 	$uploadOk = 1;
-	$message = '';
+	$message = (string)count($_FILES['fileinput']['name']);
 	
 	for ($i=0; $i<count($_FILES['fileinput']['name']); $i++)
 	{
@@ -16,7 +16,7 @@
 		
 		if ($_FILES["fileinput"]["size"][$i] > 2000000) {
 			$uploadOk = 0;
-			$message = 'Error: '.$_FILES["fileinput"]["name"][$i].'is too big. Max file size is 2000kb';
+			$message = 'Error: '.$_FILES["fileinput"]["name"][$i].'is too big. Max file size is 2 MB';
 		}
 	}
 	
