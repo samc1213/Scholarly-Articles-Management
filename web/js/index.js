@@ -314,14 +314,14 @@ $(document).ready( function () {
 		if ($("#grantname").val() == '')
 		{
 			$("#newgranterror").html('<p style="color: red;">You must include a name for the grant.</p><br><br>');
-			return;
+			return false;
 		}
 		
 		
 		$('.granttitle').each( function () {
 			if ($(this).text() == ($("#grantname").val())) {
 				$("#newgranterror").html('<p style="color: red;">You may not have multiple grants with the same name.</p><br><br>');
-				return;
+				return false;
 			}
 		});
 		
@@ -368,14 +368,14 @@ $(document).ready( function () {
 		if ($("#egrantname").val() == '')
 		{
 			$("#editgranterror").html('<p style="color: red;">You must include a name for the grant.</p><br><br>');
-			return;
+			return false;
 		}
 		
 		
 		$('.granttitle').each( function () {
 			if ($(this).text() == ($("#egrantname").val())) {
 				$("#editgranterror").html('<p style="color: red;">You may not have multiple grants with the same name.</p><br><br>');
-				return;
+				return false;
 			}
 		});
 		
