@@ -16,6 +16,28 @@ $(document).ready( function () {
 		$('#shield').show();
 		$('#newgrantbutton').hide();
 		$('#newcpform').hide();
+		var buttonnumber = $(this).attr('id').substr(7);
+		var trstr = "grant" + buttonnumber;
+		$tr = $(trstr);
+		var grantname = $tr.find('td.granttitle').text();
+		console.log("gname: " + grantname);
+		$('html, body').animate({
+	        scrollTop: $("#filestorebox").offset().top
+	    }, 1000);
+	    $.ajax({
+	    	type: "POST",
+			url: "api.php",
+			data:
+			{
+				type: "getfiles",
+				grantname: grantname,
+			},
+			success: function(data)
+			{
+				console.log(data);
+			}
+	    });
+	    
 	});
 	
 	$('#filesubmit').submit( function(e) {

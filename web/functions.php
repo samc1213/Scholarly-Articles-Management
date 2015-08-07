@@ -227,4 +227,17 @@
 
 			
 		} //end download
+		
+		function getFiles($user, $grantname) {
+			require('../vendor/autoload.php');
+			$prefixstr = $user.'/'.$grantname.'/';
+			echo $prefixstr;
+			$filenamearray = array();
+				
+			$objects = $s3->getIterator('ListObjects', array('Bucket' => 'cpgrantsuploads', 'Prefix' => $prefixstr));
+			foreach ($objects as $object) {
+				array_push($filenamearray, $object['Key']);
+			}
+			echo json_encode($filenamearray);
+		}
 	?>

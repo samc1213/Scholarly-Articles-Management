@@ -59,4 +59,9 @@
 		session_start();
 		echo deleteGrant($_POST['name'], $_SESSION['username']);
 	}
+	
+	else if ($_POST['type'] == 'getfiles') {
+		session_start();
+		echo getFiles($_SESSION['username'], $_POST['grantname']);
+	}
 ?>
