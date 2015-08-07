@@ -105,13 +105,19 @@ $(document).ready( function () {
 	    $("#choosecomparerform").append('<label for="comparergrantselect">Which grant are you generating the C&P form for?</label>');
 	    $("#choosecomparerform").append('<select id="comparergrantselect" style="margin-bottom: 2em;">');
 	    $comparer = $("#comparergrantselect");
+	    $theresanoncomplete = false;
 	    $(".grant").each( function () {
 	    	if ($(this).find(".status").text() != "Completed")
 	    	{
 		    	var str = '<option value="' + $(this).find(".granttitle").text() + '">' + $(this).find(".granttitle").text() + '</option>';
-		    	$comparer.append(str);	    		
+		    	$comparer.append(str);
+		    	$theresanoncomplete=true;	    		
 	    	}
-
+		if ($theresanoncomplete == false)
+		{
+			$("#comparergrantselect").remove();
+			$("#choosecomparerform").find('label').val("There are no grants that aren't completed");
+		}
 	    });
 	    $("#choosecomparerform").append('<div><button id="choosecomparerbtn">Next</button></div>');
 		
