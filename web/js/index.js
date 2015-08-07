@@ -25,7 +25,7 @@ $(document).ready( function () {
 	                type: 'post',
 	                success: function(php_script_response){
 	                    console.log(php_script_response); // display response from the PHP script, if any
-	                }
+	                },
 	                error: function (e) {
 	                	console.log(e);
 	                }
