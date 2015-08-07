@@ -33,8 +33,13 @@ $(document).ready( function () {
 	});
 
 	$('#fileinput').bind('change', function() {
-	  alert(this.files[0].size);
-	  alert(this.files[1].size);
+	  for (i = 0; i < this.files.length; i++)
+	  {
+	  	if(this.files[i].size >= 2000000)
+	  	{
+	  		alert(this.files[i].name);
+	  	}
+	  }
 	});
 
 	
