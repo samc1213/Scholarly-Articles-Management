@@ -12,6 +12,22 @@ $(document).ready( function () {
 	
 	$('#filesubmit').submit( function(e) {
 		e.preventDefault();
+		var sizeOk = true;
+		var problemfile = '';
+		for (i = 0; i < this.files.length; i++)
+		  {
+		  	if($("#fileinput").files[i].size >= 2000000)
+		  	{
+				problemfile = $("#fileinput").files[i].name;
+		  	}
+		  }
+		if (sizeOk != true)
+		{
+			alert(problemfile + " is too big. Max size is 2MB");
+			return false;
+		}
+		  
+		  
 		var form = document.getElementById('filesubmit');
 		var form_data = new FormData(form);
 		console.log(form_data);
@@ -37,7 +53,7 @@ $(document).ready( function () {
 	  {
 	  	if(this.files[i].size >= 2000000)
 	  	{
-	  		alert(this.files[i].name);
+	  		alert(this.files[i].name + " is too big. Max size is 2MB");
 	  	}
 	  }
 	});
