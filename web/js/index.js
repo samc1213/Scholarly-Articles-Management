@@ -32,6 +32,11 @@ $(document).ready( function () {
 	     });
 	});
 
+	$('#fileinput').bind('change', function() {
+	  alert(this.files[0].size);
+	  alert(this.files[1].size);
+	});
+
 	
 	$("#maintable").stupidtable();
 	
