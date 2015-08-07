@@ -17,7 +17,8 @@ $(document).ready( function () {
 		$('#newgrantbutton').hide();
 		$('#newcpform').hide();
 		var buttonnumber = $(this).attr('id').substr(12);
-		var trstr = "grant" + buttonnumber;
+		console.log("btnnum: " + buttonnumber);
+		var trstr = "#grant" + buttonnumber;
 		$tr = $(trstr);
 		var grantname = $tr.find('td.granttitle').text();
 		console.log("gname: " + grantname);
