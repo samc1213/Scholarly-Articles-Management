@@ -589,7 +589,7 @@ $(document).ready( function () {
 			{
 				console.log(data);
 				console.log("Grant successfully deleted");
-				window.location.href = window.location.href;
+				location.reload(true);
 			}
 		});
 	});
