@@ -30,7 +30,7 @@
 				$config = array('key' => getenv('AWS_ACCESS_KEY_ID'), 'secret' => getenv('AWS_SECRET_ACCESS_KEY'));
 				$s3 = Aws\S3\S3Client::factory();
 				
-				$prefixstr = $_SESSION['username'].'/'.$_POST['grantname'];
+				$prefixstr = $_SESSION['username'].'/'.$_POST['grantname'].'/';
 				echo $prefixstr;
 				
 				$result = $s3->putObject(array(

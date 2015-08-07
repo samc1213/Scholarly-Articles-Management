@@ -90,7 +90,9 @@ $(document).ready( function () {
 		  
 		var form = document.getElementById('filesubmit');
 		var form_data = new FormData(form);
-		form_data.append('grantname', $("#grantfilesname").text());
+		var gfilename =  $("#grantfilesname").text();
+		console.log("gfilename" + gfilename);
+		form_data.append('grantname', gfilename);
 		console.log(form_data);
 	    $.ajax({
 	                url: 'upload.php', // point to server-side PHP script 
