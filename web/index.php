@@ -113,7 +113,7 @@
 								<th data-sort="int">Modified</th>
 								<th>Edit</th>					
 								<th>Delete</th>
-								<th>Download</th>											
+								<th>Filestore</th>											
 								</tr></thead> <tbody>';
 																
 								foreach ($grants as $grant) {
@@ -173,9 +173,9 @@
 									echo $count;
 									echo '"><i class="fa fa-trash-o"';
 									echo '"></i></button></td>';
-									echo '<td class="downloadtd"><button class="downloadbtn" style="padding: 0;" id="downloadbtn';
+									echo '<td class="filestoretd"><button class="filestorebtn" style="padding: 0;" id="filestorebtn';
 									echo $count;
-									echo '"><i class="fa fa-download"';
+									echo '"><i class="fa fa-folder"';
 									echo '"></i></button></td>';
 									echo '<span class="comparison" style="display:none">';
 									echo '</tr>';
@@ -214,6 +214,10 @@
 						<input name="grantname" type="hidden"/>
 						<button id="deleteconfirmbtn" type="submit">Delete</button>
 					</form>
+				</div>
+				
+				<div id="filestorebox">
+					<h2 id="filestoreheader">Filestore</h2>
 				</div>
 				
 	                <div id="newgrantpopup" class="grantpopup">

@@ -10,6 +10,11 @@ $(document).ready( function () {
 	    }
 	}
 	
+	$('.filestorebtn').submit ( function (e) {
+		e.preventPropagation();
+		$('#filestorebox').show();
+	});
+	
 	$('#filesubmit').submit( function(e) {
 		e.preventDefault();
 		var sizeOk = true;
@@ -77,6 +82,7 @@ $(document).ready( function () {
 		$("#junkdiv").height(h - $("header").outerHeight(true) - $("#grantheader").outerHeight(true) - $("#grants").outerHeight(true) - $("#comparisonbox").outerHeight(true));
 		$('#shield').show();
 		$('.editbtn').hide();
+		$('.filestorebtn').hide();
 		$("#newgrantbutton").hide();
 		$('html, body').animate({
 	        scrollTop: $("#comparisonbox").offset().top
@@ -317,7 +323,8 @@ $(document).ready( function () {
     	$("#downloadform").remove();
     	$("#comparisonbox").hide();
     	$("#shield").hide();
-    	$(".editbtn").show();    	
+    	$(".editbtn").show(); 
+    	$('.filestorebtn').show();   	
     	$("#newcpform").show();
 		$('#newgrantbutton').show();
 	}); 
@@ -473,7 +480,8 @@ $(document).ready( function () {
 		{
 			$('#shield').hide();
 			$(".grantpopup").hide();
-			$('.editbtn').show();	
+			$('.editbtn').show();
+			$('.filestorebtn').show();
 			$('#newgrantbutton').show();
 			$("#newcpform").show();
 			$("#comparisonbox").hide();
@@ -496,7 +504,8 @@ $(document).ready( function () {
 		$('#newgrantform').trigger("reset");
 		$('#newgranterror').html('');
 		$('#shield').show();
-		$('.editbtn').hide();	
+		$('.editbtn').hide();
+		$('.filestorebtn').hide();	
 	    $("#junkdiv").height(0);
 	    $('html, body').animate({
 	        scrollTop: $("#newgrantpopup").offset().top
@@ -571,7 +580,8 @@ $(document).ready( function () {
 		$location = $grantdiv.find(".location");
 		$("#elocation").val($location.text());
 		
-		$('.editbtn').hide();	
+		$('.editbtn').hide();
+		$('.filestorebtn').hide();	
 		$('#shield').show();
 		
 		$('html, body').animate({
@@ -585,6 +595,7 @@ $(document).ready( function () {
 		$("#newgrantbutton").hide();
 		$("#newcpform").hide();
 		$(".editbtn").hide();
+		$('.filestorebtn').hide();
 		$(".deletebtn").hide();
 		$("#shield").show();
 		
