@@ -11,7 +11,7 @@ $(document).ready( function () {
 	}
 	
 	$('.filestorebtn').click ( function (e) {
-		e.preventPropagation();
+		e.stopPropagation();
 		$('#filestorebox').show();
 	});
 	
@@ -81,7 +81,6 @@ $(document).ready( function () {
 		var h = $(window).height();
 		$("#junkdiv").height(h - $("header").outerHeight(true) - $("#grantheader").outerHeight(true) - $("#grants").outerHeight(true) - $("#comparisonbox").outerHeight(true));
 		$('#shield').show();
-		$('.filestorebtn').hide();
 		$("#newgrantbutton").hide();
 		$('html, body').animate({
 	        scrollTop: $("#comparisonbox").offset().top
