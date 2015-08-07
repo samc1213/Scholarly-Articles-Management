@@ -117,7 +117,7 @@ $(document).ready( function () {
 		if ($theresanoncomplete == false)
 		{
 			$("#comparergrantselect").remove();
-			$("#choosecomparerform").find('label').val("There are no grants that aren't completed");
+			$("#choosecomparerform").find('label').text("There are no grants that aren't completed");
 		}
 	    
 	    else 
