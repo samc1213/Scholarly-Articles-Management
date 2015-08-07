@@ -106,8 +106,12 @@ $(document).ready( function () {
 	    $("#choosecomparerform").append('<select id="comparergrantselect" style="margin-bottom: 2em;">');
 	    $comparer = $("#comparergrantselect");
 	    $(".grant").each( function () {
-	    	var str = '<option value="' + $(this).find(".granttitle").text() + '">' + $(this).find(".granttitle").text() + '</option>';
-	    	$comparer.append(str);
+	    	if ($(this).find(".status").text() != "Completed")
+	    	{
+		    	var str = '<option value="' + $(this).find(".granttitle").text() + '">' + $(this).find(".granttitle").text() + '</option>';
+		    	$comparer.append(str);	    		
+	    	}
+
 	    });
 	    $("#choosecomparerform").append('<div><button id="choosecomparerbtn">Next</button></div>');
 		
@@ -124,7 +128,21 @@ $(document).ready( function () {
 		grants[grantcount] = comparergrant;		//save the grant we're comparing in the object and increment counter
 		grantcount++;
 		
-		if($('.granttitle').length == 1)
+		$('.granttitle').each (function () {
+			var compareegrant = $(this).text();
+			
+			$gtitle = $(document).find('.granttitle:contains("' + compareegrant + '")');
+			$tr = $gtitle.closest('tr');
+			var compareestatus = $tr.find('td.status').text();
+			
+			if (compareegrant != comparergrant && compareestatus != 'Completed')
+			{
+				grants.push(compareegrant);		//store all of the other grants in the grants array (the comparer is in position 0)
+			}
+			console.log("grants array: " + grants);
+		});	
+		
+		if(grants.length == 1)
 		{
 			$("#comparetoform").remove();
 			$("#choosecomparerform").remove();
@@ -167,7 +185,7 @@ $(document).ready( function () {
 						console.log("data: " + data);
 						console.log("id: " + id);
 						if ($(".waiter").is(":visible")) {		//make sure waiter is there in case someone gets bored and closes box before ajax callback
-							$("#comparisonbox").append("<form action='download.php' method='post' id='downloadform'><input name='id' value='" + id + "' type='hidden'/><input name='filename' value='"+ comparergrant + "' type='hidden'/><button type='submit'>Download The File!</button></form>");
+							$("#comparisonbox").append("<form action='download.php' method='post' id='downloadform'><input name='id' value='" + id + "' type='hidden'/><input name='filename' value='"+ comparergrant + " C&P Form' type='hidden'/><button type='submit'>Download The File!</button></form>");
 						} 
 							$(".waiter").hide();
 					}
@@ -175,14 +193,6 @@ $(document).ready( function () {
 				return;
 		}
 		
-		$('.granttitle').each (function () {
-			var compareegrant = $(this).text();
-			if (compareegrant != comparergrant)
-			{
-				grants.push(compareegrant);		//store all of the other grants in the grants array (the comparer is in position 0)
-			}
-			console.log("grants array: " + grants);
-		});	
 		$(this).remove();
 		
 		$("#comparisonbox").append('<form id="comparetoform">');		

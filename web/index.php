@@ -177,24 +177,9 @@
 																
 							}
 	        			?>
-	        	
-	        	<!-- <div id='grant1' class='grant'>
-	        		<p class="grantname"> <span class="grantnum">1.</span>This grant is really awesome <span class="status">Current</span></p>
-	        		<p class="grantagency"> DOE</p>
-	        		<p class="amount">$42,000</p>
-	        		<p class="pmonths"> 3.42 person-months</p>
-	        		
-	        	</div> -->
-	        		
+
 	        	</section>
-	        	
-			<!-- <div>
-			<form action="upload.php" method="post" enctype="multipart/form-data" class="dropzone">
-			    <input type="file" name="files[]" id="input_file" multiple="multiple">
-			    <input type="submit">
-			</form>
-			</div>
-	        	 -->
+
 
 	        	<?php
 	        	session_start();
@@ -244,6 +229,7 @@
 		      			<label class="biglabel" for="status">Status:</label>
 						<select id="status">
 							<option selected disabled>Choose status</option>
+							<option value="Completed">Completed</option>
 				        	<option value="Current">Current</option>
 		    				<option value="Pending">Pending</option>
 		    				<option value="Submission Planned">Submission Planned</option>
@@ -301,6 +287,7 @@
 		      			<label class="biglabel" for="estatus">Status:</label>
 						<select id="estatus">
 							<option selected disabled>Choose status</option>
+				        	<option value="Completed">Completed</option>
 				        	<option value="Current">Current</option>
 		    				<option value="Pending">Pending</option>
 		    				<option value="Submission Planned">Submission Planned</option>
