@@ -5,7 +5,7 @@
 	session_start();
 	
 	$uploadOk = 1;
-	$message = (string)count($_FILES['fileinput']['name']);
+	$message = var_dump($_FILES['fileinput']['name']);
 	
 	for ($i=0; $i<count($_FILES['fileinput']['name']); $i++)
 	{
