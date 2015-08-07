@@ -13,6 +13,7 @@ $(document).ready( function () {
 	$('.filestorebtn').click ( function (e) {
 		e.stopPropagation();
 		$('#filestorebox').show();
+		$('#shield').show();
 		$('#newgrantbutton').hide();
 		$('#newcpform').hide();
 	});

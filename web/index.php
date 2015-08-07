@@ -195,11 +195,6 @@
 	        	if (isset($_SESSION['username'])) {
 	        		echo '<button id="newgrantbutton"><i class="fa fa-plus-square" id="newgrantplus"></i> Add another grant</button>';
 				}?>
-	    	
-	    		<form enctype="multipart/form-data" method="post" name="fileinfo" id="filesubmit">
-				<input id="fileinput" type="file" name="fileinput[]" multiple required/>
-				<input type="submit">Upload</button>
-				</form>
 	
 	        	
 				<div id="comparisonbox" style="display: none;" class="clearfix">
@@ -218,6 +213,10 @@
 				
 				<div id="filestorebox">
 					<h2 id="filestoreheader">Filestore</h2>
+					<form enctype="multipart/form-data" method="post" name="fileinfo" id="filesubmit">
+						<input id="fileinput" type="file" name="fileinput[]" multiple required/>
+						<input type="submit">Upload</button>
+					</form>
 				</div>
 				
 	                <div id="newgrantpopup" class="grantpopup">
