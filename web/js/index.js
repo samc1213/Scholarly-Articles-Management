@@ -173,8 +173,8 @@ $(document).ready( function () {
 				grant.name = $tr.find("td.granttitle").text();
 				grant.status = $tr.find("td.status").text();
 				grant.source = $tr.find("td.grantagency").text();
-				grant.amount = $tr.find("td.amountnum").text();
-				grant.piamount = $tr.find("td.piamountnum").text();
+				grant.amount = $tr.find("span.amountnum").text();
+				grant.piamount = $tr.find("span.piamountnum").text();
 				grant.apersonmonths = $tr.find("span.apmonthnum").text();
 				grant.cpersonmonths = $tr.find("span.cpmonthnum").text();
 				grant.spersonmonths = $tr.find("span.spmonthnum").text();
@@ -184,7 +184,7 @@ $(document).ready( function () {
 				grant.firstname = $(document).find("#firstname").text();
 				grant.lastname = $(document).find("#lastname").text();
 				grant.middlename = $(document).find("#middlename").text();
-				grant.location = $tr.find("td.locationval").text();
+				grant.location = $tr.find("span.locationval").text();
 				data.push(grant);			
 			}
 				console.log(data);
@@ -244,27 +244,33 @@ $(document).ready( function () {
 			$("#comparetoform").remove();
 			$(".waiter").show();
 			var data = [];
-			$(".grant").each(function (i) {
+			for (i= 0; i<grants.length; i++) {
+				$gtitle = $(document).find('.granttitle:contains("' + grants[i] + '")');
+				console.log("gtit:");
+				console.log($gtitle);
+				$tr = $gtitle.closest('tr');
+				console.log("tr:");
+				console.log($tr);
+				console.log($tr.find("td.granttitle").text());
+				console.log($tr.find("td.grantagency").text());
 				var grant = {};
-				grant.name = $(this).find(".granttitle").text();
-				grant.awardnumber = $(this).find(".awardnumber").text();
-				grant.status = $(this).find(".status").text();
-				grant.source = $(this).find(".grantagency").text();
-				grant.amount = $(this).find(".amountnum").text();
-				grant.piamount = $(this).find(".piamountnum").text();
-				grant.apersonmonths = $(this).find(".apmonthnum").text();
-				grant.cpersonmonths = $(this).find(".cpmonthnum").text();
-				grant.spersonmonths = $(this).find(".spmonthnum").text();
-				grant.description = comparisons[grant.name];
-				grant.awardperiod1 = $(this).find(".fromdate").text();
-				grant.awardperiod2 = $(this).find(".todate").text();
+				grant.name = $tr.find("td.granttitle").text();
+				grant.status = $tr.find("td.status").text();
+				grant.source = $tr.find("td.grantagency").text();
+				grant.amount = $tr.find("span.amountnum").text();
+				grant.piamount = $tr.find("span.piamountnum").text();
+				grant.apersonmonths = $tr.find("span.apmonthnum").text();
+				grant.cpersonmonths = $tr.find("span.cpmonthnum").text();
+				grant.spersonmonths = $tr.find("span.spmonthnum").text();
+				grant.description = comparisons[grants[i]];
+				grant.awardperiod1 = $tr.find("span.fromdate").text();
+				grant.awardperiod2 = $tr.find("span.todate").text();
 				grant.firstname = $(document).find("#firstname").text();
 				grant.lastname = $(document).find("#lastname").text();
 				grant.middlename = $(document).find("#middlename").text();
-				console.log("mname" + grant.middlename);
-				grant.location = $(this).find(".locationval").text();
+				grant.location = $tr.find("span.locationval").text();
 				data.push(grant);			
-			});
+			}
 				console.log(data);
 				var jsondata = JSON.stringify(data);
 				var id = Math.random() * 10000;
