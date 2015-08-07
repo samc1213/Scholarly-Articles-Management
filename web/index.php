@@ -112,7 +112,8 @@
 								<th data-sort="string">Location</th>
 								<th data-sort="int">Modified</th>
 								<th>Edit</th>					
-								<th>Delete</th>											
+								<th>Delete</th>
+								<th>Download</th>											
 								</tr></thead> <tbody>';
 																
 								foreach ($grants as $grant) {
@@ -171,6 +172,10 @@
 									echo '<td class="deletetd"><button class="deletebtn" style="padding: 0;" id="deletebtn';
 									echo $count;
 									echo '"><i class="fa fa-trash-o"';
+									echo '"></i></button></td>';
+									echo '<td class="downloadtd"><button class="downloadbtn" style="padding: 0;" id="downloadbtn';
+									echo $count;
+									echo '"><i class="fa fa-download"';
 									echo '"></i></button></td>';
 									echo '<span class="comparison" style="display:none">';
 									echo '</tr>';
