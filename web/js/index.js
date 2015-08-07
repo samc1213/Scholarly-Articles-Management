@@ -165,6 +165,8 @@ $(document).ready( function () {
 				console.log("gtit:");
 				console.log($gtitle);
 				$tr = $gtitle.closest('tr');
+				console.log("tr:");
+				console.log($tr);
 				var grant = {};
 				grant.name = $tr.find("td.granttitle").text();
 				grant.status = $tr.find("td.status").text();
