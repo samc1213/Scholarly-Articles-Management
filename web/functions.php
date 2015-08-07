@@ -233,6 +233,8 @@
 			$prefixstr = $user.'/'.$grantname.'/';
 			echo $prefixstr;
 			$filenamearray = array();
+			
+			$s3 = Aws\S3\S3Client::factory();
 				
 			$objects = $s3->getIterator('ListObjects', array('Bucket' => 'cpgrantsuploads', 'Prefix' => $prefixstr));
 			foreach ($objects as $object) {
