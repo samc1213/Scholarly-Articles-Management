@@ -165,7 +165,7 @@
 									echo '<td class="pmonths"> <span class="pmonthnum">'.$pmonths.'</span> <span class="pmonthunits">'.$units. '</span> </td>';
 									echo '<td class="dates"><span class="fromdate">'.$fromdate.'</span> to <span class="todate">'.$todate.'</span></td>';
 									echo '<td class = "location"><span class="locationval">'.$location.'</span></td>';
-									echo '<td class="summary" type="hidden">'.$summary.'</td>';
+									echo '<td class="summary" style="display: none;">'.$summary.'</td>';
 									echo '<td class="edited">'.$edited.'</td>';
 									echo '<td class="edittd"><button class="editbtn" style="padding: 0;" id="editbtn';
 									echo $count;
