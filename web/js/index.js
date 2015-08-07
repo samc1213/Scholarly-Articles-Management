@@ -310,21 +310,27 @@ $(document).ready( function () {
 	
 	$("#newgrantform").submit( function (e) {
 		e.preventDefault();
+			
+		var okSubmit = true;		
 				
 		if ($("#grantname").val() == '')
 		{
 			$("#newgranterror").html('<p style="color: red;">You must include a name for the grant.</p><br><br>');
-			return false;
+			okSubmit = false;
 		}
 		
 		
 		$('.granttitle').each( function () {
 			if ($(this).text() == ($("#grantname").val())) {
 				$("#newgranterror").html('<p style="color: red;">You may not have multiple grants with the same name.</p><br><br>');
-				return false;
+				okSubmit = false;
 			}
 		});
 		
+		if (okSubmit == false)
+		{
+			return;
+		}
 					
 		var data = {};
 		
@@ -365,20 +371,26 @@ $(document).ready( function () {
 	$("#editgrantform").submit( function (e) {
 		e.preventDefault();
 		
+		var okSubmit = true;
+		
 		if ($("#egrantname").val() == '')
 		{
 			$("#editgranterror").html('<p style="color: red;">You must include a name for the grant.</p><br><br>');
-			return false;
+			okSubmit = false;
 		}
 		
 		
 		$('.granttitle').each( function () {
 			if ($(this).text() == ($("#egrantname").val())) {
 				$("#editgranterror").html('<p style="color: red;">You may not have multiple grants with the same name.</p><br><br>');
-				return false;
+				okSubmit = false;
 			}
 		});
 		
+		if (okSubmit == false)
+		{
+			return;
+		}
 			
 		var data = {};
 		
