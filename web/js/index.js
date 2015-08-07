@@ -14,11 +14,12 @@ $(document).ready( function () {
 		e.preventDefault();
 		var sizeOk = true;
 		var problemfile = '';
-		for (i = 0; i < $("#fileinput").files.length; i++)
+		var inp = $("#fileinput");
+		for (i = 0; i < this.files.length; i++)
 		  {
-		  	if($("#fileinput").files[i].size >= 2000000)
+		  	if(inp.files[i].size >= 2000000)
 		  	{
-				problemfile = $("#fileinput").files[i].name;
+				problemfile = inp.files[i].name;
 		  	}
 		  }
 		if (sizeOk != true)
