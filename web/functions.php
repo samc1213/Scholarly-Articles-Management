@@ -231,7 +231,6 @@
 		function getFiles($user, $grantname) {
 			require('../vendor/autoload.php');
 			$prefixstr = $user.'/'.$grantname.'/';
-			echo $prefixstr;
 			$filenamearray = array();
 			
 			$s3 = Aws\S3\S3Client::factory();
