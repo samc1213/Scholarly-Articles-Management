@@ -117,7 +117,7 @@ $(document).ready( function () {
 		if ($theresanoncomplete == false)
 		{
 			$("#comparergrantselect").remove();
-			$("#choosecomparerform").find('label').html("<a href='https://en.wikipedia.org/wiki/Double_negative'>There are no grants that aren't completed</a>");
+			$("#choosecomparerform").find('label').html("<a href='https://en.wikipedia.org/wiki/Double_negative' target='_blank'>There are no grants that aren't completed</a>");
 		}
 	    
 	    else 
@@ -160,24 +160,25 @@ $(document).ready( function () {
 			$("#choosecomparerform").remove();
 			$(".waiter").show();
 			var data = [];
-			$(".grant").each(function (i) {
+			grants.each(function (i) {
+				$gtitle = $(document).find('.granttitle:contains("' + this + '")');
+				$tr = $gtitle.closest('tr');
 				var grant = {};
-				grant.name = $(this).find(".granttitle").text();
-				grant.status = $(this).find(".status").text();
-				grant.source = $(this).find(".grantagency").text();
-				grant.amount = $(this).find(".amountnum").text();
-				grant.piamount = $(this).find(".piamountnum").text();
-				grant.apersonmonths = $(this).find(".apmonthnum").text();
-				grant.cpersonmonths = $(this).find(".cpmonthnum").text();
-				grant.spersonmonths = $(this).find(".spmonthnum").text();
-				grant.description = comparisons[grant.name];
-				grant.awardperiod1 = $(this).find(".fromdate").text();
-				grant.awardperiod2 = $(this).find(".todate").text();
+				grant.name = $tr.find(".granttitle").text();
+				grant.status = $tr.find(".status").text();
+				grant.source = $tr.find(".grantagency").text();
+				grant.amount = $tr.find(".amountnum").text();
+				grant.piamount = $tr.find(".piamountnum").text();
+				grant.apersonmonths = $tr.find(".apmonthnum").text();
+				grant.cpersonmonths = $tr.find(".cpmonthnum").text();
+				grant.spersonmonths = $tr.find(".spmonthnum").text();
+				grant.description = comparisons[this];
+				grant.awardperiod1 = $tr.find(".fromdate").text();
+				grant.awardperiod2 = $tr.find(".todate").text();
 				grant.firstname = $(document).find("#firstname").text();
 				grant.lastname = $(document).find("#lastname").text();
 				grant.middlename = $(document).find("#middlename").text();
-				console.log("mname" + grant.middlename);
-				grant.location = $(this).find(".locationval").text();
+				grant.location = $tr.find(".locationval").text();
 				data.push(grant);			
 			});
 				console.log(data);
