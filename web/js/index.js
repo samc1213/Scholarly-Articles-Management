@@ -379,9 +379,12 @@ $(document).ready( function () {
 			okSubmit = false;
 		}
 		
+		var grantstr = "grant" + $("#editgrantform").find("input[name='buttonnumber']").val();
+		console.log("grantstr: " + grantstr);
 		
 		$('.granttitle').each( function () {
-			if (($(this).text() == ($("#egrantname").val())) && ($(this).closest('tr').attr('id') != "grant" + $("#editgrantform").find("input[name='buttonnumber']").val())) {
+			console.log("trid: " + $(this).closest('tr').attr('id'));
+			if (($(this).text() == $("#egrantname").val()) && ($(this).closest('tr').attr('id') != grantstr)) {
 				$("#editgranterror").html('<p style="color: red;">You may not have multiple grants with the same name.</p><br><br>');
 				okSubmit = false;
 			}
