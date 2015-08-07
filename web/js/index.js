@@ -18,9 +18,7 @@ $(document).ready( function () {
 	    $.ajax({
 	                url: 'upload.php', // point to server-side PHP script 
 	                dataType: 'text',  // what to expect back from the PHP script, if anything
-	                cache: false,
 	                contentType: false,
-	                processData: false,
 	                data: form_data,                         
 	                type: 'post',
 	                success: function(php_script_response){
