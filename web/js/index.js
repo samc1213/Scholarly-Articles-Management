@@ -10,7 +10,7 @@ $(document).ready( function () {
 	    }
 	}
 	
-	$('.filestorebtn').submit ( function (e) {
+	$('.filestorebtn').click ( function (e) {
 		e.preventPropagation();
 		$('#filestorebox').show();
 	});
