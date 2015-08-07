@@ -130,9 +130,24 @@
 									$amount = $grant['amount'];
 									$piamount = $grant['piamount'];
 									$apmonths = $grant['apersonmonths'];
+									$pmonthcount = 0;
+									if ($apmonths != '')
+									{
+										$apmonths = $apmonths.'Academic ';
+										$pmonthcount++;
+									}
 									$cpmonths = $grant['cpersonmonths'];
+									if ($cpmonths != '')
+									{
+										$cpmonths = $cpmonths.'Calendar ';
+										$pmonthcount++;
+									}
 									$spmonths = $grant['spersonmonths'];
-									$units = $grant['specify'];
+									if ($spmonths != '')
+									{
+										$spmonths = $pmonths.'Summer';
+										$pmonthcount++;
+									}
 									$summary = $grant['description'];
 									$fromdate = $grant['awardperiod1'];
 									$todate = $grant['awardperiod2'];
@@ -153,7 +168,7 @@
 									echo '<td class="grantagency">'.$agency.'</td>';
 									echo '<td class="amount">$<span class="amountnum">'.$amount.'</span></td>';
 									echo '<td class="piamount">$<span class="piamountnum">'.$piamount.'</span></td>';
-									echo '<td class="pmonths"> <span class="apmonthnum">'.$apmonths.'</span> <span class="cpmonthnum">'.$cpmonths.'</span> <span class="spmonthnum">'.$spmonths.'</span></td>';
+									echo '<td class="pmonths"><span class="apmonthnum">'.$apmonths.'</span><span class="cpmonthnum">'.$cpmonths.'</span><span class="spmonthnum">'.$spmonths.'</span></td>';
 									echo '<td class="dates"><span class="fromdate">'.$fromdate.'</span> to <span class="todate">'.$todate.'</span></td>';
 									echo '<td class = "location"><span class="locationval">'.$location.'</span></td>';
 									echo '<td class="summary" style="display: none;">'.$summary.'</td>';
@@ -256,14 +271,6 @@
 				       
 				       <label class="biglabel" for="spersonmonths">Summer Person Months:</label>
 				       <input type="number" id="spersonmonths" maxlength="3" step="0.01" min="0"/><br><br>
-				       
-				       <label class="sublabel" for="specify">Specify:</label>
-						<select id="specify">
-				        	<option value="Calendar">Calendar</option>
-		    				<option value="Academic">Academic</option>
-		    				<option value="Summer">Summer</option>
-				       </select> <br><br>
-				       
 				       
 				       <label class="biglabel" for="amount">Total Annual Amount:</label>
 				       <span>$</span><input type="text" id="amount"/>
