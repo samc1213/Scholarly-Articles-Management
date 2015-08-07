@@ -213,6 +213,8 @@
 				
 				<div id="filestorebox">
 					<h2 id="filestoreheader">Filestore</h2>
+					<table id="filelist">
+					</table>
 					<form enctype="multipart/form-data" method="post" name="fileinfo" id="filesubmit">
 						<input id="fileinput" type="file" name="fileinput[]" multiple required/>
 						<input type="submit">Upload</button>

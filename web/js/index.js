@@ -44,10 +44,26 @@ $(document).ready( function () {
 					filenames.push(filename);
 				}
 				console.log(filenames);
+				
+				if (filenames.length <= 1)
+				{
+					console.log("No files");
+				}
+				
+				else
+				{
+					for (i=0; i<filenames.length; i++)
+					{
+						var name = filenames[i];
+						if (name != "")
+						{
+							$('#filelist').append('<tr class="filestoretr" id="' + name + '"><td class="filename">' + name + '</td></tr>');
+						}
+					}
+				}
+
 			}
-	    });
-	    console.log(filenames);
-	    
+	    });	    
 	});
 	
 	$('#filesubmit').submit( function(e) {
