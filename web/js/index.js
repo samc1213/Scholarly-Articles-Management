@@ -570,7 +570,7 @@ $(document).ready( function () {
 			{
 				console.log(data);
 				console.log("Grant successfully deleted");
-				location.reload();
+				window.location.href = window.location.href
 			}
 		});
 	});
