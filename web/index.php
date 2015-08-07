@@ -267,7 +267,7 @@
 				       <label class="biglabel" for="description">Description:</label>
 				       <textarea type="text" rows="4" id="description" class ="wideinput"></textarea> <br><br>
 				       
-				       <span id="newvalidspan"></span>
+				       <span id="newgranterror"></span>
 				       
 				       <button style="margin-bottom: 1em;">Submit</button>
 						
@@ -330,6 +330,8 @@
 				       
 				       <label class="biglabel" for="edescription">Description:</label>
 				       <textarea type="text" rows="4" id="edescription" class ="wideinput"></textarea> <br><br>
+				       
+				       <span id="editgranterror"></span> 
 				       
 				       <button style="margin-bottom: 1em;">Save</button>
 						

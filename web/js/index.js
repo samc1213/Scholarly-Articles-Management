@@ -37,40 +37,6 @@ $(document).ready( function () {
 	$("#comparisonbox").click( function (e) {
 		e.stopPropagation();
 	});
-	
-	// var target = document.querySelector("body");
-// 	
-	// var config = { attributes: true, childList: true, characterData: true };
-// 
-// 	
-	// var observer = new MutationObserver(function () {
-		// if ($("#grantheader").is(":visible"))
-		// {
-			// var h = $(window).height();
-			// $("#junkdiv").height(h - $("header").outerHeight(true) - $("#grantheader").outerHeight(true) - $("#grants").outerHeight(true) - $("#comparisonbox").outerHeight(true));
-			// if ($("#newgrantpopup").is(":visible")) {
-				// $("#junkdiv").height(0);
-			// }
-			// if ($("#editgrantpopup").is(":visible")) {
-				// $("#junkdiv").height(0);
-			// }
-		// }	
-	// });
-// 
-	// observer.observe(target, config);
-	
-	// $(window).resize(function () {
-		// if ($("#grantheader").is(":visible")) {		
-			// var h = $(window).height();
-			// $("#junkdiv").height(h - $("header").outerHeight(true) - $("#grantheader").outerHeight(true) - $("#grants").outerHeight(true) - $("#comparisonbox").outerHeight(true));
-			// if ($("#newgrantpopup").is(":visible")) {
-				// $("#junkdiv").height(0);
-			// }
-			// if ($("#editgrantpopup").is(":visible")) {
-				// $("#junkdiv").height(0);
-			// }
-		// }	
-	// });
 
 	$("#newcpform").click (function (e) {
 		e.stopPropagation();
@@ -344,6 +310,21 @@ $(document).ready( function () {
 	
 	$("#newgrantform").submit( function (e) {
 		e.preventDefault();
+				
+		if ($("#grantname").val() == '')
+		{
+			$("#newgranterror").html('<p style="color: red;">You must include a name for the grant.</p><br><br>');
+			return;
+		}
+		
+		
+		$('.granttitle').each( function () {
+			if ($(this).text() == ($("#grantname").val())) {
+				$("#newgranterror").html('<p style="color: red;">You may not have multiple grants with the same name.</p><br><br>');
+				return;
+			}
+		});
+		
 					
 		var data = {};
 		
@@ -383,6 +364,21 @@ $(document).ready( function () {
 	
 	$("#editgrantform").submit( function (e) {
 		e.preventDefault();
+		
+		if ($("#egrantname").val() == '')
+		{
+			$("#editgranterror").html('<p style="color: red;">You must include a name for the grant.</p><br><br>');
+			return;
+		}
+		
+		
+		$('.granttitle').each( function () {
+			if ($(this).text() == ($("#egrantname").val())) {
+				$("#editgranterror").html('<p style="color: red;">You may not have multiple grants with the same name.</p><br><br>');
+				return;
+			}
+		});
+		
 			
 		var data = {};
 		
@@ -581,13 +577,3 @@ $(document).ready( function () {
 	
 	
 });//end doc ready
-
-
-function validateNewForm() {
-  var isValid = true;
-  $('#newgrantform').each(function() {
-    if ( $(this).val() === '' )
-        isValid = false;
-  });
-  return isValid;
-}
