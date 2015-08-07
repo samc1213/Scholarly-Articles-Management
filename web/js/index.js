@@ -459,6 +459,7 @@ $(document).ready( function () {
 		$(this).hide();
 		console.log('hi');
 		$("#newgrantpopup").show();
+		$('#newgrantform').trigger("reset");
 		$('#shield').show();
 		$('.editbtn').hide();	
 	    $("#junkdiv").height(0);
