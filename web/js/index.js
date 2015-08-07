@@ -160,8 +160,10 @@ $(document).ready( function () {
 			$("#choosecomparerform").remove();
 			$(".waiter").show();
 			var data = [];
-			for (var g in grants) {
-				$gtitle = $(document).find('.granttitle:contains("' + grants[g] + '")');
+			for (i= 0; i<grants.length; i++) {
+				$gtitle = $(document).find('.granttitle:contains("' + grants[i] + '")');
+				console.log("gtit:");
+				console.log($gtitle);
 				$tr = $gtitle.closest('tr');
 				var grant = {};
 				grant.name = $tr.find(".granttitle").text();
@@ -172,7 +174,7 @@ $(document).ready( function () {
 				grant.apersonmonths = $tr.find(".apmonthnum").text();
 				grant.cpersonmonths = $tr.find(".cpmonthnum").text();
 				grant.spersonmonths = $tr.find(".spmonthnum").text();
-				grant.description = comparisons[g];
+				grant.description = comparisons[grants[i]];
 				grant.awardperiod1 = $tr.find(".fromdate").text();
 				grant.awardperiod2 = $tr.find(".todate").text();
 				grant.firstname = $(document).find("#firstname").text();
