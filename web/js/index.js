@@ -160,8 +160,8 @@ $(document).ready( function () {
 			$("#choosecomparerform").remove();
 			$(".waiter").show();
 			var data = [];
-			grants.each(function (i) {
-				$gtitle = $(document).find('.granttitle:contains("' + this + '")');
+			for (var g in grants) {
+				$gtitle = $(document).find('.granttitle:contains("' + g + '")');
 				$tr = $gtitle.closest('tr');
 				var grant = {};
 				grant.name = $tr.find(".granttitle").text();
@@ -172,7 +172,7 @@ $(document).ready( function () {
 				grant.apersonmonths = $tr.find(".apmonthnum").text();
 				grant.cpersonmonths = $tr.find(".cpmonthnum").text();
 				grant.spersonmonths = $tr.find(".spmonthnum").text();
-				grant.description = comparisons[this];
+				grant.description = comparisons[g];
 				grant.awardperiod1 = $tr.find(".fromdate").text();
 				grant.awardperiod2 = $tr.find(".todate").text();
 				grant.firstname = $(document).find("#firstname").text();
@@ -180,7 +180,7 @@ $(document).ready( function () {
 				grant.middlename = $(document).find("#middlename").text();
 				grant.location = $tr.find(".locationval").text();
 				data.push(grant);			
-			});
+			}
 				console.log(data);
 				var jsondata = JSON.stringify(data);
 				var id = Math.random() * 10000;
