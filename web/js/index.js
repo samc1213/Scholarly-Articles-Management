@@ -162,6 +162,7 @@ $(document).ready( function () {
 			var data = [];
 			for (var g in grants) {
 				$gtitle = $(document).find('.granttitle:contains("' + g + '")');
+				console.log($gtitle);
 				$tr = $gtitle.closest('tr');
 				var grant = {};
 				grant.name = $tr.find(".granttitle").text();
