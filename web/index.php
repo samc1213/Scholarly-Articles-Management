@@ -120,22 +120,11 @@
 									echo $count;
 									echo '" class="grant">';
 									
-									// echo '<td class="grantnum">';
-									// $count = $count + 1;
-									// echo $count;
-// 									
-									// echo '. </td>';
-									
 									echo '<td class="granttitle">';
 									echo $grant['name'];
 									echo '</td>';
-									// echo '<span> </span><span class="buttoncover"><button class="btn btn-default editbtn" style="padding: 0;" id="editbtn';
-									// echo $count;
-									// echo '"><i class="fa fa-pencil-square-o"';
-// 									
-// 									
-									// echo '"></i></button></span>';
-																									
+
+									$awardnumber = $grant['awardnumber'];																
 									$status = $grant['status'];
 									$agency = $grant['source'];
 									$amount = $grant['amount'];
@@ -158,7 +147,7 @@
 										// echo '"/><button type = "submit" class="comparebutton">Generate C&P Form</button></form>';
 // 										
 									// }
-									
+									echo '<td class="awardnumber" style="display:none;">'.$awardnumber.'</td>';
 									echo '<td class="grantagency">'.$agency.'</td>';
 									echo '<td class="amount">$<span class="amountnum">'.$amount.'</span></td>';
 									echo '<td class="piamount">$<span class="piamountnum">'.$piamount.'</span></td>';
@@ -235,6 +224,9 @@
 		        		<label class="biglabel" for="grantname">Grant Name:</label>
 				        <input type="text" id="grantname" class ="wideinput"/> <br><br>
 				        
+				        <label class="biglabel" for="awardnumber">Award Number:</label>
+				        <input type="text" id="awardnumber"/> <br><br>
+				        
 		        		<label class="biglabel" for="source">Source:</label>
 				        <input type="text" id="source"/><br><br>
 				        
@@ -287,8 +279,11 @@
 					<div id="editgrantpopup" class="grantpopup">
 		        	<h2 id="editgrantheader">Edit Grant</h2>
 		        	<form id="editgrantform">
-		        		<label class="biglabel" for="grantname">Grant Name:</label>
+		        		<label class="biglabel" for="egrantname">Grant Name:</label>
 				        <input type="text" id="egrantname" class ="wideinput"/> <br><br>
+				        
+				        <label class="biglabel" for="eawardnumber">Award Number:</label>
+				        <input type="text" id="eawardnumber"/> <br><br>
 				        
 		        		<label class="biglabel" for="esource">Source:</label>
 				        <input type="text" id="esource"/>

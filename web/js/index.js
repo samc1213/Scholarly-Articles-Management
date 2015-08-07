@@ -220,6 +220,7 @@ $(document).ready( function () {
 			$(".grant").each(function (i) {
 				var grant = {};
 				grant.name = $(this).find(".granttitle").text();
+				grant.awardnumber = $(this).find(".awardnumber").text();
 				grant.status = $(this).find(".status").text();
 				grant.source = $(this).find(".grantagency").text();
 				grant.amount = $(this).find(".amountnum").text();
@@ -310,7 +311,7 @@ $(document).ready( function () {
 					
 		var data = {};
 		
-
+		data['awardnumber'] = $("#awardnumber").val();
 		data['source'] = $('#source').val();
 		data['name'] = $('#grantname').val();
 		data['awardperiod1'] = $('#awardperiod1').val();
@@ -352,7 +353,7 @@ $(document).ready( function () {
 		
 		data['name'] = $('#egrantname').val();
 
-
+		data['awardnumber'] = $("#eawardnumber").val();
 		data['source'] = $('#esource').val();
 		data['awardperiod1'] = $('#eawardperiod1').val();
 		data['awardperiod2'] = $('#eawardperiod2').val();
@@ -436,6 +437,9 @@ $(document).ready( function () {
 		$grantname = $grantdiv.find(".granttitle");
 		originalname = $grantname.text();
 		$("#egrantname").val($grantname.text());
+		
+		$awardnumber = $grantdiv.find(".awardnumber");
+		$("#eawardnumber").val($awardnumber.text());
 		
 		$grantagency = $grantdiv.find(".grantagency");
 		$("#esource").val($grantagency.text());
