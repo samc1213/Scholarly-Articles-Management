@@ -149,12 +149,16 @@
 									$todate = $grant['awardperiod2'];
 									$location = $grant['location'];
 									$edited = $grant['edited'];
+									$totamount = $grant['totamount'];
+									$totpiamount = $grant['totpiamount'];
 									
 									echo '<td class="status">'.$status.'</span></td>';
 									echo '<td class="awardnumber" style="display:none;">'.$awardnumber.'</td>';
 									echo '<td class="grantagency">'.$agency.'</td>';
 									echo '<td class="amount">$<span class="amountnum">'.$amount.'</span></td>';
 									echo '<td class="piamount">$<span class="piamountnum">'.$piamount.'</span></td>';
+									echo '<td class="totamount">$<span class="totamountnum">'.$totamount.'</span></td>';
+									echo '<td class="totpiamount">$<span class="totpiamountnum">'.$totpiamount.'</span></td>';
 									echo '<td class="pmonths"><span class="apmonthnum">'.$apmonths.'</span>'.$alabel.'<span class="cpmonthnum">'.$cpmonths.'</span>'.$clabel.'<span class="spmonthnum">'.$spmonths.'</span>'.$slabel.'</td>';
 									echo '<td class="dates"><span class="fromdate">'.$fromdate.'</span> to <span class="todate">'.$todate.'</span></td>';
 									echo '<td class = "location"><span class="locationval">'.$location.'</span></td>';
@@ -246,10 +250,16 @@
 				       <input type="number" id="spersonmonths" maxlength="3" step="0.01" min="0"/><br><br>
 				       
 				       <label class="biglabel" for="amount">Total Annual Amount:</label>
-				       <span>$</span><input type="text" id="amount"/>
+				       <span>$</span><input type="text" id="amount"/><br><br>
 				       
 				       <label class="biglabel" for="piamount">Total Annual Amount to PI:</label>
 				       <span>$</span><input type="text" id="piamount"/> <br><br>
+				       
+				       <label class="biglabel" for="totamount">Total Amount:</label>
+				       <span>$</span><input type="text" id="totamount"/> <br><br>
+				       
+				        <label class="biglabel" for="totpiamount">Total Amount to PI:</label>
+				       <span>$</span><input type="text" id="totpiamount"/> <br><br>
 				       
 				       <label class="biglabel" for="location">Location:</label>
 				       <input type="text" id="location" class ="wideinput"/> <br><br>
@@ -308,6 +318,12 @@
 				       
 				       <label class="biglabel" for="epiamount">Total Annual Amount to PI:</label>
 				       <span>$</span><input type="text" id="epiamount"/> <br><br>
+				       
+				       <label class="biglabel" for="etotamount">Total Amount:</label>
+				       <span>$</span><input type="text" id="etotamount"/> <br><br>
+				       
+				       <label class="biglabel" for="totepiamount">Total Amount to PI:</label>
+				       <span>$</span><input type="text" id="etotpiamount"/> <br><br>
 				       
 				       <label class="biglabel" for="elocation">Location:</label>
 				       <input type="text" id="elocation" class ="wideinput"/> <br><br>

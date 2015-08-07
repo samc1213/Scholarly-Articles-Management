@@ -175,6 +175,8 @@ $(document).ready( function () {
 				grant.source = $tr.find("td.grantagency").text();
 				grant.amount = $tr.find("span.amountnum").text();
 				grant.piamount = $tr.find("span.piamountnum").text();
+				grant.totamount = $tr.find("span.totamountnum").text();
+				grant.totpiamount = $tr.find("span.totpiamountnum").text();
 				grant.apersonmonths = $tr.find("span.apmonthnum").text();
 				grant.cpersonmonths = $tr.find("span.cpmonthnum").text();
 				grant.spersonmonths = $tr.find("span.spmonthnum").text();
@@ -356,6 +358,8 @@ $(document).ready( function () {
 		data['spersonmonths'] = $('#spersonmonths').val();
 		data['amount'] = $('#amount').val();
 		data['piamount'] = $('#piamount').val();
+		data['totamount'] = $("#totamount").val();
+		data['totpiamount'] = $("#totpiamount").val();
 		data['description'] = $("#description").val();
 		data['location'] = $("#location").val();
 		
@@ -398,6 +402,8 @@ $(document).ready( function () {
 		data['spersonmonths'] = $('#espersonmonths').val();
 		data['amount'] = $('#eamount').val();
 		data['piamount'] = $('#epiamount').val();
+		data['totamount'] = $('#etotamount').val();
+		data['totpiamount'] = $('#etotpiamount').val();
 		data['description'] = $("#edescription").val();
 		data['location'] = $("#elocation").val();
 
@@ -505,6 +511,12 @@ $(document).ready( function () {
 		
 		$piamount = $grantdiv.find(".piamountnum");
 		$("#epiamount").val($piamount.text());
+		
+		$totamount = $grantdiv.find(".totamountnum");
+		$("#etotamount").val($totamount.text());
+		
+		$totpiamount = $grantdiv.find(".totpiamountnum");
+		$("#etotpiamount").val($totpiamount.text());
 		
 		$description = $grantdiv.find(".summary");
 		$("#edescription").val($description.text());

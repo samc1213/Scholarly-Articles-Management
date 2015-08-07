@@ -79,7 +79,7 @@
 			session_destroy();
 		} //end logout
 		
-		function newgrant($name, $awardnumber, $source, $awardperiod1, $awardperiod2, $status, $apersonmonths, $cpersonmonths, $spersonmonths, $amount, $piamount, $description, $user, $location) {
+		function newgrant($name, $awardnumber, $source, $awardperiod1, $awardperiod2, $status, $apersonmonths, $cpersonmonths, $spersonmonths, $amount, $piamount, $totamount, $totpiamount, $description, $user, $location) {
 			$uri = "mongodb://heroku_v7w2qftd:a5h7slci8p0b2p9nt7qe96hmvv@ds027483.mongolab.com:27483/heroku_v7w2qftd";
 			
 			$today = date("m/d/Y");		
@@ -97,6 +97,8 @@
 				        'specify' => $specify,
 				        'amount' => $amount,
 				        'piamount' => $piamount,
+				        'totamount' => $totamount,
+				        'totpiamount' => $totpiamount,
 				        'description' => $description,
 				        'user' => $user,
 				        'location' => $location,
@@ -137,7 +139,7 @@
 			
 		} //end getgrants
 		
-		function editgrant($originalname, $awardnumber, $originalperiod1, $name, $source, $awardperiod1, $awardperiod2, $status, $apersonmonths, $cpersonmonths, $spersonmonths, $amount, $piamount, $description, $user, $location)
+		function editgrant($originalname, $awardnumber, $originalperiod1, $name, $source, $awardperiod1, $awardperiod2, $status, $apersonmonths, $cpersonmonths, $spersonmonths, $amount, $piamount, $totamount, $totpiamount, $description, $user, $location)
 		{
 			$uri = "mongodb://heroku_v7w2qftd:a5h7slci8p0b2p9nt7qe96hmvv@ds027483.mongolab.com:27483/heroku_v7w2qftd";
 						
@@ -156,6 +158,8 @@
 				        'specify' => $specify,
 				        'amount' => $amount,
 				        'piamount' => $piamount,
+				        'totamount' => $totamount,
+				        'totpiamount' => $totpiamount,
 				        'description' => $description,
 				        'user' => $user,
 				        'location' => $location,
