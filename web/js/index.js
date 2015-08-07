@@ -35,7 +35,15 @@ $(document).ready( function () {
 			},
 			success: function(data)
 			{
-				console.log(data);
+				var filenames = [];
+				var files = JSON.parse(data);
+				for (i=0; i<files.length; i++)
+				{
+					var split = files[i].split('/');
+					var filename = split[split.length - 1];
+					filenames.push(filename);
+				}
+				console.log(filenames);
 			}
 	    });
 	    
