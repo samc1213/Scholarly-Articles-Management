@@ -17,12 +17,6 @@
 			$message = 'Error: '.$_FILES['fileinput']['error'][$i];
 			echo "error";
 		}
-		
-		if ($_FILES["fileinput"]["size"][$i] > 2000000) {
-			$uploadOk = 0;
-			echo "toobig";
-			$message = 'Error: '.$_FILES["fileinput"]["name"][$i].'is too big. Max file size is 2 MB';
-		}
 	}
 	
 	

@@ -14,7 +14,7 @@ $(document).ready( function () {
 		e.preventDefault();
 		var sizeOk = true;
 		var problemfile = '';
-		var inp = $("#fileinput");
+		var inp = document.getElementById('fileinput');
 		for (i = 0; i < this.files.length; i++)
 		  {
 		  	if(inp.files[i].size >= 2000000)
