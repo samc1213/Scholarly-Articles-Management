@@ -161,8 +161,7 @@ $(document).ready( function () {
 			$(".waiter").show();
 			var data = [];
 			for (var g in grants) {
-				$gtitle = $(document).find('.granttitle:contains("' + g + '")');
-				console.log($gtitle);
+				$gtitle = $(document).find('.granttitle:contains("' + grants[g] + '")');
 				$tr = $gtitle.closest('tr');
 				var grant = {};
 				grant.name = $tr.find(".granttitle").text();
