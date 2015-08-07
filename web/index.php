@@ -71,7 +71,7 @@
 					echo "'s Grants</h2>";						
 				}
 				else {
-					echo "<h1 style='text-align: center;'>Login!</h1>";
+					echo "<h1 style='text-align: center;'><a href='login.html'>Login!</a></h1>";
 				}
 				
 				?>
