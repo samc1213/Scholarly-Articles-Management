@@ -113,13 +113,17 @@ $(document).ready( function () {
 		    	$comparer.append(str);
 		    	$theresanoncomplete=true;	    		
 	    	}
+	    });
 		if ($theresanoncomplete == false)
 		{
 			$("#comparergrantselect").remove();
 			$("#choosecomparerform").find('label').val("There are no grants that aren't completed");
 		}
-	    });
-	    $("#choosecomparerform").append('<div><button id="choosecomparerbtn">Next</button></div>');
+	    
+	    else 
+	    {
+	   		$("#choosecomparerform").append('<div><button id="choosecomparerbtn">Next</button></div>');
+	    }
 		
 	});
 
