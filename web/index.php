@@ -129,7 +129,9 @@
 									$agency = $grant['source'];
 									$amount = $grant['amount'];
 									$piamount = $grant['piamount'];
-									$pmonths = $grant['personmonths'];
+									$apmonths = $grant['apersonmonths'];
+									$cpmonths = $grant['cpersonmonths'];
+									$spmonths = $grant['spersonmonths'];
 									$units = $grant['specify'];
 									$summary = $grant['description'];
 									$fromdate = $grant['awardperiod1'];
@@ -151,7 +153,7 @@
 									echo '<td class="grantagency">'.$agency.'</td>';
 									echo '<td class="amount">$<span class="amountnum">'.$amount.'</span></td>';
 									echo '<td class="piamount">$<span class="piamountnum">'.$piamount.'</span></td>';
-									echo '<td class="pmonths"> <span class="pmonthnum">'.$pmonths.'</span> <span class="pmonthunits">'.$units. '</span> </td>';
+									echo '<td class="pmonths"> <span class="apmonthnum">'.$apmonths.'</span> <span class="cpmonthnum">'.$cpmonths.'</span> <span class="spmonthnum">'.$spmonths.'</span></td>';
 									echo '<td class="dates"><span class="fromdate">'.$fromdate.'</span> to <span class="todate">'.$todate.'</span></td>';
 									echo '<td class = "location"><span class="locationval">'.$location.'</span></td>';
 									echo '<td class="summary" style="display: none;">'.$summary.'</td>';
@@ -246,8 +248,14 @@
 		    				<option value="Transfer of Support">Transfer of Support</option>
 				       </select> <br><br>
 				       
-				       <label class="biglabel" for="personmonths">Person Months:</label>
-				       <input type="number" id="personmonths" maxlength="3" step="0.01" min="0"/>
+				       <label class="biglabel" for="apersonmonths">Academic Person Months:</label>
+				       <input type="number" id="apersonmonths" maxlength="3" step="0.01" min="0"/> <br><br>
+				       
+				       <label class="biglabel" for="cpersonmonths">Calendar Person Months:</label>
+				       <input type="number" id="cpersonmonths" maxlength="3" step="0.01" min="0"/><br><br>
+				       
+				       <label class="biglabel" for="spersonmonths">Summer Person Months:</label>
+				       <input type="number" id="spersonmonths" maxlength="3" step="0.01" min="0"/><br><br>
 				       
 				       <label class="sublabel" for="specify">Specify:</label>
 						<select id="specify">
@@ -305,15 +313,14 @@
 		    				<option value="Transfer of Support">Transfer of Support</option>
 				       </select> <br><br>
 				       
-				       <label class="biglabel" for="epersonmonths">Person Months:</label>
-				       <input type="number" id="epersonmonths" maxlength="3" step="0.01" min="0"/>
+				       <label class="biglabel" for="eapersonmonths">Academic Person Months:</label>
+				       <input type="number" id="eapersonmonths" maxlength="3" step="0.01" min="0"/> <br><br>
 				       
-				       <label class="sublabel" for="specify">Specify:</label>
-						<select id="especify">
-				        	<option value="Calendar">Calendar</option>
-		    				<option value="Academic">Academic</option>
-		    				<option value="Summer">Summer</option>
-				       </select> <br><br>
+				       <label class="biglabel" for="ecpersonmonths">Calendar Person Months:</label>
+				       <input type="number" id="ecpersonmonths" maxlength="3" step="0.01" min="0"/><br><br>
+				       
+				       <label class="biglabel" for="espersonmonths">Summer Person Months:</label>
+				       <input type="number" id="espersonmonths" maxlength="3" step="0.01" min="0"/><br><br>
 				       
 				       <label class="biglabel" for="eamount">Total Annual Amount:</label>
 				       <span>$</span><input type="text" id="eamount"/> <br><br>

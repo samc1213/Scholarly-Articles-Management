@@ -140,8 +140,9 @@ $(document).ready( function () {
 				grant.source = $(this).find(".grantagency").text();
 				grant.amount = $(this).find(".amountnum").text();
 				grant.piamount = $(this).find(".piamountnum").text();
-				grant.personmonths = $(this).find(".pmonthnum").text();
-				grant.specify = $(this).find(".pmonthunits").text();
+				grant.apersonmonths = $(this).find(".apmonthnum").text();
+				grant.cpersonmonths = $(this).find(".cpmonthnum").text();
+				grant.spersonmonths = $(this).find(".spmonthnum").text();
 				grant.description = comparisons[grant.name];
 				grant.awardperiod1 = $(this).find(".fromdate").text();
 				grant.awardperiod2 = $(this).find(".todate").text();
@@ -225,8 +226,9 @@ $(document).ready( function () {
 				grant.source = $(this).find(".grantagency").text();
 				grant.amount = $(this).find(".amountnum").text();
 				grant.piamount = $(this).find(".piamountnum").text();
-				grant.personmonths = $(this).find(".pmonthnum").text();
-				grant.specify = $(this).find(".pmonthunits").text();
+				grant.apersonmonths = $(this).find(".apmonthnum").text();
+				grant.cpersonmonths = $(this).find(".cpmonthnum").text();
+				grant.spersonmonths = $(this).find(".spmonthnum").text();
 				grant.description = comparisons[grant.name];
 				grant.awardperiod1 = $(this).find(".fromdate").text();
 				grant.awardperiod2 = $(this).find(".todate").text();
@@ -317,8 +319,9 @@ $(document).ready( function () {
 		data['awardperiod1'] = $('#awardperiod1').val();
 		data['awardperiod2'] = $('#awardperiod2').val();
 		data['status'] = $('#status').val();
-		data['personmonths'] = $('#personmonths').val();
-		data['specify'] = $('#specify').val();
+		data['apersonmonths'] = $('#apersonmonths').val();
+		data['cpersonmonths'] = $('#cpersonmonths').val();
+		data['spersonmonths'] = $('#spersonmonths').val();
 		data['amount'] = $('#amount').val();
 		data['piamount'] = $('#piamount').val();
 		data['description'] = $("#description").val();
@@ -358,8 +361,9 @@ $(document).ready( function () {
 		data['awardperiod1'] = $('#eawardperiod1').val();
 		data['awardperiod2'] = $('#eawardperiod2').val();
 		data['status'] = $('#estatus').val();
-		data['personmonths'] = $('#epersonmonths').val();
-		data['specify'] = $('#especify').val();
+		data['apersonmonths'] = $('#eapersonmonths').val();
+		data['cpersonmonths'] = $('#ecpersonmonths').val();
+		data['spersonmonths'] = $('#espersonmonths').val();
 		data['amount'] = $('#eamount').val();
 		data['piamount'] = $('#epiamount').val();
 		data['description'] = $("#edescription").val();
@@ -455,11 +459,14 @@ $(document).ready( function () {
 		$status = $grantdiv.find(".status");
 		$("#estatus").val($status.text());
 		
-		$pmonths = $grantdiv.find(".pmonthnum");
-		$("#epersonmonths").val($pmonths.text());
+		$apmonths = $grantdiv.find(".apmonthnum");
+		$("#eapersonmonths").val($apmonths.text());
 		
-		$pmonthunits = $grantdiv.find(".pmonthunits");
-		$("#especify").val($pmonthunits.text());
+		$cpmonths = $grantdiv.find(".cpmonthnum");
+		$("#ecpersonmonths").val($cpmonths.text());
+		
+		$spmonths = $grantdiv.find(".spmonthnum");
+		$("#espersonmonths").val($spmonths.text());
 		
 		$amount = $grantdiv.find(".amountnum");
 		$("#eamount").val($amount.text());

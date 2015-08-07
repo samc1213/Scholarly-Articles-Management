@@ -79,7 +79,7 @@
 			session_destroy();
 		} //end logout
 		
-		function newgrant($name, $awardnumber, $source, $awardperiod1, $awardperiod2, $status, $personmonths, $specify, $amount, $piamount, $description, $user, $location) {
+		function newgrant($name, $awardnumber, $source, $awardperiod1, $awardperiod2, $status, $apersonmonths, $cpersonmonths, $spersonmonths, $amount, $piamount, $description, $user, $location) {
 			$uri = "mongodb://heroku_v7w2qftd:a5h7slci8p0b2p9nt7qe96hmvv@ds027483.mongolab.com:27483/heroku_v7w2qftd";
 			
 			$today = date("m/d/Y");		
@@ -91,7 +91,9 @@
 				        'awardperiod1' => $awardperiod1,
 				        'awardperiod2' => $awardperiod2,
 				        'status' => $status,
-				        'personmonths' => $personmonths,
+				        'apersonmonths' => $apersonmonths,
+				        'cpersonmonths' => $cpersonmonths,
+				        'spersonmonths' => $spersonmonths,
 				        'specify' => $specify,
 				        'amount' => $amount,
 				        'piamount' => $piamount,
@@ -135,7 +137,7 @@
 			
 		} //end getgrants
 		
-		function editgrant($originalname, $awardnumber, $originalperiod1, $name, $source, $awardperiod1, $awardperiod2, $status, $personmonths, $specify, $amount, $piamount, $description, $user, $location)
+		function editgrant($originalname, $awardnumber, $originalperiod1, $name, $source, $awardperiod1, $awardperiod2, $status, $apersonmonths, $cpersonmonths, $spersonmonths, $amount, $piamount, $description, $user, $location)
 		{
 			$uri = "mongodb://heroku_v7w2qftd:a5h7slci8p0b2p9nt7qe96hmvv@ds027483.mongolab.com:27483/heroku_v7w2qftd";
 						
@@ -148,7 +150,9 @@
 				        'awardperiod1' => $awardperiod1,
 				        'awardperiod2' => $awardperiod2,
 				        'status' => $status,
-				        'personmonths' => $personmonths,
+				        'apersonmonths' => $apersonmonths,
+				        'cpersonmonths' => $cpersonmonths,
+				        'spersonmonths' => $spersonmonths,
 				        'specify' => $specify,
 				        'amount' => $amount,
 				        'piamount' => $piamount,
