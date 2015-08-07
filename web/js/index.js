@@ -381,7 +381,7 @@ $(document).ready( function () {
 		
 		
 		$('.granttitle').each( function () {
-			if ($(this).text() == ($("#egrantname").val())) {
+			if ($(this).text() == ($("#egrantname").val()) && ($(this).closest('tr').attr('id') != "grant" + $("#editgrantform").find("input[name='buttonnumber]").text())) {
 				$("#editgranterror").html('<p style="color: red;">You may not have multiple grants with the same name.</p><br><br>');
 				okSubmit = false;
 			}
@@ -482,6 +482,8 @@ $(document).ready( function () {
 		
 		var buttonnumber = $(this).attr('id').substr(7);
 		console.log("btnnumber:"+buttonnumber);
+		
+		$("#editgrantpopup").append('<input type="hidden" name="buttonnumber" value="' + buttonnumber + '"/>');
 				
 		$("#editgrantpopup").show();
 		$('#editgranterror').html('');
