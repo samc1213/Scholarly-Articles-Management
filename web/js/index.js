@@ -21,6 +21,7 @@ $(document).ready( function () {
 		var trstr = "#grant" + buttonnumber;
 		$tr = $(trstr);
 		var grantname = $tr.find('td.granttitle').text();
+		$("#grantfilesname").text(grantname);
 		console.log("gname: " + grantname);
 		$('html, body').animate({
 	        scrollTop: $("#filestorebox").offset().top
@@ -35,6 +36,7 @@ $(document).ready( function () {
 			},
 			success: function(data)
 			{
+				$('#filelist').html(''); //clear out the old filelist first
 				var filenames = [];
 				var files = JSON.parse(data);
 				for (i=0; i<files.length; i++)
@@ -47,7 +49,7 @@ $(document).ready( function () {
 				
 				if (filenames.length <= 1)
 				{
-					console.log("No files");
+					$("#fileerror").text("There are no files associated with this grant");
 				}
 				
 				else
@@ -88,6 +90,7 @@ $(document).ready( function () {
 		  
 		var form = document.getElementById('filesubmit');
 		var form_data = new FormData(form);
+		form_data.append('grantname', $("#grantfilesname").text());
 		console.log(form_data);
 	    $.ajax({
 	                url: 'upload.php', // point to server-side PHP script 

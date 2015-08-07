@@ -212,7 +212,8 @@
 				</div>
 				
 				<div id="filestorebox">
-					<h2 id="filestoreheader">Filestore</h2>
+					<h2 id="filestoreheader"><span id="grantfilesname"></span>Filestore</h2>
+					<span id="fileerror"></span>
 					<table id="filelist">
 					</table>
 					<form enctype="multipart/form-data" method="post" name="fileinfo" id="filesubmit">
