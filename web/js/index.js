@@ -120,10 +120,7 @@ $(document).ready( function () {
 		grantcount = 0;
 		
 		var comparergrant = $("#comparergrantselect").val();
-		$gtitle = $(document).find('.granttitle:contains("' + comparergrant + '")');
-		$tr = $gtitle.closest('tr');
-		var comparerdescription = $tr.find('td.summary').text();
-		comparisons[comparergrant] = comparerdescription;
+		comparisons[comparergrant] = 'This is the current proposal.';
 		grants[grantcount] = comparergrant;		//save the grant we're comparing in the object and increment counter
 		grantcount++;
 		
