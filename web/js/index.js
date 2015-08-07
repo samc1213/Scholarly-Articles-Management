@@ -22,7 +22,7 @@ $(document).ready( function () {
 	                contentType: false,
 	                processData: false,
 	                data: form_data,                         
-	                type: 'post',
+	                type: 'POST',
 	                success: function(php_script_response){
 	                    console.log(php_script_response); // display response from the PHP script, if any
 	                },
