@@ -553,6 +553,10 @@ $(document).ready( function () {
 		
 		$("#confirmdeleteform").find("input[name='grantname']").val(grantname);
 		
+		$('html, body').animate({
+	        scrollTop: $("#deleteconfirmbox").offset().top
+	    }, 1000);
+		
 	}); //end delete
 	
 	$("#confirmdeleteform").submit (function () {
@@ -570,7 +574,7 @@ $(document).ready( function () {
 			{
 				console.log(data);
 				console.log("Grant successfully deleted");
-				window.location.href = window.location.href
+				window.location.href = window.location.href;
 			}
 		});
 	});
