@@ -157,8 +157,8 @@
 									echo '<td class="grantagency">'.$agency.'</td>';
 									echo '<td class="amount">$<span class="amountnum">'.$amount.'</span></td>';
 									echo '<td class="piamount">$<span class="piamountnum">'.$piamount.'</span></td>';
-									echo '<td class="totamount">$<span class="totamountnum">'.$totamount.'</span></td>';
-									echo '<td class="totpiamount">$<span class="totpiamountnum">'.$totpiamount.'</span></td>';
+									echo '<td class="totamount" style="display: none;">$<span class="totamountnum">'.$totamount.'</span></td>';
+									echo '<td class="totpiamount" style="display: none;">$<span class="totpiamountnum">'.$totpiamount.'</span></td>';
 									echo '<td class="pmonths"><span class="apmonthnum">'.$apmonths.'</span>'.$alabel.'<span class="cpmonthnum">'.$cpmonths.'</span>'.$clabel.'<span class="spmonthnum">'.$spmonths.'</span>'.$slabel.'</td>';
 									echo '<td class="dates"><span class="fromdate">'.$fromdate.'</span> to <span class="todate">'.$todate.'</span></td>';
 									echo '<td class = "location"><span class="locationval">'.$location.'</span></td>';
