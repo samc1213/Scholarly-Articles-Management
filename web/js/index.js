@@ -486,7 +486,7 @@ $(document).ready( function () {
 		var buttonnumber = $(this).attr('id').substr(7);
 		console.log("btnnumber:"+buttonnumber);
 		
-		$("#editgrantpopup").append('<input type="hidden" name="buttonnumber" value="' + buttonnumber + '"/>');
+		$("#editgrantform").append('<input type="hidden" name="buttonnumber" value="' + buttonnumber + '"/>');
 				
 		$("#editgrantpopup").show();
 		$('#editgranterror').html('');
