@@ -10,6 +10,10 @@ $(document).ready( function () {
 	    }
 	}
 	
+	$(".fa-times").click( function () {
+		$("#shield").trigger('click');
+	});
+	
 	function listfiles(data) {
 		$('#filelist').html(''); //clear out the old filelist first
 		$('#fileerror').html(''); //clear error too
