@@ -541,6 +541,9 @@ $(document).ready( function () {
 			$("#downloadform").remove();
 			$("#deleteconfirmbox").hide();
 			$(".deletebtn").show();
+			$("#fileerror").html('');
+			$("#filelist").html('');
+			$("#fileinput").val('');
 		}
 	});
 

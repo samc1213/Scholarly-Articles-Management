@@ -218,7 +218,6 @@
 					</table>
 					<form enctype="multipart/form-data" method="post" name="fileinfo" id="filesubmit">
 						<input id="fileinput" type="file" name="fileinput[]" multiple required/>
-						<input type="submit">Upload</button>
 					</form>
 				</div>
 				
