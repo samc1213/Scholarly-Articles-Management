@@ -70,7 +70,7 @@ $(document).ready( function () {
 	    });	    
 	});
 	
-	$('.deletefile').click( function () {
+	$(document).on('click', '.deletefile', function (e) {
 		console.log("delete!");
 		$tr = $(this).closest('tr');
 		console.log($tr);
