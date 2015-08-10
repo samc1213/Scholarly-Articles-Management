@@ -201,6 +201,9 @@ $(document).ready( function () {
 
 	
 	$("#maintable").tablesorter({
+		headers: {
+			3: { sorter: "floating"  }
+		},
 		testExtraction: {
 			3: function(node, table, cellIndex) {
 				var text = $(node).text();
