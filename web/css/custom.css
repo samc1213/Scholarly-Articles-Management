@@ -351,5 +351,10 @@ th {
 }
 
 .negmarg {
-	margin-top: -2em;
+	margin-top: -1.35em;
+}
+
+.teamSelector
+{
+  cursor: pointer
 }

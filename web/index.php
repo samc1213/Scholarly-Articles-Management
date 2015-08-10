@@ -166,15 +166,15 @@
 									echo '<td class = "location"><span class="locationval">'.$location.'</span></td>';
 									echo '<td class="summary" style="display: none;">'.$summary.'</td>';
 									echo '<td class="edited">'.$edited.'</td>';
-									echo '<td class="edittd"><div class="editbtn" style="padding: 0;" id="editbtn';
+									echo '<td class="edittd"><div class="editbtn teamSelector" style="padding: 0;" id="editbtn';
 									echo $count;
 									echo '"><i class="fa fa-pencil-square-o"';
 									echo '"></i></div></td>';
-									echo '<td class="deletetd"><div class="deletebtn" style="padding: 0;" id="deletebtn';
+									echo '<td class="deletetd"><div class="deletebtn teamSelector" style="padding: 0;" id="deletebtn';
 									echo $count;
 									echo '"><i class="fa fa-trash-o"';
 									echo '"></i></div></td>';
-									echo '<td class="filestoretd"><div class="filestorebtn" style="padding: 0;" id="filestorebtn';
+									echo '<td class="filestoretd"><div class="filestorebtn teamSelector" style="padding: 0;" id="filestorebtn';
 									echo $count;
 									echo '"><i class="fa fa-folder"';
 									echo '"></i></div></td>';
@@ -214,8 +214,8 @@
 					</form>
 				</div>
 				
-				<div id="filestorebox negmarg">
-					<span class="fa fa-times"></span>
+				<div id="filestorebox">
+					<span class="fa fa-times negmarg"></span>
 					<h2 id="filestoreheader"><span id="grantfilesname"></span> Filestore</h2>
 					<span id="fileerror"></span>
 					<img class="filewaiter" src="img/ajax-loader.gif"/>
