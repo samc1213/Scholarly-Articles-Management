@@ -34,8 +34,8 @@ header {
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 1em;
-	width: 10em;
-	height: 2em;
+	width: 13em;
+	height: 2.5em;
 }
 
 #newgrantplus {
@@ -95,7 +95,7 @@ header {
 .logbutton {
 	float: right;
 	height: 100%;
-	background-color: rgba(0, 0, 0, 0.8);
+	background-color: none;
 	color: white;
 	border: none;
 	border-left: black 2px white;
@@ -239,8 +239,8 @@ td {
 
 #newcpform {
 	margin-bottom: 1em;
-	width: 10em;
-	height: 2em;
+	width: 13em;
+	height: 2.5em;
 }
 #newcpdiv {
 	text-align: center;
