@@ -165,18 +165,18 @@
 									echo '<td class = "location"><span class="locationval">'.$location.'</span></td>';
 									echo '<td class="summary" style="display: none;">'.$summary.'</td>';
 									echo '<td class="edited">'.$edited.'</td>';
-									echo '<td class="edittd"><button class="editbtn" style="padding: 0;" id="editbtn';
+									echo '<td class="edittd"><div class="editbtn" style="padding: 0;" id="editbtn';
 									echo $count;
 									echo '"><i class="fa fa-pencil-square-o"';
-									echo '"></i></button></td>';
-									echo '<td class="deletetd"><button class="deletebtn" style="padding: 0;" id="deletebtn';
+									echo '"></i></div></td>';
+									echo '<td class="deletetd"><div class="deletebtn" style="padding: 0;" id="deletebtn';
 									echo $count;
 									echo '"><i class="fa fa-trash-o"';
-									echo '"></i></button></td>';
-									echo '<td class="filestoretd"><button class="filestorebtn" style="padding: 0;" id="filestorebtn';
+									echo '"></i></div></td>';
+									echo '<td class="filestoretd"><div class="filestorebtn" style="padding: 0;" id="filestorebtn';
 									echo $count;
 									echo '"><i class="fa fa-folder"';
-									echo '"></i></button></td>';
+									echo '"></i></div></td>';
 									echo '<span class="comparison" style="display:none">';
 									echo '</tr>';
 									
