@@ -22,5 +22,5 @@ $result = $s3->getObject($params);
 $file_url = 'localdoc.docx';
 header('Content-Type: application/octet-stream');
 header("Content-Transfer-Encoding: Binary"); 
-header("Content-disposition: attachment; filename=".$filename.".docx"); 
+header("Content-disposition: attachment; filename=".$filename); 
 readfile($file_url);

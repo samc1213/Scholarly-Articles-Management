@@ -49,23 +49,21 @@ $(document).ready( function () {
 				}
 				console.log(filenames);
 				
-				if (filenames.length <= 1)
+				var therearefiles = false;
+
+				for (i=0; i<filenames.length; i++)
+				{
+					var name = filenames[i];
+					if (name != "")
+					{
+						$('#filelist').append('<tr class="filestoretr" id="' + name + '"><td class="filename">' + name + '</td><td><div class="deletefile" id="deletefile' + i + '"><i class="fa fa-trash-o"></div></td><td><form class="downloadfile" id="downloadfile' + i +'" action="downloadfile.php" method="post"><i class="fa fa-cloud-download"></form></td></tr>');
+						therearefiles = true;					
+					}
+				}
+				if (!therearefiles)
 				{
 					$("#fileerror").text("There are no files associated with this grant");
 				}
-				
-				else
-				{
-					for (i=0; i<filenames.length; i++)
-					{
-						var name = filenames[i];
-						if (name != "")
-						{
-							$('#filelist').append('<tr class="filestoretr" id="' + name + '"><td class="filename">' + name + '</td><td><div class="deletefile" id="deletefile' + i + '"><i class="fa fa-trash-o"></div></td><td><form class="downloadfile" id="downloadfile' + i +'" action="downloadfile.php" method="post"><i class="fa fa-cloud-download"></form></td></tr>');
-						}
-					}
-				}
-
 			}
 	    });	    
 	});
