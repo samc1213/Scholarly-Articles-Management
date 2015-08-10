@@ -348,6 +348,7 @@ th {
 .fa-times {
 	float: right;
 	font-size: 1.3em;
+	margin-right: .1em;
 }
 
 .negmarg {
