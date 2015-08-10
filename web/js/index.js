@@ -200,7 +200,7 @@ $(document).ready( function () {
 	});
 
 	
-	$("#maintable").stupidtable();
+	$("#maintable").tablesorter();
 	
 	$(".datepicker").datepicker();
 	
