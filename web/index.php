@@ -199,11 +199,13 @@
 	
 	        	
 				<div id="comparisonbox" style="display: none;" class="clearfix">
+					<span class="fa fa-times"></span>
 					<h2>New C&P Form</h2>
 					<img class="waiter" src="img/ajax-loader.gif"/>
 				</div>
 				
 				<div id="deleteconfirmbox">
+					<span class="fa fa-times"></span>
 					<h2>Confirm Delete</h2>
 					<p id="confirmmessage"></p>
 					<form id="confirmdeleteform">
@@ -213,6 +215,7 @@
 				</div>
 				
 				<div id="filestorebox">
+					<span class="fa fa-times"></span>
 					<h2 id="filestoreheader"><span id="grantfilesname"></span> Filestore</h2>
 					<span id="fileerror"></span>
 					<img class="filewaiter" src="img/ajax-loader.gif"/>
@@ -289,6 +292,7 @@
 					</div>
 					
 					<div id="editgrantpopup" class="grantpopup">
+					<span class="fa fa-times"></span>
 		        	<h2 id="editgrantheader">Edit Grant</h2>
 		        	<form id="editgrantform">
 		        		<label class="biglabel" for="egrantname">Grant Name:</label>
