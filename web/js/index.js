@@ -61,7 +61,7 @@ $(document).ready( function () {
 						var name = filenames[i];
 						if (name != "")
 						{
-							$('#filelist').append('<tr class="filestoretr" id="' + name + '"><td class="filename">' + name + '</td><td><div class="deletefile" id="' + i + '"><i class="fa fa-trash-o"></div></td><td><i class="fa fa-cloud-download downloadfile" id="downloadfile' + i +'"></td></tr>');
+							$('#filelist').append('<tr class="filestoretr" id="' + name + '"><td class="filename">' + name + '</td><td><div class="deletefile" id="deletefile' + i + '"><i class="fa fa-trash-o"></div></td><td><i class="fa fa-cloud-download downloadfile" id="downloadfile' + i +'"></td></tr>');
 						}
 					}
 				}
@@ -75,20 +75,21 @@ $(document).ready( function () {
 		$tr = $(this).closest('tr');
 		console.log($tr);
 		var filename = $tr.find('td.filename').text();
-		$.ajax({
-	    	type: "POST",
-			url: "api.php",
-			data:
-			{
-				type: "deletefile",
-				grantname: grantname,
-				filename: filename,
-			},
-			success: function(data)
-			{
-				$('#shield').trigger('click');
-			},
-		});
+		console.log(filename);
+		// $.ajax({
+	    	// type: "POST",
+			// url: "api.php",
+			// data:
+			// {
+				// type: "deletefile",
+				// grantname: grantname,
+				// filename: filename,
+			// },
+			// success: function(data)
+			// {
+				// $('#shield').trigger('click');
+			// },
+		// });
 	});
 	
 	$('#filesubmit').submit( function(e) {
