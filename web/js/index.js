@@ -77,6 +77,7 @@ $(document).ready( function () {
 		console.log("delete!");
 		$('#filelist').html(''); //clear out the old filelist first
 		$('#fileerror').html(''); //clear error too
+		$(".filewaiter").show();
 		$tr = $(this).closest('tr');
 		console.log($tr);
 		var filename = $tr.find('td.filename').text();
@@ -93,7 +94,6 @@ $(document).ready( function () {
 			},
 			success: function(data)
 			{
-				$(".filewaiter").show();
 				$.ajax({
 			    	type: "POST",
 					url: "api.php",
@@ -127,6 +127,7 @@ $(document).ready( function () {
 	$('#filesubmit').submit( function(e) {
 		e.preventDefault();
 		$("#filelist").html('');
+		$('.filewaiter').show();
 		var sizeOk = true;
 		var problemfile = '';
 		var inp = document.getElementById('fileinput');
@@ -161,7 +162,6 @@ $(document).ready( function () {
 	                success: function(php_script_response){
 	                    console.log(php_script_response); // display response from the PHP script, if any
 	                    $("#fileinput").val('');
-	                    $('.filewaiter').show();
 	                    $.ajax({
 					    	type: "POST",
 							url: "api.php",
