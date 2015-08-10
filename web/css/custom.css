@@ -325,3 +325,10 @@ td {
 	padding: 0px;
 	text-align: left;
 } 
+
+.filewaiter {
+	display: none;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1em;
+}

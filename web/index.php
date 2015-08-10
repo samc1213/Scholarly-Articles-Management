@@ -214,10 +214,12 @@
 				<div id="filestorebox">
 					<h2 id="filestoreheader"><span id="grantfilesname"></span>Filestore</h2>
 					<span id="fileerror"></span>
+					<img class="filewaiter" src="img/ajax-loader.gif"/>
 					<table id="filelist">
 					</table>
-					<form enctype="multipart/form-data" method="post" name="fileinfo" id="filesubmit">
+					<form enctype="multipart/form-data" method="post" name="fileinfo" id="filesubmit" style="margin-top: 1em;">
 						<input id="fileinput" type="file" name="fileinput[]" multiple required/>
+						<input type="submit">
 					</form>
 				</div>
 				

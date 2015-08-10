@@ -12,6 +12,7 @@ $(document).ready( function () {
 	
 	$('.filestorebtn').click ( function (e) {
 		e.stopPropagation();
+		$(".filewaiter").show();
 		$('#filestorebox').show();
 		$('#shield').show();
 		$('#newgrantbutton').hide();
@@ -36,6 +37,7 @@ $(document).ready( function () {
 			},
 			success: function(data)
 			{
+				$(".filewaiter").hide();
 				$('#filelist').html(''); //clear out the old filelist first
 				var filenames = [];
 				var files = JSON.parse(data);
@@ -544,6 +546,7 @@ $(document).ready( function () {
 			$("#fileerror").html('');
 			$("#filelist").html('');
 			$("#fileinput").val('');
+			$(".filewaiter").hide();
 		}
 	});
 
