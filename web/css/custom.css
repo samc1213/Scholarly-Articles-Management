@@ -349,6 +349,7 @@ th {
 	float: right;
 	font-size: 1.3em;
 	margin-right: .1em;
+	cursor: pointer;
 }
 
 .negmarg {
@@ -357,7 +358,7 @@ th {
 
 .teamSelector
 {
-  cursor: pointer
+  cursor: pointer;
 }
 
 .fa {
