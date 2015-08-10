@@ -362,3 +362,7 @@ th {
 .fa {
 	text-shadow: .1em .1em .1em grey;
 }
+
+#newgrantplus {
+	text-shadow: none;
+}

@@ -34,7 +34,7 @@ $(document).ready( function () {
 			var name = filenames[i];
 			if (name != "")
 			{
-				$('#filelist').append('<tr class="filestoretr" id="' + name + '"><td class="filename">' + name + '</td><td><div class="deletefile" id="deletefile' + i + '"><i class="fa fa-trash-o"></div></td><td><form class="downloadfile" id="downloadfile' + i +'" action="downloadfile.php" method="post"><i class="fa fa-cloud-download"></form></td></tr>');
+				$('#filelist').append('<tr class="filestoretr" id="' + name + '"><td class="filename">' + name + '</td><td><div class="deletefile teamSelector" id="deletefile' + i + '"><i class="fa fa-trash-o"></div></td><td><form class="downloadfile teamSelector" id="downloadfile' + i +'" action="downloadfile.php" method="post"><i class="fa fa-cloud-download"></form></td></tr>');
 				therearefiles = true;					
 			}
 		}
