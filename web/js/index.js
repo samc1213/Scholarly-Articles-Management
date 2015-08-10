@@ -124,6 +124,8 @@ $(document).ready( function () {
 	
 	$('#filesubmit').submit( function(e) {
 		e.preventDefault();
+		$("#filelist").html('');
+		$("#fileinput").val('');
 		var sizeOk = true;
 		var problemfile = '';
 		var inp = document.getElementById('fileinput');
