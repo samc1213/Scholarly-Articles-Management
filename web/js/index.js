@@ -90,7 +90,21 @@ $(document).ready( function () {
 			},
 			success: function(data)
 			{
-				$('#shield').trigger('click');
+				$(".filewaiter").show();
+				$.ajax({
+			    	type: "POST",
+					url: "api.php",
+					data:
+					{
+						type: "getfiles",
+						grantname: grantname,
+					},
+					success: function(data)
+					{
+						$(".filewaiter").hide();
+						listfiles(data);
+					}
+		    	});	    
 			},
 		});
 	});
