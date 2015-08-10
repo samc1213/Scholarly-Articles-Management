@@ -76,20 +76,21 @@ $(document).ready( function () {
 		console.log($tr);
 		var filename = $tr.find('td.filename').text();
 		console.log(filename);
-		// $.ajax({
-	    	// type: "POST",
-			// url: "api.php",
-			// data:
-			// {
-				// type: "deletefile",
-				// grantname: grantname,
-				// filename: filename,
-			// },
-			// success: function(data)
-			// {
-				// $('#shield').trigger('click');
-			// },
-		// });
+		var grantname = $("#grantfilesname").text();
+		$.ajax({
+	    	type: "POST",
+			url: "api.php",
+			data:
+			{
+				type: "deletefile",
+				grantname: grantname,
+				filename: filename,
+			},
+			success: function(data)
+			{
+				$('#shield').trigger('click');
+			},
+		});
 	});
 	
 	$('#filesubmit').submit( function(e) {
