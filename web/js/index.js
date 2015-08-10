@@ -164,7 +164,7 @@ $(document).ready( function () {
 							data:
 							{
 								type: "getfiles",
-								grantname: grantname,
+								grantname: gfilename,
 							},
 							success: function(data)
 							{
