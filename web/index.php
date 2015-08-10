@@ -24,7 +24,7 @@
         		
 		<link href="css/dropzone.css" type="text/css" rel="stylesheet"/>
 
-		<link href="css/bootstrap.min.css" text="text/css" rel="stylesheet"/>
+		<link href="css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
                 
         <!--Keep custom css last  -->
 		<link rel="stylesheet"  type="text/css" href="css/custom.css">
