@@ -222,7 +222,7 @@ $(document).ready( function () {
 	    	$.each(['DOE'], function (i, v) {
 	    		$("#sourceselect").append('<option value ="' + v + '">' + v + '</option>');
 	    	});
-	    	$("#choosesourceform").append('<div><button id="choosesourcebtn">Next</button></div>');
+	    	$("#choosesourceform").append('<div><button id="choosesourcebtn" class="btn btn-default">Next</button></div>');
 	    }
 	    $("#choosecomparerform").remove();
 	    $("#comparetoform").remove();
@@ -252,7 +252,7 @@ $(document).ready( function () {
 	    
 	    else 
 	    {
-	   		$("#choosecomparerform").append('<div><button id="choosecomparerbtn">Next</button></div>');
+	   		$("#choosecomparerform").append('<div><button id="choosecomparerbtn" class="btn btn-default">Next</button></div>');
 	    }
 		
 	});
@@ -336,7 +336,7 @@ $(document).ready( function () {
 						console.log("data: " + data);
 						console.log("id: " + id);
 						if ($(".waiter").is(":visible")) {		//make sure waiter is there in case someone gets bored and closes box before ajax callback
-							$("#comparisonbox").append("<form action='download.php' method='post' id='downloadform'><input name='id' value='" + id + "' type='hidden'/><input name='filename' value='"+ comparergrant + " C&P Form' type='hidden'/><button type='submit'>Download The File!</button></form>");
+							$("#comparisonbox").append("<form action='download.php' method='post' id='downloadform'><input name='id' value='" + id + "' type='hidden'/><input name='filename' value='"+ comparergrant + " C&P Form' type='hidden'/><button type='submit' class='btn btn-default'>Download The File!</button></form>");
 						} 
 							$(".waiter").hide();
 					}
@@ -356,7 +356,7 @@ $(document).ready( function () {
 		$("#comparetoform").append('<textarea type="text" rows="2" style="width: 80%;" name="comparison">' + compareedescription + '</textarea>');
 		$("#comparetoform").append('<label for="comparison">' + 'Add a line that shows how <strong>' + grants[0] + '</strong> compares to <strong>' + comparee + '</strong></label>');
 		$("#comparetoform").append('<input type="hidden" name="grantname" value="' + comparee + '">' );
-		$("#comparetoform").append('<div><button id="nextcompareebtn">Next Grant</button><div>');
+		$("#comparetoform").append('<div><button id="nextcompareebtn" class="btn btn-default">Next Grant</button><div>');
 		
 		if (grantcount == grants.length-1)  //if there are only two grants total, make the button say submit
 		{
@@ -420,7 +420,7 @@ $(document).ready( function () {
 						console.log("data: " + data);
 						console.log("id: " + id);
 						if ($(".waiter").is(":visible")) {		//make sure waiter is there in case someone gets bored and closes box before ajax callback
-							$("#comparisonbox").append("<form action='download.php' method='post' id='downloadform'><input name='id' value='" + id + "' type='hidden'/><input name='filename' value='" + grants[0] + " C&P Form' type='hidden'/><button type='submit'>Download The File!</button></form>");
+							$("#comparisonbox").append("<form action='download.php' method='post' id='downloadform'><input name='id' value='" + id + "' type='hidden'/><input name='filename' value='" + grants[0] + " C&P Form' type='hidden'/><button type='submit' class='btn btn-default'>Download The File!</button></form>");
 						} 
 							$(".waiter").hide();
 					}

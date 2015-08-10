@@ -43,10 +43,10 @@
 	        	<?php
 	        		session_start();
 					if (isset($_SESSION['username'])) {
-						echo '<button id="logoutheaderbutton" class="logbutton">Logout</button>';		
+						echo '<button id="logoutheaderbutton" class="logbutton btn btn-default">Logout</button>';		
 					}
 					else {
-						echo '<a href="/login.html"><button id="loginheaderbutton" class="logbutton">Login</button></a>';
+						echo '<a href="/login.html"><button id="loginheaderbutton" class="logbutton btn btn-default">Login</button></a>';
 
 					}
 	        	?>
@@ -208,7 +208,7 @@
 					<p id="confirmmessage"></p>
 					<form id="confirmdeleteform">
 						<input name="grantname" type="hidden"/>
-						<button id="deleteconfirmbtn" type="submit">Delete</button>
+						<button id="deleteconfirmbtn" type="submit" class="btn btn-default">Delete</button>
 					</form>
 				</div>
 				
@@ -282,7 +282,7 @@
 				       
 				       <span id="newgranterror"></span>
 				       
-				       <button style="margin-bottom: 1em;">Submit</button>
+				       <button style="margin-bottom: 1em;" class="btn btn-default">Submit</button>
 						
 		        	</form>
 					</div>
@@ -346,7 +346,7 @@
 				       
 				       <span id="editgranterror"></span> 
 				       
-				       <button style="margin-bottom: 1em;">Save</button>
+				       <button style="margin-bottom: 1em;" class="btn btn-default">Save</button>
 						
 		        	</form>
 					</div>
