@@ -64,4 +64,9 @@
 		session_start();
 		echo getFiles($_SESSION['username'], $_POST['grantname']);
 	}
+	
+	else if ($_POST['type'] == 'deletefile') {
+		session_start();
+		echo deletefile($_SESSION['username'], $_POST['grantname'], $_POST['filename']);		
+	}
 ?>

@@ -241,4 +241,19 @@
 			}
 			echo json_encode($filenamearray);
 		}
+		function deleteFile($user, $grantname, $filename) {
+			require('../vendor/autoload.php');
+			$prefixstr = $user.'/'.$grantname.'/';
+			
+			$filestr = $prefixstr.$filename;
+			
+			$s3 = Aws\S3\S3Client::factory();	
+			
+			$result = $s3->deleteObject(array(
+		    'Bucket' => 'cpgrantsuploads',
+		    'Key'    => $filestr
+			));
+			
+			echo $result;	
+		}
 	?>

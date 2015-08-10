@@ -212,7 +212,7 @@
 				</div>
 				
 				<div id="filestorebox">
-					<h2 id="filestoreheader"><span id="grantfilesname"></span>Filestore</h2>
+					<h2 id="filestoreheader"><span id="grantfilesname"></span> Filestore</h2>
 					<span id="fileerror"></span>
 					<img class="filewaiter" src="img/ajax-loader.gif"/>
 					<table id="filelist">
