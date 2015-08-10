@@ -10,7 +10,7 @@ $(document).ready( function () {
 	    }
 	}
 	
-	function listfiles() {
+	function listfiles(data) {
 		$('#filelist').html(''); //clear out the old filelist first
 				var filenames = [];
 				var files = JSON.parse(data);
@@ -67,7 +67,7 @@ $(document).ready( function () {
 			success: function(data)
 			{
 				$(".filewaiter").hide();
-				listfiles();
+				listfiles(data);
 			}
 	    });	    
 	});
