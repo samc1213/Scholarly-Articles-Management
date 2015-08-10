@@ -219,9 +219,6 @@ $(document).ready( function () {
 	
 	
 	$("#maintable").tablesorter({
-		headers: {
-			9: { dateFormat:'us' }
-		},
 		testExtraction: {
 			9: function(node, table, cellIndex) {return $(node).find(".fromdate").text();}
 		}
