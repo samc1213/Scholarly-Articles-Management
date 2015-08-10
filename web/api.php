@@ -67,6 +67,11 @@
 	
 	else if ($_POST['type'] == 'deletefile') {
 		session_start();
-		echo deletefile($_SESSION['username'], $_POST['grantname'], $_POST['filename']);		
+		echo deleteFile($_SESSION['username'], $_POST['grantname'], $_POST['filename']);		
+	}
+
+	else if ($_POST['type'] == 'deletefile') {
+		session_start();
+		echo downloadFile($_SESSION['username'], $_POST['grantname'], $_POST['filename']);
 	}
 ?>

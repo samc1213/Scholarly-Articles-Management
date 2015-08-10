@@ -61,7 +61,7 @@ $(document).ready( function () {
 						var name = filenames[i];
 						if (name != "")
 						{
-							$('#filelist').append('<tr class="filestoretr" id="' + name + '"><td class="filename">' + name + '</td><td><div class="deletefile" id="deletefile' + i + '"><i class="fa fa-trash-o"></div></td><td><i class="fa fa-cloud-download downloadfile" id="downloadfile' + i +'"></td></tr>');
+							$('#filelist').append('<tr class="filestoretr" id="' + name + '"><td class="filename">' + name + '</td><td><div class="deletefile" id="deletefile' + i + '"><i class="fa fa-trash-o"></div></td><td><form class="downloadfile" id="downloadfile' + i +'" action="downloadfile.php" method="post"><i class="fa fa-cloud-download"></form></td></tr>');
 						}
 					}
 				}
@@ -91,6 +91,18 @@ $(document).ready( function () {
 				$('#shield').trigger('click');
 			},
 		});
+	});
+	
+	$(document).on('click', '.downloadfile', function (e) {
+		console.log("download!");
+		$tr = $(this).closest('tr');
+		console.log($tr);
+		var filename = $tr.find('td.filename').text();
+		console.log(filename);
+		var grantname = $("#grantfilesname").text();
+		$(this).append('<input type="hidden" name="grantname" value="' + grantname + '"/>');
+		$(this).append('<input type="hidden" name="filename" value="' + filename + '"/>');
+		$(this).trigger('submit');
 	});
 	
 	$('#filesubmit').submit( function(e) {
