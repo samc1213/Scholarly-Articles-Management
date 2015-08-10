@@ -10,6 +10,35 @@ $(document).ready( function () {
 	    }
 	}
 	
+	function listfiles() {
+		$('#filelist').html(''); //clear out the old filelist first
+				var filenames = [];
+				var files = JSON.parse(data);
+				for (i=0; i<files.length; i++)
+				{
+					var split = files[i].split('/');
+					var filename = split[split.length - 1];
+					filenames.push(filename);
+				}
+				console.log(filenames);
+				
+				var therearefiles = false;
+
+				for (i=0; i<filenames.length; i++)
+				{
+					var name = filenames[i];
+					if (name != "")
+					{
+						$('#filelist').append('<tr class="filestoretr" id="' + name + '"><td class="filename">' + name + '</td><td><div class="deletefile" id="deletefile' + i + '"><i class="fa fa-trash-o"></div></td><td><form class="downloadfile" id="downloadfile' + i +'" action="downloadfile.php" method="post"><i class="fa fa-cloud-download"></form></td></tr>');
+						therearefiles = true;					
+					}
+				}
+				if (!therearefiles)
+				{
+					$("#fileerror").text("There are no files associated with this grant");
+				}
+	}
+	
 	$('.filestorebtn').click ( function (e) {
 		e.stopPropagation();
 		$(".filewaiter").show();
@@ -38,32 +67,7 @@ $(document).ready( function () {
 			success: function(data)
 			{
 				$(".filewaiter").hide();
-				$('#filelist').html(''); //clear out the old filelist first
-				var filenames = [];
-				var files = JSON.parse(data);
-				for (i=0; i<files.length; i++)
-				{
-					var split = files[i].split('/');
-					var filename = split[split.length - 1];
-					filenames.push(filename);
-				}
-				console.log(filenames);
-				
-				var therearefiles = false;
-
-				for (i=0; i<filenames.length; i++)
-				{
-					var name = filenames[i];
-					if (name != "")
-					{
-						$('#filelist').append('<tr class="filestoretr" id="' + name + '"><td class="filename">' + name + '</td><td><div class="deletefile" id="deletefile' + i + '"><i class="fa fa-trash-o"></div></td><td><form class="downloadfile" id="downloadfile' + i +'" action="downloadfile.php" method="post"><i class="fa fa-cloud-download"></form></td></tr>');
-						therearefiles = true;					
-					}
-				}
-				if (!therearefiles)
-				{
-					$("#fileerror").text("There are no files associated with this grant");
-				}
+				listfiles();
 			}
 	    });	    
 	});
