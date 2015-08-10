@@ -219,8 +219,8 @@
 					<table id="filelist">
 					</table>
 					<form enctype="multipart/form-data" method="post" name="fileinfo" id="filesubmit" style="margin-top: 1em;">
-						<input id="fileinput" type="file" name="fileinput[]" multiple required/>
-						<input type="submit" value="Upload">
+						<span id="fileformspan"><span class="btn btn-default"><input id="fileinput" type="file" name="fileinput[]" multiple required/></span>
+						<input type="submit" value="Upload" class="btn btn-default"></span>
 					</form>
 				</div>
 				
