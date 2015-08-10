@@ -34,6 +34,8 @@ header {
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 3em;
+	width: 10em;
+	height: 2em;
 }
 
 #newgrantplus {
@@ -237,6 +239,8 @@ td {
 
 #newcpform {
 	margin-bottom: 1em;
+	width: 10em;
+	height: 2em;
 }
 #newcpdiv {
 	text-align: center;
