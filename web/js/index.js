@@ -12,31 +12,32 @@ $(document).ready( function () {
 	
 	function listfiles(data) {
 		$('#filelist').html(''); //clear out the old filelist first
-				var filenames = [];
-				var files = JSON.parse(data);
-				for (i=0; i<files.length; i++)
-				{
-					var split = files[i].split('/');
-					var filename = split[split.length - 1];
-					filenames.push(filename);
-				}
-				console.log(filenames);
-				
-				var therearefiles = false;
-
-				for (i=0; i<filenames.length; i++)
-				{
-					var name = filenames[i];
-					if (name != "")
-					{
-						$('#filelist').append('<tr class="filestoretr" id="' + name + '"><td class="filename">' + name + '</td><td><div class="deletefile" id="deletefile' + i + '"><i class="fa fa-trash-o"></div></td><td><form class="downloadfile" id="downloadfile' + i +'" action="downloadfile.php" method="post"><i class="fa fa-cloud-download"></form></td></tr>');
-						therearefiles = true;					
-					}
-				}
-				if (!therearefiles)
-				{
-					$("#fileerror").text("There are no files associated with this grant");
-				}
+		$('#fileerror').html(''); //clear error too
+		var filenames = [];
+		var files = JSON.parse(data);
+		for (i=0; i<files.length; i++)
+		{
+			var split = files[i].split('/');
+			var filename = split[split.length - 1];
+			filenames.push(filename);
+		}
+		console.log(filenames);
+		
+		var therearefiles = false;
+	
+		for (i=0; i<filenames.length; i++)
+		{
+			var name = filenames[i];
+			if (name != "")
+			{
+				$('#filelist').append('<tr class="filestoretr" id="' + name + '"><td class="filename">' + name + '</td><td><div class="deletefile" id="deletefile' + i + '"><i class="fa fa-trash-o"></div></td><td><form class="downloadfile" id="downloadfile' + i +'" action="downloadfile.php" method="post"><i class="fa fa-cloud-download"></form></td></tr>');
+				therearefiles = true;					
+			}
+		}
+		if (!therearefiles)
+		{
+			$("#fileerror").text("There are no files associated with this grant");
+		}
 	}
 	
 	$('.filestorebtn').click ( function (e) {
@@ -139,8 +140,7 @@ $(document).ready( function () {
 			alert(problemfile + " is too big. Max size is 2MB");
 			return false;
 		}
-		  
-		  
+
 		var form = document.getElementById('filesubmit');
 		var form_data = new FormData(form);
 		var gfilename =  $("#grantfilesname").text();
@@ -157,7 +157,22 @@ $(document).ready( function () {
 	                type: 'POST',
 	                success: function(php_script_response){
 	                    console.log(php_script_response); // display response from the PHP script, if any
-	                    $('#shield').trigger('click');
+	                    $('.filewaiter').show();
+	                    $.ajax({
+					    	type: "POST",
+							url: "api.php",
+							data:
+							{
+								type: "getfiles",
+								grantname: grantname,
+							},
+							success: function(data)
+							{
+								$(".filewaiter").hide();
+								listfiles(data);
+							}
+				    	});	    
+	                    
 	                },
 	                error: function (e) {
 	                	console.log(e);
