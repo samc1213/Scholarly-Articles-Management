@@ -200,7 +200,16 @@ $(document).ready( function () {
 	});
 
 	
-	$("#maintable").tablesorter();
+	$("#maintable").tablesorter({
+		testExtraction: {
+			3: function(node, table, cellIndex) {
+				var text = $(node).text();
+				text = text.replace('$', '');
+				text = text.replace(',', '');
+				return text;
+			}, 
+		}	
+	});
 	
 	$(".datepicker").datepicker();
 	
