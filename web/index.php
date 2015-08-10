@@ -43,10 +43,10 @@
 	        	<?php
 	        		session_start();
 					if (isset($_SESSION['username'])) {
-						echo '<button id="logoutheaderbutton" class="logbutton btn btn-default">Logout</button>';		
+						echo '<button id="logoutheaderbutton" class="logbutton">Logout</button>';		
 					}
 					else {
-						echo '<a href="/login.html"><button id="loginheaderbutton" class="logbutton btn btn-default">Login</button></a>';
+						echo '<a href="/login.html"><button id="loginheaderbutton" class="logbutton">Login</button></a>';
 
 					}
 	        	?>
