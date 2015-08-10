@@ -113,7 +113,8 @@
 								<th data-sort="float" class="teamSelector" style="display: none;">Total Amount</th>
 								<th data-sort="float" class="teamSelector" style="display: none;">Total Amount to PI</th>
 								<th data-sort="float" class="teamSelector">Person Months</th>
-								<th data-sort="int" class="teamSelector">Dates</th>
+								<th data-sort="int" class="teamSelector">From</th>
+								<th data-sort="int" class="teamSelector">To</th>
 								<th data-sort="string" class="teamSelector">Location</th>
 								<th data-sort="float" class="teamSelector" style="display: none;">Summary</th>
 								<th data-sort="int" class="teamSelector">Modified</th>
@@ -179,7 +180,8 @@
 									echo '<td class="totamount" style="display: none;">$<span class="totamountnum">'.$totamount.'</span></td>';
 									echo '<td class="totpiamount" style="display: none;">$<span class="totpiamountnum">'.$totpiamount.'</span></td>';
 									echo '<td class="pmonths"><span class="apmonthnum">'.$apmonths.'</span>'.$alabel.'<span class="cpmonthnum">'.$cpmonths.'</span>'.$clabel.'<span class="spmonthnum">'.$spmonths.'</span>'.$slabel.'</td>';
-									echo '<td class="dates"><span class="fromdate">'.$fromdate.'</span> to <span class="todate">'.$todate.'</span></td>';
+									echo '<td class="from"><span class="fromdate">'.$fromdate.'</span></td>';
+									echo '<td class="to"><span class="todate">'.$todate.'</span></td>';
 									echo '<td class = "location"><span class="locationval">'.$location.'</span></td>';
 									echo '<td class="summary" style="display: none;">'.$summary.'</td>';
 									echo '<td class="edited">'.$edited.'</td>';

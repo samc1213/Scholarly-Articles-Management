@@ -219,9 +219,6 @@ $(document).ready( function () {
 	
 	
 	$("#maintable").tablesorter({
-		testExtraction: {
-			9: function(node, table, cellIndex) {return $(node).find(".fromdate").text();}
-		}
 	});
 	
 	$(".datepicker").datepicker();
