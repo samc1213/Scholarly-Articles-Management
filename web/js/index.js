@@ -71,6 +71,7 @@ $(document).ready( function () {
 	});
 	
 	$('.deletefile').click( function () {
+		console.log("delete!");
 		$tr = $(this).closest('tr');
 		console.log($tr);
 		var filename = $tr.find('td.filename').text();
