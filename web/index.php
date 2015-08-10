@@ -103,15 +103,15 @@
 								
 								echo '<table id="maintable" border="1">';
 								echo '<thead><tr>
-								<th data-sort="string">Title</th>
-								<th data-sort="string">Status</th>
-								<th data-sort="string">Agency</th>
-								<th data-sort="float">Amount</th>
-								<th data-sort="float">Amount to PI</th>
-								<th data-sort="float">Person Months</th>
-								<th data-sort="int">Dates</th>
-								<th data-sort="string">Location</th>
-								<th data-sort="int">Modified</th>
+								<th data-sort="string" class="teamSelector">Title</th>
+								<th data-sort="string" class="teamSelector">Status</th>
+								<th data-sort="string" class="teamSelector">Agency</th>
+								<th data-sort="float" class="teamSelector">Annual Amount</th>
+								<th data-sort="float" class="teamSelector">Annual Amount to PI</th>
+								<th data-sort="float" class="teamSelector">Person Months</th>
+								<th data-sort="int" class="teamSelector">Dates</th>
+								<th data-sort="string" class="teamSelector">Location</th>
+								<th data-sort="int" class="teamSelector">Modified</th>
 								<th>Edit</th>					
 								<th>Delete</th>
 								<th>Filestore</th>											
