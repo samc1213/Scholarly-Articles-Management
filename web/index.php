@@ -109,9 +109,12 @@
 								<th data-sort="string" class="teamSelector">Agency</th>
 								<th data-sort="float" class="teamSelector">Annual Amount</th>
 								<th data-sort="float" class="teamSelector">Annual Amount to PI</th>
+								<th data-sort="float" class="teamSelector" style="display: none;">Total Amount</th>
+								<th data-sort="float" class="teamSelector" style="display: none;">Total Amount to PI</th>
 								<th data-sort="float" class="teamSelector">Person Months</th>
 								<th data-sort="int" class="teamSelector">Dates</th>
 								<th data-sort="string" class="teamSelector">Location</th>
+								<th data-sort="float" class="teamSelector" style="display: none;">Summary</th>
 								<th data-sort="int" class="teamSelector">Modified</th>
 								<th>Edit</th>					
 								<th>Delete</th>
