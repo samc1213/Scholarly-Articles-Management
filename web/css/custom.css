@@ -95,9 +95,11 @@ header {
 .logbutton {
 	float: right;
 	height: 100%;
-	background-color: none;
+	background-color: rgba(0, 0, 0, 0.8);
 	color: white;
-	border: none;
+	border-right: none;
+	border-top: none;
+	border-bottom: none;
 	border-left: black 2px white;
 }
 
