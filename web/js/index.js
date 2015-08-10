@@ -61,7 +61,7 @@ $(document).ready( function () {
 						var name = filenames[i];
 						if (name != "")
 						{
-							$('#filelist').append('<tr class="filestoretr" id="' + name + '"><td class="filename">' + name + '</td><td><i class="fa fa-trash-o deletefile" id="deletefile' + i + '"></td><td><i class="fa fa-cloud-download downloadfile" id="downloadfile' + i +'"></td></tr>');
+							$('#filelist').append('<tr class="filestoretr" id="' + name + '"><td class="filename">' + name + '</td><td><div class="deletefile" id="' + i + '"><i class="fa fa-trash-o"></div></td><td><i class="fa fa-cloud-download downloadfile" id="downloadfile' + i +'"></td></tr>');
 						}
 					}
 				}
