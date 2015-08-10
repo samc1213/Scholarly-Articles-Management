@@ -105,6 +105,7 @@
 								echo '<thead><tr>
 								<th data-sort="string" class="teamSelector">Title</th>
 								<th data-sort="string" class="teamSelector">Status</th>
+								<th data-sort="string" class="teamSelector" style="display:none;">Award Number</th>
 								<th data-sort="string" class="teamSelector">Agency</th>
 								<th data-sort="float" class="teamSelector">Annual Amount</th>
 								<th data-sort="float" class="teamSelector">Annual Amount to PI</th>
@@ -118,7 +119,6 @@
 								</tr></thead> <tbody>';
 																
 								foreach ($grants as $grant) {
-									echo var_dump($grant);
 									echo '<tr id="grant';
 									echo $count;
 									echo '" class="grant">';

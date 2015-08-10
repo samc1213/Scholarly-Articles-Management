@@ -1,4 +1,3 @@
-
 $.tablesorter.addParser({ 
     // set a unique id 
     id: 'money',
