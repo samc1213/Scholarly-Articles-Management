@@ -225,6 +225,7 @@
 				</div>
 				
 	                <div id="newgrantpopup" class="grantpopup">
+	                <i class="fa fa-times" id="shield"></i>
 		        	<h2 id="newgrantheader">New Grant</h2>
 		        	<form id="newgrantform">
 		        		<label class="biglabel" for="grantname">Grant Name:</label>
