@@ -317,10 +317,11 @@ td {
 }
 
 #filelist {
-	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .filename {
 	padding: 0px;
 	text-align: left;
-}
+} 
