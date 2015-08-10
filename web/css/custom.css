@@ -315,3 +315,12 @@ td {
 .filestoretd {
 	text-align: center;
 }
+
+#filelist {
+	width: 70%;
+}
+
+.filename {
+	padding: 0px;
+	text-align: left;
+}
