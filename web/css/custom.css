@@ -349,3 +349,7 @@ th {
 	float: right;
 	font-size: 1.3em;
 }
+
+.negmarg {
+	margin-top: -2em;
+}

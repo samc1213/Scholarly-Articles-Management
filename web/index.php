@@ -199,13 +199,13 @@
 	
 	        	
 				<div id="comparisonbox" style="display: none;" class="clearfix">
-					<span class="fa fa-times"></span>
+					<span class="fa fa-times negmarg"></span>
 					<h2>New C&P Form</h2>
 					<img class="waiter" src="img/ajax-loader.gif"/>
 				</div>
 				
 				<div id="deleteconfirmbox">
-					<span class="fa fa-times"></span>
+					<span class="fa fa-times negmarg"></span>
 					<h2>Confirm Delete</h2>
 					<p id="confirmmessage"></p>
 					<form id="confirmdeleteform">
@@ -214,7 +214,7 @@
 					</form>
 				</div>
 				
-				<div id="filestorebox">
+				<div id="filestorebox negmarg">
 					<span class="fa fa-times"></span>
 					<h2 id="filestoreheader"><span id="grantfilesname"></span> Filestore</h2>
 					<span id="fileerror"></span>
