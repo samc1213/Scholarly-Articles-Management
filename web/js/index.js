@@ -1,6 +1,6 @@
 $.tablesorter.addParser({ 
     // set a unique id 
-    id: 'money',
+    id: 'customData',
     is: function(s) { 
         // return false so this parser is not auto detected 
         return false; 
@@ -219,6 +219,12 @@ $(document).ready( function () {
 	
 	
 	$("#maintable").tablesorter({
+		headers: {
+			9: { dateFormat:'us' }
+		},
+		testExtraction: {
+			9: function(node, table, cellIndex) {return $(node).find(".fromdate").text();}
+		}
 	});
 	
 	$(".datepicker").datepicker();

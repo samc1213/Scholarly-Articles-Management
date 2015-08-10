@@ -40,6 +40,7 @@
         <section id="content" class="clearfix">
 	        <header class="clearfix">
 	        	<a href="/"> <img id="mainlogo" src="img/sofilogo.png"/> </a>
+	        	<i class="fa fa-user"></i>
 	        	<?php
 	        		session_start();
 					if (isset($_SESSION['username'])) {
