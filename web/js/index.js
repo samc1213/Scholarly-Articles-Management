@@ -13,6 +13,7 @@ $.tablesorter.addParser({
     type: 'numeric' 
 }); 
 
+
 $(document).ready( function () {
 	var originalname;
 	var originalperiod1;
@@ -218,11 +219,6 @@ $(document).ready( function () {
 	
 	
 	$("#maintable").tablesorter({
-		headers: {
-			6: {
-				sorter: 'money'
-			}
-		}
 	});
 	
 	$(".datepicker").datepicker();
