@@ -97,7 +97,7 @@
 								}
 								
 								else {
-									echo '<div id="newcpdiv"><button id="newcpform">Create New C&P Form</button></div>
+									echo '<div id="newcpdiv"><button class="btn btn-default" id="newcpform">Create New C&P Form</button></div>
 ';
 								}
 								
@@ -194,7 +194,7 @@
 	        	<?php
 	        	session_start();
 	        	if (isset($_SESSION['username'])) {
-	        		echo '<button id="newgrantbutton"><i class="fa fa-plus-square" id="newgrantplus"></i> Add another grant</button>';
+	        		echo '<button id="newgrantbutton" class="btn btn-default"><i class="fa fa-plus-square" id="newgrantplus"></i> Add another grant</button>';
 				}?>
 	
 	        	
