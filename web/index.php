@@ -118,6 +118,7 @@
 								</tr></thead> <tbody>';
 																
 								foreach ($grants as $grant) {
+									echo var_dump($grant);
 									echo '<tr id="grant';
 									echo $count;
 									echo '" class="grant">';
