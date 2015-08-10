@@ -137,15 +137,27 @@
 									{
 										$alabel = ' Academic ';
 									}
+									else
+									{
+										$alabel = '';
+									}
 									$cpmonths = $grant['cpersonmonths'];
 									if ($cpmonths != '')
 									{
 										$clabel = ' Calendar ';
 									}
+									else
+									{
+										$clabel = '';
+									}
 									$spmonths = $grant['spersonmonths'];
 									if ($spmonths != '')
 									{
 										$slabel = ' Summer';
+									}
+									else
+									{
+										$slabel = '';
 									}
 									$summary = $grant['description'];
 									$fromdate = $grant['awardperiod1'];
