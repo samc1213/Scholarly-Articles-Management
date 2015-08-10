@@ -106,6 +106,7 @@ $(document).ready( function () {
 	                type: 'POST',
 	                success: function(php_script_response){
 	                    console.log(php_script_response); // display response from the PHP script, if any
+	                    $('#shield').trigger('click');
 	                },
 	                error: function (e) {
 	                	console.log(e);
