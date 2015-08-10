@@ -1,3 +1,19 @@
+
+$.tablesorter.addParser({ 
+    // set a unique id 
+    id: 'money',
+    is: function(s) { 
+        // return false so this parser is not auto detected 
+        return false; 
+    }, 
+    format: function(s) {
+        // format your data for normalization 
+        return s.replace('$','').replace(',','');
+    }, 
+    // set type, either numeric or text 
+    type: 'numeric' 
+}); 
+
 $(document).ready( function () {
 	var originalname;
 	var originalperiod1;
@@ -199,19 +215,15 @@ $(document).ready( function () {
 	  }
 	});
 
+
+	
 	
 	$("#maintable").tablesorter({
 		headers: {
-			3: { sorter: "floating"  }
-		},
-		testExtraction: {
-			3: function(node, table, cellIndex) {
-				var text = $(node).text();
-				text = text.replace('$', '');
-				text = text.replace(',', '');
-				return text;
-			}, 
-		}	
+			6: {
+				sorter: 'money'
+			}
+		}
 	});
 	
 	$(".datepicker").datepicker();
