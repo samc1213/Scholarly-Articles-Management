@@ -243,18 +243,15 @@
 						<label class="sublabel" for="awardperiod2">To:</label>
 						<input id="awardperiod2" type="text" class="datepicker"/><br><br>
 		      			
-		      			<div class="form-group">
 		      			<label class="biglabel" for="status">Status:</label>
-						<select id="status" class="form-control">
+						<select id="status">
 							<option selected disabled>Choose status</option>
 							<option value="Completed">Completed</option>
 				        	<option value="Current">Current</option>
 		    				<option value="Pending">Pending</option>
 		    				<option value="Submission Planned">Submission Planned</option>
 		    				<option value="Transfer of Support">Transfer of Support</option>
-				       </select>
-				       </div>
-				       <br><br>
+				       </select><br><br>
 				       
 				       <label class="biglabel" for="apersonmonths">Academic Person Months:</label>
 				       <input type="number" id="apersonmonths" maxlength="3" step="0.01" min="0"/> <br><br>
