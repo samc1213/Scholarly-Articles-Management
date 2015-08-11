@@ -288,7 +288,6 @@ $(document).ready( function () {
 	
 	$(document).on('submit', '#customtemplateform', function (e) {
 		e.preventDefault();
-		$('.filewaiter').show();
 		var sizeOk = true;
 		var problemfile = '';
 		var inp = document.getElementById('templatefileinput');
@@ -305,7 +304,7 @@ $(document).ready( function () {
 			alert(problemfile + " is too big. Max size is 2MB");
 			return false;
 		}
-		var form = document.getElementById('templatefileinput');
+		var form = document.getElementById('customtemplateform');
 		var form_data = new FormData(form);
 		console.log(form_data);
 	    $.ajax({
