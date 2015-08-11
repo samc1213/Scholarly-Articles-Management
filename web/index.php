@@ -107,8 +107,8 @@
 								<th data-sort="string" class="teamSelector">Status</th>
 								<th data-sort="string" class="teamSelector" style="display:none;">Award Number</th>
 								<th data-sort="string" class="teamSelector">Agency</th>
-								<th data-sort="float" class="teamSelector">Amount</th>
-								<th data-sort="float" class="teamSelector">Amount to PI</th>
+								<th data-sort="float" class="sorter-currency teamSelector">Amount</th>
+								<th data-sort="float" class="sorter-currency teamSelector">Amount to PI</th>
 								<th data-sort="float" class="teamSelector">Person Months</th>
 								<th data-sort="int" class="teamSelector">From</th>
 								<th data-sort="int" class="teamSelector">To</th>
