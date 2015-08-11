@@ -232,24 +232,17 @@ $(document).ready( function () {
 		$("#newcpform").hide();		
 		$("#comparisonbox").show();
 		var h = $(window).height();
-		$("#junkdiv").height(h - $("header").outerHeight(true) - $("#grantheader").outerHeight(true) - $("#grants").outerHeight(true) - $("#comparisonbox").outerHeight(true));
 		$('#shield').show();
 		$("#newgrantbutton").hide();
-		// $('html, body').animate({
-	        // scrollTop: $("#comparisonbox").offset().top
-	    // }, 1000);
-	    if(! $("#choosesourceform").length)
-	    {
-	    	$("#comparisonbox").append('<form id="choosesourceform">');
-	    	$("#choosesourceform").append('<label for ="sourceformselect">Which form would you like to use?</label>');
-	    	$("#choosesourceform").append('<select id="sourceselect">');
-	    	$.each(['DOE', 'New Custom Form'], function (i, v) {
-	    		$("#sourceselect").append('<option value ="' + v + '">' + v + '</option>');
-	    	});
-	    	$("#choosesourceform").append('<div><button id="choosesourcebtn" class="btn btn-default">Next</button></div>');
-	    }
-	    $("#choosecomparerform").remove();
-	    $("#comparetoform").remove();
+	    $("#comparisonbox").html('');
+	    $("#comparisonbox").append('<h2>New C&P Form</h2>');
+    	$("#comparisonbox").append('<form id="choosesourceform">');
+    	$("#choosesourceform").append('<label for ="sourceformselect">Which form would you like to use?</label>');
+    	$("#choosesourceform").append('<select id="sourceselect">');
+    	$.each(['DOE', 'New Custom Form'], function (i, v) {
+    		$("#sourceselect").append('<option value ="' + v + '">' + v + '</option>');
+    	});
+    	$("#choosesourceform").append('<div><button id="choosesourcebtn" class="btn btn-default">Next</button></div>');
 	});
 
 	$(document).on('submit', '#choosesourceform', function (e) {
