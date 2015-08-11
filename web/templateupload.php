@@ -26,7 +26,7 @@
 			echo $prefixstr;
 			
 			$result = $s3->putObject(array(
-		    'Bucket'       => 'cpgrantsuploads',
+		    'Bucket'       => 'cpgrantstemplates',
 		    'Key'          => $prefixstr.$_FILES['fileinput']['name'][0],
 		    'SourceFile'   => 'uploads/' . $_FILES['fileinput']['name'][0],
 		    'ContentType'  => $_FILES['fileinput']['type'][0],
