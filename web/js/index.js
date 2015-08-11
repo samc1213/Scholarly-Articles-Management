@@ -290,9 +290,43 @@ $(document).ready( function () {
 			$("#templatefilespan").append('<input type="submit" value="Upload" class="btn btn-default">');
 			$("#comparisonbox").append('<p><a href="Template Creation Instructions.zip">Template Instructions</a></p>');
 	   }
-	   $(this).remove();
-
-			
+	   $(this).remove();		
+	});
+	
+	$(document).on('submit', '#customtemplateform', function (e) {
+		e.preventDefault();
+		$('.filewaiter').show();
+		var sizeOk = true;
+		var problemfile = '';
+		var inp = document.getElementById('fileinput');
+		for (i = 0; i < inp.files.length; i++)
+		  {
+		  	if(inp.files[i].size >= 2000000)
+		  	{
+				problemfile = inp.files[i].name;
+				sizeOk = false;
+		  	}
+		  }
+		if (sizeOk != true)
+		{
+			alert(problemfile + " is too big. Max size is 2MB");
+			return false;
+		}
+		var form = document.getElementById('templatefileinput');
+		var form_data = new FormData(form);
+		console.log(form_data);
+	    $.ajax({
+            url: 'templateupload.php', // point to server-side PHP script 
+            dataType: 'text',  // what to expect back from the PHP script, if anything
+            cache: false,
+            contentType: false,
+            processData: false,
+            data: form_data,                         
+            type: 'POST',
+            success: function(php_script_response){
+            	console.log(php_script_response);
+            }
+		});
 	});
 
 	$(document).on('submit', '#choosecomparerform', function (e) {
