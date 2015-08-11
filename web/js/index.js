@@ -283,12 +283,12 @@ $(document).ready( function () {
 	   else
 	   {
 	   		$("#comparisonbox").append('<form id="customtemplateform" enctype="multipart/form-data" method="post" name="customtemplate">');
-	   		$("#customtemplateform").append('label for="templatefileinput" value="Upload a Custom Template"');
+	   		$("#customtemplateform").append('<label for="templatefileinput" value="Upload a Custom Template">');
 	   		$("#customtemplateform").append('<span id="templatefilespan">');
 	   		$("#templatefilespan").append('<span class="btn btn-default" id="templateinputbtn">');
 	   		$("#templateinputbtn").append('<input id="templatefileinput" type="file" name="templatefileinput[]" required/>');
 			$("#templatefilespan").append('<input type="submit" value="Upload" class="btn btn-default">');
-			$("#comparisonbox").append('<p><a href="Template Instructions.zip">Template Instructions</a></p>');
+			$("#comparisonbox").append('<p><a href="Template Creation Instructions.zip">Template Instructions</a></p>');
 	   }
 	   $(this).remove();
 
