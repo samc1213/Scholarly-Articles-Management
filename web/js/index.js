@@ -74,9 +74,9 @@ $(document).ready( function () {
 		var grantname = $tr.find('td.granttitle').text();
 		$("#grantfilesname").text(grantname);
 		console.log("gname: " + grantname);
-		$('html, body').animate({
-	        scrollTop: $("#filestorebox").offset().top
-	    }, 1000);
+		// $('html, body').animate({
+	        // scrollTop: $("#filestorebox").offset().top
+	    // }, 1000);
 	    $.ajax({
 	    	type: "POST",
 			url: "api.php",
@@ -235,9 +235,9 @@ $(document).ready( function () {
 		$("#junkdiv").height(h - $("header").outerHeight(true) - $("#grantheader").outerHeight(true) - $("#grants").outerHeight(true) - $("#comparisonbox").outerHeight(true));
 		$('#shield').show();
 		$("#newgrantbutton").hide();
-		$('html, body').animate({
-	        scrollTop: $("#comparisonbox").offset().top
-	    }, 1000);
+		// $('html, body').animate({
+	        // scrollTop: $("#comparisonbox").offset().top
+	    // }, 1000);
 	    if(! $("#choosesourceform").length)
 	    {
 	    	$("#comparisonbox").append('<form id="choosesourceform">');
@@ -661,9 +661,9 @@ $(document).ready( function () {
 		$('#newgranterror').html('');
 		$('#shield').show();
 	    $("#junkdiv").height(0);
-	    $('html, body').animate({
-	        scrollTop: $("#newgrantpopup").offset().top
-	    }, 1000);
+	    // $('html, body').animate({
+	        // scrollTop: $("#newgrantpopup").offset().top
+	    // }, 1000);
 				
 	});//end logout click
 	
@@ -764,9 +764,9 @@ $(document).ready( function () {
 		
 		$("#confirmdeleteform").find("input[name='grantname']").val(grantname);
 		
-		$('html, body').animate({
-	        scrollTop: $("#deleteconfirmbox").offset().top
-	    }, 1000);
+		// $('html, body').animate({
+	        // scrollTop: $("#deleteconfirmbox").offset().top
+	    // }, 1000);
 		
 	}); //end delete
 	
