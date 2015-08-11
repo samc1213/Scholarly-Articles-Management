@@ -71,7 +71,14 @@
 					echo "'s Grants</h2>";						
 				}
 				else {
-					echo "<h1 style='text-align: center;'><a href='login.html'>Login!</a></h1>";
+					echo "
+					<h1 style='text-align: center;'><a href='login.html'>Welcome to the Grant Form Page!</a></h1>
+					<h2>You can manage your grants...<h2>
+					<img src='img/wasielewskiexample.png' alt='examplephoto' style='display: block;'/>
+					<h2>And create current and pending forms</h2>
+					<img src='img/cpexample.png' alt='cpexample' style='display: block;'/>					
+					
+					";
 				}
 				
 				?>
