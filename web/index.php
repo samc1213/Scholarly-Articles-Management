@@ -86,7 +86,7 @@
 				
 				?>
 				
-				<div id="editgrantpopup" class="grantpopup">
+				<div id="editgrantpopup" class="grantpopup popup">
 					<span class="fa fa-times"></span>
 		        	<h2 id="editgrantheader">Edit Grant</h2>
 		        	<form id="editgrantform">
@@ -323,13 +323,13 @@
 				}?>
 	
 	        	
-				<div id="comparisonbox" style="display: none;" class="clearfix">
+				<div id="comparisonbox" style="display: none;" class="clearfix" class="popup">
 					<span class="fa fa-times negmarg"></span>
 					<h2>New C&P Form</h2>
 					<img class="waiter" src="img/ajax-loader.gif"/>
 				</div>
 				
-				<div id="deleteconfirmbox">
+				<div id="deleteconfirmbox" class="popup">
 					<span class="fa fa-times negmarg"></span>
 					<h2>Confirm Delete</h2>
 					<p id="confirmmessage"></p>
@@ -339,7 +339,7 @@
 					</form>
 				</div>
 				
-				<div id="filestorebox">
+				<div id="filestorebox" class="popup">
 					<span class="fa fa-times negmarg"></span>
 					<h2 id="filestoreheader"><span id="grantfilesname"></span> Filestore</h2>
 					<span id="fileerror"></span>
@@ -352,7 +352,7 @@
 					</form>
 				</div>
 				
-	                <div id="newgrantpopup" class="grantpopup">
+	                <div id="newgrantpopup" class="grantpopup popup">
 	                <span class="fa fa-times"></span>
 		        	<h2 id="newgrantheader">New Grant</h2>
 		        	<form id="newgrantform">

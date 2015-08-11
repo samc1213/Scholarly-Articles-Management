@@ -384,3 +384,13 @@ th {
 	display: block;
 	width: 15%;
 }
+
+.popup {
+	position: absolute;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	top: 11em;
+}
