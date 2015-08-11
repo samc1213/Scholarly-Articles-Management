@@ -283,7 +283,7 @@ $(document).ready( function () {
 	   else
 	   {
 	   		$("#comparisonbox").append('<form id="customtemplateform" enctype="multipart/form-data" method="post" name="customtemplate">');
-	   		$("#uploadcustomform").append('<span id="templatefilespan">');
+	   		$("#customtemplateform").append('<span id="templatefilespan">');
 	   		$("#templatefilespan").append('<span class="btn btn-default" id="templateinputbtn">');
 	   		$("#templateinputbtn").append('<input id="templatefileinput" type="file" name="templatefileinput[]" required/>');
 			$("#templatefilespan").append('<input type="submit" value="Upload" class="btn btn-default">');
