@@ -24,6 +24,7 @@ header {
 	background-color: rgba(0, 0, 0, 0.8);
 	height: 2.5em;
 	position: fixed;
+	width: 100%;
 }
 
 #mainlogo {
