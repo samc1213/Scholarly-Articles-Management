@@ -107,10 +107,8 @@
 								<th data-sort="string" class="teamSelector">Status</th>
 								<th data-sort="string" class="teamSelector" style="display:none;">Award Number</th>
 								<th data-sort="string" class="teamSelector">Agency</th>
-								<th data-sort="float" class="teamSelector">Annual Amount</th>
-								<th data-sort="float" class="teamSelector">Annual Amount to PI</th>
-								<th data-sort="float" class="teamSelector" style="display: none;">Total Amount</th>
-								<th data-sort="float" class="teamSelector" style="display: none;">Total Amount to PI</th>
+								<th data-sort="float" class="teamSelector">Amount</th>
+								<th data-sort="float" class="teamSelector">Amount to PI</th>
 								<th data-sort="float" class="teamSelector">Person Months</th>
 								<th data-sort="int" class="teamSelector">From</th>
 								<th data-sort="int" class="teamSelector">To</th>
@@ -134,8 +132,6 @@
 									$awardnumber = $grant['awardnumber'];																
 									$status = $grant['status'];
 									$agency = $grant['source'];
-									$amount = $grant['amount'];
-									$piamount = $grant['piamount'];
 									$apmonths = $grant['apersonmonths'];
 									if ($apmonths != '')
 									{
@@ -170,14 +166,53 @@
 									$edited = $grant['edited'];
 									$totamount = $grant['totamount'];
 									$totpiamount = $grant['totpiamount'];
+									$amount = $grant['amount'];
+									$piamount = $grant['piamount'];
+									
+									if ($totamount == '')
+									{
+										$totamountdol = '';
+										$totamountlabel = '';
+									}
+									else {
+										$totamountdol = '$';
+										$totamountlabel = ' (Total) ';
+									}
+									if ($totpiamount == '')
+									{
+										$totpiamountdol = '';
+										$totpiamountlabel = '';
+									}
+									else {
+										$totpiamountdol = '$';
+										$totpiamountlabel = ' (Total) ';
+									}
+									
+									if ($piamount == '')
+									{
+										$piamountdol = '';
+										$piamountlabel = '';
+									}
+									else {
+										$piamountdol = '$';
+										$piamountlabel = ' (Annual) ';
+									}
+									if ($amount == '')
+									{
+										$amountdol = '';
+										$amountlabel = '';
+									}
+									else {
+										$amountdol = '$';
+										$amountlabel = ' (Annual) ';
+									}
+									
 									
 									echo '<td class="status">'.$status.'</span></td>';
 									echo '<td class="awardnumber" style="display:none;">'.$awardnumber.'</td>';
 									echo '<td class="grantagency">'.$agency.'</td>';
-									echo '<td class="amount">$<span class="amountnum">'.$amount.'</span></td>';
-									echo '<td class="piamount">$<span class="piamountnum">'.$piamount.'</span></td>';
-									echo '<td class="totamount" style="display: none;">$<span class="totamountnum">'.$totamount.'</span></td>';
-									echo '<td class="totpiamount" style="display: none;">$<span class="totpiamountnum">'.$totpiamount.'</span></td>';
+									echo '<td class="amount"><span class = "amountdol">'.$amountdol.'</span><span class="amountnum">'.$amount.'</span>'.$amountlabel.'<span class="totamountdol">'.$totamaountdol.'</span><span class="totamountnum">'.$totamount.'</span>'.$totamountlabel.'</td>';
+									echo '<td class="piamount"><span class="piamountdol">'.$piamountdol.'</span><span class="piamountnum">'.$piamount.'</span>'.$piamountlabel.'<span class="totpiamountdol">'.$totpiamountdol.'</span><span class="totpiamountnum">'.$totpiamount.'</span>'.$totpiamountlabel.'</td>';
 									echo '<td class="pmonths"><span class="apmonthnum">'.$apmonths.'</span>'.$alabel.'<span class="cpmonthnum">'.$cpmonths.'</span>'.$clabel.'<span class="spmonthnum">'.$spmonths.'</span>'.$slabel.'</td>';
 									echo '<td class="from"><span class="fromdate">'.$fromdate.'</span></td>';
 									echo '<td class="to"><span class="todate">'.$todate.'</span></td>';
