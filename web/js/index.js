@@ -243,7 +243,7 @@ $(document).ready( function () {
 	    	$("#comparisonbox").append('<form id="choosesourceform">');
 	    	$("#choosesourceform").append('<label for ="sourceformselect">Which form would you like to use?</label>');
 	    	$("#choosesourceform").append('<select id="sourceselect">');
-	    	$.each(['DOE'], function (i, v) {
+	    	$.each(['DOE', 'New Custom Form'], function (i, v) {
 	    		$("#sourceselect").append('<option value ="' + v + '">' + v + '</option>');
 	    	});
 	    	$("#choosesourceform").append('<div><button id="choosesourcebtn" class="btn btn-default">Next</button></div>');
@@ -255,30 +255,39 @@ $(document).ready( function () {
 	$(document).on('submit', '#choosesourceform', function (e) {
 		e.preventDefault();
 		$(this).remove();
-		$("#comparisonbox").append('<form id="choosecomparerform">');
-	    $("#choosecomparerform").append('<label for="comparergrantselect">Which grant are you generating the C&P form for?</label>');
-	    $("#choosecomparerform").append('<select id="comparergrantselect" style="margin-bottom: 2em;">');
-	    $comparer = $("#comparergrantselect");
-	    $theresanoncomplete = false;
-	    $(".grant").each( function () {
-	    	if ($(this).find(".status").text() != "Completed")
-	    	{
-		    	var str = '<option value="' + $(this).find(".granttitle").text() + '">' + $(this).find(".granttitle").text() + '</option>';
-		    	$comparer.append(str);
-		    	$theresanoncomplete=true;	    		
-	    	}
-	    });
-		if ($theresanoncomplete == false)
+		if($("#sourceselect").val() != 'New Custom Form')
 		{
-			$("#comparergrantselect").remove();
-			$("#choosecomparerform").find('label').html("<a href='https://en.wikipedia.org/wiki/Double_negative' target='_blank'>There are no grants that aren't completed</a>");
-		}
-	    
-	    else 
-	    {
-	   		$("#choosecomparerform").append('<div><button id="choosecomparerbtn" class="btn btn-default">Next</button></div>');
-	    }
-		
+			$("#comparisonbox").append('<form id="choosecomparerform">');
+		    $("#choosecomparerform").append('<label for="comparergrantselect">Which grant are you generating the C&P form for?</label>');
+		    $("#choosecomparerform").append('<select id="comparergrantselect" style="margin-bottom: 2em;">');
+		    $comparer = $("#comparergrantselect");
+		    $theresanoncomplete = false;
+		    $(".grant").each( function () {
+		    	if ($(this).find(".status").text() != "Completed")
+		    	{
+			    	var str = '<option value="' + $(this).find(".granttitle").text() + '">' + $(this).find(".granttitle").text() + '</option>';
+			    	$comparer.append(str);
+			    	$theresanoncomplete=true;	    		
+		    	}
+		    });
+			if ($theresanoncomplete == false)
+			{
+				$("#comparergrantselect").remove();
+				$("#choosecomparerform").find('label').html("<a href='https://en.wikipedia.org/wiki/Double_negative' target='_blank'>There are no grants that aren't completed</a>");
+			}
+		    
+		    else 
+		    {
+		   		$("#choosecomparerform").append('<div><button id="choosecomparerbtn" class="btn btn-default">Next</button></div>');
+		    }
+	   }
+	   else
+	   {
+	   		$("#comparisonbox").append('<form id="customtemplateform" enctype="multipart/form-data" method="post" name="customtemplate">');
+	   		$("#uploadcustomform").append('<span id="templatefilespan"><span class="btn btn-default"><input id="templatefileinput" type="file" name="templatefileinput[]" required/></span>
+						<input type="submit" value="Upload" class="btn btn-default"></span>');
+	   }
+			
 	});
 
 	$(document).on('submit', '#choosecomparerform', function (e) {
