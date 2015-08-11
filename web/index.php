@@ -37,7 +37,6 @@
         <!-- Add your site or application content here -->
         <div id='shield'>
         </div>
-        <section id="content" class="clearfix">
 	        <header class="clearfix">
 	        	<?php
 	        		session_start();
@@ -52,7 +51,8 @@
 	        	
 	        	
 	        </header>
-	        	
+	   <section id="content" class="clearfix">
+ 	
 	        	<h2 id="grantheader"><?php session_start();
 	        	if (isset($_SESSION['username'])) {
 	        		echo '<span id="firstname">';
