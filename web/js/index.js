@@ -291,19 +291,18 @@ $(document).ready( function () {
 		var sizeOk = true;
 		var problemfile = '';
 		var inp = document.getElementById('templatefileinput');
-		for (i = 0; i < inp.files.length; i++)
-		  {
-		  	if(inp.files[i].size >= 2000000)
-		  	{
-				problemfile = inp.files[i].name;
-				sizeOk = false;
-		  	}
-		  }
+	  	if(inp.files[0].size >= 2000000)
+	  	{
+			problemfile = inp.files[0].name;
+			sizeOk = false;
+	  	}
 		if (sizeOk != true)
 		{
 			alert(problemfile + " is too big. Max size is 2MB");
 			return false;
 		}
+		console.log(inp.files[0].type);
+		
 		var form = document.getElementById('customtemplateform');
 		var form_data = new FormData(form);
 		console.log(form_data);
