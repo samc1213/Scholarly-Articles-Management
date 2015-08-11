@@ -374,5 +374,6 @@ th {
 	background-color: white;
 	border: 2px black solid;
 	z-index: 50;
-	box-shadow: 3px 3px 3px white;
+	box-shadow: 10px 10px 5px white;
+	margin-bottom: 3em;
 }
