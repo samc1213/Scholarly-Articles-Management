@@ -378,7 +378,7 @@ $(document).ready( function () {
 		var compareedescription = $tr.find('td.summary').text();			//do first comparison in this function
 		
 		$("#comparetoform").append('<textarea type="text" rows="2" style="width: 80%;" name="comparison">' + compareedescription + '</textarea>');
-		$("#comparetoform").append('<label for="comparison">' + 'Add a line that shows how <strong>' + grants[0] + '</strong> compares to <strong>' + comparee + '</strong></label>');
+		$("#comparetoform").append('<label for="comparison">' + 'Add a line that shows how <strong>"' + grants[0] + '"</strong> compares to <strong>"' + comparee + '</strong>"</label>');
 		$("#comparetoform").append('<input type="hidden" name="grantname" value="' + comparee + '">' );
 		$("#comparetoform").append('<div><button id="nextcompareebtn" class="btn btn-default">Next Grant</button><div>');
 		
@@ -466,7 +466,7 @@ $(document).ready( function () {
 		var compareedescription = $tr.find('td.summary').text();
 		$(this).find('textarea[name="comparison"]').val(compareedescription);
 
-		$(this).find('label').html('Add a line that shows how <strong>' + grants[0] + '</strong> compares to <strong>' + comparee + '</strong>');
+		$(this).find('label').html('Add a line that shows how <strong>"' + grants[0] + '"</strong> compares to <strong>"' + comparee + '"</strong>');
 	});
 
 	$(document).on('submit', '#downloadform', function(){ 

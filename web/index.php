@@ -39,11 +39,10 @@
         </div>
         <section id="content" class="clearfix">
 	        <header class="clearfix">
-	        	<a href="/"> <img id="mainlogo" src="img/sofilogo.png"/> </a>
-	        	<i class="fa fa-user"></i>
 	        	<?php
 	        		session_start();
 					if (isset($_SESSION['username'])) {
+						echo '<i class="fa fa-user"></i>';
 						echo '<button id="logoutheaderbutton" class="logbutton">Logout</button>';		
 					}
 					else {
@@ -285,17 +284,17 @@
 				       <label class="biglabel" for="spersonmonths">Summer Person Months:</label>
 				       <input type="number" id="spersonmonths" maxlength="3" step="0.01" min="0"/><br><br>
 				       
-				       <label class="biglabel" for="amount">Total Annual Amount:</label>
-				       <span>$</span><input type="text" id="amount"/><br><br>
-				       
-				       <label class="biglabel" for="piamount">Total Annual Amount to PI:</label>
-				       <span>$</span><input type="text" id="piamount"/> <br><br>
-				       
 				       <label class="biglabel" for="totamount">Total Amount:</label>
 				       <span>$</span><input type="text" id="totamount"/> <br><br>
 				       
 				        <label class="biglabel" for="totpiamount">Total Amount to PI:</label>
 				       <span>$</span><input type="text" id="totpiamount"/> <br><br>
+				       
+				       <label class="biglabel" for="amount">Total Annual Amount:</label>
+				       <span>$</span><input type="text" id="amount"/><br><br>
+				       
+				       <label class="biglabel" for="piamount">Total Annual Amount to PI:</label>
+				       <span>$</span><input type="text" id="piamount"/> <br><br>
 				       
 				       <label class="biglabel" for="location">Location:</label>
 				       <input type="text" id="location" class ="wideinput"/> <br><br>
@@ -350,17 +349,17 @@
 				       <label class="biglabel" for="espersonmonths">Summer Person Months:</label>
 				       <input type="number" id="espersonmonths" maxlength="3" step="0.01" min="0"/><br><br>
 				       
-				       <label class="biglabel" for="eamount">Total Annual Amount:</label>
-				       <span>$</span><input type="text" id="eamount"/> <br><br>
-				       
-				       <label class="biglabel" for="epiamount">Total Annual Amount to PI:</label>
-				       <span>$</span><input type="text" id="epiamount"/> <br><br>
-				       
 				       <label class="biglabel" for="etotamount">Total Amount:</label>
 				       <span>$</span><input type="text" id="etotamount"/> <br><br>
 				       
 				       <label class="biglabel" for="totepiamount">Total Amount to PI:</label>
 				       <span>$</span><input type="text" id="etotpiamount"/> <br><br>
+				       
+				       <label class="biglabel" for="eamount">Total Annual Amount:</label>
+				       <span>$</span><input type="text" id="eamount"/> <br><br>
+				       
+				       <label class="biglabel" for="epiamount">Total Annual Amount to PI:</label>
+				       <span>$</span><input type="text" id="epiamount"/> <br><br>
 				       
 				       <label class="biglabel" for="elocation">Location:</label>
 				       <input type="text" id="elocation" class ="wideinput"/> <br><br>

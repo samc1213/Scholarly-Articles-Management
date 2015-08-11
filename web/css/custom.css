@@ -376,3 +376,8 @@ th {
 #newgrantplus {
 	text-shadow: none;
 }
+
+.fa-user {
+	color: white;
+	float: right;
+}
