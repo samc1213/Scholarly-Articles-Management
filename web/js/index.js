@@ -30,6 +30,10 @@ $(document).ready( function () {
 		$("#shield").trigger('click');
 	});
 	
+	$(document).on('click', '.fa-times', function() {
+		$("#shield").trigger('click');
+	});
+	
 	function listfiles(data) {
 		$('#filelist').html(''); //clear out the old filelist first
 		$('#fileerror').html(''); //clear error too
@@ -328,6 +332,7 @@ $(document).ready( function () {
             success: function(php_script_response){
             	console.log(php_script_response);
             	$("#customtemplateform").remove();
+            	$("#comparisonbox").find('p').remove();
             	$("#comparisonbox").append("The new template has been uploaded!");
             }
 		});
