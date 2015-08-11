@@ -381,3 +381,17 @@ th {
 	color: white;
 	float: right;
 }
+
+#wasexample {
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+	margin: 2px solid black;
+}
+
+#cpexample {
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+	margin: 2px solid black;
+}
