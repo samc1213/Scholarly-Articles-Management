@@ -284,8 +284,10 @@ $(document).ready( function () {
 	   else
 	   {
 	   		$("#comparisonbox").append('<form id="customtemplateform" enctype="multipart/form-data" method="post" name="customtemplate">');
-	   		$("#uploadcustomform").append('<span id="templatefilespan"><span class="btn btn-default"><input id="templatefileinput" type="file" name="templatefileinput[]" required/></span>
-						<input type="submit" value="Upload" class="btn btn-default"></span>');
+	   		$("#uploadcustomform").append('<span id="templatefilespan">');
+	   		$("#templatefilespan").append('<span class="btn btn-default" id="templateinputbtn">');
+	   		$("#templateinputbtn").append('<input id="templatefileinput" type="file" name="templatefileinput[]" required/>');
+			$("#templatefilespan").append('<input type="submit" value="Upload" class="btn btn-default">');
 	   }
 			
 	});
