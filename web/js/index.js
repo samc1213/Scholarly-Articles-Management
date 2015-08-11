@@ -334,6 +334,7 @@ $(document).ready( function () {
 				grant.apersonmonths = $tr.find("span.apmonthnum").text();
 				grant.cpersonmonths = $tr.find("span.cpmonthnum").text();
 				grant.spersonmonths = $tr.find("span.spmonthnum").text();
+				grant.awardnumber = $tr.find("td.awardnumber").text();
 				grant.description = comparisons[grants[i]];
 				grant.awardperiod1 = $tr.find("span.fromdate").text();
 				grant.awardperiod2 = $tr.find("span.todate").text();
@@ -415,9 +416,12 @@ $(document).ready( function () {
 				grant.source = $tr.find("td.grantagency").text();
 				grant.amount = $tr.find("span.amountnum").text();
 				grant.piamount = $tr.find("span.piamountnum").text();
+				grant.totamount = $tr.find("span.totamountnum").text();
+				grant.totpiamount = $tr.find("span.totpiamountnum").text();
 				grant.apersonmonths = $tr.find("span.apmonthnum").text();
 				grant.cpersonmonths = $tr.find("span.cpmonthnum").text();
 				grant.spersonmonths = $tr.find("span.spmonthnum").text();
+				grant.awardnumber = $tr.find("td.awardnumber").text();
 				grant.description = comparisons[grants[i]];
 				grant.awardperiod1 = $tr.find("span.fromdate").text();
 				grant.awardperiod2 = $tr.find("span.todate").text();

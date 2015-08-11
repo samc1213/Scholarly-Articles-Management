@@ -78,8 +78,8 @@
 					<h2 align='center'>And generate current and pending forms</h2>
 					<img id='cpexample' src='img/cpexample.png' alt='cpexample' style='display: block;'/>
 					<h2 align='center'>We have templates for: </h2>
-					<a href='http://www.energy.gov/'><img class='templatelogo' src='img/Department-of-Energy.png' alt='DOE logo'/></a>
-					<h2 align='center'><a href='Template Instructions.zip'>And you can create your own!</a></h2>			
+					<img class='templatelogo' src='img/Department-of-Energy.png' alt='DOE logo' href='http://www.energy.gov'/>
+					<h2 align='center'><a href='Template Instructions.zip'>And you can create your own using Microsoft Word!</a></h2>			
 					
 					";
 				}
