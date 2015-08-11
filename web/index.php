@@ -72,10 +72,10 @@
 				}
 				else {
 					echo "
-					<h1 style='text-align: center;'><a href='login.html'>Welcome to the Grant Form Page!</a></h1>
-					<h2>You can manage your grants...<h2>
+					<h1 style='text-align: center;'>Welcome to the Grant Form Page!</h1>
+					<h2 style='text-agign: center;'>You can manage your grants...<h2>
 					<img id='wasexample' src='img/wasielewskiexample.png' alt='examplephoto' style='display: block;'/>
-					<h2>And create current and pending forms</h2>
+					<h2 style='text-agign: center;'>And create current and pending forms</h2>
 					<img id='cpexample' src='img/cpexample.png' alt='cpexample' style='display: block;'/>					
 					
 					";
