@@ -9,7 +9,7 @@
 	$uploadOk = 1;
 	$message = var_dump($_FILES['templatefileinput']['name']);
 	
-	if (0 < $_FILES['fileinput']['error'][0]) {
+	if (0 < $_FILES['templatefileinput']['error'][0]) {
     	$uploadOk = 0;
 		$message = 'Error: '.$_FILES['templatefileinput']['error'][0];
 		echo "error";
