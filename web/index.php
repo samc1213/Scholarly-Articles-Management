@@ -86,7 +86,70 @@
 				
 				?>
 				
-				
+				<div id="editgrantpopup" class="grantpopup">
+					<span class="fa fa-times"></span>
+		        	<h2 id="editgrantheader">Edit Grant</h2>
+		        	<form id="editgrantform">
+		        		<label class="biglabel" for="egrantname">Grant Name:</label>
+				        <input type="text" id="egrantname" class ="wideinput"/> <br><br>
+				        
+				        <label class="biglabel" for="eawardnumber">Award Number:</label>
+				        <input type="text" id="eawardnumber"/> <br><br>
+				        
+		        		<label class="biglabel" for="esource">Source:</label>
+				        <input type="text" id="esource"/>
+				       <br><br>
+				        
+				        <label class="biglabel">Award Period:</label>
+						<label class="sublabel" for="eawardperiod1">From:</label>
+						<input id="eawardperiod1" type="text" class="datepicker"/> 
+						
+						<label class="sublabel" for="eawardperiod2">To:</label>
+						<input id="eawardperiod2" type="text" class="datepicker"/><br><br>
+		      		
+		      			<label class="biglabel" for="estatus">Status:</label>
+						<select id="estatus">
+							<option selected disabled>Choose status</option>
+				        	<option value="Completed">Completed</option>
+				        	<option value="Current">Current</option>
+		    				<option value="Pending">Pending</option>
+		    				<option value="Submission Planned">Submission Planned</option>
+		    				<option value="Transfer of Support">Transfer of Support</option>
+				       </select> <br><br>
+				       
+				       <label class="biglabel" for="eapersonmonths">Academic Person Months:</label>
+				       <input type="number" id="eapersonmonths" maxlength="3" step="0.01" min="0"/> <br><br>
+				       
+				       <label class="biglabel" for="ecpersonmonths">Calendar Person Months:</label>
+				       <input type="number" id="ecpersonmonths" maxlength="3" step="0.01" min="0"/><br><br>
+				       
+				       <label class="biglabel" for="espersonmonths">Summer Person Months:</label>
+				       <input type="number" id="espersonmonths" maxlength="3" step="0.01" min="0"/><br><br>
+				       
+				       <label class="biglabel" for="etotamount">Total Amount:</label>
+				       <span>$</span><input type="text" id="etotamount"/> <br><br>
+				       
+				       <label class="biglabel" for="totepiamount">Total Amount to PI:</label>
+				       <span>$</span><input type="text" id="etotpiamount"/> <br><br>
+				       
+				       <label class="biglabel" for="eamount">Total Annual Amount:</label>
+				       <span>$</span><input type="text" id="eamount"/> <br><br>
+				       
+				       <label class="biglabel" for="epiamount">Total Annual Amount to PI:</label>
+				       <span>$</span><input type="text" id="epiamount"/> <br><br>
+				       
+				       <label class="biglabel" for="elocation">Location:</label>
+				       <input type="text" id="elocation" class ="wideinput"/> <br><br>
+				       
+				       <label class="biglabel" for="edescription">Description:</label>
+				       <textarea type="text" rows="4" id="edescription" class ="wideinput"></textarea> <br><br>
+				       
+				       <span id="editgranterror"></span> 
+				       
+				       <button style="margin-bottom: 1em;" class="btn btn-default">Save</button>
+						
+		        	</form>
+					</div>
 				
 	        	<section id="grants">
 	        			<?php
@@ -353,70 +416,7 @@
 		        	</form>
 					</div>
 					
-					<div id="editgrantpopup" class="grantpopup">
-					<span class="fa fa-times"></span>
-		        	<h2 id="editgrantheader">Edit Grant</h2>
-		        	<form id="editgrantform">
-		        		<label class="biglabel" for="egrantname">Grant Name:</label>
-				        <input type="text" id="egrantname" class ="wideinput"/> <br><br>
-				        
-				        <label class="biglabel" for="eawardnumber">Award Number:</label>
-				        <input type="text" id="eawardnumber"/> <br><br>
-				        
-		        		<label class="biglabel" for="esource">Source:</label>
-				        <input type="text" id="esource"/>
-				       <br><br>
-				        
-				        <label class="biglabel">Award Period:</label>
-						<label class="sublabel" for="eawardperiod1">From:</label>
-						<input id="eawardperiod1" type="text" class="datepicker"/> 
-						
-						<label class="sublabel" for="eawardperiod2">To:</label>
-						<input id="eawardperiod2" type="text" class="datepicker"/><br><br>
-		      		
-		      			<label class="biglabel" for="estatus">Status:</label>
-						<select id="estatus">
-							<option selected disabled>Choose status</option>
-				        	<option value="Completed">Completed</option>
-				        	<option value="Current">Current</option>
-		    				<option value="Pending">Pending</option>
-		    				<option value="Submission Planned">Submission Planned</option>
-		    				<option value="Transfer of Support">Transfer of Support</option>
-				       </select> <br><br>
-				       
-				       <label class="biglabel" for="eapersonmonths">Academic Person Months:</label>
-				       <input type="number" id="eapersonmonths" maxlength="3" step="0.01" min="0"/> <br><br>
-				       
-				       <label class="biglabel" for="ecpersonmonths">Calendar Person Months:</label>
-				       <input type="number" id="ecpersonmonths" maxlength="3" step="0.01" min="0"/><br><br>
-				       
-				       <label class="biglabel" for="espersonmonths">Summer Person Months:</label>
-				       <input type="number" id="espersonmonths" maxlength="3" step="0.01" min="0"/><br><br>
-				       
-				       <label class="biglabel" for="etotamount">Total Amount:</label>
-				       <span>$</span><input type="text" id="etotamount"/> <br><br>
-				       
-				       <label class="biglabel" for="totepiamount">Total Amount to PI:</label>
-				       <span>$</span><input type="text" id="etotpiamount"/> <br><br>
-				       
-				       <label class="biglabel" for="eamount">Total Annual Amount:</label>
-				       <span>$</span><input type="text" id="eamount"/> <br><br>
-				       
-				       <label class="biglabel" for="epiamount">Total Annual Amount to PI:</label>
-				       <span>$</span><input type="text" id="epiamount"/> <br><br>
-				       
-				       <label class="biglabel" for="elocation">Location:</label>
-				       <input type="text" id="elocation" class ="wideinput"/> <br><br>
-				       
-				       <label class="biglabel" for="edescription">Description:</label>
-				       <textarea type="text" rows="4" id="edescription" class ="wideinput"></textarea> <br><br>
-				       
-				       <span id="editgranterror"></span> 
-				       
-				       <button style="margin-bottom: 1em;" class="btn btn-default">Save</button>
-						
-		        	</form>
-					</div>
+					
 
         </section>
         <!-- ^ end of content section -->
