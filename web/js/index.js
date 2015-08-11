@@ -291,7 +291,7 @@ $(document).ready( function () {
 		$('.filewaiter').show();
 		var sizeOk = true;
 		var problemfile = '';
-		var inp = document.getElementById('fileinput');
+		var inp = document.getElementById('templatefileinput');
 		for (i = 0; i < inp.files.length; i++)
 		  {
 		  	if(inp.files[i].size >= 2000000)
