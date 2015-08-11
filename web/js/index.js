@@ -736,9 +736,9 @@ $(document).ready( function () {
 		
 		$('#shield').show();
 		
-		$('html, body').animate({
-	        scrollTop: $("#editgrantpopup").offset().top
-	    }, 1000);	
+		// $('html, body').animate({
+	        // scrollTop: $("#editgrantpopup").offset().top
+	    // }, 1000);	
 	});//end edit click
 	
 	$(".deletebtn").click( function (e) {

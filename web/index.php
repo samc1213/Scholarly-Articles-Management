@@ -319,7 +319,7 @@
 	        	<?php
 	        	session_start();
 	        	if (isset($_SESSION['username'])) {
-	        		echo '<button id="newgrantbutton" class="btn btn-default"><i class="fa fa-plus-square" id="newgrantplus"></i> Add another grant</button>';
+	        		echo '<div><button id="newgrantbutton" class="btn btn-default"><i class="fa fa-plus-square" id="newgrantplus"></i> Add another grant</button></div>';
 				}?>
 	
 	        	

@@ -23,7 +23,6 @@ label {
 header {
 	background-color: rgba(0, 0, 0, 0.8);
 	height: 2.5em;
-	position: fixed;
 	width: 100%;
 }
 
@@ -204,6 +203,8 @@ header {
 	width: 90%;
 	margin-left: auto;
 	margin-right: auto;
+	left: 0;
+	right: 0;
 	border: solid black 2px;
 	position: absolute;
 }
