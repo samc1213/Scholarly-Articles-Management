@@ -254,7 +254,6 @@ $(document).ready( function () {
 
 	$(document).on('submit', '#choosesourceform', function (e) {
 		e.preventDefault();
-		$(this).remove();
 		if($("#sourceselect").val() != 'New Custom Form')
 		{
 			$("#comparisonbox").append('<form id="choosecomparerform">');
@@ -289,6 +288,8 @@ $(document).ready( function () {
 	   		$("#templateinputbtn").append('<input id="templatefileinput" type="file" name="templatefileinput[]" required/>');
 			$("#templatefilespan").append('<input type="submit" value="Upload" class="btn btn-default">');
 	   }
+	   $(this).remove();
+
 			
 	});
 
