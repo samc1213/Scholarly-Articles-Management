@@ -248,6 +248,13 @@ td {
 
 }
 
+#deleteconfirmbox {
+	text-align: center;
+	padding-top: 2em;
+	padding-bottom: 2em;
+	display: none;
+}
+
 #filestorebox {
 	width: 90%;
 	margin-left: auto;
@@ -380,5 +387,6 @@ th {
 	right: 0;
 	top: 11em;
 	background-color: white;
-	border: 2px solid black;
+	border: 2px black solid;
+	z-index: 50;
 }
