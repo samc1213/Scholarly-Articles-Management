@@ -169,7 +169,7 @@
 								}
 								
 								else {
-									echo '<div id="newcpdiv"><button class="btn btn-default" id="newcpform">Create New C&P Form</button></div>
+									echo '<div id="newcpdiv" class="popup"><button class="btn btn-default" id="newcpform">Create New C&P Form</button></div>
 ';
 								}
 								
