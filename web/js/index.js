@@ -289,6 +289,7 @@ $(document).ready( function () {
 	$(document).on('submit', '#customtemplateform', function (e) {
 		e.preventDefault();
 		var sizeOk = true;
+		var typeOk = true;
 		var problemfile = '';
 		var inp = document.getElementById('templatefileinput');
 	  	if(inp.files[0].size >= 2000000)
@@ -301,7 +302,16 @@ $(document).ready( function () {
 			alert(problemfile + " is too big. Max size is 2MB");
 			return false;
 		}
-		console.log(inp.files[0].type);
+		if(inp.files[0].type != 'application/vnd.openxmlformats-officedocument.wordprocessingml.document')
+		{
+			typeOk = false;
+			problemfile = inp.files[0].name;
+		}
+		if (typeOk != true)
+		{
+			alert(problemfile + " is the wrong type. Must be .docx");
+			return false;
+		}
 		
 		var form = document.getElementById('customtemplateform');
 		var form_data = new FormData(form);
