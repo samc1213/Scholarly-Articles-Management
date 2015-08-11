@@ -235,6 +235,7 @@ $(document).ready( function () {
 		$('#shield').show();
 		$("#newgrantbutton").hide();
 	    $("#comparisonbox").html('');
+	    $("#comparisonbox").append('<span class="fa fa-times negmarg">');
 	    $("#comparisonbox").append('<h2>New C&P Form</h2>');
     	$("#comparisonbox").append('<form id="choosesourceform">');
     	$("#choosesourceform").append('<label for ="sourceformselect">Which form would you like to use?</label>');
@@ -326,6 +327,8 @@ $(document).ready( function () {
             type: 'POST',
             success: function(php_script_response){
             	console.log(php_script_response);
+            	$("#customtemplateform").remove();
+            	$("#comparisonbox").append("The new template has been uploaded!");
             }
 		});
 	});
