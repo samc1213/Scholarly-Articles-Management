@@ -207,7 +207,9 @@ table {
 	margin-right: auto;
 	left: 0;
 	right: 0;
-	border: solid black 2px;
+	border-top: solid black 2px;
+	border-right: solid black 2px;
+	border-bottom: solid black 2px;
 }
 
 td {
@@ -433,6 +435,7 @@ th {
 
 .granttitle {
 	border-right: 2px solid black;
+	border-left: 2px solid black;
 }
 
 #titleth {
@@ -441,6 +444,7 @@ th {
 
 #spacerbody {
 	display: block;
+	width: 90%;
 	height: 4em;
 	border-top: 2px solid black;
 	border-bottom: 2px solid black;
