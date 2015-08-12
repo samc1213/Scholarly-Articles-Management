@@ -385,3 +385,7 @@ th {
 	box-shadow: 10px 10px 5px rgba(255, 255, 255, 0.4);
 	margin-bottom: 3em;
 }
+
+.actionth {
+	width: 7em;
+  }

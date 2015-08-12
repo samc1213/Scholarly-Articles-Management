@@ -2,6 +2,9 @@ $.expr[':'].textEquals = function(a, i, m) {
 return $(a).text().match("^" + m[3] + "$");
 };
 
+$(window).load( function () {
+	window.scrollTo(0,0);
+});
 
 $.tablesorter.addParser({ 
     // set a unique id 
