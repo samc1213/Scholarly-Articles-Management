@@ -258,6 +258,11 @@ $(document).ready( function () {
             async: false,
          });
         templatearray = templatearray.sort();
+        for (i = 0; i < templatearray.length; i++)
+       	{
+       		var n = templatearray[i].lastIndexOf('/');
+       		templatearray[i] = templatearray[i].substring(n + 1);
+       	}
         templatearray.push('DOE');
         templatearray.push('New Custom Form');
     	$.each(templatearray, function (i, v) {
