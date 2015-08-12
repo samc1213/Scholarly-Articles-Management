@@ -395,10 +395,9 @@ th {
 	position: relative;
 	z-index: 50;
 	top: 50%;
-	transform: translate(0%, -50%);
 	border: 2px solid black;
 	background-color: white;
-	width: 30%;
+	width: 10em;
 	box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.4);
 	display:none;
 }
