@@ -244,7 +244,19 @@ $(document).ready( function () {
     	$("#comparisonbox").append('<form id="choosesourceform">');
     	$("#choosesourceform").append('<label for ="sourceformselect">Which form would you like to use?</label>');
     	$("#choosesourceform").append('<select id="sourceselect">');
-    	$.each(['DOE', 'New Custom Form'], function (i, v) {
+    	var templates = [];
+    	$.ajax({
+    		url: 'api.php', // point to server-side PHP script 
+            dataType: 'text',  // what to expect back from the PHP script, if anything                        
+            type: 'POST',
+            data: {
+            	type: 'gettemplates',
+            },
+            success: function(data){
+            	templatearray = JSON.parse(data);
+            },
+         });
+    	$.each(templatearray, function (i, v) {
     		$("#sourceselect").append('<option value ="' + v + '">' + v + '</option>');
     	});
     	$("#choosesourceform").append('<div><button id="choosesourcebtn" class="btn btn-default">Next</button></div>');

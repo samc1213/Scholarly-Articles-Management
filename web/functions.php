@@ -256,4 +256,19 @@
 			
 			echo $result;	
 		}
+		function getTemplates($user) {
+			require('../vendor/autoload.php');
+			$prefixstr = $user.'/';
+			
+			$s3 = Aws\S3\S3Client::factory();
+			
+			$filenamearray = array();
+			
+			$objects = $s3->getIterator('ListObjects', array('Bucket' => 'cpgrantstemplates', 'Prefix' => $prefixstr));
+			foreach ($objects as $object) {
+				array_push($filenamearray, $object['Key']);
+			}
+			echo json_encode($filenamearray);
+			
+		}
 	?>

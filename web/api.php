@@ -74,4 +74,9 @@
 		session_start();
 		echo downloadFile($_SESSION['username'], $_POST['grantname'], $_POST['filename']);
 	}
+
+	else if ($_POST['type'] == 'gettemplates') {
+		session_start();
+		echo getTemplates($_SESSION['username']);
+	}
 ?>
