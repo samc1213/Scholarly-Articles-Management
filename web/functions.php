@@ -202,13 +202,13 @@
 		
 		
 		// function download($message, $jsondata) {
-		function generateDoc($data, $id) {							
+		function generateDoc($data, $id, $template, $user) {							
 			try {
 				$str = "https://morning-bastion-4519.herokuapp.com/jobs";
 							
 				$ch = curl_init();
 				
-				$fields = array("id" => $id, "data" => $data);
+				$fields = array("id" => $id, "data" => $data, "template" => $template, "user" => $user);
 				echo $id;				
 				curl_setopt($ch, CURLOPT_URL, $str);
 				curl_setopt($ch, CURLOPT_POST, true);

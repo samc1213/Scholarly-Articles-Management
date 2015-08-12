@@ -52,7 +52,8 @@
 	}
 	
 	else if ($_POST['type'] == "download") {
-		echo generateDoc($_POST['data'], $_POST['id']);
+		session_start();
+		echo generateDoc($_POST['data'], $_POST['id'], $_POST['template'], $_SESSION['username']);
 	}
 	
 	else if ($_POST['type'] == "deletegrant") {

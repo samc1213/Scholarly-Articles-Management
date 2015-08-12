@@ -257,6 +257,9 @@ $(document).ready( function () {
             },
             async: false,
          });
+        templatearray = templatearray.sort();
+        templatearray.push('DOE');
+        templatearray.push('New Custom Form');
     	$.each(templatearray, function (i, v) {
     		$("#sourceselect").append('<option value ="' + v + '">' + v + '</option>');
     	});
@@ -265,7 +268,8 @@ $(document).ready( function () {
 
 	$(document).on('submit', '#choosesourceform', function (e) {
 		e.preventDefault();
-		if($("#sourceselect").val() != 'New Custom Form')
+		templatesource = $("#sourceselect").val();
+		if(templatesource != 'New Custom Form')
 		{
 			$("#comparisonbox").append('<form id="choosecomparerform">');
 		    $("#choosecomparerform").append('<label for="comparergrantselect">Which grant are you generating the C&P form for?</label>');
@@ -425,6 +429,7 @@ $(document).ready( function () {
 						type: "download",
 						data: jsondata,
 						id: id,
+						template: templatesource,
 					},
 					success: function(data)
 					{
@@ -512,6 +517,7 @@ $(document).ready( function () {
 						type: "download",
 						data: jsondata,
 						id: id,
+						template: templatesource,
 					},
 					success: function(data)
 					{
