@@ -439,55 +439,7 @@ th {
 	border-right: 2px solid black;
 }
 
-#completedtable {
-	margin-top 4em;
-}
-
-#maintable {
-	margin-bottom: 3em;
-}
-
-.titlecol {
-	width: 10%;
-}
-
-.agencycol {
-	width: 10%;
-}
-
-.amountcol {
-	width: 10%;
-}
-
-.piamountcol {
-	width: 10%;
-}
-
-.pmonthscol {
-	width: 10%;
-}
-
-.fromcol {
-	width: 10%;
-}
-
-.tocol {
-	width: 10%;
-}
-
-.locationcol {
-	width: 10%;
-}
-
-.statuscol {
-	width: 10%;
-}
-
-.modifiedcol {
-	width: 10%;
-}
-
-.actionscol {
-	width: 10%;
+#spacertr {
+	height: 4em;
 }
 

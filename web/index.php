@@ -204,23 +204,7 @@
 									}
 									$count = $count + 1;
 								}
-							echo '</tbody></table>';
-							echo '<table id="completedtable">
-							<thead><tr>
-								<th data-sort="string" class="teamSelector" id="titleth" class="titlecol">Title</th>
-								<th data-sort="string" class="teamSelector" style="display:none;" class="awardcol">Award Number</th>
-								<th data-sort="string" class="teamSelector" class="agencycol">Agency</th>
-								<th data-sort="float" class="sorter-currency teamSelector" class="amountcol">Amount</th>
-								<th data-sort="float" class="sorter-currency teamSelector" class="piamountcol">Amount to PI</th>
-								<th data-sort="float" class="teamSelector" class="pmonthscol">Person Months</th>
-								<th data-sort="int" class="teamSelector" class="fromcol">From</th>
-								<th data-sort="int" class="teamSelector" class="tocol">To</th>
-								<th data-sort="string" class="teamSelector" class="locationcol">Location</th>
-								<th data-sort="string" class="teamSelector" class="statuscol">Status</th>
-								<th data-sort="float" class="teamSelector" style="display: none;" class="summarycol">Summary</th>
-								<th data-sort="int" class="teamSelector" style="border-right: 2px solid black;" class="modifiedcol">Modified</th>	
-								<th colspan="3" style="border-right: 2px solid black;" class="actionscol">Actions</th>										
-								</tr style="border-right: 2px solid black;"></thead><tbody>';
+								echo '<tr id="spacertr"></tr>';
 								foreach ($completedarray as $dict)
 								{
 									echo listTableElements($dict['grant'], $dict['count']);
