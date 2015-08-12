@@ -242,6 +242,7 @@ $(document).ready( function () {
 		$("#customtemplateform").remove();
 		$("#comparetoform").remove();
 		$("#templateuploadmsg").remove();
+		$("#choosesourceform").remove();
 		$("#comparisonbox").append('<form id="choosesourceform">');
 		$("#choosesourceform").append('<select id="sourceselect">');
     	var templates = [];
