@@ -300,6 +300,16 @@ td {
 
 th {
 	text-align: center;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+.granttitle {
+	border-right: 2px solid black;
+}
+
+#titleth {
+	border-right: 2px solid black;
 }
 
 #filesubmit {

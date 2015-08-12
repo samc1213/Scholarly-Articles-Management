@@ -175,7 +175,7 @@
 								
 								echo '<table id="maintable" border="1">';
 								echo '<thead><tr>
-								<th data-sort="string" class="teamSelector">Title</th>
+								<th data-sort="string" class="teamSelector" id="titleth">Title</th>
 								<th data-sort="string" class="teamSelector" style="display:none;">Award Number</th>
 								<th data-sort="string" class="teamSelector">Agency</th>
 								<th data-sort="float" class="sorter-currency teamSelector">Amount</th>
