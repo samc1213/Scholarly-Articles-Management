@@ -587,7 +587,7 @@ $(document).ready( function () {
 		var comparee = grants[grantcount];
 		$(this).find('input[name="grantname"]').val(comparee); //prepare for next submission
 		
-		$gtitle = $(document).find('.granttitle:t("' + comparee + '")');
+		$gtitle = $(document).find('.granttitle:textEquals("' + comparee + '")');
 		$tr = $gtitle.closest('tr');
 		var compareedescription = $tr.find('td.summary').text();
 		$(this).find('textarea[name="comparison"]').val(compareedescription);
