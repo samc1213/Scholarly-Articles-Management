@@ -439,7 +439,7 @@
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 		<script src="js/index.js"></script>
-		<script>$("th, td").iWouldLikeToAbsolutelyPositionThingsInsideOfFrickingTableCellsPlease();</script>
+		<script>$(".grantagency").iWouldLikeToAbsolutelyPositionThingsInsideOfFrickingTableCellsPlease();</script>
 
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
