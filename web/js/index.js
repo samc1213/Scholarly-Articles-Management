@@ -238,13 +238,9 @@ $(document).ready( function () {
 		var h = $(window).height();
 		$('#shield').show();
 		$("#newgrantbutton").hide();
-	    $("#comparisonbox").html('');
-	    $("#comparisonbox").append('<img id="cpformwaiter" src="img/ajax-loader.gif"/>');
-	    $("#comparisonbox").append('<span class="fa fa-times negmarg">');
-	    $("#comparisonbox").append('<h2>New C&P Form</h2>');
-    	$("#comparisonbox").append('<form id="choosesourceform">');
-    	$("#choosesourceform").append('<label for ="sourceformselect">Which form would you like to use?</label>');
-    	$("#choosesourceform").append('<select id="sourceselect">');
+		$("#choosecomparerform").remove();
+		$("#customtemplateform").remove();
+		$("#comparetoform").remove();
     	var templates = [];
     	$.ajax({
     		url: 'api.php', // point to server-side PHP script 
@@ -392,7 +388,7 @@ $(document).ready( function () {
 		{
 			$("#comparetoform").remove();
 			$("#choosecomparerform").remove();
-			$("#cpformwaiter").show();
+			$(".waiter").show();
 			var data = [];
 			for (i= 0; i<grants.length; i++) {
 				$gtitle = $(document).find('.granttitle:contains("' + grants[i] + '")');
@@ -480,7 +476,7 @@ $(document).ready( function () {
 		if (grantcount == grants.length-1)		//on submit, check if we've compared every grant, if so, submit to API
 		{
 			$("#comparetoform").remove();
-			$("#cpformwaiter").show();
+			$(".waiter").show();
 			var data = [];
 			for (i= 0; i<grants.length; i++) {
 				$gtitle = $(document).find('.granttitle:contains("' + grants[i] + '")');
@@ -529,7 +525,7 @@ $(document).ready( function () {
 					{
 						console.log("data: " + data);
 						console.log("id: " + id);
-						if ($("#cpformwaiter").is(":visible")) {		//make sure waiter is there in case someone gets bored and closes box before ajax callback
+						if ($(".waiter").is(":visible")) {		//make sure waiter is there in case someone gets bored and closes box before ajax callback
 							$("#comparisonbox").append("<form action='download.php' method='post' id='downloadform'><input name='id' value='" + id + "' type='hidden'/><input name='filename' value='" + grants[0] + " C&P Form' type='hidden'/><button type='submit' class='btn btn-default'>Download The File!</button></form>");
 						} 
 							$("#cpformwaiter").hide();

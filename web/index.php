@@ -326,7 +326,7 @@
 				<div id="comparisonbox" style="display: none;" class="popup">
 					<span class="fa fa-times negmarg"></span>
 					<h2>New C&P Form</h2>
-					<img id="cpformwaiter" src="img/ajax-loader.gif"/>
+					<img class="waiter" src="img/ajax-loader.gif"/>
 				</div>
 				
 				<div id="deleteconfirmbox" class="popup">
