@@ -176,7 +176,6 @@
 								echo '<table id="maintable" border="1">';
 								echo '<thead><tr>
 								<th data-sort="string" class="teamSelector">Title</th>
-								<th data-sort="string" class="teamSelector">Status</th>
 								<th data-sort="string" class="teamSelector" style="display:none;">Award Number</th>
 								<th data-sort="string" class="teamSelector">Agency</th>
 								<th data-sort="float" class="sorter-currency teamSelector">Amount</th>
@@ -185,6 +184,7 @@
 								<th data-sort="int" class="teamSelector">From</th>
 								<th data-sort="int" class="teamSelector">To</th>
 								<th data-sort="string" class="teamSelector">Location</th>
+								<th data-sort="string" class="teamSelector">Status</th>
 								<th data-sort="float" class="teamSelector" style="display: none;">Summary</th>
 								<th data-sort="int" class="teamSelector">Modified</th>
 								<th>Edit</th>					
@@ -207,7 +207,7 @@
 									$apmonths = $grant['apersonmonths'];
 									if ($apmonths != '')
 									{
-										$alabel = ' Academic ';
+										$alabel = '&nbsp;Academic ';
 									}
 									else
 									{
@@ -216,7 +216,7 @@
 									$cpmonths = $grant['cpersonmonths'];
 									if ($cpmonths != '')
 									{
-										$clabel = ' Calendar ';
+										$clabel = '&nbsp;Calendar ';
 									}
 									else
 									{
@@ -225,7 +225,7 @@
 									$spmonths = $grant['spersonmonths'];
 									if ($spmonths != '')
 									{
-										$slabel = ' Summer';
+										$slabel = '&nbsp;Summer';
 									}
 									else
 									{
@@ -279,8 +279,6 @@
 										$amountlabel = ' (Annual) ';
 									}
 									
-									
-									echo '<td class="status">'.$status.'</span></td>';
 									echo '<td class="awardnumber" style="display:none;">'.$awardnumber.'</td>';
 									echo '<td class="grantagency">'.$agency.'</td>';
 									echo '<td class="amount"><span class = "amountdol">'.$amountdol.'</span><span class="amountnum">'.$amount.'</span>'.$amountlabel.'<span class="totamountdol">'.$totamountdol.'</span><span class="totamountnum">'.$totamount.'</span>'.$totamountlabel.'</td>';
@@ -289,6 +287,7 @@
 									echo '<td class="from"><span class="fromdate">'.$fromdate.'</span></td>';
 									echo '<td class="to"><span class="todate">'.$todate.'</span></td>';
 									echo '<td class = "location"><span class="locationval">'.$location.'</span></td>';
+									echo '<td class="status">'.$status.'</span></td>';
 									echo '<td class="summary" style="display: none;">'.$summary.'</td>';
 									echo '<td class="edited">'.$edited.'</td>';
 									echo '<td class="edittd"><div class="editbtn teamSelector" style="padding: 0;" id="editbtn';
