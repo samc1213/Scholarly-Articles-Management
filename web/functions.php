@@ -273,6 +273,7 @@
 		}
 		
 		function listTableElements($grant, $count) {
+			$status = $grant['status'];
 			$awardnumber = $grant['awardnumber'];
 			$agency = $grant['source'];
 			$apmonths = $grant['apersonmonths'];

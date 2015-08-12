@@ -208,6 +208,7 @@ table {
 	left: 0;
 	right: 0;
 	border: solid black 2px;
+	table-layout: fixed;
 }
 
 td {
@@ -441,6 +442,10 @@ th {
 
 #completedtable {
 	margin-top 4em;
+}
+
+#maintable {
+	margin-bottom: 3em;
 }
 
 
