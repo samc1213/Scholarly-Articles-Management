@@ -398,10 +398,13 @@ th {
 	transform: translate(0%, -50%);
 	border: 2px solid black;
 	background-color: white;
-	width: 10em;
+	width: 20em;
 	box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.4);
 	display:none;
 }
 
-#agencyinnerdiv {
+.grantagencyval {
+	position: absolute;
+	top: 50%;
+	transform: translate(0%, -50%);
 }
