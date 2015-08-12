@@ -6,6 +6,22 @@ $(window).load( function () {
 	window.scrollTo(0,0);
 });
 
+$.fn.iWouldLikeToAbsolutelyPositionThingsInsideOfFrickingTableCellsPlease = function() {
+    var $el;
+    return this.each(function() {
+    	$el = $(this);
+    	var newDiv = $("<div />", {
+    		"class": "innerWrapper",
+    		"css"  : {
+    			"height"  : $el.height(),
+    			"width"   : "100%",
+    			"position": "relative"
+    		}
+    	});
+    	$el.wrapInner(newDiv);    
+    });
+};
+
 $(".granttitle").hover(
 	function () {
 		var grantnum = $(this).closest('tr').attr('id').substr(5);
