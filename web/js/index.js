@@ -255,6 +255,7 @@ $(document).ready( function () {
             success: function(data){
             	templatearray = JSON.parse(data);
             },
+            async: false,
          });
     	$.each(templatearray, function (i, v) {
     		$("#sourceselect").append('<option value ="' + v + '">' + v + '</option>');
