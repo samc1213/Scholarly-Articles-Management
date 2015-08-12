@@ -189,136 +189,32 @@
 								<th data-sort="int" class="teamSelector" style="border-right: 2px solid black;">Modified</th>	
 								<th colspan="3" style="border-right: 2px solid black;">Actions</th>										
 								</tr style="border-right: 2px solid black;"></thead> <tbody>';
-																
-								foreach ($grants as $grant) {
-									echo '<tr id="grant';
-									echo $count;
-									echo '" class="grant">';
-									
-									echo '<td class="granttitle">';
-									echo $grant['name'];
-									echo '</td>';
-
-									$awardnumber = $grant['awardnumber'];																
+								
+								$completedarray = array();
+														
+								foreach ($grants as $grant) {																								
 									$status = $grant['status'];
-									$agency = $grant['source'];
-									$apmonths = $grant['apersonmonths'];
-									if ($apmonths != '')
+									if ($status != 'Completed')
 									{
-										$alabel = '&nbsp;Academic ';
-									}
-									else
-									{
-										$alabel = '';
-									}
-									$cpmonths = $grant['cpersonmonths'];
-									if ($cpmonths != '')
-									{
-										$clabel = '&nbsp;Calendar ';
-									}
-									else
-									{
-										$clabel = '';
-									}
-									$spmonths = $grant['spersonmonths'];
-									if ($spmonths != '')
-									{
-										$slabel = '&nbsp;Summer';
-									}
-									else
-									{
-										$slabel = '';
-									}
-									$summary = $grant['description'];
-									$fromdate = $grant['awardperiod1'];
-									$todate = $grant['awardperiod2'];
-									$location = $grant['location'];
-									$edited = $grant['edited'];
-									$totamount = $grant['totamount'];
-									$totpiamount = $grant['totpiamount'];
-									$amount = $grant['amount'];
-									$piamount = $grant['piamount'];
-									
-									if ($totamount == '')
-									{
-										$totamountdol = '';
-										$totamountlabel = '';
+										echo listTableElements($grant, $count);
 									}
 									else {
-										$totamountdol = '$';
-										$totamountlabel = ' (Total) ';
+										$dictarray = array('grant' => $grant, 'count' => $count);
+										array_push($completedarray, $dictarray);
 									}
-									if ($totpiamount == '')
-									{
-										$totpiamountdol = '';
-										$totpiamountlabel = '';
-									}
-									else {
-										$totpiamountdol = '$';
-										$totpiamountlabel = ' (Total) ';
-									}
-									
-									if ($piamount == '')
-									{
-										$piamountdol = '';
-										$piamountlabel = '';
-									}
-									else {
-										$piamountdol = '$';
-										$piamountlabel = ' (Annual) ';
-									}
-									if ($amount == '')
-									{
-										$amountdol = '';
-										$amountlabel = '';
-									}
-									else {
-										$amountdol = '$';
-										$amountlabel = ' (Annual) ';
-									}
-									
-									echo '<td class="awardnumber" style="display:none;">'.$awardnumber.'</td>';
-									$descsummary = $summary;
-									if ($descsummary == '')
-									{
-										$descsummary = 'No description added.';
-									}
-									
-									echo '<td class="grantagency"><div class="descdiv" id="descdiv'.$count.'">'.$descsummary.'</div><span class="grantagencyval">'.$agency.'</span></td>';
-									echo '<td class="amount"><span class = "amountdol">'.$amountdol.'</span><span class="amountnum">'.$amount.'</span>'.$amountlabel.'<span class="totamountdol">'.$totamountdol.'</span><span class="totamountnum">'.$totamount.'</span>'.$totamountlabel.'</td>';
-									echo '<td class="piamount"><span class="piamountdol">'.$piamountdol.'</span><span class="piamountnum">'.$piamount.'</span>'.$piamountlabel.'<span class="totpiamountdol">'.$totpiamountdol.'</span><span class="totpiamountnum">'.$totpiamount.'</span>'.$totpiamountlabel.'</td>';
-									echo '<td class="pmonths"><span class="apmonthnum">'.$apmonths.'</span>'.$alabel.'<span class="cpmonthnum">'.$cpmonths.'</span>'.$clabel.'<span class="spmonthnum">'.$spmonths.'</span>'.$slabel.'</td>';
-									echo '<td class="from"><span class="fromdate">'.$fromdate.'</span></td>';
-									echo '<td class="to"><span class="todate">'.$todate.'</span></td>';
-									echo '<td class = "location"><span class="locationval">'.$location.'</span></td>';
-									echo '<td class="status">'.$status.'</span></td>';
-									echo '<td class="summary" style="display: none;">'.$summary.'</td>';
-									echo '<td class="edited">'.$edited.'</td>';
-									echo '<td class="edittd"><div class="editbtn teamSelector" style="padding: 0;" id="editbtn';
-									echo $count;
-									echo '"><i class="fa fa-pencil-square-o"';
-									echo '"></i></div></td>';
-									echo '<td class="deletetd"><div class="deletebtn teamSelector" style="padding: 0;" id="deletebtn';
-									echo $count;
-									echo '"><i class="fa fa-trash-o"';
-									echo '"></i></div></td>';
-									echo '<td class="filestoretd"><div class="filestorebtn teamSelector" style="padding: 0;" id="filestorebtn';
-									echo $count;
-									echo '"><i class="fa fa-folder"';
-									echo '"></i></div></td>';
-									echo '<span class="comparison" style="display:none">';
-									echo '</tr>';
-									
 									$count = $count + 1;
 								}
 							echo '</tbody></table>';
+							echo '<table id="completedtable">';
+								foreach ($completedarray as $dict)
+								{
+									echo listTableElements($dict['grant'], $dict['count']);
+								}
+							echo '</table>';
 																
 							}
-	        			?>
-
+	        			?>				
 	        	</section>
-
-
 	        	<?php
 	        	session_start();
 	        	if (isset($_SESSION['username'])) {

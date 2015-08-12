@@ -271,4 +271,123 @@
 			echo json_encode($filenamearray);
 			
 		}
+		
+		function listTableElements($grant, $count) {
+			$awardnumber = $grant['awardnumber'];
+			$agency = $grant['source'];
+			$apmonths = $grant['apersonmonths'];
+			if ($apmonths != '')
+			{
+				$alabel = '&nbsp;Academic ';
+			}
+			else
+			{
+				$alabel = '';
+			}
+			$cpmonths = $grant['cpersonmonths'];
+			if ($cpmonths != '')
+			{
+				$clabel = '&nbsp;Calendar ';
+			}
+			else
+			{
+				$clabel = '';
+			}
+			$spmonths = $grant['spersonmonths'];
+			if ($spmonths != '')
+			{
+				$slabel = '&nbsp;Summer';
+			}
+			else
+			{
+				$slabel = '';
+			}
+			$summary = $grant['description'];
+			$fromdate = $grant['awardperiod1'];
+			$todate = $grant['awardperiod2'];
+			$location = $grant['location'];
+			$edited = $grant['edited'];
+			$totamount = $grant['totamount'];
+			$totpiamount = $grant['totpiamount'];
+			$amount = $grant['amount'];
+			$piamount = $grant['piamount'];
+			
+			if ($totamount == '')
+			{
+				$totamountdol = '';
+				$totamountlabel = '';
+			}
+			else {
+				$totamountdol = '$';
+				$totamountlabel = ' (Total) ';
+			}
+			if ($totpiamount == '')
+			{
+				$totpiamountdol = '';
+				$totpiamountlabel = '';
+			}
+			else {
+				$totpiamountdol = '$';
+				$totpiamountlabel = ' (Total) ';
+			}
+			
+			if ($piamount == '')
+			{
+				$piamountdol = '';
+				$piamountlabel = '';
+			}
+			else {
+				$piamountdol = '$';
+				$piamountlabel = ' (Annual) ';
+			}
+			if ($amount == '')
+			{
+				$amountdol = '';
+				$amountlabel = '';
+			}
+			else {
+				$amountdol = '$';
+				$amountlabel = ' (Annual) ';
+			}
+			
+			echo '<tr id="grant';
+			echo $count;
+			echo '" class="grant">';
+			
+			echo '<td class="granttitle">';
+			echo $grant['name'];
+			echo '</td>';
+			
+			echo '<td class="awardnumber" style="display:none;">'.$awardnumber.'</td>';
+			$descsummary = $summary;
+			if ($descsummary == '')
+			{
+				$descsummary = 'No description added.';
+			}
+			
+			echo '<td class="grantagency"><div class="descdiv" id="descdiv'.$count.'">'.$descsummary.'</div><span class="grantagencyval">'.$agency.'</span></td>';
+			echo '<td class="amount"><span class = "amountdol">'.$amountdol.'</span><span class="amountnum">'.$amount.'</span>'.$amountlabel.'<span class="totamountdol">'.$totamountdol.'</span><span class="totamountnum">'.$totamount.'</span>'.$totamountlabel.'</td>';
+			echo '<td class="piamount"><span class="piamountdol">'.$piamountdol.'</span><span class="piamountnum">'.$piamount.'</span>'.$piamountlabel.'<span class="totpiamountdol">'.$totpiamountdol.'</span><span class="totpiamountnum">'.$totpiamount.'</span>'.$totpiamountlabel.'</td>';
+			echo '<td class="pmonths"><span class="apmonthnum">'.$apmonths.'</span>'.$alabel.'<span class="cpmonthnum">'.$cpmonths.'</span>'.$clabel.'<span class="spmonthnum">'.$spmonths.'</span>'.$slabel.'</td>';
+			echo '<td class="from"><span class="fromdate">'.$fromdate.'</span></td>';
+			echo '<td class="to"><span class="todate">'.$todate.'</span></td>';
+			echo '<td class = "location"><span class="locationval">'.$location.'</span></td>';
+			echo '<td class="status">'.$status.'</span></td>';
+			echo '<td class="summary" style="display: none;">'.$summary.'</td>';
+			echo '<td class="edited">'.$edited.'</td>';
+			echo '<td class="edittd"><div class="editbtn teamSelector" style="padding: 0;" id="editbtn';
+			echo $count;
+			echo '"><i class="fa fa-pencil-square-o"';
+			echo '"></i></div></td>';
+			echo '<td class="deletetd"><div class="deletebtn teamSelector" style="padding: 0;" id="deletebtn';
+			echo $count;
+			echo '"><i class="fa fa-trash-o"';
+			echo '"></i></div></td>';
+			echo '<td class="filestoretd"><div class="filestorebtn teamSelector" style="padding: 0;" id="filestorebtn';
+			echo $count;
+			echo '"><i class="fa fa-folder"';
+			echo '"></i></div></td>';
+			echo '<span class="comparison" style="display:none">';
+			echo '</tr>';
+		}
 	?>
