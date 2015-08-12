@@ -187,7 +187,7 @@
 								<th data-sort="string" class="teamSelector">Status</th>
 								<th data-sort="float" class="teamSelector" style="display: none;">Summary</th>
 								<th data-sort="int" class="teamSelector" style="border-right: 2px solid black;">Modified</th>	
-								<th>Actions</th>										
+								<th colspan="3" style="border-right: 2px solid black;">Actions</th>										
 								</tr style="border-right: 2px solid black;"></thead> <tbody>';
 																
 								foreach ($grants as $grant) {

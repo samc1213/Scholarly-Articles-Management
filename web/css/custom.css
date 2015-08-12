@@ -305,13 +305,6 @@ th {
 	border-bottom: 2px solid black;
 }
 
-.granttitle {
-	border-right: 2px solid black;
-}
-
-#titleth {
-	border-right: 2px solid black;
-}
 
 #filesubmit {
 	text-align: center;
@@ -419,6 +412,8 @@ td {
 th {
 	border-bottom: 2px solid black;
 	border-top: 2px solid black;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
 }
 
 .deletetd {
@@ -439,6 +434,12 @@ th {
 	border-left: 2px solid black;
 }
 
+.granttitle {
+	border-right: 2px solid black;
+}
 
+#titleth {
+	border-right: 2px solid black;
+}
 
 
