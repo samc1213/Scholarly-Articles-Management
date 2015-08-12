@@ -204,9 +204,11 @@
 									}
 									$count = $count + 1;
 								}
-								echo '<tr id="spacertr"></tr>';
+								echo '</tbody><tr id="spacertr"></tr>';
+								echo '<tbody class="avoid-sort">';
 								foreach ($completedarray as $dict)
 								{
+									
 									echo listTableElements($dict['grant'], $dict['count']);
 								}
 							echo '</tbody></table>';
