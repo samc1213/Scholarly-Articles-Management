@@ -411,7 +411,14 @@ th {
 
 #mainttable {
 	border: 2px solid black;
-	border-right: none;
+}
+
+td {
+	border: 1px solid black;
+}
+
+th {
+	border: 2px solid black;
 }
 
 .deletetd {
@@ -439,6 +446,4 @@ th {
 
 
 
-td.edited {
-	
-}
+
