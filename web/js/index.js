@@ -411,11 +411,11 @@ $(document).ready( function () {
 				console.log("tr:");
 				console.log($tr);
 				console.log($tr.find("td.granttitle").text());
-				console.log($tr.find("td.grantagency").text());
+				console.log($tr.find("span.grantagencyval").text());
 				var grant = {};
 				grant.name = $tr.find("td.granttitle").text();
 				grant.status = $tr.find("td.status").text();
-				grant.source = $tr.find("td.grantagency").text();
+				grant.source = $tr.find("span.grantagencyval").text();
 				grant.amount = $tr.find("span.amountnum").text();
 				grant.piamount = $tr.find("span.piamountnum").text();
 				grant.totamount = $tr.find("span.totamountnum").text();
@@ -499,11 +499,11 @@ $(document).ready( function () {
 				console.log("tr:");
 				console.log($tr);
 				console.log($tr.find("td.granttitle").text());
-				console.log($tr.find("td.grantagency").text());
+				console.log($tr.find("span.grantagencyval").text());
 				var grant = {};
 				grant.name = $tr.find("td.granttitle").text();
 				grant.status = $tr.find("td.status").text();
-				grant.source = $tr.find("td.grantagency").text();
+				grant.source = $tr.find("span.grantagencyval").text();
 				grant.amount = $tr.find("span.amountnum").text();
 				grant.piamount = $tr.find("span.piamountnum").text();
 				grant.totamount = $tr.find("span.totamountnum").text();
@@ -784,7 +784,7 @@ $(document).ready( function () {
 		$awardnumber = $grantdiv.find(".awardnumber");
 		$("#eawardnumber").val($awardnumber.text());
 		
-		$grantagency = $grantdiv.find(".grantagency");
+		$grantagency = $grantdiv.find(".grantagencyval");
 		$("#esource").val($grantagency.text());
 
 
