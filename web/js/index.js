@@ -241,6 +241,8 @@ $(document).ready( function () {
 		$("#choosecomparerform").remove();
 		$("#customtemplateform").remove();
 		$("#comparetoform").remove();
+		$("#comparisonbox").append('<form id="choosesourceform">');
+		$("#choosesourceform").append('<select id="sourceselect">');
     	var templates = [];
     	$.ajax({
     		url: 'api.php', // point to server-side PHP script 
