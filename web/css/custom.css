@@ -302,6 +302,7 @@ th {
 	text-align: center;
 	padding-left: 1em;
 	padding-right: 1em;
+	border-bottom: 2px solid black;
 }
 
 .granttitle {
@@ -378,7 +379,7 @@ th {
 	margin-right: auto;
 	left: 0;
 	right: 0;
-	top: 11em;
+	top: 13em;
 	background-color: white;
 	border: 2px black solid;
 	z-index: 50;
@@ -389,3 +390,10 @@ th {
 .actionth {
 	width: 7em;
   }
+
+#testdescdiv {
+	position: absolute;
+	z-index: 50;
+	border: 2px solid black;
+	width: 30%;
+}
