@@ -260,6 +260,8 @@ $(document).ready( function () {
 	$("#maintable").tablesorter({
 	});
 	
+	$("#completedtable").tablesorter();
+	
 	$(".datepicker").datepicker();
 	
 	$("#comparisonbox").click( function (e) {

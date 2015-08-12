@@ -205,12 +205,27 @@
 									$count = $count + 1;
 								}
 							echo '</tbody></table>';
-							echo '<table id="completedtable">';
+							echo '<table id="completedtable">
+							<thead><tr>
+								<th data-sort="string" class="teamSelector" id="titleth">Title</th>
+								<th data-sort="string" class="teamSelector" style="display:none;">Award Number</th>
+								<th data-sort="string" class="teamSelector">Agency</th>
+								<th data-sort="float" class="sorter-currency teamSelector">Amount</th>
+								<th data-sort="float" class="sorter-currency teamSelector">Amount to PI</th>
+								<th data-sort="float" class="teamSelector">Person Months</th>
+								<th data-sort="int" class="teamSelector">From</th>
+								<th data-sort="int" class="teamSelector">To</th>
+								<th data-sort="string" class="teamSelector">Location</th>
+								<th data-sort="string" class="teamSelector">Status</th>
+								<th data-sort="float" class="teamSelector" style="display: none;">Summary</th>
+								<th data-sort="int" class="teamSelector" style="border-right: 2px solid black;">Modified</th>	
+								<th colspan="3" style="border-right: 2px solid black;">Actions</th>										
+								</tr style="border-right: 2px solid black;"></thead><tbody>';
 								foreach ($completedarray as $dict)
 								{
 									echo listTableElements($dict['grant'], $dict['count']);
 								}
-							echo '</table>';
+							echo '</tbody></table>';
 																
 							}
 	        			?>				
