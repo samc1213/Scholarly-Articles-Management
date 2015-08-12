@@ -8,12 +8,12 @@ $(window).load( function () {
 
 $(".granttitle").hover(
 	function () {
-		var trid = $(this).closest('tr').attr('id');
-		console.log(trid);
-		console.log(trid.substr(4));
+		var grantnum = $(this).closest('tr').attr('id').substr(5);
+		descstr = "#descdiv" + grantnum;
+		$(descstr).show();
 	},
 	function () {
-		
+		$(descstr).hide();
 	}
 );
 
