@@ -241,6 +241,7 @@ $(document).ready( function () {
 		$("#choosecomparerform").remove();
 		$("#customtemplateform").remove();
 		$("#comparetoform").remove();
+		$("#templateuploadmsg").remove();
 		$("#comparisonbox").append('<form id="choosesourceform">');
 		$("#choosesourceform").append('<select id="sourceselect">');
     	var templates = [];
@@ -354,7 +355,7 @@ $(document).ready( function () {
             	console.log(php_script_response);
             	$("#customtemplateform").remove();
             	$("#comparisonbox").find('p').remove();
-            	$("#comparisonbox").append("The new template has been uploaded!");
+            	$("#comparisonbox").append('<p id="templateuplodmsg">The new template has been uploaded!</p>');
             }
 		});
 	});
@@ -442,7 +443,7 @@ $(document).ready( function () {
 						if ($(".waiter").is(":visible")) {		//make sure waiter is there in case someone gets bored and closes box before ajax callback
 							$("#comparisonbox").append("<form action='download.php' method='post' id='downloadform'><input name='id' value='" + id + "' type='hidden'/><input name='filename' value='"+ comparergrant + " C&P Form' type='hidden'/><button type='submit' class='btn btn-default'>Download The File!</button></form>");
 						} 
-							$(".waiter").hide();
+						$(".waiter").hide();
 					}
 				});
 				return;
@@ -530,7 +531,7 @@ $(document).ready( function () {
 						if ($(".waiter").is(":visible")) {		//make sure waiter is there in case someone gets bored and closes box before ajax callback
 							$("#comparisonbox").append("<form action='download.php' method='post' id='downloadform'><input name='id' value='" + id + "' type='hidden'/><input name='filename' value='" + grants[0] + " C&P Form' type='hidden'/><button type='submit' class='btn btn-default'>Download The File!</button></form>");
 						} 
-							$("#cpformwaiter").hide();
+							$("#.waiter").hide();
 					}
 				});
 		}
