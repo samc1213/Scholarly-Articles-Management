@@ -239,6 +239,7 @@ $(document).ready( function () {
 		$('#shield').show();
 		$("#newgrantbutton").hide();
 	    $("#comparisonbox").html('');
+	    $("#comparisonbox").append('<img id="cpformwaiter" src="img/ajax-loader.gif"/>');
 	    $("#comparisonbox").append('<span class="fa fa-times negmarg">');
 	    $("#comparisonbox").append('<h2>New C&P Form</h2>');
     	$("#comparisonbox").append('<form id="choosesourceform">');
