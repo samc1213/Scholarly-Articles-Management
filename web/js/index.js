@@ -531,7 +531,7 @@ $(document).ready( function () {
 						if ($(".waiter").is(":visible")) {		//make sure waiter is there in case someone gets bored and closes box before ajax callback
 							$("#comparisonbox").append("<form action='download.php' method='post' id='downloadform'><input name='id' value='" + id + "' type='hidden'/><input name='filename' value='" + grants[0] + " C&P Form' type='hidden'/><button type='submit' class='btn btn-default'>Download The File!</button></form>");
 						} 
-							$("#.waiter").hide();
+							$(".waiter").hide();
 					}
 				});
 		}
