@@ -410,7 +410,6 @@ th {
 }
 
 #mainttable {
-	border: 2px solid black;
 }
 
 td {
@@ -418,30 +417,26 @@ td {
 }
 
 th {
-	border: 2px solid black;
+	border-bottom: 2px solid black;
+	border-top: 2px solid black;
 }
 
 .deletetd {
 	width: 1em;
 	border-right: none;
-	border-top: none;
-	border-bottom: none;
 	border-left: none;
 }
 
 .filestoretd {
 	width: 1em;
 	border-right: none;
-	border-top: none;
-	border-bottom: none;
 	border-left: none;
 }
 
 .edittd {
 	width: 1em;
 	border-right: none;
-	border-top: none;
-	border-bottom: none;
+	border-left: 2px solid black;
 }
 
 
