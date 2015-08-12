@@ -391,7 +391,7 @@ th {
 	width: 7em;
   }
 
-#testdescdiv {
+.descdiv {
 	position: absolute;
 	z-index: 50;
 	border: 2px solid black;

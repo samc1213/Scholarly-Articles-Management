@@ -6,6 +6,17 @@ $(window).load( function () {
 	window.scrollTo(0,0);
 });
 
+$(".granttitle").hover(
+	function () {
+		var trid = $(this).closest('tr').attr('id');
+		console.log(trid);
+		console.log(trid.substr(4));
+	},
+	function () {
+		
+	}
+);
+
 $.tablesorter.addParser({ 
     // set a unique id 
     id: 'customData',
