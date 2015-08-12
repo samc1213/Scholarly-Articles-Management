@@ -391,7 +391,7 @@ $(document).ready( function () {
 		{
 			$("#comparetoform").remove();
 			$("#choosecomparerform").remove();
-			$(".waiter").show();
+			$("#cpformwaiter").show();
 			var data = [];
 			for (i= 0; i<grants.length; i++) {
 				$gtitle = $(document).find('.granttitle:contains("' + grants[i] + '")');
@@ -479,7 +479,7 @@ $(document).ready( function () {
 		if (grantcount == grants.length-1)		//on submit, check if we've compared every grant, if so, submit to API
 		{
 			$("#comparetoform").remove();
-			$(".waiter").show();
+			$("#cpformwaiter").show();
 			var data = [];
 			for (i= 0; i<grants.length; i++) {
 				$gtitle = $(document).find('.granttitle:contains("' + grants[i] + '")');
@@ -528,10 +528,10 @@ $(document).ready( function () {
 					{
 						console.log("data: " + data);
 						console.log("id: " + id);
-						if ($(".waiter").is(":visible")) {		//make sure waiter is there in case someone gets bored and closes box before ajax callback
+						if ($("#cpformwaiter").is(":visible")) {		//make sure waiter is there in case someone gets bored and closes box before ajax callback
 							$("#comparisonbox").append("<form action='download.php' method='post' id='downloadform'><input name='id' value='" + id + "' type='hidden'/><input name='filename' value='" + grants[0] + " C&P Form' type='hidden'/><button type='submit' class='btn btn-default'>Download The File!</button></form>");
 						} 
-							$(".waiter").hide();
+							$("#cpformwaiter").hide();
 					}
 				});
 		}
