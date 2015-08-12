@@ -408,3 +408,26 @@ th {
 	top: 50%;
 	transform: translate(0%, -50%);
 }
+
+.deletetd {
+	width: 1em;
+	border-right: none;
+	border-top: none;
+	border-bottom: none;
+	border-left: none;
+}
+
+.filestoretd {
+	width: 1em;
+	border-right: none;
+	border-top: none;
+	border-bottom: none;
+	border-left: none;
+}
+
+.edittd {
+	width: 1em;
+	border-right: none;
+	border-top: none;
+	border-bottom: none;
+}
