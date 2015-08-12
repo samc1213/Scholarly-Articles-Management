@@ -388,11 +388,11 @@ th {
 }
 
 .actionth {
-	width: 7em;
+	max-width: 7em;
   }
 
 .descdiv {
-	position: relative;
+	position: absolute;
 	z-index: 50;
 	top: 50%;
 	border: 2px solid black;
