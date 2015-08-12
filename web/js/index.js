@@ -1,3 +1,8 @@
+$.expr[':'].textEquals = function(a, i, m) {
+return $(a).text().match("^" + m[3] + "$");
+};
+
+
 $.tablesorter.addParser({ 
     // set a unique id 
     id: 'customData',
@@ -243,6 +248,7 @@ $(document).ready( function () {
 		$("#comparetoform").remove();
 		$("#templateuploadmsg").remove();
 		$("#choosesourceform").remove();
+		$("#comparisonbox").find('p').remove();
 		$("#comparisonbox").append('<form id="choosesourceform">');
 		$("#choosesourceform").append('<select id="sourceselect">');
     	var templates = [];
@@ -309,7 +315,7 @@ $(document).ready( function () {
 	   		$("#templatefilespan").append('<span class="btn btn-default" id="templateinputbtn">');
 	   		$("#templateinputbtn").append('<input id="templatefileinput" type="file" name="templatefileinput[]" required/>');
 			$("#templatefilespan").append('<input type="submit" value="Upload" class="btn btn-default">');
-			$("#comparisonbox").append('<p><a href="Template Creation Instructions.zip">Template Instructions</a></p>');
+			$("#comparisonbox").append('<p><a href="Template Instructions.zip">Template Instructions</a></p>');
 	   }
 	   $(this).remove();		
 	});
@@ -375,7 +381,7 @@ $(document).ready( function () {
 		$('.granttitle').each (function () {
 			var compareegrant = $(this).text();
 			
-			$gtitle = $(document).find('.granttitle:contains("' + compareegrant + '")');
+			$gtitle = $(document).find('.granttitle:textEquals("' + compareegrant + '")');
 			$tr = $gtitle.closest('tr');
 			console.log("TR:" + $tr);
 			var compareestatus = $tr.find('td.status').text();
@@ -395,7 +401,7 @@ $(document).ready( function () {
 			$(".waiter").show();
 			var data = [];
 			for (i= 0; i<grants.length; i++) {
-				$gtitle = $(document).find('.granttitle:contains("' + grants[i] + '")');
+				$gtitle = $(document).find('.granttitle:textEquals("' + grants[i] + '")');
 				console.log("gtit:");
 				console.log($gtitle);
 				$tr = $gtitle.closest('tr');
@@ -455,7 +461,7 @@ $(document).ready( function () {
 		$("#comparisonbox").append('<form id="comparetoform">');		
 		
 		var comparee = grants[grantcount];
-		$gtitle = $(document).find('.granttitle:contains("' + comparee + '")');
+		$gtitle = $(document).find('.granttitle:textEquals("' + comparee + '")');
 		$tr = $gtitle.closest('tr');
 		var compareedescription = $tr.find('td.summary').text();			//do first comparison in this function
 		
@@ -483,7 +489,7 @@ $(document).ready( function () {
 			$(".waiter").show();
 			var data = [];
 			for (i= 0; i<grants.length; i++) {
-				$gtitle = $(document).find('.granttitle:contains("' + grants[i] + '")');
+				$gtitle = $(document).find('.granttitle:textEquals("' + grants[i] + '")');
 				console.log("gtit:");
 				console.log($gtitle);
 				$tr = $gtitle.closest('tr');
@@ -547,7 +553,7 @@ $(document).ready( function () {
 		var comparee = grants[grantcount];
 		$(this).find('input[name="grantname"]').val(comparee); //prepare for next submission
 		
-		$gtitle = $(document).find('.granttitle:contains("' + comparee + '")');
+		$gtitle = $(document).find('.granttitle:textEquals("' + comparee + '")');
 		$tr = $gtitle.closest('tr');
 		var compareedescription = $tr.find('td.summary').text();
 		$(this).find('textarea[name="comparison"]').val(compareedescription);
