@@ -173,7 +173,7 @@
 ';
 								}
 								
-								echo '<table id="maintable" border="1">';
+								echo '<table id="maintable">';
 								echo '<thead><tr>
 								<th data-sort="string" class="teamSelector" id="titleth">Title</th>
 								<th data-sort="string" class="teamSelector" style="display:none;">Award Number</th>
@@ -186,7 +186,7 @@
 								<th data-sort="string" class="teamSelector">Location</th>
 								<th data-sort="string" class="teamSelector">Status</th>
 								<th data-sort="float" class="teamSelector" style="display: none;">Summary</th>
-								<th data-sort="int" class="teamSelector">Modified</th>											
+								<th data-sort="int" class="teamSelector" style="border-right: 2px solid black;">Modified</th>											
 								</tr></thead> <tbody>';
 																
 								foreach ($grants as $grant) {

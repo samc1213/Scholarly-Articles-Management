@@ -409,6 +409,11 @@ th {
 	transform: translate(0%, -50%);
 }
 
+#mainttable {
+	border: 2px solid black;
+	border-right: none;
+}
+
 .deletetd {
 	width: 1em;
 	border-right: none;
@@ -430,4 +435,10 @@ th {
 	border-right: none;
 	border-top: none;
 	border-bottom: none;
+}
+
+
+
+td.edited {
+	
 }
