@@ -258,6 +258,8 @@ $(document).ready( function () {
 	
 	
 	$("#maintable").tablesorter({
+		cssInfoBlock : "avoid-sort", 
+		widgets: [ 'zebra' ] 
 	});
 	
 	$("#completedtable").tablesorter();
