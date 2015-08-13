@@ -108,7 +108,7 @@ $(document).ready( function () {
 	});
 	
 	$("#shownotfundedgrants").click ( function () {
-		$("#notfundedgrantsbody").show();
+		$("#notfundedgrantsbody").toggle();
 	});
 	
 	$('.filestorebtn').click ( function (e) {
