@@ -459,3 +459,7 @@ th {
 	border-left: none;
 	border-right: none;
 }
+
+.innerWrapper {
+	height: 100%;
+}
