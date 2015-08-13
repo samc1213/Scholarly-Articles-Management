@@ -271,7 +271,10 @@ $(document).ready( function () {
 	
 	$("#maintable").tablesorter({
 		cssInfoBlock : "avoid-sort", 
-		widgets: [ 'zebra' ] 
+		widgets: [ 'zebra' ],
+		textExtraction: {
+		2: function(node, table, cellIndex){ return $(node).find(".grantagencyval").text(); },
+		}
 	});
 	
 	$("#completedtable").tablesorter();
