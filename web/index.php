@@ -216,7 +216,7 @@
 								
 								if (empty($completedarray))
 								{
-									echo '<tr><td colspan="13">There are no Completed grants</td></tr>';
+									echo '<tr><td colspan="13" style="text-align: center;">There are no Completed grants</td></tr>';
 								}
 								
 								foreach ($completedarray as $dict)
@@ -228,7 +228,7 @@
 							echo '</tbody><tr id="spacertr"><td class="emptycol" colspan="13"></tr><tbody class="avoid-sort">';
 								if (empty($notfundedarray))
 								{
-									echo '<tr><td colspan="13">There are no Not Funded grants</td></tr>';
+									echo '<tr><td colspan="13" style="text-align: center;">There are no Not Funded grants</td></tr>';
 								}
 								
 								foreach ($notfundedarray as $dict)
