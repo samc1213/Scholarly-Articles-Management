@@ -6,9 +6,9 @@ $(window).load( function () {
 	window.scrollTo(0,0);
 });
 
-$(window).resize( function () {
-	$('.innerWrapper').height($(this).parent.height());
-});
+// $(window).resize( function () {
+	// $('.innerWrapper').height($(this).parent.height());
+// });
 
 $.fn.iWouldLikeToAbsolutelyPositionThingsInsideOfFrickingTableCellsPlease = function() {
     var $el;
