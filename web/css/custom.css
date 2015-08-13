@@ -218,6 +218,7 @@ td {
 
 tr {
 	border-right: solid black 2px;
+	border-left: solid black 2px;
 }
 .deletetd {
 	text-align: center;
@@ -451,6 +452,7 @@ th {
 	border-top: 2px solid black;
 	border-bottom: 2px solid black;
 	border-right: none;
+	border-left: none;
 }
 
 .emptycol {
