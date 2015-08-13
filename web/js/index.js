@@ -323,7 +323,7 @@ $(document).ready( function () {
 		    $comparer = $("#comparergrantselect");
 		    $theresanoncomplete = false;
 		    $(".grant").each( function () {
-		    	if ($(this).find(".status").text() != "Completed")
+		    	if ($(this).find(".status").text() != "Completed" && $(this).find(".status").text() != "Not Funded")
 		    	{
 			    	var str = '<option value="' + $(this).find(".granttitle").text() + '">' + $(this).find(".granttitle").text() + '</option>';
 			    	$comparer.append(str);
@@ -333,7 +333,7 @@ $(document).ready( function () {
 			if ($theresanoncomplete == false)
 			{
 				$("#comparergrantselect").remove();
-				$("#choosecomparerform").find('label').html("<a href='https://en.wikipedia.org/wiki/Double_negative' target='_blank'>There are no grants that aren't completed</a>");
+				$("#choosecomparerform").find('label').html("<a href='https://en.wikipedia.org/wiki/Double_negative' target='_blank'>There are no grants that aren't Completed or Not Funded</a>");
 			}
 		    
 		    else 
@@ -421,7 +421,7 @@ $(document).ready( function () {
 			var compareestatus = $tr.find('td.status').text();
 			console.log(compareestatus);
 			
-			if (compareegrant != comparergrant && compareestatus != 'Completed')
+			if (compareegrant != comparergrant && compareestatus != 'Completed' && compareestatus != 'Not Funded')
 			{
 				grants.push(compareegrant);		//store all of the other grants in the grants array (the comparer is in position 0)
 			}

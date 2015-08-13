@@ -115,6 +115,7 @@
 		    				<option value="Pending">Pending</option>
 		    				<option value="Submission Planned">Submission Planned</option>
 		    				<option value="Transfer of Support">Transfer of Support</option>
+		    				<option value="Not Funded">Not Funded</option>
 				       </select> <br><br>
 				       
 				       <label class="biglabel" for="eapersonmonths">Academic Person Months:</label>
@@ -280,6 +281,7 @@
 		    				<option value="Pending">Pending</option>
 		    				<option value="Submission Planned">Submission Planned</option>
 		    				<option value="Transfer of Support">Transfer of Support</option>
+		    				<option value="Not Funded">Not Funded</option>
 				       </select><br><br>
 				       
 				       <label class="biglabel" for="apersonmonths">Academic Person Months:</label>
