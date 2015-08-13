@@ -6,6 +6,8 @@
 	
 	session_start();
 	
+	echo 'uname';
+	echo $_SESSION['username'];
 	
 	$uploadOk = 1;
 	$message = var_dump($_FILES['fileinput']['name']);
