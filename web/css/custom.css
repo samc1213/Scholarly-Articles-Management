@@ -447,6 +447,8 @@ th {
 }
 
 .spacertr {
+	height: 2em;
+	line-height 2em;
 	border: none;
 }
 

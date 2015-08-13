@@ -211,7 +211,7 @@
 									}
 									$count = $count + 1;
 								}
-								echo '</tbody><tbody class="avoid-sort" id="spacerbody"><tr class="spacertr"><td class="emptycol" colspan="13"><a class="showgrants" id="showcompletedgrants">Click to toggle Completed grants</a></td></tr></tbody>';
+								echo '</tbody><tbody class="avoid-sort" id="spacerbody"><tr class="spacertr" style="border-top: 2px solid black;"><td class="emptycol" colspan="13"><a class="showgrants" id="showcompletedgrants">Click to toggle Completed grants</a></td></tr></tbody>';
 								echo '<tbody class="avoid-sort grantsbody" id="completedgrantsbody">';
 								
 								if (empty($completedarray))
