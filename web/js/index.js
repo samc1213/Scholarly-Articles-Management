@@ -104,7 +104,7 @@ $(document).ready( function () {
 	}
 	
 	$("#showcompletedgrants").click ( function () {
-		$("#completedgrantsbody").show();
+		$("#completedgrantsbody").toggle();
 	});
 	
 	$("#shownotfundedgrants").click ( function () {

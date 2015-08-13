@@ -458,6 +458,8 @@ th {
 .emptycol {
 	border-left: none;
 	border-right: none;
+	border-top: none;
+	border: bottom: none;
 	text-align: center;
 }
 
@@ -472,4 +474,5 @@ th {
 
 .grantsbody {
 	display: none;
+	border: 2px solid black;
 }
