@@ -232,6 +232,7 @@ tr {
 	margin-bottom: 1em;
 	width: 13em;
 	height: 2.5em;
+	display: inline;
 }
 #newcpdiv {
 	text-align: center;
@@ -474,7 +475,3 @@ th {
 	border: 2px solid black;
 }
 
-#bigbtnspan {
-	margin-left: auto;
-	margin-right: auto;
-}
