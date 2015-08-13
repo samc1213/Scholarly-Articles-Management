@@ -197,7 +197,7 @@
 														
 								foreach ($grants as $grant) {																								
 									$status = $grant['status'];
-									if ($status != 'Completed')
+									if ($status != 'Completed' && $status != 'Not Funded')
 									{
 										echo listTableElements($grant, $count);
 									}
