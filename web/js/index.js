@@ -1,5 +1,5 @@
 $.expr[':'].textEquals = function(a, i, m) {
-return $(a).text().match("^" + m[3] + "$");
+	return $(a).text().match("^" + m[3] + "$");
 };
 
 $(window).load( function () {
@@ -427,7 +427,7 @@ $(document).ready( function () {
 		$('.granttitle').each (function () {
 			var compareegrant = $(this).text();
 			
-			$gtitle = $(document).find('.granttitle:textEquals("' + compareegrant + '")');
+			$gtitle = $('.granttitle').filter( function (i) { return $(this).text() == compareegrant;});
 			$tr = $gtitle.closest('tr');
 			console.log("TR:" + $tr);
 			var compareestatus = $tr.find('td.status').text();
@@ -447,7 +447,7 @@ $(document).ready( function () {
 			$(".waiter").show();
 			var data = [];
 			for (i= 0; i<grants.length; i++) {
-				$gtitle = $(document).find('.granttitle:textEquals("' + grants[i] + '")');
+				$gtitle = $('.granttitle').filter( function (i) { return $(this).text() == grants[i];});
 				console.log("gtit:");
 				console.log($gtitle);
 				$tr = $gtitle.closest('tr');
@@ -507,7 +507,7 @@ $(document).ready( function () {
 		$("#comparisonbox").append('<form id="comparetoform">');		
 		
 		var comparee = grants[grantcount];
-		$gtitle = $(document).find('.granttitle:textEquals("' + comparee + '")');
+		$gtitle = $('.granttitle').filter( function (i) { return $(this).text() == comparee;});
 		$tr = $gtitle.closest('tr');
 		var compareedescription = $tr.find('td.summary').text();			//do first comparison in this function
 		
@@ -535,7 +535,7 @@ $(document).ready( function () {
 			$(".waiter").show();
 			var data = [];
 			for (i= 0; i<grants.length; i++) {
-				$gtitle = $(document).find('.granttitle:textEquals("' + grants[i] + '")');
+				$gtitle = $('.granttitle').filter( function (i) { return $(this).text() == grants[i];});
 				console.log("gtit:");
 				console.log($gtitle);
 				$tr = $gtitle.closest('tr');
@@ -599,7 +599,7 @@ $(document).ready( function () {
 		var comparee = grants[grantcount];
 		$(this).find('input[name="grantname"]').val(comparee); //prepare for next submission
 		
-		$gtitle = $(document).find('.granttitle:textEquals("' + comparee + '")');
+		$gtitle = $('.granttitle').filter( function (i) { return $(this).text() == comparee;});
 		$tr = $gtitle.closest('tr');
 		var compareedescription = $tr.find('td.summary').text();
 		$(this).find('textarea[name="comparison"]').val(compareedescription);

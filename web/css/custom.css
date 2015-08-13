@@ -36,8 +36,8 @@ header {
 
 #newgrantbutton {
 	display: block;
-	margin-left: auto;
-	margin-right: auto;
+	margin-left: 2em;
+	margin-right: 2em;
 	margin-top: 1em;
 	margin-bottom: 5em;
 	width: 13em;
@@ -472,4 +472,9 @@ th {
 .grantsbody {
 	display: none;
 	border: 2px solid black;
+}
+
+#bigbtnspan {
+	margin-left: auto;
+	margin-right: auto;
 }

@@ -177,7 +177,7 @@
 								}
 								
 								else {
-									echo '<div id="newcpdiv"><span><button class="btn btn-default" id="newcpform">Create New C&P Form</button><button id="newgrantbutton" class="btn btn-default"><i class="fa fa-plus-square" id="newgrantplus"></i> Add another grant</button></span></div>
+									echo '<div id="newcpdiv"><span id="bigbtnspan"><button class="btn btn-default" id="newcpform">Create New C&P Form</button><button id="newgrantbutton" class="btn btn-default"><i class="fa fa-plus-square" id="newgrantplus"></i> Add another grant</button></span></div>
 ';
 								}
 								
