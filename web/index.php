@@ -211,7 +211,7 @@
 									}
 									$count = $count + 1;
 								}
-								echo '</tbody><tbody class="avoid-sort" id="spacerbody"><tr id="spacertr"><td class="emptycol" colspan="13"></tr></tbody>';
+								echo '</tbody><tbody class="avoid-sort" id="spacerbody"><tr id="spacertr"><td class="emptycol" colspan="13"><a>Click to show Completed grants</a></td></tr></tbody>';
 								echo '<tbody class="avoid-sort">';
 								
 								if (empty($completedarray))
@@ -225,7 +225,7 @@
 									echo listTableElements($dict['grant'], $dict['count']);
 								}
 								
-							echo '</tbody><tr id="spacertr"><td class="emptycol" colspan="13"></tr><tbody class="avoid-sort">';
+							echo '</tbody><tr id="spacertr"><td class="emptycol" colspan="13"><a>Click to show Not Funded grants</a></td></tr><tbody class="avoid-sort">';
 								if (empty($notfundedarray))
 								{
 									echo '<tr><td colspan="13" style="text-align: center;">There are no Not Funded grants</td></tr>';

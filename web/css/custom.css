@@ -458,6 +458,7 @@ th {
 .emptycol {
 	border-left: none;
 	border-right: none;
+	text-align: center;
 }
 
 .innerWrapper {
