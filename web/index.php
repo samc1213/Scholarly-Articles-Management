@@ -218,11 +218,19 @@
 									
 									echo listTableElements($dict['grant'], $dict['count']);
 								}
+								if ($completedarray.length == 0)
+								{
+									echo '<tr colspan = 13>There are no Completed grants</tr>';
+								}
 							echo '</tbody><tr id="spacertr"><td class="emptycol" colspan="13"></tr><tbody class="avoid-sort">';
 								foreach ($notfundedarray as $dict)
 								{
 									
 									echo listTableElements($dict['grant'], $dict['count']);
+								}
+								if ($notfundedarray.length == 0)
+								{
+									echo '<tr colspan = 13>There are no Not Funded grants</tr>';
 								}
 							
 							echo '</tbody></table>';
