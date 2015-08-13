@@ -17,7 +17,7 @@ $.fn.iWouldLikeToAbsolutelyPositionThingsInsideOfFrickingTableCellsPlease = func
     	var newDiv = $("<div />", {
     		"class": "innerWrapper",
     		"css"  : {
-    			"height"  : $el.height(),
+    			"height"  : "100%",
     			"width"   : "100%",
     			"position": "relative"
     		}
