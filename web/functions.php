@@ -366,7 +366,7 @@
 				$descsummary = 'No description added.';
 			}
 			
-			echo '<td class="grantagency"><div class="descdiv" id="descdiv'.$count.'">'.$descsummary.'</div><span class="grantagencyval">'.$agency.'</span></td>';
+			echo '<td class="grantagency"><div class="descdiv" id="descdiv'.$count.'">'.$descsummary.'</div>'.$agency.'</td>';
 			echo '<td class="amount"><span class = "amountdol">'.$amountdol.'</span><span class="amountnum">'.$amount.'</span>'.$amountlabel.'<span class="totamountdol">'.$totamountdol.'</span><span class="totamountnum">'.$totamount.'</span>'.$totamountlabel.'</td>';
 			echo '<td class="piamount"><span class="piamountdol">'.$piamountdol.'</span><span class="piamountnum">'.$piamount.'</span>'.$piamountlabel.'<span class="totpiamountdol">'.$totpiamountdol.'</span><span class="totpiamountnum">'.$totpiamount.'</span>'.$totpiamountlabel.'</td>';
 			echo '<td class="pmonths"><span class="apmonthnum">'.$apmonths.'</span>'.$alabel.'<span class="cpmonthnum">'.$cpmonths.'</span>'.$clabel.'<span class="spmonthnum">'.$spmonths.'</span>'.$slabel.'</td>';
