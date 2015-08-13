@@ -465,3 +465,11 @@ th {
 	height: 100%;
 	/*overflow: auto;*/
 }
+
+.showgrants {
+	cursor: pointer;
+}
+
+.grantsbody {
+	display: none;
+}

@@ -103,6 +103,14 @@ $(document).ready( function () {
 		}
 	}
 	
+	$("#showcompletedgrants").click ( function () {
+		$("#completedgrantsbody").show();
+	});
+	
+	$("#shownotfundedgrants").click ( function () {
+		$("#notfundedgrantsbody").show();
+	});
+	
 	$('.filestorebtn').click ( function (e) {
 		e.stopPropagation();
 		$(".filewaiter").show();
