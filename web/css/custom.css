@@ -209,7 +209,6 @@ table {
 	left: 0;
 	right: 0;
 	border-top: solid black 2px;
-	border-bottom: solid black 2px;
 }
 
 td {
@@ -447,8 +446,7 @@ th {
 	border-left: 2px solid black;
 }
 
-#spacertr {
-	height: 4em;
+.spacertr {
 	border: none;
 }
 
