@@ -151,6 +151,13 @@
 						
 		        	</form>
 					</div>
+					
+						        	<?php
+	        	session_start();
+	        	if (isset($_SESSION['username'])) {
+	        		echo '<div><button id="newgrantbutton" class="btn btn-default"><i class="fa fa-plus-square" id="newgrantplus"></i> Add another grant</button></div>';
+				}?>
+	
 				
 	        	<section id="grants">
 	        			<?php
@@ -170,7 +177,7 @@
 								}
 								
 								else {
-									echo '<div id="newcpdiv"><button class="btn btn-default" id="newcpform">Create New C&P Form</button></div>
+									echo '<div id="newcpdiv"><span><button class="btn btn-default" id="newcpform">Create New C&P Form</button><button id="newgrantbutton" class="btn btn-default"><i class="fa fa-plus-square" id="newgrantplus"></i> Add another grant</button></span></div>
 ';
 								}
 								
@@ -243,12 +250,7 @@
 							}
 	        			?>				
 	        	</section>
-	        	<?php
-	        	session_start();
-	        	if (isset($_SESSION['username'])) {
-	        		echo '<div><button id="newgrantbutton" class="btn btn-default"><i class="fa fa-plus-square" id="newgrantplus"></i> Add another grant</button></div>';
-				}?>
-	
+
 	        	
 				<div id="comparisonbox" style="display: none;" class="popup">
 					<span class="fa fa-times negmarg"></span>
