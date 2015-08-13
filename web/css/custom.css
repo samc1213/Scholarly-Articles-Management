@@ -461,10 +461,10 @@ th {
 	border-right: none;
 }
 
-#titleth {
-	max-width: 12%;	
+.agencycol {
+	width: 13em;
 }
 
-.agencycol {
-	width: 10%;
+.grantagency {
+	width: 13em;
 }
