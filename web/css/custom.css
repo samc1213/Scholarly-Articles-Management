@@ -452,7 +452,7 @@ th {
 	border-right: none;
 }
 
-#emptycol {
+.emptycol {
 	border-left: none;
 	border-right: none;
 }

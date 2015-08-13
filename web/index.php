@@ -192,6 +192,8 @@
 								</tr style="border-right: 2px solid black;"></thead> <tbody>';
 								
 								$completedarray = array();
+								$notfundedarray = array();
+														
 														
 								foreach ($grants as $grant) {																								
 									$status = $grant['status'];
@@ -199,19 +201,30 @@
 									{
 										echo listTableElements($grant, $count);
 									}
+									else if ($status == 'Completed') {
+										$dictarray = array('grant' => $grant, 'count' => $count);
+										array_push($completedarray, $dictarray);
+									}
 									else {
 										$dictarray = array('grant' => $grant, 'count' => $count);
 										array_push($completedarray, $dictarray);
 									}
 									$count = $count + 1;
 								}
-								echo '</tbody><tbody class="avoid-sort" id="spacerbody"><tr id="spacertr"><td id="emptycol" colspan="13"></tr></tbody>';
+								echo '</tbody><tbody class="avoid-sort" id="spacerbody"><tr id="spacertr"><td class="emptycol" colspan="13"></tr></tbody>';
 								echo '<tbody class="avoid-sort">';
 								foreach ($completedarray as $dict)
 								{
 									
 									echo listTableElements($dict['grant'], $dict['count']);
 								}
+							echo '</tbody><tr id="spacertr"><td class="emptycol" colspan="13"></tr><tbody class="avoid-sort">';
+								foreach ($notfundedarray as $dict)
+								{
+									
+									echo listTableElements($dict['grant'], $dict['count']);
+								}
+							
 							echo '</tbody></table>';
 																
 							}
