@@ -204,7 +204,7 @@
 									}
 									$count = $count + 1;
 								}
-								echo '</tbody><tbody class="avoid-sort" id="spacerbody"><tr id="spacertr"><td colspan="13"></tr></tbody>';
+								echo '</tbody><tbody class="avoid-sort" id="spacerbody"><tr id="spacertr"><td id="emptycol" colspan="13"></tr></tbody>';
 								echo '<tbody class="avoid-sort">';
 								foreach ($completedarray as $dict)
 								{

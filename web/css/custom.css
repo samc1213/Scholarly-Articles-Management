@@ -208,7 +208,6 @@ table {
 	left: 0;
 	right: 0;
 	border-top: solid black 2px;
-	border-right: solid black 2px;
 	border-bottom: solid black 2px;
 }
 
@@ -217,6 +216,9 @@ td {
 	padding-right: .5em;
 }
 
+tr {
+	border-right: solid black 2px;
+}
 .deletetd {
 	text-align: center;
 }
@@ -440,12 +442,18 @@ th {
 
 #titleth {
 	border-right: 2px solid black;
+	border-left: 2px solid black;
 }
 
 #spacertr {
 	height: 4em;
 	border-top: 2px solid black;
 	border-bottom: 2px solid black;
+	border-right: none;
 }
 
+#emptycol {
+	border-left: none;
+	border-right: none;
+}
 
