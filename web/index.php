@@ -214,7 +214,7 @@
 								echo '</tbody><tbody class="avoid-sort" id="spacerbody"><tr id="spacertr"><td class="emptycol" colspan="13"></tr></tbody>';
 								echo '<tbody class="avoid-sort">';
 								
-								if ($completedarray.length == 0)
+								if (empty($completedarray))
 								{
 									echo '<tr><td colspan="13">There are no Completed grants</td></tr>';
 								}
@@ -226,7 +226,7 @@
 								}
 								
 							echo '</tbody><tr id="spacertr"><td class="emptycol" colspan="13"></tr><tbody class="avoid-sort">';
-								if ($notfundedarray.length == 0)
+								if (empty($notfundedarray))
 								{
 									echo '<tr><td colspan="13">There are no Not Funded grants</td></tr>';
 								}
