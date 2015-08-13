@@ -207,7 +207,7 @@
 									}
 									else {
 										$dictarray = array('grant' => $grant, 'count' => $count);
-										array_push($completedarray, $dictarray);
+										array_push($notfundedarray, $dictarray);
 									}
 									$count = $count + 1;
 								}
