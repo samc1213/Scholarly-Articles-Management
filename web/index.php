@@ -71,7 +71,7 @@
 					echo "'s Grants</h2>";						
 				}
 				else {
-					header('Location: http://'.$_SERVER[HTTP_HOST].$_SERVER[REQUEST_URI].'/login.html');
+					header('Location: http://'.$_SERVER[HTTP_HOST].$_SERVER[REQUEST_URI].'login.html');
 				}
 				
 				?>
