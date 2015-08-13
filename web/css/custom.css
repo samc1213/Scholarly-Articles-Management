@@ -38,6 +38,7 @@ header {
 	display: inline;
 	width: 13em;
 	height: 2.5em;
+	margin-left: 1em;
 }
 
 #newgrantplus {
@@ -228,6 +229,7 @@ tr {
 	width: 13em;
 	height: 2.5em;
 	display: inline;
+	margin-right: 1em;
 }
 #newcpdiv {
 	text-align: center;

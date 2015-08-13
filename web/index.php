@@ -71,17 +71,7 @@
 					echo "'s Grants</h2>";						
 				}
 				else {
-					echo "
-					<h1 align='center'>Welcome to the Grant Form Page!</h1>
-					<h2 align='center'>You can manage your grants...<h2>
-					<img id='wasexample' src='img/wasielewskiexample.png' alt='examplephoto' style='display: block;'/>
-					<h2 align='center'>And generate current and pending forms</h2>
-					<img id='cpexample' src='img/cpexample.png' alt='cpexample' style='display: block;'/>
-					<h2 align='center'>We have templates for: </h2>
-					<img class='templatelogo' src='img/Department-of-Energy.png' alt='DOE logo' href='http://www.energy.gov'/>
-					<h2 align='center'><a href='Template Instructions.zip'>And you can create your own using Microsoft Word!</a></h2>			
-					
-					";
+					http_redirect('login.html');
 				}
 				
 				?>
