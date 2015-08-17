@@ -16,7 +16,7 @@ The site is hosted on [Heroku] (heroku.com).
 
 The table is sorted using [Tablesorter] (https://github.com/Mottie/tablesorter).
 
-Styling uses [normalize.css] (https://github.com/necolas/normalize.css) and Bootstrap (https://github.com/twbs/bootstrap).
+Styling uses [normalize.css] (https://github.com/necolas/normalize.css) and [Bootstrap] (https://github.com/twbs/bootstrap).
 
 ## Issues
 
