@@ -146,6 +146,10 @@ $(document).ready( function () {
 	
 	$("#getcsvform").submit ( function () {
 		$('td.emptycol').hide();
+		$('tr').each( function () {
+			var re = new RegExp(String.fromCharCode(160), "g");
+			$(this).text().replace(re, " ");
+		});
 		var csv_value=$('#maintable').table2CSV({delivery:'value'});
 		$("#csv_text").val(csv_value);	
 		$('td.emptycol').show();
