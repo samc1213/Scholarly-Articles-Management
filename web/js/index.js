@@ -146,6 +146,7 @@ $(document).ready( function () {
 		$('td.editd').hide();
 		$('td.deletetd').hide();
 		$('td.filestoretd').hide();
+		$('.descdiv').remove();
 		$('td.pmonths').each( function () {
 			//get rid of the no break spaces
 			var re = new RegExp(String.fromCharCode(160), "g");
