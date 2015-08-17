@@ -145,6 +145,7 @@ $(document).ready( function () {
 	});
 	
 	$("#getcsvform").submit ( function () {
+		$("#maintable tr").show();
 		var csv_value=$('#maintable').table2CSV({delivery:'value'});
 		$("#csv_text").val(csv_value);	
 	});
