@@ -162,7 +162,7 @@ $(document).ready( function () {
 			data: $(this).serialize(),
 			success: function (data)
 			{
-				$(this).append('<a href="data.csv"'>Download</a>');
+				$(this).append('<a href="data.csv">Download</a>');
 			},
 		});
 	});
