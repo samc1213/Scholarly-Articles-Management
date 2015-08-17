@@ -4,12 +4,12 @@ $.expr[':'].textEquals = function(a, i, m) {
 
 $(window).load( function () {
 	window.scrollTo(0,0);
-	$('td.pmonths').each( function () {
-		//get rid of the no break spaces
-		var re = new RegExp(String.fromCharCode(160), "g");
-		var newtext = $(this).text().replace(" ", re);
-		$(this).text(newtext);
-	});
+	// $('td.pmonths').each( function () {
+		// //get rid of the no break spaces
+		// var re = new RegExp(String.fromCharCode(160), "g");
+		// var newtext = $(this).text().replace(" ", re);
+		// $(this).text(newtext);
+	// });
 });
 
 // $(window).resize( function () {
