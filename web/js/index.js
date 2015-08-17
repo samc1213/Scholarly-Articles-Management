@@ -148,7 +148,9 @@ $(document).ready( function () {
 		$('td.emptycol').hide();
 		$('td').each( function () {
 			var re = new RegExp(String.fromCharCode(160), "g");
-			$(this).text() = $(this).text().replace(re, " ");
+			var newtext = $(this).text().replace(re, " ");
+			console.log(newtext);
+			$(this).text(newtext);
 		});
 		var csv_value=$('#maintable').table2CSV({delivery:'value'});
 		$("#csv_text").val(csv_value);	
