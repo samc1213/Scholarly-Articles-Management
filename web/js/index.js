@@ -141,13 +141,18 @@ $(document).ready( function () {
 	});
 	
 	$("#getcsvform").submit ( function (e) {
-		e.preventDefault();
 		$('td.emptycol').hide();
 		$('td.actionscol').hide();
 		$('td.editd').hide();
 		$('td.deletetd').hide();
 		$('td.filestoretd').hide();
-		$('.descdiv').remove();
+		var descdivs = [];
+		var descdivparents = [];
+		$('.descdiv').each (function () {
+			descdivs.push($(this));
+			desdivparents.push($(this).parent());
+			$(this).remove();
+		});
 		$('td.pmonths').each( function () {
 			//get rid of the no break spaces
 			var re = new RegExp(String.fromCharCode(160), "g");
@@ -156,8 +161,14 @@ $(document).ready( function () {
 		});
 		var csv_value=$('#maintable').table2CSV({delivery:'value'});
 		$("#csv_text").val(csv_value);
-		$(this).submit();
-		location.reload(true);
+		$('td.emptycol').show();
+		$('td.actionscol').show();
+		$('td.editd').show();
+		$('td.deletetd').show();
+		$('td.filestoretd').show();
+		$.each(descdivs, function(i) {
+			descdivparents[i].append(descdivs[i]);
+		});
 	});
 	
 	$(document).on('click', '.deletefile', function (e) {
