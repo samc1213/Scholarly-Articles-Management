@@ -140,7 +140,8 @@ $(document).ready( function () {
 	    });	    
 	});
 	
-	$("#getcsvform").submit ( function () {
+	$("#getcsvform").submit ( function (e) {
+		e.preventDefault();
 		$('td.emptycol').hide();
 		$('td.actionscol').hide();
 		$('td.editd').hide();
@@ -155,7 +156,14 @@ $(document).ready( function () {
 		});
 		var csv_value=$('#maintable').table2CSV({delivery:'value'});
 		$("#csv_text").val(csv_value);
-		location.href = 'http://google.com/';
+		$.ajax({
+			type: "POST",
+		 	url: "getCSV.php",
+		    data: $(this).serialize(),
+		    success: function() {
+		    	location.reload(true);
+		    }
+		});
 	});
 	
 	$(document).on('click', '.deletefile', function (e) {
