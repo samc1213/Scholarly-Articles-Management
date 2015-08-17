@@ -149,11 +149,15 @@ $(document).ready( function () {
 		$('td').each( function () {
 			var re = new RegExp(String.fromCharCode(160), "g");
 			var newtext = $(this).text().replace(re, " ");
-			console.log(newtext);
 			$(this).text(newtext);
 		});
 		var csv_value=$('#maintable').table2CSV({delivery:'value'});
 		$("#csv_text").val(csv_value);	
+		$('td').each( function () {
+			var re = new RegExp(String.fromCharCode(160), "g");
+			var newtext = $(this).text().replace(" ", re);
+			$(this).text(newtext);
+		});
 		$('td.emptycol').show();
 	});
 	
