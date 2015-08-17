@@ -148,6 +148,7 @@ $(document).ready( function () {
 		$('td.emptycol').hide();
 		var csv_value=$('#maintable').table2CSV({delivery:'value'});
 		$("#csv_text").val(csv_value);	
+		$('td.emptycol').show();
 	});
 	
 	$(document).on('click', '.deletefile', function (e) {
