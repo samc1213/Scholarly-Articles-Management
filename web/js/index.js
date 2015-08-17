@@ -141,7 +141,6 @@ $(document).ready( function () {
 	});
 	
 	$("#getcsvform").submit ( function (e) {
-		e.preventDefault();
 		$('td.emptycol').hide();
 		$('td.actionscol').hide();
 		$('td.editd').hide();
@@ -156,16 +155,9 @@ $(document).ready( function () {
 		});
 		var csv_value=$('#maintable').table2CSV({delivery:'value'});
 		$("#csv_text").val(csv_value);
-		$.ajax({
-	    	type: "POST",
-			url: "getCSV.php",
-			data: $(this).serialize(),
-			success: function (data)
-			{
-				$(this).append('<a href="data.csv">Download</a>');
-			},
-		});
 	});
+	
+	
 	
 	$(document).on('click', '.deletefile', function (e) {
 		console.log("delete!");
