@@ -147,16 +147,16 @@ $(document).ready( function () {
 	$("#getcsvform").submit ( function () {
 		$('td.emptycol').hide();
 		$('td.pmonths').each( function () {
-			var re = new RegExp(String.fromCharCode(160), "g");
-			var newtext = $(this).text().replace(re, " ");
-			$(this).text(newtext);
+			//get rid of the no break spaces
+			var text = $(this).html();
+        	$(this).html(text.replace("&nbsp;", / /g));
 		});
 		var csv_value=$('#maintable').table2CSV({delivery:'value'});
 		$("#csv_text").val(csv_value);	
 		$('td.pmonths').each( function () {
-			var re = new RegExp(String.fromCharCode(160), "g");
-			var newtext = $(this).text().replace(" ", re);
-			$(this).text(newtext);
+			//return no break spaces after download
+			var text = $(this).html();
+        	$(this).html(text.replace(/ /g, "&nbsp;"));
 		});
 		$('td.emptycol').show();
 	});
