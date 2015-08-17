@@ -146,14 +146,14 @@ $(document).ready( function () {
 	
 	$("#getcsvform").submit ( function () {
 		$('td.emptycol').hide();
-		$('td').each( function () {
+		$('td.pmonths').each( function () {
 			var re = new RegExp(String.fromCharCode(160), "g");
 			var newtext = $(this).text().replace(re, " ");
 			$(this).text(newtext);
 		});
 		var csv_value=$('#maintable').table2CSV({delivery:'value'});
 		$("#csv_text").val(csv_value);	
-		$('td').each( function () {
+		$('td.pmonths').each( function () {
 			var re = new RegExp(String.fromCharCode(160), "g");
 			var newtext = $(this).text().replace(" ", re);
 			$(this).text(newtext);
