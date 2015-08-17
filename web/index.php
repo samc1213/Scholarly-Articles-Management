@@ -236,7 +236,7 @@
 	        	
 	        	<form action="getCSV.php" method ="post" id="getcsvform"> 
 					<input type="hidden" name="csv_text" id="csv_text"/>
-					<input type="submit" value="Get CSV File" />
+					<input type="submit" class="btn btn-default" value="Get CSV File" />
 				</form>
 	        	
 				<div id="comparisonbox" style="display: none;" class="popup">
