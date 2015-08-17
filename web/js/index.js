@@ -155,7 +155,7 @@ $(document).ready( function () {
 		});
 		var csv_value=$('#maintable').table2CSV({delivery:'value'});
 		$("#csv_text").val(csv_value);
-		location.reload(true);
+		window.location.href = window.location.href;
 	});
 	
 	$(document).on('click', '.deletefile', function (e) {
