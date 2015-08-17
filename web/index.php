@@ -233,7 +233,11 @@
 							}
 	        			?>				
 	        	</section>
-
+	        	
+	        	<form action="getCSV.php" method ="post" id="getcsvform"> 
+					<input type="hidden" name="csv_text" id="csv_text"/>
+					<input type="submit" value="Get CSV File" />
+				</form>
 	        	
 				<div id="comparisonbox" style="display: none;" class="popup">
 					<span class="fa fa-times negmarg"></span>
@@ -340,6 +344,7 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
         <script src="js/jquery-ui.min.js"></script>
         <script src="js/jquery.tablesorter.js"></script>
+        <script src="js/table2CSV.js"></script>	
         <script src="js/stupidtable.min.js"></script>
         <script src="js/dropzone.js"></script>
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>        

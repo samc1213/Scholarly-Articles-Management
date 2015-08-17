@@ -144,6 +144,11 @@ $(document).ready( function () {
 	    });	    
 	});
 	
+	$("#getcsvform").submit ( function () {
+		var csv_value=$('#maintable').table2CSV({delivery:'value'});
+		$("#csv_text").val(csv_value);	
+	});
+	
 	$(document).on('click', '.deletefile', function (e) {
 		console.log("delete!");
 		$('#filelist').html(''); //clear out the old filelist first
