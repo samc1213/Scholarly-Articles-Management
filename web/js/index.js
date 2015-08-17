@@ -4,17 +4,7 @@ $.expr[':'].textEquals = function(a, i, m) {
 
 $(window).load( function () {
 	window.scrollTo(0,0);
-	// $('td.pmonths').each( function () {
-		// //get rid of the no break spaces
-		// var re = new RegExp(String.fromCharCode(160), "g");
-		// var newtext = $(this).text().replace(" ", re);
-		// $(this).text(newtext);
-	// });
 });
-
-// $(window).resize( function () {
-	// $('.innerWrapper').height($(this).parent.height());
-// });
 
 $.fn.iWouldLikeToAbsolutelyPositionThingsInsideOfFrickingTableCellsPlease = function() {
     var $el;
@@ -152,6 +142,10 @@ $(document).ready( function () {
 	
 	$("#getcsvform").submit ( function () {
 		$('td.emptycol').hide();
+		$('td.actionscol').hide();
+		$('td.editd').hide();
+		$('td.deletetd').hide();
+		$('td.filestoretd').hide();
 		$('td.pmonths').each( function () {
 			//get rid of the no break spaces
 			var re = new RegExp(String.fromCharCode(160), "g");
@@ -160,7 +154,7 @@ $(document).ready( function () {
 		});
 		var csv_value=$('#maintable').table2CSV({delivery:'value'});
 		$("#csv_text").val(csv_value);
-		$('td.emptycol').show();
+		location.reload();
 	});
 	
 	$(document).on('click', '.deletefile', function (e) {
@@ -919,11 +913,7 @@ $(document).ready( function () {
 		$("#confirmmessage").html("Are you sure you want to delete <strong>" + grantname + "</strong>?");
 		
 		$("#confirmdeleteform").find("input[name='grantname']").val(grantname);
-		
-		// $('html, body').animate({
-	        // scrollTop: $("#deleteconfirmbox").offset().top
-	    // }, 1000);
-		
+	
 	}); //end delete
 	
 	$("#confirmdeleteform").submit (function () {
