@@ -146,7 +146,7 @@ $(document).ready( function () {
 	
 	$("#getcsvform").submit ( function () {
 		$('td.emptycol').hide();
-		$('tr').each( function () {
+		$('td').each( function () {
 			var re = new RegExp(String.fromCharCode(160), "g");
 			$(this).text().replace(re, " ");
 		});
