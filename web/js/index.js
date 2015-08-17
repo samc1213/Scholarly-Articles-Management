@@ -146,7 +146,7 @@ $(document).ready( function () {
 		$('td.editd').hide();
 		$('td.deletetd').hide();
 		$('td.filestoretd').hide();
-		$('th.awardscol').show();
+		$('th.awardcol').show();
 		$('th.summarycol').show();
 		$('td.awardnumber').show();
 		$('td.summary').show();
@@ -170,7 +170,7 @@ $(document).ready( function () {
 		$('td.editd').show();
 		$('td.deletetd').show();
 		$('td.filestoretd').show();
-		$('th.awardscol').hide();
+		$('th.awardcol').hide();
 		$('th.summarycol').hide();
 		$('td.awardnumber').hide();
 		$('td.summary').hide();

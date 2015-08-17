@@ -167,7 +167,7 @@
 								echo '<table id="maintable">';
 								echo '<thead><tr>
 								<th data-sort="string" class="teamSelector" id="titleth" class="titlecol">Title</th>
-								<th data-sort="string" class="teamSelector" style="display:none;" class="awardcol">Award Number</th>
+								<th data-sort="string" class="teamSelector awardcol" style="display:none;" >Award Number</th>
 								<th data-sort="string" class="teamSelector" class="agencycol">Agency</th>
 								<th data-sort="float" class="sorter-currency teamSelector" class="amountcol">Amount</th>
 								<th data-sort="float" class="sorter-currency teamSelector" class="piamountcol">Amount to PI</th>
@@ -176,7 +176,7 @@
 								<th data-sort="int" class="teamSelector" class="tocol">To</th>
 								<th data-sort="string" class="teamSelector" class="locationcol">Location</th>
 								<th data-sort="string" class="teamSelector" class="statuscol">Status</th>
-								<th data-sort="float" class="teamSelector" style="display: none;" class="summarycol">Summary</th>
+								<th data-sort="float" class="teamSelector summarycol" style="display: none;">Summary</th>
 								<th data-sort="int" class="teamSelector" style="border-right: 2px solid black;" class="modifiedcol">Modified</th>	
 								<th colspan="3" style="border-right: 2px solid black;" class="actionscol">Actions</th>										
 								</tr style="border-right: 2px solid black;"></thead> <tbody>';
