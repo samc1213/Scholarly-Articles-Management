@@ -142,7 +142,7 @@ $(document).ready( function () {
 	
 	$("#getcsvform").submit ( function (e) {
 		$('td.emptycol').hide();
-		$('td.actionscol').hide();
+		$('th.actionscol').hide();
 		$('td.editd').hide();
 		$('td.deletetd').hide();
 		$('td.filestoretd').hide();
@@ -162,7 +162,7 @@ $(document).ready( function () {
 		var csv_value=$('#maintable').table2CSV({delivery:'value'});
 		$("#csv_text").val(csv_value);
 		$('td.emptycol').show();
-		$('td.actionscol').show();
+		$('th.actionscol').show();
 		$('td.editd').show();
 		$('td.deletetd').show();
 		$('td.filestoretd').show();
