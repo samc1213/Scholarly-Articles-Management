@@ -150,7 +150,7 @@ $(document).ready( function () {
 		var descdivparents = [];
 		$('.descdiv').each (function () {
 			descdivs.push($(this));
-			desdivparents.push($(this).parent());
+			descdivparents.push($(this).parent());
 			$(this).remove();
 		});
 		$('td.pmonths').each( function () {
