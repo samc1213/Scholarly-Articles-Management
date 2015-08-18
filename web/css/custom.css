@@ -480,3 +480,9 @@ th {
 #getcsvform {
 	text-align: center;
 }
+
+#manageuserbtn {
+	color: white;
+	float: right;
+	text: 100%;
+}
