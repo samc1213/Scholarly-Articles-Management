@@ -488,10 +488,11 @@ th {
 }
 
 .fa-user {
-	height: 2.5em;
 	font-size: 1.5em;
 	margin-right: 4px;
 	margin-left: 4px;
+	padding-top: .5em;
+	padding-bottom: .5em;
 	line-height: 2.5em;
 	cursor: pointer;
 	border-left-style: solid;
