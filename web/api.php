@@ -92,6 +92,12 @@
 		else {
 			$passhash = password_hash($phpdata['password'], PASSWORD_DEFAULT);
 		}
+		
+		$_SESSION['firstname'] = $phpdata['firstname'];
+		$_SESSION['middlename'] = $phpdata['middlename'];
+		$_SESSION['lastname'] = $phpdata['lastname'];
+		$_SESSION['email'] = $phpdata['email'];
+		
 		echo editUser($_SESSION['username'], $phpdata['firstname'], $phpdata['middlename'], $phpdata['lastname'], $phpdata['email'], $passhash);
 	}
 ?>
