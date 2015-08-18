@@ -4,7 +4,7 @@
     	<link rel="icon" href="favicon.ico" type="image/x-icon"/>	
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Scholarly Articles Management</title>
+        <title>Scholarly Awards Management</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
