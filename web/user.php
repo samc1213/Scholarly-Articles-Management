@@ -57,10 +57,10 @@
 	        		echo var_dump($_SESSION);
 					echo '<form id="edituserform">
 								<input type="text" name="firstname" value="'.$_SESSION['firstname'].
-								'<input type="text" name="middlename" value="'.$_SESSION['middlename'].
-								'<input type="text" name="lastname" value="'.$_SESSION['lastname'].
-								'<input type="text" name="email" value="'.$_SESSION['email'].
-								'<input type="password" name="newpass"/>
+								'"/><input type="text" name="middlename" value="'.$_SESSION['middlename'].
+								'"/><input type="text" name="lastname" value="'.$_SESSION['lastname'].
+								'"/><input type="text" name="email" value="'.$_SESSION['email'].
+								'"/><input type="password" name="newpass"/>
 								<input type="password" name="newpassconfirm"/>
 								<button type="submit">Update User</button>
 							</form>
