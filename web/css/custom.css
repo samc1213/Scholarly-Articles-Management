@@ -498,3 +498,7 @@ th {
 	margin-right: auto;
 	margin-top: 20%;
 }
+
+.edituserinput {
+	display: block;
+}

@@ -56,13 +56,13 @@
 	        	if (isset($_SESSION['username'])) {
 	        		echo var_dump($_SESSION);
 					echo '<form id="edituserform">
-								<input type="text" name="firstname" value="'.$_SESSION['firstname'].
-								'"/><input type="text" name="middlename" value="'.$_SESSION['middlename'].
-								'"/><input type="text" name="lastname" value="'.$_SESSION['lastname'].
-								'"/><input type="text" name="email" value="'.$_SESSION['email'].
-								'"/><input type="password" name="newpass"/>
-								<input type="password" name="newpassconfirm"/>
-								<button type="submit">Update User</button>
+								<label for="firstname">First Name</label><input type="text" name="firstname" value="'.$_SESSION['firstname'].
+								'"/><label for="middlename">Middle Name</label><input type="text" name="middlename" class="edituserinput" value="'.$_SESSION['middlename'].
+								'"/><label for="lastname">Last Name</label><input type="text" name="lastname" class="edituserinput" value="'.$_SESSION['lastname'].
+								'"/><label for="email">Email</label><input type="text" name="email" class="edituserinput" value="'.$_SESSION['email'].
+								'"/><label for="newpass">New Password</label><input type="password" class="edituserinput" name="newpass"/>
+								<label for="newpassconfirm">Confirm New Password</label><input type="password"  class="edituserinput" name="newpassconfirm"/>
+								<button type="submit" class="edituserinput btn btn-default">Update User</button>
 							</form>
 							<span id="editusererrorspan"></span>';					
 				}
