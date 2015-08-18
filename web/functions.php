@@ -420,6 +420,8 @@
 			}
 			
 			
+			$updatearray = array('$set' => $newdata);
+			
 			try {
 				$client = new MongoClient($uri);
 				
@@ -427,7 +429,7 @@
 						
 				$users = $db->users;
 				
-				$users->update($query, $newdata);
+				$users->update($query, $updatearray);
 				
 				// echo var_dump(iterator_to_array($results));
 			} catch (Exception $e) {
