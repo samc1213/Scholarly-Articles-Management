@@ -41,7 +41,7 @@
 	        	<?php
 	        		session_start();
 					if (isset($_SESSION['username'])) {
-						echo '<div id="userspacer"><i class="fa fa-user" id="manageuserbtn"></i></div><button id="logoutheaderbutton" class="logbutton">Logout</button>';		
+						echo '<div id="userspacer"><span class="fa fa-user" id="manageuserbtn"></span></div><button id="logoutheaderbutton" class="logbutton">Logout</button>';		
 					}
 					else {
 						echo '<a href="/login.html"><button id="loginheaderbutton" class="logbutton">Login</button></a>';
