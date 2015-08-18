@@ -24,6 +24,9 @@ header {
 	background-color: rgba(0, 0, 0, 0.8);
 	height: 2.5em;
 	width: 100%;
+	color: white;
+	text-align: right;
+	font-size: 2.5em;
 }
 
 #content {
@@ -479,10 +482,4 @@ th {
 
 #getcsvform {
 	text-align: center;
-}
-
-#manageuserbtn {
-	color: white;
-	float: right;
-	text: 100%;
 }
