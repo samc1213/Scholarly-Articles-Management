@@ -54,7 +54,17 @@
 	   <section id="content" class="clearfix">
 				<?php session_start();
 	        	if (isset($_SESSION['username'])) {
-	        		echo var_dump($_SESSION);					
+	        		echo var_dump($_SESSION);
+					echo '<form id="edituserform">
+								<input type="text" name="firstname" value="'.$_SESSION['firstname'].
+								'<input type="text" name="middlename" value="'.$_SESSION['middlename'].
+								'<input type="text" name="lastname" value="'.$_SESSION['lastname'].
+								'<input type="text" name="email" value="'.$_SESSION['email'].
+								'<input type="password" name="newpass"/>
+								<input type="password" name="newpassconfirm"/>
+								<button type="submit">Update User</button>
+							</form>
+							<span id="editusererrorspan"></span>';					
 				}
 				else {
 					header('Location: http://'.$_SERVER[HTTP_HOST].$_SERVER[REQUEST_URI].'login.html');
@@ -74,6 +84,7 @@
         <script src="js/jquery.watermark.min.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/user.js"></script>
 		<script src="js/index.js"></script>
 		<script>$(".grantagency").iWouldLikeToAbsolutelyPositionThingsInsideOfFrickingTableCellsPlease();</script>
 
