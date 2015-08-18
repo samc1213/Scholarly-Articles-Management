@@ -17,13 +17,10 @@
         
         <link rel="stylesheet" href="css/font-awesome-4.3.0/css/font-awesome.min.css">
         
-        <link rel="stylesheet" href="css/jquery.modal.css" type="text/css" media="screen" />
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 		
 		<link rel="stylesheet" href="css/jquery-ui.css" type="text/css"/>
         		
-		<link href="css/dropzone.css" type="text/css" rel="stylesheet"/>
-
 		<link href="css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
               
         <!--Keep custom css last  -->
