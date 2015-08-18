@@ -490,7 +490,11 @@ th {
 .fa-user {
 	font-size: 1.5em;
 	margin-right: 4px;
+	margin-top: 2.5px;
 	cursor: pointer;
+	border-left-style: solid;
+	border-left-width: 2px;
+	border-left-color: black;
 }
 
 #edituserform {
