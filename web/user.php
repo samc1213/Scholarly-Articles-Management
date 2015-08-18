@@ -62,9 +62,9 @@
 								'"/><label for="email">Email</label><input type="text" name="email" value="'.$_SESSION['email'].
 								'"/><label for="newpass">New Password</label><input type="password" name="newpass"/>
 								<label for="newpassconfirm">Confirm New Password</label><input type="password" name="newpassconfirm"/>
-								<button type="submit" class="btn btn-default">Update User</button>
+								<button type="submit" class="btn btn-default" style="display:block; margin-left: auto; margin-right: auto; margin-top: 1em;">Update User</button>
 							</form>
-							<span id="editusererrorspan"></span>';					
+							<div id="editusererror"></div>';					
 				}
 				else {
 					header('Location: http://'.$_SERVER[HTTP_HOST].'/login.html');

@@ -6,7 +6,7 @@ $(document).ready(function () {
 		
 		if (newpass != newpassconfirm)
 		{
-			$("#editusererrorspan").text("Passwords Must Match");
+			$("#editusererror").text("Passwords Must Match");
 			return false;
 		}
 		
@@ -19,5 +19,22 @@ $(document).ready(function () {
 		data.password = $(this).find('input[name="newpass"]').val();
 		
 		console.log(data);
+		
+		var jsondata = JSON.stringify(data);
+		
+		$.ajax({
+			type: "POST",
+			url: "api.php"
+			data:
+			{
+				type: "edituser",
+				data: jsondata,
+			},
+			success: function (data)
+			{
+				console.log(data);
+				window.location('/');
+			},
+		});
 	});
 });

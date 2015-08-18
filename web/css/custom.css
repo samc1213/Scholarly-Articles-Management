@@ -505,3 +505,7 @@ th {
 .edituserinput {
 	display: block;
 }
+
+#editusererror {
+	text-align: center;
+}
