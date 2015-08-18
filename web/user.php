@@ -67,7 +67,7 @@
 							<span id="editusererrorspan"></span>';					
 				}
 				else {
-					header('Location: http://'.$_SERVER[HTTP_HOST].'login.html');
+					header('Location: http://'.$_SERVER[HTTP_HOST].'/login.html');
 				}
 				
 				?>

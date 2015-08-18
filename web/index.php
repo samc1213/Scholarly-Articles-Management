@@ -42,11 +42,6 @@
 	        		session_start();
 					if (isset($_SESSION['username'])) {
 						echo '<button id="logoutheaderbutton" class="logbutton">Logout</button><div id="userspacer"><a href="user.php"><i class="fa fa-user" id="manageuserbtn"></i></a></div>';
-						echo '<form id="edituserform">
-								<input type="text" name="firstname" value="'.$_SESSION['firstname'].
-								'<input type="text" name="lastname" value="'.$_
-						'
-								
 					}
 					else {
 						echo '<a href="/login.html"><button id="loginheaderbutton" class="logbutton">Login</button></a>';
@@ -76,7 +71,7 @@
 					echo "'s Grants</h2>";						
 				}
 				else {
-					header('Location: http://'.$_SERVER[HTTP_HOST].$_SERVER[REQUEST_URI].'login.html');
+					header('Location: http://'.$_SERVER[HTTP_HOST].'/login.html');
 				}
 				
 				?>
