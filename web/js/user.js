@@ -33,7 +33,7 @@ $(document).ready(function () {
 			success: function (data)
 			{
 				console.log(data);
-				window.location('/');
+				window.location.replace('/');
 			},
 		});
 	});

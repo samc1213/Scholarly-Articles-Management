@@ -404,7 +404,7 @@
 				'middlename' => $middlename,
 				'lastname' => $lastname,
 				'email' => $email,
-				'password' => $password,
+				'password' => $newpass,
 			);
 			
 			try {
