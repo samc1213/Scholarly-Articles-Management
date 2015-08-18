@@ -399,22 +399,35 @@
 			
 			$query = array ("username" => $username);
 			
-			$newdata = array (
+			if ($newpass != '')
+			{
+				$newdata = array (
 				'firstname' => $firstname,
 				'middlename' => $middlename,
 				'lastname' => $lastname,
 				'email' => $email,
 				'password' => $newpass,
-			);
+				);
+			}
+			else
+			{
+				$newdata = array (
+				'firstname' => $firstname,
+				'middlename' => $middlename,
+				'lastname' => $lastname,
+				'email' => $email,
+				);
+			}
+			
 			
 			try {
 				$client = new MongoClient($uri);
 				
 				$db = $client->selectDB("heroku_v7w2qftd");
 						
-				$users = $db->grants;
+				$users = $db->users;
 				
-				$grants->update($query, $newdata);
+				$users->update($query, $newdata);
 				
 				// echo var_dump(iterator_to_array($results));
 			} catch (Exception $e) {
