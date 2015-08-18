@@ -1,4 +1,4 @@
-# Scholarly Articles Management System
+# Scholarly Awards Management System
 
 ## Summary
 
