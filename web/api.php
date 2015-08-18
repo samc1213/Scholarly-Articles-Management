@@ -84,7 +84,8 @@
 	else if ($_POST['type'] == 'edituser') {
 		session_start();
 		$phpdata = (array)json_decode($_POST['data']);
-		$passhash = password_hash($phpdata['password'], PASSWORD_DEFAULT);
-		echo editUser($_SESSION['username'], $phpdata['firstname'], $phpdata['middlename'], $phpdata['lastname'], $phpdata['email'], $passhash);
+		echo var_dump($phpdata);
+		// $passhash = password_hash($phpdata['password'], PASSWORD_DEFAULT);
+		// echo editUser($_SESSION['username'], $phpdata['firstname'], $phpdata['middlename'], $phpdata['lastname'], $phpdata['email'], $passhash);
 	}
 ?>

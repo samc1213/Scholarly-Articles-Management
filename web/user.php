@@ -51,7 +51,6 @@
 	   <section id="content" class="clearfix">
 				<?php session_start();
 	        	if (isset($_SESSION['username'])) {
-	        		echo var_dump($_SESSION);
 					echo '<form id="edituserform">
 								<label for="firstname">First Name</label><input type="text" name="firstname" value="'.$_SESSION['firstname'].
 								'"/><label for="middlename">Middle Name</label><input type="text" name="middlename" value="'.$_SESSION['middlename'].
