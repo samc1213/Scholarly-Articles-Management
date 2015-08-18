@@ -488,9 +488,11 @@ th {
 }
 
 .fa-user {
+	height: 2.5em;
 	font-size: 1.5em;
 	margin-right: 4px;
-	margin-top: 2.5px;
+	margin-left: 4px;
+	line-height: 2.5em;
 	cursor: pointer;
 	border-left-style: solid;
 	border-left-width: 2px;
@@ -512,4 +514,8 @@ th {
 
 #editusererror {
 	text-align: center;
+}
+
+#userlink {
+	color: transparent;
 }

@@ -179,6 +179,10 @@ $(document).ready( function () {
 		});
 	});
 	
+	$("#manageuserbtn").click(function () {
+		window.location.replace('/user.php');
+	});
+	
 	$(document).on('click', '.deletefile', function (e) {
 		console.log("delete!");
 		$('#filelist').html(''); //clear out the old filelist first
