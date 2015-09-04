@@ -2,7 +2,7 @@
 
 ## Summary
 
-This is the code that powers the [Scholarly Awards Management System] (https://obscure-retreat-8490.herokuapp.com/).
+This is the code that powers the [Scholarly Awards Management System] (https:/awardsmanagement.herokuapp.com/).
 
 This system allows users to keep a record of all of their scholarly grant applications. It features a filestore to store relevant documents in a central location. Additionally, it allows users to generate Current & Pending forms using any custom .docx template. Finally, users can download all information as a CSV for personal customization and use.
 
